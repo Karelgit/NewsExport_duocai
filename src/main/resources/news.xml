@@ -2,16 +2,22 @@
 <root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
     <root class="cn.com.enorth.cms.service.news.News">
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
-            <title class="java.lang.String"><![CDATA[31省份7月CPI数据出炉 22省份涨幅出现回升]]></title>
+            <tag class="java.lang.String">$tag</tag>
+
+            <title class="java.lang.String"><![CDATA[$title]]></title>
+
+            <pubDate class="java.util.Date">$pubDate</pubDate>
+
             <channelId class="java.lang.Long">1000000000000000</channelId>
+
+
             <templateId class="java.lang.Integer">100000340</templateId>
+
         </tnNewsVo>
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>
                 <key class="java.lang.String"><![CDATA[content]]></key>
-                <value class="java.lang.String"><![CDATA[
-	全国物价涨幅创出新高，多数省份物价涨幅也出现回升。中新网记者梳理发现，青海、上海等22个地区的7月CPI涨幅较6月出现回升，西藏、宁夏、云南、海南等4地出现回落，湖北、甘肃、贵州、广西、陕西这5地物价涨幅则与6月持平。
-	]]></value>
+                <value class="java.lang.String"><![CDATA[$content]]></value>
             </item>
         </clobs>
     </root>
