@@ -69,14 +69,15 @@ public class CrawlerDataEntityService
     private void writeNumToProperties(long num){
       String path=  this.getClass().getResource("/dataPosition.properties").getPath();
        String positionInfo="position="+num;
+        FileOutputStream fileOutputStream=null;
         try
         {
-            FileOutputStream fileOutputStream= new FileOutputStream(path);
+             fileOutputStream= new FileOutputStream(path);
             try
             {
                 fileOutputStream.write(positionInfo.getBytes());
                 fileOutputStream.flush();
-                fileOutputStream.close();
+
             } catch (IOException e)
             {
                 e.printStackTrace();
@@ -84,6 +85,18 @@ public class CrawlerDataEntityService
         } catch (FileNotFoundException e)
         {
             e.printStackTrace();
+        }finally
+        {
+            if(fileOutputStream!=null){
+                try
+                {
+                    fileOutputStream.close();
+                } catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 }
