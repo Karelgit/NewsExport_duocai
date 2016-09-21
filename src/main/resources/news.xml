@@ -2,23 +2,9 @@
 <root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
     <root class="cn.com.enorth.cms.service.news.News">
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
-            <pubEditor class="java.lang.Integer">-1</pubEditor>
-            <tag class="java.lang.String">00000000000000000000000000000000</tag>
-            <state class="java.lang.Integer">2000</state>
             <title class="java.lang.String"><![CDATA[31省份7月CPI数据出炉 22省份涨幅出现回升]]></title>
-            <sourceName class="java.lang.String"><![CDATA[北方网]]></sourceName>
-            <pubDate class="java.util.Date">2015-08-18 17:16:26</pubDate>
-            <keywords class="java.lang.String"><![CDATA[省份 cpi 出现 回升 全国 ]]></keywords>
-            <channelId class="java.lang.Long">2000000000000000</channelId>
-            <initDate class="java.util.Date">2015-08-18 17:16:18</initDate>
-            <keywords4 class="java.lang.String"><![CDATA[张某某]]></keywords4>
-            <initEditor class="java.lang.Integer">1</initEditor>
-            <newsTypeId class="java.lang.Integer">10000</newsTypeId>
-            <editTypeId class="java.lang.Integer">10000</editTypeId>
-            <templateId class="java.lang.Integer">74</templateId>
-            <newsId class="java.lang.String"><![CDATA[100002045]]></newsId>
-            <modDate class="java.util.Date">2015-08-18 17:16:26</modDate>
-            <modEditor class="java.lang.Integer">1</modEditor>
+            <channelId class="java.lang.Long">1000000000000000</channelId>
+            <templateId class="java.lang.Integer">100000340</templateId>
         </tnNewsVo>
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>
@@ -26,50 +12,6 @@
                 <value class="java.lang.String"><![CDATA[
 	全国物价涨幅创出新高，多数省份物价涨幅也出现回升。中新网记者梳理发现，青海、上海等22个地区的7月CPI涨幅较6月出现回升，西藏、宁夏、云南、海南等4地出现回落，湖北、甘肃、贵州、广西、陕西这5地物价涨幅则与6月持平。
 	]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[abstract]]></key>
-                <value class="java.lang.String"><![CDATA[22省份物价涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[org_title]]></key>
-                <value class="java.lang.String"><![CDATA[31省份7月CPI数据出炉 22省份涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[content2]]></key>
-                <value class="java.lang.String"><![CDATA[22省份物价涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[content3]]></key>
-                <value class="java.lang.String"><![CDATA[22省份物价涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[content4]]></key>
-                <value class="java.lang.String"><![CDATA[22省份物价涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[content5]]></key>
-                <value class="java.lang.String"><![CDATA[22省份物价涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[content6]]></key>
-                <value class="java.lang.String"><![CDATA[22省份物价涨幅出现回升]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[guide_image2]]></key>
-                <value class="java.lang.String"><![CDATA[http://pic.pub.enorth.com.cn/003/000/125/00300012560_96dddab5.jpg]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[guide_image]]></key>
-                <value class="java.lang.String"><![CDATA[http://pic.pub.enorth.com.cn/003/000/125/00300012561_6e73e859.jpg]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[guide_image3]]></key>
-                <value class="java.lang.String"><![CDATA[http://pic.pub.enorth.com.cn/003/000/125/00300012562_4a6b1641.jpg]]></value>
-            </item>
-            <item>
-                <key class="java.lang.String"><![CDATA[guide_image4]]></key>
-                <value class="java.lang.String"><![CDATA[http://pic.pub.enorth.com.cn/003/000/125/00300012562_4a6b1641.jpg]]></value>
             </item>
         </clobs>
     </root>
