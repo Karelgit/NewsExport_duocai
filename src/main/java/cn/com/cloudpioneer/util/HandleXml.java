@@ -21,7 +21,6 @@ public class HandleXml {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(stringBuffer.toString());
         return stringBuffer.toString();
     }
 
