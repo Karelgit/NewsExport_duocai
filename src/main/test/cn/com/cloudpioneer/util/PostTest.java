@@ -18,14 +18,15 @@ public class PostTest {
     public void testPostMethod()  {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
-//        String api_token = "000001000000810000014744482397210c0cb83bb61404dab95dde71aa8620c3";
-//        String check_sum = "0ck+qRh85lLCjAnxrDC6Jg==";
-        String newsXML = HandleXml.readXml("news.xml");
+        String api_token = "0000010000008100000147450954410705948a3acb70de0b1ab8fa794f1f5f83";
+        String check_sum = "2e328d7561d60bf581ec88807878c574";
+        String newsXML = HandleXml.readXml("newsTest.xml");
         params.put("news",newsXML);
-//        params.put("api_token",api_token);
-//        params.put("check_sum",check_sum);
+        params.put("api_token",api_token);
+        params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
         System.out.println(response);
+
     }
 
     @Test
@@ -44,14 +45,30 @@ public class PostTest {
 
     @Test
     public void getMD5_64bit()  throws Exception{
-        String str = "news7b21ff0e0e06d47d81f8e6d12af845c7";
-        System.out.println(MD5_64bit(str));
+        String newsXML = HandleXml.readXml("newsTest.xml");
+        String str = newsXML+"5b43e6a24156660d2f1f39545306d383";
+        System.out.println(MD5(str));
     }
+
+
     public String MD5_64bit(String readyEncryptStr) throws Exception{
         MessageDigest md = MessageDigest.getInstance("MD5");
         BASE64Encoder base64Encoder = new BASE64Encoder();
         return base64Encoder.encode(md.digest(readyEncryptStr.getBytes("UTF-8")));
     }
 
+    public String MD5(String md5) {
+        try {
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+            byte[] array = md.digest(md5.getBytes());
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < array.length; ++i) {
+                sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+            }
+            return sb.toString();
+        } catch (java.security.NoSuchAlgorithmException e) {
+        }
+        return null;
+    }
 
 }
