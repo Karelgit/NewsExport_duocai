@@ -1,5 +1,5 @@
-import cn.com.cloudpioneer.util.HandleXml;
-import cn.com.cloudpioneer.util.PostUtil;
+package cn.com.cloudpioneer.util;
+
 import org.junit.Test;
 import sun.misc.BASE64Encoder;
 
