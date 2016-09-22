@@ -1,5 +1,5 @@
-import cn.com.cloudpioneer.util.HandleXml;
-import cn.com.cloudpioneer.util.PostUtil;
+package cn.com.cloudpioneer.util;
+
 import org.junit.Test;
 import sun.misc.BASE64Encoder;
 
@@ -26,6 +26,7 @@ public class PostTest {
 //        params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
         System.out.println(response);
+
     }
 
     @Test

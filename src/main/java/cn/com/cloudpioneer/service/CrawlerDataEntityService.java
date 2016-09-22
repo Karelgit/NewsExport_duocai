@@ -30,7 +30,7 @@ public class CrawlerDataEntityService
             date=sdf.format(entity.getPublishTime());
         }*//*
         xml=xml.replace("$pubDate",date);*/
-        xml=xml.replaceAll("\\r\\n","");
+//        xml=xml.replaceAll("\\r\\n","");
         return xml;
     }
 
