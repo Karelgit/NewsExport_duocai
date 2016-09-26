@@ -20,8 +20,5 @@ public class CrawlerDataEntityMapperTester
         for (String s:datas){
             System.out.println(s);
         }
-
-
-
     }
 }

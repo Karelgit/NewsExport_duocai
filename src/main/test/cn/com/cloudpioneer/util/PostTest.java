@@ -19,7 +19,7 @@ public class PostTest {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
         String api_token = "0000010000008100000147450954410705948a3acb70de0b1ab8fa794f1f5f83";
-        String check_sum = "2e328d7561d60bf581ec88807878c574";
+        String check_sum = "eed09c5fb498e495706017018e4a7d9c";
         String newsXML = HandleXml.readXml("newsTest.xml");
         params.put("news",newsXML);
         params.put("api_token",api_token);
