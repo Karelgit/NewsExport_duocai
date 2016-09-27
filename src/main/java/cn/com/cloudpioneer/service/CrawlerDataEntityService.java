@@ -4,13 +4,12 @@ import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
 import cn.com.cloudpioneer.utils.ResourceReader;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Tijun on 2016/9/21.
@@ -22,7 +21,10 @@ public class CrawlerDataEntityService
     CrawlerDataEntityDao dataEntityDao=new CrawlerDataEntityDao();
 
     private String entityToXml(CrawlerDataEntity entity,String xml){
-        xml=xml.replace("$content",entity.getText());
+        String domianPrefix = "http://www.qnz.com.cn";
+        //为content里面的img标签变成绝对路径
+        String content_imgabsolute = entity.getText().replace("src=\"","src=\""+domianPrefix);
+        xml=xml.replace("$content",content_imgabsolute);
         xml=xml.replace("$title",entity.getTitle());
       /* *//* SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date="";
@@ -34,6 +36,7 @@ public class CrawlerDataEntityService
         return xml;
     }
 
+
     public List<String> crawlerDataEntityXml(int size) throws IOException
     {
       long startPostion=this.getPosition();
@@ -42,7 +45,9 @@ public class CrawlerDataEntityService
         String xml=ResourceReader.readResource("/news.xml");
         List<String> datas=new ArrayList<>();
         for (CrawlerDataEntity entity:crawlerDataEntities){
-            datas.add(this.entityToXml(entity, xml));
+            if(entity.getText() != null)    {
+                datas.add(this.entityToXml(entity, xml));
+            }
         }
 
         this.writeNumToProperties(startPostion+datas.size());
@@ -99,4 +104,6 @@ public class CrawlerDataEntityService
 
         }
     }
+
+
 }
