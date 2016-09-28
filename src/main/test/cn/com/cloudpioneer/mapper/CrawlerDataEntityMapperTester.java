@@ -15,7 +15,7 @@ public class CrawlerDataEntityMapperTester
     public void testGainData() throws IOException
     {
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-      List<String>  datas=dataEntityService.crawlerDataEntityXml(70);
+      List<String>  datas=dataEntityService.crawlerDataEntityXml(70,"");
         for (String s:datas){
             System.out.println(s);
         }

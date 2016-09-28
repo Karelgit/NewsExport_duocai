@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.processor;
 
 import cn.com.cloudpioneer.downloader.SeleniumDownloader;
@@ -16,9 +17,11 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+*/
 /**
  * Created by Tijun on 2016/9/26.
- */
+ *//*
+
 public class QNRProcessorTester {
 
     @Test
@@ -51,3 +54,4 @@ public class QNRProcessorTester {
     }
 
 }
+*/

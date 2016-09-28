@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.downloader;
 
 import org.apache.http.HttpResponse;
@@ -17,9 +18,11 @@ import us.codecraft.webmagic.utils.UrlUtils;
 
 import java.io.IOException;
 
+*/
 /**
  * Created by Tijun on 2016/9/26.
- */
+ *//*
+
 public class HttpClientDownloader implements Downloader {
 
     public Page download(Request request, Task task) {
@@ -59,3 +62,4 @@ public class HttpClientDownloader implements Downloader {
 
     }
 }
+*/

@@ -1,6 +1,7 @@
 package cn.com.cloudpioneer.dao;
 
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
+import cn.com.cloudpioneer.entity.TaskEntity;
 import cn.com.cloudpioneer.mapper.CrawlerDataEntityMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -29,12 +30,24 @@ public class CrawlerDataEntityDao
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
     }
 
-    public List<CrawlerDataEntity> findByPage(long start,int size){
+    public List<CrawlerDataEntity> findByPage(long start,int size,String taskId){
        SqlSession sqlSession= sqlSessionFactory.openSession();
         CrawlerDataEntityMapper crawlerDataEntityMapper=sqlSession.getMapper(CrawlerDataEntityMapper.class);
-      List<CrawlerDataEntity> crawlerDataEntities=  crawlerDataEntityMapper.findByPage(start, size);
+      List<CrawlerDataEntity> crawlerDataEntities=  crawlerDataEntityMapper.findByPage(start, size,taskId);
         sqlSession.commit(true);
         return crawlerDataEntities;
+    }
+
+    public TaskEntity findTaskEntity(String taskId){
+        SqlSession sqlSession= sqlSessionFactory.openSession();
+        CrawlerDataEntityMapper crawlerDataEntityMapper=sqlSession.getMapper(CrawlerDataEntityMapper.class);
+        return crawlerDataEntityMapper.findTaskEntity(taskId);
+    }
+    public void updateTaskEntity(TaskEntity entity){
+        SqlSession sqlSession= sqlSessionFactory.openSession();
+        CrawlerDataEntityMapper crawlerDataEntityMapper=sqlSession.getMapper(CrawlerDataEntityMapper.class);
+        crawlerDataEntityMapper.updateTaskEntity(entity);
+        sqlSession.commit();
     }
 
 }

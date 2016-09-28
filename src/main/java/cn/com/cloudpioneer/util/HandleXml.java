@@ -24,16 +24,19 @@ public class HandleXml {
         return stringBuffer.toString();
     }
 
-    public void writeXml(String xml,String path)  {
+    public void  writeXml(String xml,String path)  {
         try {
+           path= this.getClass().getResource(path).getPath();
             FileWriter fw = new FileWriter(path);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(xml);
+            bw.flush();
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     public void writeResponseToLocal(String xml,String path)  {
         try {

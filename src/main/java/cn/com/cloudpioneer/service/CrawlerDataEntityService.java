@@ -2,8 +2,10 @@ package cn.com.cloudpioneer.service;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
+import cn.com.cloudpioneer.entity.TaskEntity;
 import cn.com.cloudpioneer.util.HandleXml;
 import cn.com.cloudpioneer.utils.ResourceReader;
+import org.omg.IOP.TAG_ALTERNATE_IIOP_ADDRESS;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -31,11 +33,12 @@ public class CrawlerDataEntityService
     }
 
 
-    public List<String> crawlerDataEntityXml(int size) throws IOException
+    public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
     {
-      long startPostion=0;/*this.getPosition();*/
+        TaskEntity taskEntity=dataEntityDao.findTaskEntity(taskId);
+      int startPostion=taskEntity.getPosition();/*this.getPosition();*/
+       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size,taskId);
 
-       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size);
         String xml= new HandleXml().readXml("news.xml");
         List<String> datas=new ArrayList<>();
         for (CrawlerDataEntity entity:crawlerDataEntities){
@@ -43,58 +46,9 @@ public class CrawlerDataEntityService
                 datas.add(this.entityToXml(entity, xml));
             }
         }
-        this.writeNumToProperties(startPostion+datas.size());
-
+        taskEntity.setPosition(startPostion+crawlerDataEntities.size());
+        dataEntityDao.updateTaskEntity(taskEntity);
         return datas;
-    }
-    private long getPosition(){
-        InputStream is= this.getClass().getResourceAsStream("/dataPosition.properties");
-        Properties properties=new Properties();
-        try
-        {
-            properties.load(is);
-            String num=(String)properties.get("position");
-         return    Long.parseLong(num);
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-        return 0;
-    }
-
-    private void writeNumToProperties(long num){
-      String path=  this.getClass().getResource("/dataPosition.properties").getPath();
-       String positionInfo="position="+num;
-        FileOutputStream fileOutputStream=null;
-        try
-        {
-             fileOutputStream= new FileOutputStream(path);
-            try
-            {
-                fileOutputStream.write(positionInfo.getBytes());
-                fileOutputStream.flush();
-
-            } catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }finally
-        {
-            if(fileOutputStream!=null){
-                try
-                {
-                    fileOutputStream.close();
-                } catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-
-        }
     }
 
 

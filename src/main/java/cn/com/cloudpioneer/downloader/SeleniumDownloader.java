@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.downloader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,26 +21,32 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+*/
 /**
  *This is a downloader for dynamic web page,and it needs phantomjs driver to support.<br/>
  * @author TijunWang
  *         Date: 2016-9-19 <br>
  *         Time: afternoon 1:37 <br>
- */
+ *//*
+
 public class SeleniumDownloader implements Downloader, Closeable {
 
     static {
-        /**
+        */
+/**
          * The phantomjs driver installed path are indicated in /webdriver.properties
-         */
+         *//*
+
         InputStream is= System.class.getResourceAsStream("/webdriver.properties");
         Properties properties=new Properties();
         try
         {
             properties.load(is);
-            /**
+            */
+/**
              * init an environment for phantomjs
-             */
+             *//*
+
              String phantomJsPath=properties.getProperty("phantomjs.binary.path");
             if (phantomJsPath==null||phantomJsPath.equals("")){
                 throw new Exception("must have phantomjs webdriver path be indicated in /webdriver.properties");
@@ -61,12 +68,14 @@ public class SeleniumDownloader implements Downloader, Closeable {
     //cache webdriver
     private Map<String,WebDriver> webDriverMap= Collections.synchronizedMap(new HashMap<String, WebDriver>());
 
-    /**
+    */
+/**
      * use domain to gain a webdriver from webDriverMap,if webDriverMap has no webDriver for current domain,we create
      * a webDriver for it ,and put the  driver into webDrvierMap to cache
      * @param task
      * @return
-     */
+     *//*
+
     private synchronized WebDriver getWebDriver(Task task){
         String domain=task.getSite().getDomain();
         WebDriver driver=  webDriverMap.get(domain);
@@ -80,20 +89,24 @@ public class SeleniumDownloader implements Downloader, Closeable {
         return driver;
     }
 
-    /**
+    */
+/**
      * Constructor without any filed.
      *
      * @author
-     */
+     *//*
+
     public SeleniumDownloader() {
     }
 
-    /**
+    */
+/**
      * set sleep time to wait until load success
      *
      * @param sleepTime sleepTime
      * @return this
-     */
+     *//*
+
     public SeleniumDownloader setSleepTime(int sleepTime) {
         this.sleepTime = sleepTime;
         return this;
@@ -115,9 +128,11 @@ public class SeleniumDownloader implements Downloader, Closeable {
         return page;
     }
 
-    /**
+    */
+/**
      * sleep sleepTime  to wait page loading
-     */
+     *//*
+
     private void sleep(){
         try
         {
@@ -137,18 +152,22 @@ public class SeleniumDownloader implements Downloader, Closeable {
         this.closeAll();
     }
 
-    /**
+    */
+/**
      *   create a webDriver and return it
-     */
+     *//*
+
     private WebDriver create(){
         WebDriver webDriver=new PhantomJSDriver();
         webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         return webDriver;
     }
 
-    /**
+    */
+/**
      * when finished all tasks，close all webdrivers and kill all webdriver processes
-     */
+     *//*
+
     public void  closeAll(){
         for (String domain:webDriverMap.keySet()){
             WebDriver driver=webDriverMap.remove(domain);
@@ -161,4 +180,4 @@ public class SeleniumDownloader implements Downloader, Closeable {
             }
         }
     }
-}
+}*/

@@ -17,6 +17,7 @@ public class ResourceReader
         StringBuffer buffer=new StringBuffer();
         while (reader.read(chars,0,chars.length)!=-1){
             buffer.append(chars);
+            chars=new char[1024];
         }
        return buffer.toString();
     }

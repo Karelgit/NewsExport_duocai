@@ -1,4 +1,3 @@
-/*
 package cn.com.cloudpioneer.util;
 
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
@@ -13,40 +12,46 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-*/
 /**
  * <类详细说明:Post方法测试类>
  *
  * @Author： Huanghai
  * @Version: 2016-09-21
- **//*
-
+ **/
 public class PostTest {
     /**
      * 多彩贵州北方网系统推送接口
      * @throws Exception
      */
+    String taskId="acbrocdldrtfkauj9ertt29d67";
 
     @Test
     public void pushNews()  throws Exception{
-        String projectPath = System.getProperty("user.dir");
-        String xmlPath = projectPath+"/src/main/resources/newsTest.xml";
-        CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        List<String> datas=dataEntityService.crawlerDataEntityXml(70);
-//        for(int i=0; i<datas.size(); i++)   {
-        System.out.println("***********************"+ datas.size()+"***********************");
-//            new HandleXml().writeXml(datas.get(36),xmlPath);
-//            testPostMethod();
-        System.out.println(datas.get(35));
 
-//        }
+
+        CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
+        List<String> datas=dataEntityService.crawlerDataEntityXml(10,taskId);
+        String loginResponse = loginParam();
+        for(int i=0; i<datas.size(); i++)   {
+        System.out.println("***********************"+ datas.size()+"***********************");
+            HandleXml handleXml= new HandleXml();
+            handleXml.writeXml(datas.get(i),"/newsTest.xml");
+            String s=   handleXml.readXml("newsTest.xml");
+           testPostMethod(loginResponse);
+
+            //testPostMethod(dloginResponse);
+
+
+        }
     }
 
-//    @Test
-    public void testPostMethod(/*String newsXML*/) throws Exception {
+
+
+    //    @Test
+    public void testPostMethod(String loginResponse ) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
-        String loginResponse = loginParam();
+      //  String loginResponse = loginParam();
 
         JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
         String api_token = (String) jsonObject.getJSONObject("result").get("token");
@@ -100,4 +105,3 @@ public class PostTest {
     }
 
 }
-*/

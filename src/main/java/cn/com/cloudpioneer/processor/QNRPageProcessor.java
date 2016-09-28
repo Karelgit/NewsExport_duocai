@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.processor;
 
 import us.codecraft.webmagic.Page;
@@ -7,9 +8,11 @@ import us.codecraft.webmagic.processor.PageProcessor;
 import java.util.List;
 import java.util.regex.Pattern;
 
+*/
 /**
  * Created by Tijun on 2016/9/26.
- */
+ *//*
+
 public class QNRPageProcessor implements PageProcessor {
     //县市和州市新闻的url匹配
     private static final String QNR_ARTICLE_REGEX="http://www.qnz.com.cn/news/newsshow-\\d*.shtml";
@@ -47,3 +50,4 @@ public class QNRPageProcessor implements PageProcessor {
 
 
 }
+*/
