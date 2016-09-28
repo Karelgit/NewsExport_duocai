@@ -1,11 +1,16 @@
 /*
 package cn.com.cloudpioneer.util;
 
+import cn.com.cloudpioneer.service.CrawlerDataEntityService;
+import com.alibaba.fastjson.JSONObject;
+import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
 import sun.misc.BASE64Encoder;
 
 import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 */
@@ -17,23 +22,51 @@ import java.util.Map;
  **//*
 
 public class PostTest {
+    /**
+     * 多彩贵州北方网系统推送接口
+     * @throws Exception
+     */
+
     @Test
-    public void testPostMethod()  {
+    public void pushNews()  throws Exception{
+        String projectPath = System.getProperty("user.dir");
+        String xmlPath = projectPath+"/src/main/resources/newsTest.xml";
+        CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
+        List<String> datas=dataEntityService.crawlerDataEntityXml(70);
+//        for(int i=0; i<datas.size(); i++)   {
+        System.out.println("***********************"+ datas.size()+"***********************");
+//            new HandleXml().writeXml(datas.get(36),xmlPath);
+//            testPostMethod();
+        System.out.println(datas.get(35));
+
+//        }
+    }
+
+//    @Test
+    public void testPostMethod(/*String newsXML*/) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
-        String api_token = "0000010000008100000147450954410705948a3acb70de0b1ab8fa794f1f5f83";
-        String check_sum = "2e328d7561d60bf581ec88807878c574";
-        String newsXML = HandleXml.readXml("newsTest.xml");
+        String loginResponse = loginParam();
+
+        JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
+        String api_token = (String) jsonObject.getJSONObject("result").get("token");
+        String seed = (String) jsonObject.getJSONObject("result").get("seed");
+
+        String check_sum = getMD5_32bit(seed);
+        String newsXML = new HandleXml().readXml("newsTest.xml");
+        System.out.println("newXML:" +"\n" + newsXML);
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
-        System.out.println(response);
+        System.out.println("返回参数：" + response);
 
+        String projectPath = System.getProperty("user.dir");
+        String xmlPath = projectPath+"/src/main/resources/test.xml";
+        new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
-    @Test
-    public void testLogin()  {
+    public String  loginParam()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
 
@@ -43,21 +76,13 @@ public class PostTest {
         loginParams.put("password",password);
 
         String response = PostUtil.postMethod(loginUrl,loginParams);
-        System.out.println(response);
+        return response;
     }
 
-    @Test
-    public void getMD5_64bit()  throws Exception{
-        String newsXML = HandleXml.readXml("newsTest.xml");
-        String str = newsXML+"5b43e6a24156660d2f1f39545306d383";
-        System.out.println(MD5(str));
-    }
-
-
-    public String MD5_64bit(String readyEncryptStr) throws Exception{
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        BASE64Encoder base64Encoder = new BASE64Encoder();
-        return base64Encoder.encode(md.digest(readyEncryptStr.getBytes("UTF-8")));
+    public String getMD5_32bit(String seed)  throws Exception{
+        String newsXML = new HandleXml().readXml("newsTest.xml");
+        String str = newsXML+seed;
+        return MD5(str);
     }
 
     public String MD5(String md5) {
