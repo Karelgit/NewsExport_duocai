@@ -2,6 +2,7 @@ package cn.com.cloudpioneer.service;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
+import cn.com.cloudpioneer.util.HandleXml;
 import cn.com.cloudpioneer.utils.ResourceReader;
 
 import java.io.*;
@@ -26,13 +27,6 @@ public class CrawlerDataEntityService
         String content_imgabsolute = entity.getText().replace("src=\"","src=\""+domianPrefix);
         xml=xml.replace("$content",content_imgabsolute);
         xml=xml.replace("$title",entity.getTitle());
-      /* *//* SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date="";
-        if(entity.getPublishTime()!=null){
-            date=sdf.format(entity.getPublishTime());
-        }*//*
-        xml=xml.replace("$pubDate",date);*/
-//        xml=xml.replaceAll("\\r\\n","");
         return xml;
     }
 
@@ -42,18 +36,16 @@ public class CrawlerDataEntityService
       long startPostion=this.getPosition();
 
        List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size);
-        String xml=ResourceReader.readResource("/news.xml");
+        String xml= new HandleXml().readXml("news.xml");
         List<String> datas=new ArrayList<>();
         for (CrawlerDataEntity entity:crawlerDataEntities){
             if(entity.getText() != null)    {
                 datas.add(this.entityToXml(entity, xml));
             }
         }
-
         this.writeNumToProperties(startPostion+datas.size());
 
         return datas;
-
     }
     private long getPosition(){
         InputStream is= this.getClass().getResourceAsStream("/dataPosition.properties");

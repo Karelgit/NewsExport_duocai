@@ -9,7 +9,7 @@ import java.io.*;
  * @Version: 2016-09-21
  **/
 public class HandleXml {
-    public static String readXml(String fileName) {
+    public String readXml(String fileName) {
         InputStream in = ClassLoader.getSystemResourceAsStream(fileName);
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         StringBuffer stringBuffer = new StringBuffer();
@@ -24,7 +24,32 @@ public class HandleXml {
         return stringBuffer.toString();
     }
 
+    public void writeXml(String xml,String path)  {
+        try {
+            FileWriter fw = new FileWriter(path);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(xml);
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeResponseToLocal(String xml,String path)  {
+        try {
+            FileWriter fw = new FileWriter(path,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(xml);
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
-        readXml("news.xml");
+        String projectPath = System.getProperty("user.dir");
+        String xmlPath = projectPath+"/src/main/resources/test.xml";
+//        readXml("news.xml");
+        new HandleXml().writeXml("bbb"+"\n",xmlPath);
     }
 }

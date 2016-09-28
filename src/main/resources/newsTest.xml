@@ -2,7 +2,7 @@
 <root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
     <root class="cn.com.enorth.cms.service.news.News">
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
-            <title class="java.lang.String"><![CDATA[黔南推动纪检监察队伍约谈工作制度化、常态化 ]]></title>
+            <title class="java.lang.String"><![CDATA[$title]]></title>
             <channelId class="java.lang.Long">1000000000000000</channelId>
             <initEditor class="java.lang.Integer">100000081</initEditor>
             <templateId class="java.lang.Integer">100000340</templateId>
@@ -10,13 +10,7 @@
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>
                 <key class="java.lang.String"><![CDATA[content]]></key>
-                <value class="java.lang.String"><![CDATA[<div id="content_main"> 
- <p> 　　近日，黔南州纪委制定出台《关于开展对全州纪检监察干部帮助性谈话的实施方案》，将有力推动纪检监察队伍内部约谈工作制度化、常态化。 </p> 
- <p> 　　“在领导上下功夫”，根据“分级管理、层层负责”的原则，按照不同层次明确领导担任主谈人，由全州各级纪检监察干部监督室（干部室）和派驻机构具体组织实施，有效传递组织的关怀和帮助。 </p> 
- <p> 　　“在精准上下功夫”，结合近期约谈情况，梳理当前纪检监察队伍内部容易出现的几类情况和问题，区分谈话对象，明确谈话方法和步骤，切实做到因人施策、以理服人、以情动人。 </p> 
- <p> 　　“在持续上下功夫”，以通知的形式下发至全州各县市纪委、开发区纪工委和派驻纪检组，要求统一开展，覆盖至全州纪检监察系统，保障全州纪检队伍内部约谈工作持续有效开展。 </p> 
- <p> &nbsp;&nbsp;&nbsp;&nbsp; （编辑：保超燕&nbsp; 审核编辑：邹骐聪） </p> 
-</div>]]></value>
+                <value class="java.lang.String"><![CDATA[$content]]></value>
             </item>
         </clobs>
     </root>

@@ -24,15 +24,17 @@ public class PostTest {
 
     @Test
     public void pushNews()  throws Exception{
+        String projectPath = System.getProperty("user.dir");
+        String xmlPath = projectPath+"/src/main/resources/newsTest.xml";
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
         List<String> datas=dataEntityService.crawlerDataEntityXml(70);
 //        for(int i=0; i<datas.size(); i++)   {
-            testPostMethod(datas.get(0));
-            Thread.sleep(1000*10);
+            new HandleXml().writeXml(datas.get(10),xmlPath);
+            testPostMethod();
 //        }
     }
 
-    public void testPostMethod(String newsXML) throws Exception {
+    public void testPostMethod(/*String newsXML*/) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
         String loginResponse = loginParam();
@@ -42,12 +44,16 @@ public class PostTest {
         String seed = (String) jsonObject.getJSONObject("result").get("seed");
 
         String check_sum = getMD5_32bit(seed);
-//        String newsXML = HandleXml.readXml("newsTest.xml");
+        String newsXML = new HandleXml().readXml("newsTest.xml");
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
-        System.out.println(response);
+        System.out.println("返回参数：" + response);
+
+        String projectPath = System.getProperty("user.dir");
+        String xmlPath = projectPath+"/src/main/resources/test.xml";
+        new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
     public String  loginParam()  {
@@ -64,7 +70,7 @@ public class PostTest {
     }
 
     public String getMD5_32bit(String seed)  throws Exception{
-        String newsXML = HandleXml.readXml("newsTest.xml");
+        String newsXML = new HandleXml().readXml("newsTest.xml");
         String str = newsXML+seed;
         return MD5(str);
     }
