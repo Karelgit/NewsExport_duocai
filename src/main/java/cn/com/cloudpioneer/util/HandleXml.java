@@ -51,7 +51,7 @@ public class HandleXml {
 
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
-        String xmlPath = projectPath+"/src/main/resources/test.xml";
+        String xmlPath = projectPath+"/src/main/resources/response.log";
 //        readXml("news.xml");
         new HandleXml().writeXml("bbb"+"\n",xmlPath);
     }

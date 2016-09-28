@@ -33,15 +33,10 @@ public class PostTest {
         List<String> datas=dataEntityService.crawlerDataEntityXml(10,taskId);
         String loginResponse = loginParam();
         for(int i=0; i<datas.size(); i++)   {
-        System.out.println("***********************"+ datas.size()+"***********************");
             HandleXml handleXml= new HandleXml();
             handleXml.writeXml(datas.get(i),"/newsTest.xml");
             String s=   handleXml.readXml("newsTest.xml");
-           testPostMethod(loginResponse);
-
-            //testPostMethod(dloginResponse);
-
-
+            testPostMethod(loginResponse);
         }
     }
 
@@ -64,10 +59,9 @@ public class PostTest {
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
-        System.out.println("返回参数：" + response);
 
         String projectPath = System.getProperty("user.dir");
-        String xmlPath = projectPath+"/src/main/resources/test.xml";
+        String xmlPath = projectPath+"/src/main/resources/response.log";
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
