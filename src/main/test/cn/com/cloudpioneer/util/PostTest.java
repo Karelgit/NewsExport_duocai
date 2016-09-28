@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.util;
 
 import org.junit.Test;
@@ -7,12 +8,14 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * <类详细说明:Post方法测试类>
  *
  * @Author： Huanghai
  * @Version: 2016-09-21
- **/
+ **//*
+
 public class PostTest {
     @Test
     public void testPostMethod()  {
@@ -72,3 +75,4 @@ public class PostTest {
     }
 
 }
+*/

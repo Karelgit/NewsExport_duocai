@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.utils;
 
 import org.apache.commons.httpclient.HttpClient;
@@ -31,12 +32,13 @@ public class PostTest {
                 postMethod.releaseConnection();
         }
         return response;
-		
+
     }
-    
+
     public HttpMethod getMethod(String url,String param) throws IOException	{
 	   GetMethod get = new GetMethod(url + "?" +param);
 	   get.releaseConnection();
 	   return get;
    }
 }
+*/

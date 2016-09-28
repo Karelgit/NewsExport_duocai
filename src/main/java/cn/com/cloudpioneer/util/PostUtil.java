@@ -1,16 +1,17 @@
+/*
 package cn.com.cloudpioneer.util;
 
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.methods.PostMethod;
 
 import java.io.IOException;
 import java.util.Map;
 
+*/
 /**
  * @Author：Huanghai
  * @CreateTime：2016-09-20 22:18:38
  * @Description：Post方法工具类
- */
+ *//*
+
 public class PostUtil {
 
     public static String postMethod(String url, Map<String, String> params) {
@@ -36,4 +37,4 @@ public class PostUtil {
         return response;
 		
     }
-}
+}*/

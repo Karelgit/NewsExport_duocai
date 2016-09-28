@@ -1,5 +1,7 @@
 package cn.com.cloudpioneer.mapper;
 
+import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
+import cn.com.cloudpioneer.entity.CrawlerDataEntity;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import org.junit.Test;
 
@@ -14,11 +16,13 @@ public class CrawlerDataEntityMapperTester
     @Test
     public void testGainData() throws IOException
     {
+        CrawlerDataEntityDao dataEntityDao=new CrawlerDataEntityDao();
+        List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(0, 10);
 
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-      List<String>  datas=dataEntityService.crawlerDataEntityXml(50);
-        for (String s:datas){
-            System.out.println(s);
+  //    List<String>  datas=dataEntityService.crawlerDataEntityXml(50);
+        for (CrawlerDataEntity entity :crawlerDataEntities){
+            System.out.println(entity.getText());
         }
 
 
