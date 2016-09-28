@@ -33,7 +33,7 @@ public class CrawlerDataEntityService
 
     public List<String> crawlerDataEntityXml(int size) throws IOException
     {
-      long startPostion=this.getPosition();
+      long startPostion=0;/*this.getPosition();*/
 
        List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size);
         String xml= new HandleXml().readXml("news.xml");

@@ -2,10 +2,12 @@ package cn.com.cloudpioneer.util;
 
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import com.alibaba.fastjson.JSONObject;
+import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
 import sun.misc.BASE64Encoder;
 
 import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,11 +31,15 @@ public class PostTest {
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
         List<String> datas=dataEntityService.crawlerDataEntityXml(70);
 //        for(int i=0; i<datas.size(); i++)   {
-            new HandleXml().writeXml(datas.get(10),xmlPath);
-            testPostMethod();
+        System.out.println("***********************"+ datas.size()+"***********************");
+//            new HandleXml().writeXml(datas.get(36),xmlPath);
+//            testPostMethod();
+        System.out.println(datas.get(35));
+
 //        }
     }
 
+//    @Test
     public void testPostMethod(/*String newsXML*/) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
@@ -45,6 +51,7 @@ public class PostTest {
 
         String check_sum = getMD5_32bit(seed);
         String newsXML = new HandleXml().readXml("newsTest.xml");
+        System.out.println("newXML:" +"\n" + newsXML);
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);

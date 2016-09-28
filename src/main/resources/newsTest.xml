@@ -2,7 +2,7 @@
 <root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
     <root class="cn.com.enorth.cms.service.news.News">
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
-            <title class="java.lang.String"><![CDATA[$title]]></title>
+            <title class="java.lang.String"><![CDATA[平塘县“农商行”杯“金牌”导游评选大赛正式开赛 ]]></title>
             <channelId class="java.lang.Long">1000000000000000</channelId>
             <initEditor class="java.lang.Integer">100000081</initEditor>
             <templateId class="java.lang.Integer">100000340</templateId>
@@ -10,7 +10,15 @@
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>
                 <key class="java.lang.String"><![CDATA[content]]></key>
-                <value class="java.lang.String"><![CDATA[$content]]></value>
+                <value class="java.lang.String"><![CDATA[<div id="content_main"> 
+ <p> 　　9月18日，为迎接“9•25”天文论坛峰会，进一步加强平塘县旅游业建设，提高“FAST”射电望远镜景区接待水平，由中共平塘县委、平塘县人民政府主办，由平塘农商银行冠名的“农商行”杯2016年“金牌”导游评选大赛在美丽的绿草滩举行。此次比赛吸引了来此平塘县各乡镇的30余名选手到场参赛。 </p> 
+ <p align="center"> <img alt="" src="http://www.qnz.com.cn/upload/editor/2016-9-20/2016920857452671j4bc.jpg"> </p> 
+ <p> 　　上午9点，比赛正式开始。选手通过四个环节展示并由评委打分进行角逐。一是自我介绍，二是模拟讲解，三是抽奖问答，四是才艺展示。比赛可谓藏龙卧虎，各显身手。“500米口径球面射电望远镜，300个足球场大小，具有中国独立自主知识产权的FAST，是世界上目前口径最大，最具威力的单天线射电望远镜。”来自克度的选手在对其“FAST”天眼工程介绍时彰显地方特色；来自掌布的参赛选手，带着其布依人家的淳朴民风，用神秘的布依语言向台下领导观众展现出动听的布依山歌，获得台下观众阵阵掌声。也有来自平舟镇的选手用流利英语讲解展示平塘各类民族景点，穿插民俗故事，为迎接中外游客作准备，震撼了现场所有观众。 </p> 
+ <p align="center"> <img alt="" src="http://www.qnz.com.cn/upload/editor/2016-9-20/20169208583861i6b1f.jpg"> </p> 
+ <p align="center"> <img alt="" src="http://www.qnz.com.cn/upload/editor/2016-9-20/2016920858217064t9i2.jpg"> </p> 
+ <p> 　　最后，在经过一天的激烈角逐，来自平塘县掌布镇的卢德花获得本次比赛的第一名，平塘农商银行副行长周里林为其颁奖，并祝贺选手取得成功。来自平舟镇的曾楠楠、莫元珊获得本次比赛的第二名，来自平舟镇的杨秀黎明、者密镇的覃凯琳获得本次比赛的第三名。 </p> 
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; (编辑：保超燕&nbsp; 审核编辑：邹骐聪） </p> 
+</div>]]></value>
             </item>
         </clobs>
     </root>
