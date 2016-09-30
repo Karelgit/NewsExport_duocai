@@ -32,17 +32,17 @@ public class PostTest {
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
         List<String> datas=dataEntityService.crawlerDataEntityXml(10,taskId);
         String loginResponse = loginParam();
-        for(int i=0; i<datas.size(); i++)   {
+//        for(int i=0; i<datas.size(); i++)   {
             HandleXml handleXml= new HandleXml();
-            handleXml.writeXml(datas.get(i),"/newsTest.xml");
+//            handleXml.writeXml(datas.get(i),"/newsTest.xml");
             String s=   handleXml.readXml("newsTest.xml");
             testPostMethod(loginResponse);
-        }
+//        }
     }
 
 
 
-    //    @Test
+//        @Test
     public void testPostMethod(String loginResponse ) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();

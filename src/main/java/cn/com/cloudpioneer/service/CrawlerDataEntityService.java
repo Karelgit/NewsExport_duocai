@@ -4,23 +4,16 @@ import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
 import cn.com.cloudpioneer.entity.TaskEntity;
 import cn.com.cloudpioneer.util.HandleXml;
-import cn.com.cloudpioneer.utils.ResourceReader;
-import org.omg.IOP.TAG_ALTERNATE_IIOP_ADDRESS;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Tijun on 2016/9/21.
  */
 public class CrawlerDataEntityService
 {
-    private long dataPostion;
-
     CrawlerDataEntityDao dataEntityDao=new CrawlerDataEntityDao();
 
     private String entityToXml(CrawlerDataEntity entity,String xml){
