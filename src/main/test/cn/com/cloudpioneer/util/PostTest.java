@@ -38,7 +38,7 @@ public class PostTest {
             handleXml.writeXml(datas.get(i),"/newsTest.xml");
             String s=   handleXml.readXml("/newsTest.xml");
             System.out.println(s);
-            testPostMethod(new String(datas.get(i).getBytes("utf-8")),loginResponse);
+            testPostMethod(s,loginResponse);
         }
     }
 
