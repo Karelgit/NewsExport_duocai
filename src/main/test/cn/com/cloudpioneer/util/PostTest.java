@@ -30,14 +30,13 @@ public class PostTest {
 
 
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        List<String> datas=dataEntityService.crawlerDataEntityXml(30,taskId);
+        List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);
         String loginResponse = loginParam();
         System.out.println(datas.size());
         for(int i=0; i<datas.size(); i++)   {
             HandleXml handleXml= new HandleXml();
             handleXml.writeXml(datas.get(i),"/newsTest.xml");
             String s=   handleXml.readXml("/newsTest.xml");
-            System.out.println(s);
             testPostMethod(s,loginResponse);
         }
     }
@@ -55,13 +54,13 @@ public class PostTest {
         String seed = (String) jsonObject.getJSONObject("result").get("seed");
 
         String check_sum = getMD5_32bit(seed);
-      /*  String newsXML = new HandleXml().readXml("newsTest.xml");
-        System.out.println("newXML:" +"\n" + newsXML);*/
+        newsXML = new HandleXml().readXml("/newsTest.xml");
+        System.out.println("newXML:" +"\n" + newsXML);
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
-
+        System.out.println("news"+response);
         String projectPath = System.getProperty("user.dir");
         String xmlPath = projectPath+"/src/main/resources/response.log";
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
@@ -99,5 +98,23 @@ public class PostTest {
         }
         return null;
     }
+    @Test
+    public void   loginParam1()  {
+        String loginUrl = "http://work.gog.cn:9443/pub/auth/LoginAction!loginBegin.do";
+        Map<String,String> loginParams = new HashMap<>();
 
+        String userName = "testgengyun";
+        String password = "Tes@t123%A2jhc23";
+        loginParams.put("screenHight","1080");
+        loginParams.put("y","17");
+        loginParams.put("screenWidth","1920");
+        loginParams.put("x","68");
+        loginParams.put("vo.token","b8ab66");
+        loginParams.put("vo.userName",userName);
+        loginParams.put("vo.password",password);
+
+
+        String response = PostUtil.postMethod(loginUrl,loginParams);
+        System.out.println(response);
+    }
 }
