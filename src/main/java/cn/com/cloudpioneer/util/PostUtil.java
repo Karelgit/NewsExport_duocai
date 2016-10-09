@@ -14,8 +14,8 @@ public class PostUtil {
         HttpClient httpClient = new HttpClient();
         PostMethod postMethod = new PostMethod(url);
         String response = null;
-
-        postMethod.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+//和这里有关系？？？？
+        postMethod.setRequestHeader("Content-Type", "text/html;charset=utf-8");
         for (Map.Entry<String, String> entry : params.entrySet()) {
         	postMethod.addParameter(entry.getKey(), entry.getValue());
 

@@ -30,20 +30,22 @@ public class PostTest {
 
 
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        List<String> datas=dataEntityService.crawlerDataEntityXml(10,taskId);
+        List<String> datas=dataEntityService.crawlerDataEntityXml(30,taskId);
         String loginResponse = loginParam();
-//        for(int i=0; i<datas.size(); i++)   {
+        System.out.println(datas.size());
+        for(int i=0; i<datas.size(); i++)   {
             HandleXml handleXml= new HandleXml();
-//            handleXml.writeXml(datas.get(i),"/newsTest.xml");
-            String s=   handleXml.readXml("newsTest.xml");
-            testPostMethod(loginResponse);
-//        }
+            handleXml.writeXml(datas.get(i),"/newsTest.xml");
+            String s=   handleXml.readXml("/newsTest.xml");
+            System.out.println(s);
+            testPostMethod(new String(datas.get(i).getBytes("utf-8")),loginResponse);
+        }
     }
 
 
 
-//        @Test
-    public void testPostMethod(String loginResponse ) throws Exception {
+    //    @Test
+    public void testPostMethod(String newsXML,String loginResponse ) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
       //  String loginResponse = loginParam();
@@ -53,8 +55,8 @@ public class PostTest {
         String seed = (String) jsonObject.getJSONObject("result").get("seed");
 
         String check_sum = getMD5_32bit(seed);
-        String newsXML = new HandleXml().readXml("newsTest.xml");
-        System.out.println("newXML:" +"\n" + newsXML);
+      /*  String newsXML = new HandleXml().readXml("newsTest.xml");
+        System.out.println("newXML:" +"\n" + newsXML);*/
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
@@ -79,7 +81,7 @@ public class PostTest {
     }
 
     public String getMD5_32bit(String seed)  throws Exception{
-        String newsXML = new HandleXml().readXml("newsTest.xml");
+        String newsXML = new HandleXml().readXml("/newsTest.xml");
         String str = newsXML+seed;
         return MD5(str);
     }

@@ -10,7 +10,7 @@ import java.io.*;
  **/
 public class HandleXml {
     public String readXml(String fileName) {
-        InputStream in = ClassLoader.getSystemResourceAsStream(fileName);
+        InputStream in = this.getClass().getResourceAsStream(fileName);
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         StringBuffer stringBuffer = new StringBuffer();
         String str;

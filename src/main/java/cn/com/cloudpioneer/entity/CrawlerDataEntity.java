@@ -34,6 +34,24 @@ public class CrawlerDataEntity
     private int  count;
     private int tag;
     private int fetched;
+    private String sourceName;
+    private String author;
+
+    public String getSourceName() {
+        return sourceName;
+    }
+
+    public void setSourceName(String sourceName) {
+        this.sourceName = sourceName;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
     public int getSeqeueID()
     {

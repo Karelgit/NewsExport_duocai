@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.util;
 
 import com.alibaba.fastjson.JSONObject;
@@ -26,18 +27,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+*/
 /**
  * Created by tijun on 2016/7/29.
  * @author tijun
- */
+ *//*
+
 public class HttpUtil
 {
-    /**
+    */
+/**
      * 得到Url返回的所有header信息
      * @param requestBase 参数为HttpGet/HttpPost
      * @return
      * @throws IOException
-     */
+     *//*
+
         public static Header[] getHeadersByHttpRequest(HttpRequestBase requestBase) throws IOException
         {
 
@@ -65,21 +70,25 @@ public class HttpUtil
             if (header.getName().equals("Set-Cookie")){
                 String value=header.getValue();
                 cookie+=value;
-                /*if (value.contains("JSESSIONID")){
+                */
+/*if (value.contains("JSESSIONID")){
                     return value;
-                }*/
+                }*//*
+
 
             }
         }
         return cookie;
     }
 
-    /**
+    */
+/**
      * 给post请求拼装请求参数
      * @param url
      * @param params
      * @return HttpPost
-     */
+     *//*
+
     public static HttpPost postForm(String url, Map<String, String> params){
 
         HttpPost httpost = new HttpPost(url);
@@ -101,12 +110,14 @@ public class HttpUtil
 
     }
 
-    /**
+    */
+/**
      *
      * @param params
      * @param url
      * @return HttpPost
-     */
+     *//*
+
     public  static HttpPost postByJSON(String url, Map<String,String> params) throws UnsupportedEncodingException {
         HttpPost post=new HttpPost(url);
         String param=JSONObject.toJSONString(params);
@@ -129,11 +140,13 @@ public class HttpUtil
 
     }
 
-    /**
+    */
+/**
      * httpGet
      * @param url
      * @return
-     */
+     *//*
+
     public  static HttpGet getMethd(String url){
         HttpGet getMethod=new HttpGet(url);
         return getMethod;
@@ -205,3 +218,4 @@ public class HttpUtil
 
 
 }
+*/

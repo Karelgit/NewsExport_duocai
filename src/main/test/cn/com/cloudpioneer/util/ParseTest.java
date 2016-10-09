@@ -1,3 +1,4 @@
+/*
 package cn.com.cloudpioneer.util;
 
 import org.htmlcleaner.*;
@@ -18,12 +19,14 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.io.IOException;
 
+*/
 /**
  * <类详细说明:Xpath解析测试类>
  *
  * @Author： Huanghai
  * @Version: 2016-09-26
- **/
+ **//*
+
 public class ParseTest {
     private static final Logger LOG = LoggerFactory.getLogger(ParseTest.class);
 
@@ -47,14 +50,16 @@ public class ParseTest {
         Object result;
         result = xPath.evaluate(exp, dom, XPathConstants.NODESET);
         System.out.println("result: " + result);
-        /*if (result instanceof NodeList) {
+        */
+/*if (result instanceof NodeList) {
             NodeList nodeList = (NodeList) result;
             System.out.println(nodeList.getLength());
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
                 System.out.println(node.getNodeValue() == null ? node.getTextContent() : node.getNodeValue());
             }
-        }*/
+        }*//*
+
     }
 
     @Test
@@ -64,3 +69,4 @@ public class ParseTest {
     }
 }
 
+*/
