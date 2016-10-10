@@ -1,37 +1,47 @@
-package cn.com.cloudpioneer.util;
+package cn.com.cloudpioneer.service;
 
-import cn.com.cloudpioneer.service.CrawlerDataEntityService;
-import cn.com.cloudpioneer.service.NewsPusher;
+import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
+import cn.com.cloudpioneer.entity.TaskEntity;
+import cn.com.cloudpioneer.util.HandleXml;
+import cn.com.cloudpioneer.util.PostUtil;
 import com.alibaba.fastjson.JSONObject;
-import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
-import sun.misc.BASE64Encoder;
 
-import java.security.MessageDigest;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * <类详细说明:Post方法测试类>
- *
- * @Author： Huanghai
- * @Version: 2016-09-21
- **/
-public class PostTest {
+ * Created by Administrator on 2016/10/9.
+ */
+public class NewsPusher {
+
     /**
      * 多彩贵州北方网系统推送接口
      * @throws Exception
      */
     String taskId="acbrocdldrtfkauj9ertt29d67";
 
-    @Test
+
     public void pushNews()  throws Exception{
 
-
+        CrawlerDataEntityDao dao=new CrawlerDataEntityDao();
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);
+        TaskEntity entity=dao.findTaskEntity(taskId);
+       int number=dao.count()-entity.getPosition();
+        List<String> datas=null;
+        System.out.println("number---"+number);
+        if (number>0){
+            datas=dataEntityService.crawlerDataEntityXml(number,taskId);
+        }else {
+            System.out.println("所有数据推送完毕！");
+            System.out.println(new SimpleDateFormat().format(new Date()));
+            return;
+        }
+
+
         String loginResponse = loginParam();
         System.out.println(datas.size());
         for(int i=0; i<datas.size(); i++)   {
@@ -45,10 +55,10 @@ public class PostTest {
 
 
     //    @Test
-    public void testPostMethod(String newsXML,String loginResponse ) throws Exception {
+    private void testPostMethod(String newsXML,String loginResponse ) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
-      //  String loginResponse = loginParam();
+        //  String loginResponse = loginParam();
 
         JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
         String api_token = (String) jsonObject.getJSONObject("result").get("token");
@@ -67,7 +77,7 @@ public class PostTest {
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
-    public String  loginParam()  {
+    private String  loginParam()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
 
@@ -80,13 +90,13 @@ public class PostTest {
         return response;
     }
 
-    public String getMD5_32bit(String seed)  throws Exception{
+    private String getMD5_32bit(String seed)  throws Exception{
         String newsXML = new HandleXml().readXml("/newsTest.xml");
         String str = newsXML+seed;
         return MD5(str);
     }
 
-    public String MD5(String md5) {
+    private String MD5(String md5) {
         try {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
             byte[] array = md.digest(md5.getBytes());
@@ -99,29 +109,5 @@ public class PostTest {
         }
         return null;
     }
-    @Test
-    public void   loginParam1()  {
-        String loginUrl = "http://work.gog.cn:9443/pub/auth/LoginAction!loginBegin.do";
-        Map<String,String> loginParams = new HashMap<>();
 
-        String userName = "testgengyun";
-        String password = "Tes@t123%A2jhc23";
-        loginParams.put("screenHight","1080");
-        loginParams.put("y","17");
-        loginParams.put("screenWidth","1920");
-        loginParams.put("x","68");
-        loginParams.put("vo.token","b8ab66");
-        loginParams.put("vo.userName",userName);
-        loginParams.put("vo.password",password);
-
-
-        String response = PostUtil.postMethod(loginUrl,loginParams);
-        System.out.println(response);
-    }
-
-    @Test
-    public void teste() throws Exception {
-        NewsPusher pusher=new NewsPusher();
-        pusher.pushNews();
-    }
 }

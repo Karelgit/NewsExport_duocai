@@ -23,4 +23,7 @@ public interface CrawlerDataEntityMapper
 
     @Update("UPDATE task set position=#{position} WHERE id=#{id}")
     void updateTaskEntity(TaskEntity entity);
+
+    @Select("SELECT COUNT(*) FROM crawlerdata_zktest")
+    int count();
 }

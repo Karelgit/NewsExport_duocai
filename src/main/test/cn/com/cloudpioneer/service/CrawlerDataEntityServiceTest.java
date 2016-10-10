@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
 public class CrawlerDataEntityServiceTest {
     CrawlerDataEntityService crawlerDataEntityService = new CrawlerDataEntityService();
 
+
+
     @Test
     public void testRegex() {
         String domain = "http://www.qnz.com.cn";

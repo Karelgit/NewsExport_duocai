@@ -49,7 +49,7 @@ public class CrawlerDataEntityService
     {
         TaskEntity taskEntity=dataEntityDao.findTaskEntity(taskId);
       int startPostion=taskEntity.getPosition();/*this.getPosition();*/
-       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size,taskId);
+       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion+1, size,taskId);
 
         String xml= new HandleXml().readXml("/news.xml");
         List<String> datas=new ArrayList<>();
