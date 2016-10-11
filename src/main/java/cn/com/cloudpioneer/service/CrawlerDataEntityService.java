@@ -18,15 +18,11 @@ import java.util.regex.Pattern;
  */
 public class CrawlerDataEntityService
 {
-    private long dataPostion;
 
     CrawlerDataEntityDao dataEntityDao=new CrawlerDataEntityDao();
 
     private String entityToXml(CrawlerDataEntity entity,String xml){
-        String domianPrefix = "http://www.qnz.com.cn";
-        //为content里面的img标签变成绝对路径
-        String content_imgabsolute = entity.getText().replace("src=\"","src=\""+domianPrefix);
-        xml=xml.replace("$content",content_imgabsolute);
+        xml=xml.replace("$content",entity.getText());
         xml=xml.replace("$title",entity.getTitle());
 
         if (entity.getAuthor()!=null){
@@ -48,7 +44,7 @@ public class CrawlerDataEntityService
     public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
     {
         TaskEntity taskEntity=dataEntityDao.findTaskEntity(taskId);
-      int startPostion=taskEntity.getPosition();/*this.getPosition();*/
+      int startPostion=taskEntity.getPosition();
        List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion+1, size,taskId);
 
         String xml= new HandleXml().readXml("/news.xml");
