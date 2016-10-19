@@ -33,13 +33,10 @@ public class PostTest {
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
         List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);
         String loginResponse = loginParam();
-        System.out.println(datas.size());
-        for(int i=0; i<datas.size(); i++)   {
+
             HandleXml handleXml= new HandleXml();
-            handleXml.writeXml(datas.get(i),"/newsTest.xml");
-            String s=   handleXml.readXml("/newsTest.xml");
-            testPostMethod(s,loginResponse);
-        }
+            testPostMethod(null,loginResponse);
+
     }
 
 
@@ -66,6 +63,7 @@ public class PostTest {
         String xmlPath = projectPath+"/src/main/resources/response.log";
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
+
 
     public String  loginParam()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";

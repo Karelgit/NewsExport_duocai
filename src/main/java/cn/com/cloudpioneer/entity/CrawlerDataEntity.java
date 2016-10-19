@@ -36,6 +36,15 @@ public class CrawlerDataEntity
     private int fetched;
     private String sourceName;
     private String author;
+    private String jsonData;
+
+    public String getJsonData() {
+        return jsonData;
+    }
+
+    public void setJsonData(String jsonData) {
+        this.jsonData = jsonData;
+    }
 
     public String getSourceName() {
         return sourceName;

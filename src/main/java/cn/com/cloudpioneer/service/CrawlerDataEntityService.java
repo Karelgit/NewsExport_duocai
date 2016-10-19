@@ -4,6 +4,8 @@ import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
 import cn.com.cloudpioneer.entity.TaskEntity;
 import cn.com.cloudpioneer.util.HandleXml;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 
 
 import java.io.*;
@@ -50,6 +52,18 @@ public class CrawlerDataEntityService
         String xml= new HandleXml().readXml("/news.xml");
         List<String> datas=new ArrayList<>();
         for (CrawlerDataEntity entity:crawlerDataEntities){
+            if (entity.getJsonData()!=null){
+                JSONObject map=JSON.parseObject(entity.getJsonData());
+                entity.setTitle(map.getString("title"));
+                entity.setSourceName(map.getString("sourceName"));
+                Pattern pattern=Pattern.compile("<!--\\w+.*-->");
+                Matcher matcher=pattern.matcher(map.getString("content"));
+                while (matcher.find()){
+
+                }
+                entity.setText("");
+            }
+
             if(entity.getText() != null)    {
                 datas.add(this.entityToXml(entity, xml));
             }
@@ -58,6 +72,7 @@ public class CrawlerDataEntityService
         dataEntityDao.updateTaskEntity(taskEntity);
         return datas;
     }
+
 
 
 }
