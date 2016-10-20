@@ -1,6 +1,7 @@
 package cn.com.cloudpioneer.util;
 
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
+import cn.com.cloudpioneer.service.NewsPusher;
 import com.alibaba.fastjson.JSONObject;
 import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
@@ -27,53 +28,51 @@ public class PostTest {
 
     @Test
     public void pushNews()  throws Exception{
+
+
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        List<String> datas=dataEntityService.crawlerDataEntityXml(30,taskId);
-        String loginResponse = "";
-        loginResponse = loginParam();
-        System.out.println(datas.size());
-//        for(int i=0; i<datas.size(); i++)   {
-            /*HandleXml handleXml= new HandleXml();
-            handleXml.writeXml(datas.get(0),"/newsTest.xml");
-            String s=   handleXml.readXml("/newsTest.xml");
-            System.out.println(s);*/
-            testPostMethod(/*s,*/loginResponse);
-//        }
+        List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);
+        String loginResponse = loginParam();
+
+            HandleXml handleXml= new HandleXml();
+            testPostMethod(XmlFormatter.format(handleXml.readXml("/newsTest.xml")),loginResponse);
+
     }
 
-        @Test
-    public void testPostMethod(/*String newsXML,*/String loginResponse) throws Exception {
+
+
+    //    @Test
+    public void testPostMethod(String newsXML,String loginResponse ) throws Exception {
         String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
         Map<String,String> params = new HashMap<>();
-//        String loginResponse = loginParam();
+      //  String loginResponse = loginParam();
 
         JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
         String api_token = (String) jsonObject.getJSONObject("result").get("token");
-//        String api_token = "000001000001050000014748503594953f9fced5c736cd82750c55274fc4c06d";
         String seed = (String) jsonObject.getJSONObject("result").get("seed");
 
-        String check_sum = getMD5_32bit(seed);
-        String newsXML = new HandleXml().readXml("/newsTest.xml");
+        String check_sum = getMD5_32bit(seed,newsXML);
+       // newsXML = new HandleXml().readXml("/newsTest.xml");
         System.out.println("newXML:" +"\n" + newsXML);
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
-        System.out.println("push response: " + response);
-
+        System.out.println("news"+response);
         String projectPath = System.getProperty("user.dir");
         String xmlPath = projectPath+"/src/main/resources/response.log";
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
-    public String loginParam()  {
+
+    public String  loginParam()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
 
-        /*String userName = "testgengyun";
+       /* String userName = "testgengyun";
         String password = "Tes@t123%A2jhc23";*/
         String userName = "test_hl";
-        String password = "123123123";
+        String password = "123123123;";
         loginParams.put("userName",userName);
         loginParams.put("password",password);
 
@@ -81,10 +80,9 @@ public class PostTest {
         return response;
     }
 
-    public String getMD5_32bit(String seed)  throws Exception{
-        String newsXML = new HandleXml().readXml("/newsTest.xml");
-        String str = newsXML+seed;
-        System.out.println("newsXML+seed: " + str);
+    public String getMD5_32bit(String seed,String xml)  throws Exception{
+       // String newsXML = new HandleXml().readXml("/newsTest.xml");
+        String str = xml+seed;
         return MD5(str);
     }
 
@@ -101,5 +99,33 @@ public class PostTest {
         }
         return null;
     }
+    @Test
+    public void   loginParam1()  {
+        String loginUrl = "http://work.gog.cn:9443/pub/auth/LoginAction!loginBegin.do";
+        Map<String,String> loginParams = new HashMap<>();
 
+        String userName = "testgengyun";
+        String password = "Tes@t123%A2jhc23";
+        loginParams.put("screenHight","1080");
+        loginParams.put("y","17");
+        loginParams.put("screenWidth","1920");
+        loginParams.put("x","68");
+        loginParams.put("vo.token","b8ab66");
+        loginParams.put("vo.userName",userName);
+        loginParams.put("vo.password",password);
+
+
+        String response = PostUtil.postMethod(loginUrl,loginParams);
+        System.out.println(response);
+    }
+
+    @Test
+    public void teste() throws Exception {
+        NewsPusher pusher=new NewsPusher();
+        pusher.pushNews();
+    }
+    @Test
+    public void testNewsExport(){
+        System.out.println(NewsPushUtil.readResourceAsXml("/news.xml"));
+    }
 }

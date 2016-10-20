@@ -4,6 +4,8 @@ import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
 import cn.com.cloudpioneer.entity.TaskEntity;
 import cn.com.cloudpioneer.util.HandleXml;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 
 
 import java.io.*;
@@ -18,15 +20,11 @@ import java.util.regex.Pattern;
  */
 public class CrawlerDataEntityService
 {
-    private long dataPostion;
 
     CrawlerDataEntityDao dataEntityDao=new CrawlerDataEntityDao();
 
     private String entityToXml(CrawlerDataEntity entity,String xml){
-        String domianPrefix = "http://www.qnz.com.cn";
-        //为content里面的img标签变成绝对路径
-        String content_imgabsolute = entity.getText().replace("src=\"","src=\""+domianPrefix);
-        xml=xml.replace("$content",content_imgabsolute);
+        xml=xml.replace("$content",entity.getText());
         xml=xml.replace("$title",entity.getTitle());
 
         if (entity.getAuthor()!=null){
@@ -48,12 +46,24 @@ public class CrawlerDataEntityService
     public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
     {
         TaskEntity taskEntity=dataEntityDao.findTaskEntity(taskId);
-      int startPostion=taskEntity.getPosition();/*this.getPosition();*/
-       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size,taskId);
+      int startPostion=taskEntity.getPosition();
+       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion+1, size,taskId);
 
         String xml= new HandleXml().readXml("/news.xml");
         List<String> datas=new ArrayList<>();
         for (CrawlerDataEntity entity:crawlerDataEntities){
+            if (entity.getJsonData()!=null){
+                JSONObject map=JSON.parseObject(entity.getJsonData());
+                entity.setTitle(map.getString("title"));
+                entity.setSourceName(map.getString("sourceName"));
+                Pattern pattern=Pattern.compile("<!--\\w+.*-->");
+                Matcher matcher=pattern.matcher(map.getString("content"));
+                while (matcher.find()){
+
+                }
+                entity.setText(map.getString("content"));
+            }
+
             if(entity.getText() != null)    {
                 datas.add(this.entityToXml(entity, xml));
             }
@@ -62,6 +72,7 @@ public class CrawlerDataEntityService
         dataEntityDao.updateTaskEntity(taskEntity);
         return datas;
     }
+
 
 
 }

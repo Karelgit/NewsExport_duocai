@@ -50,4 +50,12 @@ public class CrawlerDataEntityDao
         sqlSession.commit();
     }
 
+    public int count(){
+        SqlSession sqlSession= sqlSessionFactory.openSession();
+        CrawlerDataEntityMapper crawlerDataEntityMapper=sqlSession.getMapper(CrawlerDataEntityMapper.class);
+        int count=crawlerDataEntityMapper.count();
+        sqlSession.close();
+        return count;
+    }
+
 }

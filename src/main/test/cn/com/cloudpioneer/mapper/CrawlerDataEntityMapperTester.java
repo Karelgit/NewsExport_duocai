@@ -1,5 +1,6 @@
 package cn.com.cloudpioneer.mapper;
 
+import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import org.junit.Test;
 
@@ -19,5 +20,11 @@ public class CrawlerDataEntityMapperTester
         for (String s:datas){
             System.out.println(s);
         }
+    }
+
+    @Test
+    public void testCount(){
+        CrawlerDataEntityDao dao=new CrawlerDataEntityDao();
+        System.out.println(dao.count());
     }
 }

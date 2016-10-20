@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
 public class CrawlerDataEntityServiceTest {
     CrawlerDataEntityService crawlerDataEntityService = new CrawlerDataEntityService();
 
+
+
     @Test
     public void testRegex() {
         String domain = "http://www.qnz.com.cn";
@@ -43,5 +45,29 @@ public class CrawlerDataEntityServiceTest {
 
         /*String str1 = "<img alt=\"\" src=\"/upload/editor/2016-9-26/2016926141536460e9545.jpg\">";
         System.out.println(str1.matches("^(<img).*(>)$"));*/
+    }
+
+    @Test
+    public void testRemoveAdd(){
+        String hstml="<div class=\"BSHARE_POP blkContainerSblkCon clearfix blkContainerSblkCon_14\" id=\"artibody\"> \n" +
+                " <div class=\"img_wrapper\"> \n" +
+                "  <img alt=\"易建联会留在湖人吗\" src=\"http://k.sinaimg.cn/n/sports/transform/20161013/FmRI-fxwrtna8355296.jpg/w570fac.jpg\"> \n" +
+                "  <span class=\"img_descr\">易建联会留在湖人吗</span> \n" +
+                "  <br> \n" +
+                " </div> \n" +
+                "\n" +
+                " <div id=\"ad_51777\" class=\"otherContent_01\" style=\"display: block; margin: 10px 20px 10px 0px; float: left; overflow: hidden; clear: both; padding: 4px; width: 300px; height: 250px;\"> \n" +
+                "  <ins class=\"sinaads sinaads-done\" id=\"Sinads49447\" data-ad-pdps=\"PDPS000000044110\" data-ad-status=\"done\" style=\"display: block; overflow: hidden; text-decoration: none;\"><ins style=\"text-decoration:none;margin:0px auto;width:300px;display:block;position:relative;overflow:hidden;\"><iframe width=\"300px\" height=\"250px\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" src=\"http://x.jd.com/exsites?spread_type=2&amp;ad_ids=1884:5&amp;location_info=0&amp;callback=getjjsku_callback\" name=\"clickTAG=http%3A%2F%2Fsax.sina.com.cn%2Fmfp%2Fclick%3Ftype%3D3%26t%3DMjAxNi0xMC0xMyAxNjozNToyMwkxMTEuMTIxLjY3LjgwCTExMS4xMjEuNjcuODBfMTQ3NjM0NzY5NC43MTcyNjYJaHR0cDovL3Nwb3J0cy5zaW5hLmNvbS5jbi9iYXNrZXRiYWxsL25iYS8yMDE2LTEwLTEzL2RvYy1pZnh3dnBhcjc4OTQ4OTAuc2h0bWwJUERQUzAwMDAwMDA0NDExMAk2ODEzYmM1OC1hMDU4LTRkMDItYWQ2Mi1kZTI1NzUwYTQ2MGEJQURBQUZFQ0U0OUQ0CUFEQUFGRUNFNDlENAlhdXRvX2xldmVsOjE4MDEwMHx1c2VyX2dyb3VwOjkwMiw5MDUsOTAzfHVzZXJfdGFnOjIwNzM3fHBvczpQRFBTMDAwMDAwMDQ0MTEwfHdhcF9vczo3MDB8dXNlcl9hZ2U6NjAyLDYwM3x2X3pvbmU6MzA4MDAwLDMwODAwMXx1c2VyX2dlbmRlcjo1MDF8X3Zfem9uZTozMDgwMDAsMzA4MDAxfGF1dG9fcHJpY2U6MTgwMjAwfG1vYmlsZV9icmFuZDoxMjA5fG1vYmlsZV9icm93c2VyOjgxMXx2ZXJzaW9uOmdsX3JwMV8xCQkzMDgwMDB8MzA4MDAxCUNEMENDRkFEM0Q4NglMWTE1MTIwOTY1CVBEUFMwMDAwMDAwNDQxMTAJQ0QwQ0NGQUQzRDg2X3BvcnRhbAlBRQktCTYJLQktCS0JLQktCS0JLQktCTIJMTQJc3RyYXRlZ3lfdWFjaGwJMAk2CW9zOndpbmRvd3M4fGJyb3dzZXI6cGhhbnRvbWpzfGlncnBfY3RyOjguNTAwMjE5NDMwMDI5MzY5RS00fHBsYXRmb3JtOm90aGVyfGRldmljZTpvdGhlcg%253D%253D&amp;viewTAG=http%3A%2F%2Fsax.sina.com.cn%2Fmfp%2Fview%3Ftype%3D3%26t%3DMjAxNi0xMC0xMyAxNjozNToyMwkxMTEuMTIxLjY3LjgwCTExMS4xMjEuNjcuODBfMTQ3NjM0NzY5NC43MTcyNjYJaHR0cDovL3Nwb3J0cy5zaW5hLmNvbS5jbi9iYXNrZXRiYWxsL25iYS8yMDE2LTEwLTEzL2RvYy1pZnh3dnBhcjc4OTQ4OTAuc2h0bWwJUERQUzAwMDAwMDA0NDExMAk2ODEzYmM1OC1hMDU4LTRkMDItYWQ2Mi1kZTI1NzUwYTQ2MGEJQURBQUZFQ0U0OUQ0CUFEQUFGRUNFNDlENAlhdXRvX2xldmVsOjE4MDEwMHx1c2VyX2dyb3VwOjkwMiw5MDUsOTAzfHVzZXJfdGFnOjIwNzM3fHBvczpQRFBTMDAwMDAwMDQ0MTEwfHdhcF9vczo3MDB8dXNlcl9hZ2U6NjAyLDYwM3x2X3pvbmU6MzA4MDAwLDMwODAwMXx1c2VyX2dlbmRlcjo1MDF8X3Zfem9uZTozMDgwMDAsMzA4MDAxfGF1dG9fcHJpY2U6MTgwMjAwfG1vYmlsZV9icmFuZDoxMjA5fG1vYmlsZV9icm93c2VyOjgxMXx2ZXJzaW9uOmdsX3JwMV8xCQkzMDgwMDB8MzA4MDAxCUNEMENDRkFEM0Q4NglMWTE1MTIwOTY1CVBEUFMwMDAwMDAwNDQxMTAJQ0QwQ0NGQUQzRDg2X3BvcnRhbAlBRQktCTYJLQktCS0JLQktCS0JLQktCTIJMTQJc3RyYXRlZ3lfdWFjaGwJMAk2CW9zOndpbmRvd3M4fGJyb3dzZXI6cGhhbnRvbWpzfGlncnBfY3RyOjguNTAwMjE5NDMwMDI5MzY5RS00fHBsYXRmb3JtOm90aGVyfGRldmljZTpvdGhlcg%253D%253D%26userid%3D111.121.67.80_1476347694.717266%26viewlog%3Dfalse%26hashCode%3D31ad7f5fbed2a5dde3f1f7fac06c2833\"></iframe></ins></ins> \n" +
+                " </div> \n" +
+                " <p>　　新浪体育讯　　北京时间10月13日，据《湖人国度》报道，洛杉矶湖人队今天完成了新赛季开始前的第一次裁人，扎克-奥古斯特、特拉维斯-威尔以及朱利安-雅各布斯这三名球员被裁，目前湖人队的阵容里还剩下17名球员。</p> \n" +
+                " <p>　　湖人队今天裁掉这三名球员并不让人感到惊讶。特拉维斯-威尔和朱利安-雅各布斯在季前赛中的出场时间非常有限，而且表现并不突出。</p> \n" +
+                " <p>　　扎克-奥古斯特代表湖人队参加了夏季联赛，但是他在季前赛中没有获得任何出场时间。</p> \n" +
+                " <p>　　和特拉维斯-威尔与朱利安-雅各布斯的非保障合同不同，奥古斯特的合同是小部分受保障，这使得很多人相信奥古斯特最终可能会加盟湖人队的下属发展联盟球队。</p> \n" +
+                " <p>　　随着以上这3名球员被裁，湖人队目前的阵容里还剩下17名球员，也就是说，湖人队在常规赛揭幕战开始之前还得裁掉2名球员。</p> \n" +
+                " <p>　　这17名球员里面有14名球员拥有保障合同，剩下的3名球员分别是：易建联（受保障的合同仅为25万美元）、慈世平（无保障合同）和托马斯-罗宾逊（无保障合同）。这就意味着阿联将和慈世平以及罗宾逊争夺湖人队的最后一个常规赛席位。</p> \n" +
+                " <p>　　（罗森）</p> \n" +
+                " <div style=\"font-size: 0px; height: 0px; clear: both;\"></div> \n" +
+                " <!-- {独家提供}--> \n" ;
+
     }
 }
