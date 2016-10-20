@@ -61,7 +61,7 @@ public class CrawlerDataEntityService
                 while (matcher.find()){
 
                 }
-                entity.setText("");
+                entity.setText(map.getString("content"));
             }
 
             if(entity.getText() != null)    {

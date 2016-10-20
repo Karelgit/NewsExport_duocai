@@ -1,20 +1,18 @@
-package cn.com.cloudpioneer.service;
+package cn.com.cloudpioneer.pusher;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.entity.TaskEntity;
+import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import cn.com.cloudpioneer.util.HandleXml;
 import cn.com.cloudpioneer.util.PostUtil;
 import com.alibaba.fastjson.JSONObject;
-import org.junit.Test;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
- * Created by Administrator on 2016/10/9.
+ * Created by Tijun on 2016/10/9.
+ * @author TijunWang
  */
 public class NewsPusher {
 
@@ -24,6 +22,7 @@ public class NewsPusher {
      */
     String taskId="acbrocdldrtfkauj9ertt29d67";
 
+    private String loginUrl="";
 
     public void pushNews()  throws Exception{
 
@@ -42,7 +41,7 @@ public class NewsPusher {
         }
 
 
-        String loginResponse = loginParam();
+        String loginResponse = login();
         System.out.println(datas.size());
         for(int i=0; i<datas.size(); i++)   {
             HandleXml handleXml= new HandleXml();
@@ -77,24 +76,29 @@ public class NewsPusher {
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
-    private String  loginParam()  {
+    private String  login()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
-
         String userName = "testgengyun";
         String password = "Tes@t123%A2jhc23";
         loginParams.put("userName",userName);
         loginParams.put("password",password);
-
         String response = PostUtil.postMethod(loginUrl,loginParams);
         return response;
     }
 
+    /**
+     *
+     * @param seed
+     * @param xml
+     * @return
+     * @throws Exception
+     */
     private String getMD5_32bit(String seed,String xml)  throws Exception{
-
         String str = xml+seed;
         return MD5(str);
     }
+
 
     private String MD5(String md5) {
         try {

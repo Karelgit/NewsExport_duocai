@@ -15,7 +15,7 @@ import java.io.StringWriter;
  */
 public class XmlFormatter {
 
-    public String format(String str)
+    public static String format(String str)
     {
 
         StringWriter out = new StringWriter();

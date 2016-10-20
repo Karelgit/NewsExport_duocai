@@ -35,7 +35,7 @@ public class PostTest {
         String loginResponse = loginParam();
 
             HandleXml handleXml= new HandleXml();
-            testPostMethod(null,loginResponse);
+            testPostMethod(XmlFormatter.format(handleXml.readXml("/newsTest.xml")),loginResponse);
 
     }
 
@@ -51,8 +51,8 @@ public class PostTest {
         String api_token = (String) jsonObject.getJSONObject("result").get("token");
         String seed = (String) jsonObject.getJSONObject("result").get("seed");
 
-        String check_sum = getMD5_32bit(seed);
-        newsXML = new HandleXml().readXml("/newsTest.xml");
+        String check_sum = getMD5_32bit(seed,newsXML);
+       // newsXML = new HandleXml().readXml("/newsTest.xml");
         System.out.println("newXML:" +"\n" + newsXML);
         params.put("news",newsXML);
         params.put("api_token",api_token);
@@ -69,8 +69,10 @@ public class PostTest {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
 
-        String userName = "testgengyun";
-        String password = "Tes@t123%A2jhc23";
+       /* String userName = "testgengyun";
+        String password = "Tes@t123%A2jhc23";*/
+        String userName = "test_hl";
+        String password = "123123123;";
         loginParams.put("userName",userName);
         loginParams.put("password",password);
 
@@ -78,9 +80,9 @@ public class PostTest {
         return response;
     }
 
-    public String getMD5_32bit(String seed)  throws Exception{
-        String newsXML = new HandleXml().readXml("/newsTest.xml");
-        String str = newsXML+seed;
+    public String getMD5_32bit(String seed,String xml)  throws Exception{
+       // String newsXML = new HandleXml().readXml("/newsTest.xml");
+        String str = xml+seed;
         return MD5(str);
     }
 
@@ -121,5 +123,9 @@ public class PostTest {
     public void teste() throws Exception {
         NewsPusher pusher=new NewsPusher();
         pusher.pushNews();
+    }
+    @Test
+    public void testNewsExport(){
+        System.out.println(NewsPushUtil.readResourceAsXml("/news.xml"));
     }
 }
