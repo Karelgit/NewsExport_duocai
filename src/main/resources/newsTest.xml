@@ -2,22 +2,23 @@
 <root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
     <root class="cn.com.enorth.cms.service.news.News">
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
-            <title class="java.lang.String"><![CDATA[黔南州制定五个地方标准 助推生态畜牧业发展 ]]></title>
-            <sourceName class="java.lang.String"><![CDATA[黔南热线-黔南日报]]></sourceName>
-            <channelId class="java.lang.Long">1000000000000000</channelId>
-            <keywords4 class="java.lang.String"><![CDATA[龙开元]]></keywords4>
-            <initEditor class="java.lang.Integer">100000081</initEditor>
-            <templateId class="java.lang.Integer">100000340</templateId>
+            <title class="java.lang.String"><![CDATA[2016舟马招募18名官方配速兔 活动分两阶段进行 ]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新浪跑步 ]]></sourceName>
+            <channelId class="java.lang.Long">28000000000000000</channelId>
+            <initEditor class="java.lang.Integer">100000105</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
         </tnNewsVo>
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>
                 <key class="java.lang.String"><![CDATA[content]]></key>
-                <value class="java.lang.String"><![CDATA[<div id="content_main"> 
- <p> 　　近日，黔南州质量技术监督局组织有关专家在都匀市召开了《黔南州重大动物疫情应急处置规程》和《荔波瑶山鸡》等五个地方标准的专家审定会，与会专家对标准的起草工作给予充分的肯定，提出了修改意见或建议，同意通过标准的审定。经修改审定的五个系列标准已于2016年9月1日由黔南州质量技术监督局发布，分别于9月15日和12月1日起实施。 </p> 
- <p> 　　据了解，今年初，州动物疫病预防控制中心和黔南州质量技术监督检测所将《黔南州重大动物疫情应急处置规程》和《荔波瑶山鸡》地方标准体系列入2016年州级标准制定计划并成立起草工作小组。通过对历年数据的收集、分析，起草了《黔南州重大动物疫情应急处置规程》和《荔波瑶山鸡》、《荔波瑶山鸡综合标准体系》、《荔波瑶山鸡饲养管理技术规程》、《荔波瑶山鸡疫病预防与控制规程》五个地方标准。 </p> 
- <p> 　　《黔南州重大动物疫情应急处置规程》的出台，让州县乡各级动物防疫相关单位有详实、具体、实用的操作守则，提高了疫情处置措施的可操作性，规范了疫情处置中的各个关键环节，保证了疫情处置的质量和效果。《荔波瑶山鸡》系列标准体系的出台，既推进了荔波瑶山鸡的标准化生产管理工作，又对瑶山鸡种质资源保护起到有力的推动作用。五个标准的制定，为推动我州畜牧业“无公害农产品、绿色食品、有机农产品和农产品地理标志”（三品一标）工作，为保证畜产品质量安全，保障我州生态畜牧业的发展，夯实了基础。（作者：董保豫&nbsp; 龚才伟 龙毓虎） </p> 
- <p> &nbsp;&nbsp;&nbsp;&nbsp; （编辑：保超燕&nbsp; 审核编辑：邹骐聪） </p> 
-</div>]]></value>
+                <value class="java.lang.String"><![CDATA[<!-- 正文内容 begin -->
+                    <div class="BSHARE_POP blkContainerSblkCon clearfix blkContainerSblkCon_14 xh-highlight" id="artibody">
+                        <div class="img_wrapper"><img alt="舟山马拉松" src="http://k.sinaimg.cn/n/sports/transform/20161018/e7Fc-fxwvxzf6899969.jpg/w5709d6.jpg"><span class="img_descr">舟山马拉松</span><br></div>
+<p class="">　　记者从赛事组委会处了解到，2016舟山群岛马拉松即日起招募7个组别、18名官方领跑兔。</p>
+<p>　　据悉，7个领跑兔组别完赛时间分别1小时30分、1小时45分、2小时、2小时15分、2小时30分、2小时45分、3小时，每组招募2-3名兔子，总计18名。本届参赛兔子将着由力为运动提供的靓丽兔子服和标有完赛时间的气球加以识别。跑者根据自身情况选择适合的兔子完赛。</p>
+<p>　　欢迎拥有丰富马拉松比赛经验和稳定配速的跑者加入。所有最终入选的兔子都将获得由赛事组委会提供的统一装备、专属号码布、赛事配速员证书，同时，中国人民财产保险股份有限公司舟山市分公司也会为入选兔子提供一份有效期长达一个月、保额超百万的保险，保险详情可以于名单公布后参阅保险说明书。</p>
+<p>　　本次“兔子”招募活动分为预报名和专业评审两个阶段，有意向者需将自己的姓名、性别、身份证号码、兔子组别等信息整理，并附上跑步靓照（2张）和马拉松完赛证书，一起发送至赛事官方邮箱 zhoushanmarathon@163.com，报名者需保证信息真实有效。赛事组委会将会综合评估报名者的各项信息来选取官方兔子。</p>
+<p>　　“兔子”就是马拉松配速员，在比赛中依照固定的配速前进，帮助参赛者了解自身配速，不至于过快或过慢于预设时间。兔子身上会绑上气球，利用不同气球颜色标示配速，目前已被广泛运用于马拉松赛事。</p><div style="font-size: 0px; height: 0px; clear: both;"></div>]]></value>
             </item>
         </clobs>
     </root>
