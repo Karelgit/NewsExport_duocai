@@ -45,9 +45,9 @@ public class CrawlerDataEntityService
 
     public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
     {
-        TaskEntity taskEntity=dataEntityDao.findTaskEntity(taskId);
-      int startPostion=taskEntity.getPosition();
-       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion+1, size,taskId);
+//        TaskEntity taskEntity=dataEntityDao.findTaskEntity(taskId);
+//      int startPostion=taskEntity.getPosition();
+       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(1, size,taskId);
 
         String xml= new HandleXml().readXml("/news.xml");
         List<String> datas=new ArrayList<>();
@@ -56,11 +56,11 @@ public class CrawlerDataEntityService
                 JSONObject map=JSON.parseObject(entity.getJsonData());
                 entity.setTitle(map.getString("title"));
                 entity.setSourceName(map.getString("sourceName"));
-                Pattern pattern=Pattern.compile("<!--\\w+.*-->");
+              /*  Pattern pattern=Pattern.compile("<!--\\w+.*-->");
                 Matcher matcher=pattern.matcher(map.getString("content"));
                 while (matcher.find()){
 
-                }
+                }*/
                 entity.setText(map.getString("content"));
             }
 
@@ -68,8 +68,8 @@ public class CrawlerDataEntityService
                 datas.add(this.entityToXml(entity, xml));
             }
         }
-        taskEntity.setPosition(startPostion+crawlerDataEntities.size());
-        dataEntityDao.updateTaskEntity(taskEntity);
+//        taskEntity.setPosition(startPostion+crawlerDataEntities.size());
+//        dataEntityDao.updateTaskEntity(taskEntity);
         return datas;
     }
 

@@ -1,5 +1,6 @@
 package cn.com.cloudpioneer.util;
 
+import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import cn.com.cloudpioneer.service.NewsPusher;
 import com.alibaba.fastjson.JSONObject;
@@ -125,7 +126,19 @@ public class PostTest {
         pusher.pushNews();
     }
     @Test
-    public void testNewsExport(){
-        System.out.println(NewsPushUtil.readResourceAsXml("/news.xml"));
+    public void testNewsExport() throws Exception {
+        CrawlerDataEntityService service = new CrawlerDataEntityService();
+        List<String> xmls = service.crawlerDataEntityXml(50,"");
+        cn.com.cloudpioneer.push.NewsPusher pusher = new cn.com.cloudpioneer.push.NewsPusher();
+
+        //登陆获得返回数据
+        String param = pusher.loginDuocai();
+        for (String xml:xmls){
+            //String xml = NewsPushUtil.readResourceAsXml("/newsTest.xml");
+           //推送文章
+            pusher.exportNewsToDuocai(xml,param);
+        }
+
     }
+
 }
