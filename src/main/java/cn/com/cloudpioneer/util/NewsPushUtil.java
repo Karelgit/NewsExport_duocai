@@ -30,11 +30,11 @@ public class NewsPushUtil {
         return null;
     }
 
-    public Properties readResourceAsProperties(String name){
+    public static Properties readResourceAsProperties(String name){
        InputStream is= NewsPushUtil.class.getResourceAsStream(name);
         Properties properties=new Properties();
         try {
-            properties.load(is);
+            properties.load(new InputStreamReader(is,"UTF-8"));
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
@@ -48,6 +48,8 @@ public class NewsPushUtil {
         }
         return properties;
     }
+
+
 
     public static String excutePost(String url, Map<String, String> params) {
 

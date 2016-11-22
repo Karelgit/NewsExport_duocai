@@ -13,9 +13,7 @@ import java.util.List;
  */
 public interface CrawlerDataEntityMapper
 {
-    @Select("SELECT seqeueID,tid,url,statusCode,pass,type,rootUrl,fromUrl,text,html,startTime,crawlTime," +
-            "publishTime,depthfromSeed,title,count,tag,fetched,author,sourceName,jsonData FROM crawlerdata_zktest " +
-            "WHERE tid=#{taskId} ORDER BY seqeueID limit #{start},#{size}")
+    @Select("SELECT data  jsonData from zk_test limit #{start},#{size}")
     List<CrawlerDataEntity> findByPage(@Param("start")long start,@Param("size")int size,@Param("taskId")String taskId);
 
     @Select("SELECT id,taskId,position FROM task WHERE taskId=#{taskId}")
@@ -24,6 +22,6 @@ public interface CrawlerDataEntityMapper
     @Update("UPDATE task set position=#{position} WHERE id=#{id}")
     void updateTaskEntity(TaskEntity entity);
 
-    @Select("SELECT COUNT(*) FROM crawlerdata_zktest")
+    @Select("SELECT COUNT(*) FROM zk_test")
     int count();
 }
