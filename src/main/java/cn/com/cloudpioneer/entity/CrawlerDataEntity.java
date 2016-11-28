@@ -1,10 +1,13 @@
 package cn.com.cloudpioneer.entity;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
 /**
  * Created by Tijun on 2016/9/21.
  */
+@Component
 public class CrawlerDataEntity
 {
     private int seqeueID;
@@ -34,6 +37,36 @@ public class CrawlerDataEntity
     private int  count;
     private int tag;
     private int fetched;
+    private String sourceName;
+    private String author;
+
+    public String getParsedData() {
+        return parsedData;
+    }
+
+    public void setParsedData(String parsedData) {
+        this.parsedData = parsedData;
+    }
+
+    private String parsedData;
+
+
+
+    public String getSourceName() {
+        return sourceName;
+    }
+
+    public void setSourceName(String sourceName) {
+        this.sourceName = sourceName;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
     public int getSeqeueID()
     {

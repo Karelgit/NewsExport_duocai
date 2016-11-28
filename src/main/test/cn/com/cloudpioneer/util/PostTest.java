@@ -1,10 +1,17 @@
 package cn.com.cloudpioneer.util;
 
+import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
+import cn.com.cloudpioneer.service.CrawlerDataEntityService;
+import cn.com.cloudpioneer.service.NewsPusher;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
+
 import sun.misc.BASE64Encoder;
 
 import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,47 +21,81 @@ import java.util.Map;
  * @Version: 2016-09-21
  **/
 public class PostTest {
+    /**
+     * 多彩贵州北方网系统推送接口
+     * @throws Exception
+     */
+    String taskId="acbrocdldrtfkauj9ertt29d67";
+
     @Test
-    public void testPostMethod()  {
-        String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
-        Map<String,String> params = new HashMap<>();
-        String api_token = "0000010000008100000147450954410705948a3acb70de0b1ab8fa794f1f5f83";
-        String check_sum = "2e328d7561d60bf581ec88807878c574";
-        String newsXML = HandleXml.readXml("newsTest.xml");
-        params.put("news",newsXML);
-        params.put("api_token",api_token);
-        params.put("check_sum",check_sum);
-        String response = PostUtil.postMethod(url,params);
-        System.out.println(response);
+    public void pushNews()  throws Exception{
+
+       /* CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
+        List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);*/
+        String loginResponse = loginParam();
+        HandleXml handleXml= new HandleXml();
+        testPostMethod(XmlFormatter.format(handleXml.readXml("/newsTest.xml")),loginResponse);
 
     }
 
+    //    @Test
+    public void testPostMethod(String newsXML,String loginResponse ) throws Exception {
+        String url = "http://work.gog.cn:9001/pub/cms_api_60/Api!impNews.do";
+        Map<String,String> params = new HashMap<>();
+      //  String loginResponse = loginParam();
+
+        JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
+        String api_token = (String) jsonObject.getJSONObject("result").get("token");
+        String seed = (String) jsonObject.getJSONObject("result").get("seed");
+
+//        String check_sum = getMD5_32bit("3cd2ab9a142ecac9e8f442bc7b1993fc",newsXML);
+        String check_sum = getMD5_32bit(seed,newsXML);
+       // newsXML = new HandleXml().readXml("/newsTest.xml");
+        System.out.println("newXML:" +"\n" + newsXML);
+        params.put("news",newsXML);
+        params.put("api_token",api_token);
+//        params.put("api_token","00000100000122000001479807767383b7810c8177fc1d7d76b671858d6b3fa2");
+
+        params.put("check_sum",check_sum);
+        String response = PostUtil.postMethod(url,params);
+        System.out.println("news"+response);
+        String projectPath = System.getProperty("user.dir");
+        String xmlPath = projectPath+"/src/main/resources/response.log";
+        new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
+    }
+
     @Test
-    public void testLogin()  {
+    public void test()  {
+        String str = loginParam();
+        System.out.println(str);
+    }
+    public String  loginParam()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
 
-        String userName = "testgengyun";
-        String password = "Tes@t123%A2jhc23";
+        /*String userName = "testgengyun";
+        String password = "12345678;";*/
+
+        /*String userName = "test_hl";
+        String password = "123123123;"*/
+
+        /*String userName = "zhangchao001";
+        String password = "1234567;";*/
+
+        String userName = "libei001";
+        String password = "1234567;";
+
         loginParams.put("userName",userName);
         loginParams.put("password",password);
 
         String response = PostUtil.postMethod(loginUrl,loginParams);
-        System.out.println(response);
+        return response;
     }
 
-    @Test
-    public void getMD5_64bit()  throws Exception{
-        String newsXML = HandleXml.readXml("newsTest.xml");
-        String str = newsXML+"5b43e6a24156660d2f1f39545306d383";
-        System.out.println(MD5(str));
-    }
-
-
-    public String MD5_64bit(String readyEncryptStr) throws Exception{
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        BASE64Encoder base64Encoder = new BASE64Encoder();
-        return base64Encoder.encode(md.digest(readyEncryptStr.getBytes("UTF-8")));
+    public String getMD5_32bit(String seed,String xml)  throws Exception{
+       // String newsXML = new HandleXml().readXml("/newsTest.xml");
+        String str = xml+seed;
+        return MD5(str);
     }
 
     public String MD5(String md5) {
@@ -69,6 +110,46 @@ public class PostTest {
         } catch (java.security.NoSuchAlgorithmException e) {
         }
         return null;
+    }
+    @Test
+    public void   loginParam1()  {
+        String loginUrl = "http://work.gog.cn:9443/pub/auth/LoginAction!loginBegin.do";
+        Map<String,String> loginParams = new HashMap<>();
+
+        String userName = "testgengyun";
+        String password = "Tes@t123%A2jhc23";
+        loginParams.put("screenHight","1080");
+        loginParams.put("y","17");
+        loginParams.put("screenWidth","1920");
+        loginParams.put("x","68");
+        loginParams.put("vo.token","b8ab66");
+        loginParams.put("vo.userName",userName);
+        loginParams.put("vo.password",password);
+
+
+        String response = PostUtil.postMethod(loginUrl,loginParams);
+        System.out.println(response);
+    }
+
+    @Test
+    public void teste() throws Exception {
+        NewsPusher pusher=new NewsPusher();
+        pusher.pushNews();
+    }
+    @Test
+    public void testNewsExport() throws Exception {
+        CrawlerDataEntityService service = new CrawlerDataEntityService();
+        List<String> xmls = service.crawlerDataEntityXml(100,"2ebb2984228fd024bfac23dbcb375a9e");
+        cn.com.cloudpioneer.push.NewsPusher pusher = new cn.com.cloudpioneer.push.NewsPusher();
+
+        //登陆获得返回数据
+        String param = pusher.loginDuocai();
+        for (String xml:xmls){
+            //String xml = NewsPushUtil.readResourceAsXml("/newsTest.xml");
+           //推送文章
+            pusher.exportNewsToDuocai(xml,param);
+        }
+
     }
 
 }

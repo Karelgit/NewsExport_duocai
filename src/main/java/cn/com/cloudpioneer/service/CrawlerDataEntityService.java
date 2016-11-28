@@ -1,102 +1,138 @@
 package cn.com.cloudpioneer.service;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
+import cn.com.cloudpioneer.dao.FieldCroperEntityDao;
 import cn.com.cloudpioneer.entity.CrawlerDataEntity;
-import cn.com.cloudpioneer.utils.ResourceReader;
+import cn.com.cloudpioneer.entity.FieldCroperEntity;
+import cn.com.cloudpioneer.entity.TaskPositionEntity;
+import cn.com.cloudpioneer.util.HandleXml;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.json.JsonParser;
+import org.springframework.stereotype.Service;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by Tijun on 2016/9/21.
  */
-public class CrawlerDataEntityService
-{
-    private long dataPostion;
-
-    CrawlerDataEntityDao dataEntityDao=new CrawlerDataEntityDao();
+@Service
+public class CrawlerDataEntityService {
+    @Autowired
+    private FieldCroperEntityDao fieldCroperEntityDao;
+    @Autowired
+    private  CrawlerDataEntityDao dataEntityDao;
 
     private String entityToXml(CrawlerDataEntity entity,String xml){
         xml=xml.replace("$content",entity.getText());
         xml=xml.replace("$title",entity.getTitle());
-      /* *//* SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date="";
-        if(entity.getPublishTime()!=null){
-            date=sdf.format(entity.getPublishTime());
-        }*//*
-        xml=xml.replace("$pubDate",date);*/
-//        xml=xml.replaceAll("\\r\\n","");
+
+        if (entity.getAuthor()!=null){
+            xml=xml.replace("$keywords4",entity.getAuthor());
+        }else {
+           xml= xml.replace("$keywords4","");
+        }
+
+        if(entity.getSourceName()!=null){
+            xml=xml.replace("$sourceName",entity.getSourceName());
+        }else {
+            xml=xml.replace("$sourceName","");
+        }
+
         return xml;
     }
 
-    public List<String> crawlerDataEntityXml(int size) throws IOException
-    {
-      long startPostion=this.getPosition();
 
-       List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size);
-        String xml=ResourceReader.readResource("/news.xml");
+    public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
+    {
+        TaskPositionEntity taskPositionEntity =dataEntityDao.findTaskEntity(taskId);
+        int startPostion= taskPositionEntity.getPosition();
+        List<CrawlerDataEntity> crawlerDataEntities= dataEntityDao.findByPage(startPostion, size,taskId);
+
+        //加载字段精确裁剪规则croper
+        FieldCroperEntity croper = fieldCroperEntityDao.findById(taskId);
+
+        String xml= new HandleXml().readXml("/news.xml");
         List<String> datas=new ArrayList<>();
         for (CrawlerDataEntity entity:crawlerDataEntities){
-            datas.add(this.entityToXml(entity, xml));
-        }
+            if (entity.getParsedData()!=null){
+                JSONObject map=JSON.parseObject(entity.getParsedData());
 
-        this.writeNumToProperties(startPostion+datas.size());
+                if(croper == null)  {
+                    //已经精确提取
+                    entity.setTitle(map.getString("title"));
+                    entity.setAuthor(map.getString("author"));
+                    entity.setSourceName(map.getString("sourceName"));
+                    entity.setText(map.getString("content"));
 
-        return datas;
+                }else if(croper !=null) {
+                    //有字段冗余信息的裁剪规则
+                    if(map.getString("author")!=null)   {
+                        String [] arr = map.get("author").toString().split("\\s+");
+                        for (String s : arr) {
+                            //作者前缀字段
+                            String preffix = JSON.parseObject(croper.getCropRule()).getString()
+                            if(s.startsWith(croper.getCropRule()))
+                        }
+//                        entity.setAuthor(map.get("author"));
+                    }
 
-    }
-    private long getPosition(){
-        InputStream is= this.getClass().getResourceAsStream("/dataPosition.properties");
-        Properties properties=new Properties();
-        try
-        {
-            properties.load(is);
-            String num=(String)properties.get("position");
-         return    Long.parseLong(num);
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-        return 0;
-    }
-
-    private void writeNumToProperties(long num){
-      String path=  this.getClass().getResource("/dataPosition.properties").getPath();
-       String positionInfo="position="+num;
-        FileOutputStream fileOutputStream=null;
-        try
-        {
-             fileOutputStream= new FileOutputStream(path);
-            try
-            {
-                fileOutputStream.write(positionInfo.getBytes());
-                fileOutputStream.flush();
-
-            } catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }finally
-        {
-            if(fileOutputStream!=null){
-                try
-                {
-                    fileOutputStream.close();
-                } catch (IOException e)
-                {
-                    e.printStackTrace();
                 }
+                entity.setTitle(map.getString("title"));
+
+                //infoBar字段中是否有值
+                boolean hasInfoBar =(map.getString("infoBar")!=null);
+
+                //作者字段
+                /*if(map.getString("author")!=null&& croper.getCropRule())   {
+                    entity.setAuthor(map.getString("author").substring(3));
+                }else if(hasInfoBar)  {
+                    String infoBar= map.getString("infoBar");
+                    String [] arr = infoBar.split("\\s+");
+                    for (String s : arr) {
+                        if (s.startsWith("编辑：")) {
+                            entity.setAuthor(s.substring(3));
+                        }
+                    }
+                }*/
+
+                //来源字段
+                if(map.getString("sourceName")!=null)   {
+                    entity.setSourceName(map.getString("sourceName").substring(3));
+                } else if(hasInfoBar)  {
+                    String infoBar= map.getString("infoBar");
+                    String [] arr = infoBar.split("\\s+");
+                    for (String s : arr) {
+                        if (s.startsWith("来源：")) {
+                            entity.setSourceName(s.substring(3));
+                        }
+                    }
+                }
+                entity.setText(map.getString("content"));
             }
 
+            if(entity.getText() != null)    {
+                datas.add(this.entityToXml(entity, xml));
+            }
+        }
+        taskPositionEntity.setPosition(startPostion+crawlerDataEntities.size());
+        dataEntityDao.updateTaskEntity(taskPositionEntity);
+        return datas;
+    }
+
+    //对字典的提取测试
+    public static void main(String[] args) {
+        String str = "作者：当代贵州评论员 编辑：杨刚 来源：《当代贵州》2016年第39期 发布时间：2016-10-20 20:19:48";
+        String[] arr = str.split("\\s+");
+        for (String s : arr) {
+            if (s.startsWith("来源：")) {
+                System.out.println(s.substring(3));
+            }
         }
     }
+
 }

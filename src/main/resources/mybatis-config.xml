@@ -9,13 +9,14 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url"
-                          value="jdbc:mysql://118.118.118.201:3306/crawlerdata?useUnicode=true&amp;characterEncoding=UTF-8"/>
-                <property name="username" value="root"/>
-                <property name="password" value="123456"/>
+                          value="jdbc:mysql://108.108.108.8:3306/crawlerdata?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="builder"/>
+                <property name="password" value="builder"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
         <mapper class="cn.com.cloudpioneer.mapper.CrawlerDataEntityMapper"/>
+        <mapper class="cn.com.cloudpioneer.mapper.FieldCroperEntityMapper"></mapper>
     </mappers>
 </configuration>

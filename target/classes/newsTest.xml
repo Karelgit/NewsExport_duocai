@@ -2,16 +2,40 @@
 <root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
     <root class="cn.com.enorth.cms.service.news.News">
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+<<<<<<< HEAD
             <title class="java.lang.String"><![CDATA[人民银行等六部门联合整治非法买卖银行卡信息]]></title>
             <channelId class="java.lang.Long">1000000000000000</channelId>
             <initEditor class="java.lang.Integer">100000081</initEditor>
             <templateId class="java.lang.Integer">100000340</templateId>
+=======
+            <title class="java.lang.String"><![CDATA[2016舟马招募18名官方配速兔 活动分两阶段进行测试]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新浪跑步 ]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <!--<initEditor class="java.lang.Integer">100000081</initEditor>-->
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+>>>>>>> 365eb2b701a7b3d54d32b43fe3742098e2e61bb4
         </tnNewsVo>
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>
                 <key class="java.lang.String"><![CDATA[content]]></key>
+<<<<<<< HEAD
                 <value class="java.lang.String"><![CDATA[记者１２日从中国人民银行获悉，为保护银行卡持卡人合法权益，人民银行等六部门近日发布通知，决定于２０１６年９月至２０１７年４月在全国范围内开展联合整治非法买卖银行卡信息专项行动。人民银行有关负责人表示，近年来，银行卡作为方便、快捷的非现金支付工具被社会公众广泛接受并运用于日常生活中。２０１５年我国银行卡欺诈率为１．９９ＢＰ（每万元中发生的欺诈金额占比），远低于国际平均水平。银行卡风险总体可控，但安全问题依然不容忽视。不法分子通过电信技术、黑客技术和改造银行卡收单受理终端等手段，窃取银行卡信息进而盗取卡内资金的违法犯罪活动日益猖獗，对社会公众利益和金融体系安全造成了严重威胁。据介绍，专项行动将采取六方面的行动：破获一批非法买卖银行卡信息的犯罪案件；集中整治用于非法采集银行卡信息的钓鱼网站、恶意程序（ＡＰＰ）；检查银行、支付机构、银行卡清算机构的账户信息保护内控管理措施和支付业务系统安全性，排查存放大量公民个人信息的互联网站和重点行业、单位和企业的信息保护制度和系统的风险漏洞；组织开展对银行和支付机构布放的ＰＯＳ机具的安全性和标准符合性检查；依法关停一批发布银行卡信息非法买卖交易的网站和网络账号；加强社会公众安全使用银行卡的宣传教育。人民银行有关负责人表示，社会公众在日常生活中应当加强对银行卡信息的保护，包括妥善保管好自己的身份证件、银行卡、网银Ｕ盾、手机；开通银行账户变动短信提醒；不随意丢弃银行卡刷卡消费或使用ＡＴＭ设备的交易凭条；不轻易向外透露身份证件号码、账号、卡片信息；不轻信、不回拨收到的异常信息或电话；谨防木马病毒；妥善设置银行卡密码；使用资金额较少的银行卡或开立个人Ⅱ类、Ⅲ类户专门用于办理网络支付；将银行卡磁条卡更换为芯片卡等。相关信息·南明区水口寺社区开展辖区新建装饰装修工程安全生产例行检查[16-09-13]·南明区多部门联合开展“儿童学急救，急救为儿童”宣传活动儿童急救进校园撑起生命保...[16-09-12]·云岩区文体局加强“中秋、国庆”期间文物安全检查工作杜绝消防安全隐患[16-09-12]·开阳县南山社区安装小天网提升群众安全感[16-09-12]·我区2016年“安全生产月”工作获得全市第三名开发区第一名[16-09-11]最近更新]]></value>
             </item>
         </clobs>
     </root>
 </root>
+=======
+                <value class="java.lang.String"><![CDATA[<!-- 正文内容 begin -->
+                    <div class="BSHARE_POP blkContainerSblkCon clearfix blkContainerSblkCon_14 xh-highlight" id="artibody">
+                        <div class="img_wrapper"><img alt="舟山马拉松" src="http://k.sinaimg.cn/n/sports/transform/20161018/e7Fc-fxwvxzf6899969.jpg/w5709d6.jpg"><span class="img_descr">舟山马拉松</span><br></div>
+<p class="">　　记者从赛事组委会处了解到，2016舟山群岛马拉松即日起招募7个组别、18名官方领跑兔。</p>
+<p>　　据悉，7个领跑兔组别完赛时间分别1小时30分、1小时45分、2小时、2小时15分、2小时30分、2小时45分、3小时，每组招募2-3名兔子，总计18名。本届参赛兔子将着由力为运动提供的靓丽兔子服和标有完赛时间的气球加以识别。跑者根据自身情况选择适合的兔子完赛。</p>
+<p>　　欢迎拥有丰富马拉松比赛经验和稳定配速的跑者加入。所有最终入选的兔子都将获得由赛事组委会提供的统一装备、专属号码布、赛事配速员证书，同时，中国人民财产保险股份有限公司舟山市分公司也会为入选兔子提供一份有效期长达一个月、保额超百万的保险，保险详情可以于名单公布后参阅保险说明书。</p>
+<p>　　本次“兔子”招募活动分为预报名和专业评审两个阶段，有意向者需将自己的姓名、性别、身份证号码、兔子组别等信息整理，并附上跑步靓照（2张）和马拉松完赛证书，一起发送至赛事官方邮箱 zhoushanmarathon@163.com，报名者需保证信息真实有效。赛事组委会将会综合评估报名者的各项信息来选取官方兔子。</p>
+<p>　　“兔子”就是马拉松配速员，在比赛中依照固定的配速前进，帮助参赛者了解自身配速，不至于过快或过慢于预设时间。兔子身上会绑上气球，利用不同气球颜色标示配速，目前已被广泛运用于马拉松赛事。</p><div style="font-size: 0px; height: 0px; clear: both;"></div>]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+>>>>>>> 365eb2b701a7b3d54d32b43fe3742098e2e61bb4
