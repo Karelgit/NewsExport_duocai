@@ -1,11 +1,11 @@
 package cn.com.cloudpioneer.service;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
-import cn.com.cloudpioneer.entity.TaskEntity;
+import cn.com.cloudpioneer.entity.TaskPositionEntity;
 import cn.com.cloudpioneer.util.HandleXml;
 import cn.com.cloudpioneer.util.PostUtil;
 import com.alibaba.fastjson.JSONObject;
-import org.junit.Test;
+import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,6 +16,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 2016/10/9.
  */
+@Service
 public class NewsPusher {
 
     /**
@@ -29,7 +30,7 @@ public class NewsPusher {
 
         CrawlerDataEntityDao dao=new CrawlerDataEntityDao();
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        TaskEntity entity=dao.findTaskEntity(taskId);
+        TaskPositionEntity entity=dao.findTaskEntity(taskId);
        int number=dao.count()-entity.getPosition();
         List<String> datas=null;
         System.out.println("number---"+number);
@@ -40,7 +41,6 @@ public class NewsPusher {
             System.out.println(new SimpleDateFormat().format(new Date()));
             return;
         }
-
 
         String loginResponse = loginParam();
         System.out.println(datas.size());

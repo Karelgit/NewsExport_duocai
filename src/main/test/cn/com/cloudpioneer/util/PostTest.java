@@ -30,17 +30,13 @@ public class PostTest {
     @Test
     public void pushNews()  throws Exception{
 
-
-        CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);
+       /* CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
+        List<String> datas=dataEntityService.crawlerDataEntityXml(40,taskId);*/
         String loginResponse = loginParam();
-
-            HandleXml handleXml= new HandleXml();
-            testPostMethod(XmlFormatter.format(handleXml.readXml("/newsTest.xml")),loginResponse);
+        HandleXml handleXml= new HandleXml();
+        testPostMethod(XmlFormatter.format(handleXml.readXml("/newsTest.xml")),loginResponse);
 
     }
-
-
 
     //    @Test
     public void testPostMethod(String newsXML,String loginResponse ) throws Exception {
@@ -52,11 +48,14 @@ public class PostTest {
         String api_token = (String) jsonObject.getJSONObject("result").get("token");
         String seed = (String) jsonObject.getJSONObject("result").get("seed");
 
+//        String check_sum = getMD5_32bit("3cd2ab9a142ecac9e8f442bc7b1993fc",newsXML);
         String check_sum = getMD5_32bit(seed,newsXML);
        // newsXML = new HandleXml().readXml("/newsTest.xml");
         System.out.println("newXML:" +"\n" + newsXML);
         params.put("news",newsXML);
         params.put("api_token",api_token);
+//        params.put("api_token","00000100000122000001479807767383b7810c8177fc1d7d76b671858d6b3fa2");
+
         params.put("check_sum",check_sum);
         String response = PostUtil.postMethod(url,params);
         System.out.println("news"+response);
@@ -65,15 +64,27 @@ public class PostTest {
         new HandleXml().writeResponseToLocal(response+"\n",xmlPath);
     }
 
-
+    @Test
+    public void test()  {
+        String str = loginParam();
+        System.out.println(str);
+    }
     public String  loginParam()  {
         String loginUrl = "http://work.gog.cn:9001/pub/cms_api_60/Api!login.do";
         Map<String,String> loginParams = new HashMap<>();
 
-       /* String userName = "testgengyun";
-        String password = "Tes@t123%A2jhc23";*/
-        String userName = "test_hl";
-        String password = "123123123;";
+        /*String userName = "testgengyun";
+        String password = "12345678;";*/
+
+        /*String userName = "test_hl";
+        String password = "123123123;"*/
+
+        /*String userName = "zhangchao001";
+        String password = "1234567;";*/
+
+        String userName = "libei001";
+        String password = "1234567;";
+
         loginParams.put("userName",userName);
         loginParams.put("password",password);
 
@@ -128,7 +139,7 @@ public class PostTest {
     @Test
     public void testNewsExport() throws Exception {
         CrawlerDataEntityService service = new CrawlerDataEntityService();
-        List<String> xmls = service.crawlerDataEntityXml(50,"");
+        List<String> xmls = service.crawlerDataEntityXml(100,"2ebb2984228fd024bfac23dbcb375a9e");
         cn.com.cloudpioneer.push.NewsPusher pusher = new cn.com.cloudpioneer.push.NewsPusher();
 
         //登陆获得返回数据

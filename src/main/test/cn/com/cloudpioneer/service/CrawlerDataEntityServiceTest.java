@@ -2,6 +2,8 @@ package cn.com.cloudpioneer.service;
 
 import org.junit.Test;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,8 +15,6 @@ import java.util.regex.Pattern;
  **/
 public class CrawlerDataEntityServiceTest {
     CrawlerDataEntityService crawlerDataEntityService = new CrawlerDataEntityService();
-
-
 
     @Test
     public void testRegex() {
@@ -69,5 +69,18 @@ public class CrawlerDataEntityServiceTest {
                 " <div style=\"font-size: 0px; height: 0px; clear: both;\"></div> \n" +
                 " <!-- {独家提供}--> \n" ;
 
+    }
+
+    @Test
+    public void testCrawlerDataEntityXml()  {
+        String tid = "2ebb2984228fd024bfac23dbcb375a9e";
+        try {
+            List<String> list = crawlerDataEntityService.crawlerDataEntityXml(100,tid);
+            for (String s : list) {
+                System.out.println(s);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

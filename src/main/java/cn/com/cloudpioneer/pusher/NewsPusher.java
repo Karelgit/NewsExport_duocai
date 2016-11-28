@@ -1,7 +1,7 @@
 package cn.com.cloudpioneer.pusher;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
-import cn.com.cloudpioneer.entity.TaskEntity;
+import cn.com.cloudpioneer.entity.TaskPositionEntity;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import cn.com.cloudpioneer.util.HandleXml;
 import cn.com.cloudpioneer.util.PostUtil;
@@ -28,7 +28,7 @@ public class NewsPusher {
 
         CrawlerDataEntityDao dao=new CrawlerDataEntityDao();
         CrawlerDataEntityService dataEntityService=new CrawlerDataEntityService();
-        TaskEntity entity=dao.findTaskEntity(taskId);
+        TaskPositionEntity entity=dao.findTaskEntity(taskId);
        int number=dao.count()-entity.getPosition();
         List<String> datas=null;
         System.out.println("number---"+number);

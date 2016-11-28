@@ -1,9 +1,12 @@
 package cn.com.cloudpioneer.entity;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Tijun on 2016/9/28.
  */
-public class TaskEntity {
+@Component
+public class TaskPositionEntity {
     private int id;
     private String taskId;
     private int position;
