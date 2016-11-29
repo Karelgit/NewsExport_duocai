@@ -20,10 +20,9 @@ public class FieldCroperEntityMapperTest {
         fieldCroperEntity.setTid("019c531802d4200e52586dc01677cd64");
         //构造过滤规则
         JSONObject jsonObject =new JSONObject();
-        jsonObject.put("type","author");
         JSONObject rules =new JSONObject();
         rules.put("preffix","责任编辑：");
-        jsonObject.put("rules",rules);
+        jsonObject.put("author",rules);
         fieldCroperEntity.setCropRule(JSONArray.toJSONString(jsonObject));
         System.out.println(fieldCroperEntityDao.insertRules(fieldCroperEntity));
     }

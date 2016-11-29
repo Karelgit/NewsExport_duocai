@@ -1,11 +1,20 @@
 package cn.com.cloudpioneer.service;
 
+import cn.com.cloudpioneer.ApplicationNewsExport;
+import cn.com.cloudpioneer.dao.FieldCroperEntityDao;
+import cn.com.cloudpioneer.entity.FieldCroperEntity;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.embedded.jetty.JettyServerCustomizer;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * <类详细说明>
@@ -13,8 +22,14 @@ import java.util.regex.Pattern;
  * @Author： Huanghai
  * @Version: 2016-09-27
  **/
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = ApplicationNewsExport.class)
+@WebAppConfiguration
 public class CrawlerDataEntityServiceTest {
-    CrawlerDataEntityService crawlerDataEntityService = new CrawlerDataEntityService();
+    @Autowired
+    private CrawlerDataEntityService crawlerDataEntityService;
+    @Autowired
+    private FieldCroperEntityDao fieldCroperEntityDao;
 
     @Test
     public void testRegex() {
@@ -71,16 +86,32 @@ public class CrawlerDataEntityServiceTest {
 
     }
 
+    /**
+     * 测试从数据库里面拿到的爬虫数据经过字段处理之后得到的xml
+     * 是新闻推送前的准数据，在推送前务必进行测试
+     */
     @Test
     public void testCrawlerDataEntityXml()  {
-        String tid = "2ebb2984228fd024bfac23dbcb375a9e";
+        String tid = "019c531802d4200e52586dc01677cd64";
         try {
-            List<String> list = crawlerDataEntityService.crawlerDataEntityXml(100,tid);
+            List<String> list = crawlerDataEntityService.crawlerDataEntityXml(50,tid);
             for (String s : list) {
                 System.out.println(s);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testGetCropFieldValue() {
+//        String pasedData = "{\"content\":\"<div class=\\\"content\\\"> \\n <p align=\\\"center\\\"><img style=\\\"WIDTH: 800px; HEIGHT: 536px\\\" id=\\\"{216177AD-BD39-4247-ADA4-ECE80B10080B}\\\" title=\\\"\\\" border=\\\"0\\\" align=\\\"center\\\" src=\\\"1119954709_14797048903411n.jpg\\\" sourcedescription=\\\"编辑提供的本地文件\\\" sourcename=\\\"本地文件\\\"></p> \\n <p>&nbsp;&nbsp;&nbsp;&nbsp;贵州省盘县石桥镇妥乐村被誉为“世界古银杏之乡”，妥乐村拥有古银杏1200余株，胸径一般在1米左右，最大达到2.2米，树干高达几十米，树龄最长者为1000余年。初冬季节，整个妥乐村被银杏树群装点得“金彩”夺目。新华网 卢志佳 摄</p> \\n <div width=\\\"100%\\\"> \\n  <p> </p> \\n  <center> \\n   <div id=\\\"div_page_roll1\\\" style=\\\"display:none\\\">\\n     &nbsp;&nbsp; \\n    <span>1</span> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_2.htm\\\">2</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_3.htm\\\">3</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_4.htm\\\">4</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_5.htm\\\">5</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_6.htm\\\">6</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_7.htm\\\">7</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_8.htm\\\">8</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_2.htm\\\">下一页</a>&nbsp;&nbsp; \\n   </div> \\n   <div id=\\\"div_currpage\\\">\\n     &nbsp;&nbsp; \\n    <span>1</span> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_2.htm\\\">2</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_3.htm\\\">3</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_4.htm\\\">4</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_5.htm\\\">5</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_6.htm\\\">6</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_7.htm\\\">7</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_8.htm\\\">8</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/21/c_1119954709_2.htm\\\">下一页</a>&nbsp;&nbsp; \\n   </div> \\n  </center> \\n  <p></p> \\n </div> \\n <script language=\\\"javascript\\\">function turnpage(page){  document.all(\\\"div_currpage\\\").innerHTML = document.all(\\\"div_page_roll\\\"+page).innerHTML;}</script> \\n <script language=\\\"javascript\\\">function turnpage(page){  document.all(\\\"div_currpage\\\").innerHTML = document.all(\\\"div_page_roll\\\"+page).innerHTML;}</script> \\n</div>\",\"author\":\"[责任编辑: 曾鹏] \",\"title\":\" 【“飞阅”中国】航拍世界古银杏之乡 ——贵州妥乐\",\"sourceName\":\" 新华网\",\"tag\":{\"column\":\"新华网贵州频道- 本网专稿\"}}";
+//        String pasedData = "{\"content\":\"<div class=\\\"g-content-c\\\"> \\n <!--enpproperty <articleid>5364886</articleid><date>2016-10-31 09:28:27.0</date><author>郭奋</author><title>茅台三季报：持续两位数增长茅台现象倍受关注</title><keyword>方正证券,茅台王子酒,三季报,两位,招商证券</keyword><subtitle></subtitle><introtitle></introtitle><siteid>2</siteid><nodeid>423</nodeid><nodename>本地时政</nodename><nodesearchname></nodesearchname><picurl></picurl>/enpproperty--> \\n <!--enpcontent--> \\n <!--enpcontent--> \\n <p> 　　10月28日晚，贵州茅台发布三季报，2016年前三季度累计实现营业收入266亿元，同比增长15%；实现净利润125亿元，同比增长9%；营收和净利延续两位数增长势头，业绩喜人。与营收和净利相比，其他指标更为抢眼，经营性现金流325亿，同比大增185%；账面货币资金620亿元，同比大增103%；预收账款174亿元，同比大增210%，这三项指标均创历史新高，显示出充沛的现金流。</p> \\n <p> 　　总体来看，白酒行业目前仍处于调整期，经济下行压力依然巨大，贵州茅台抢抓大众消费升级趋势，强化品牌宣传，成功实现转型，经营指标明显好于行业，呈现出“企业发展、经销商盈利、消费者受益、股东分享成长”的多方共赢局面，在白酒行业呈现了独具一格的“茅台现象”，被业内外人士广泛关注。</p> \\n <p>　　大众消费升级，茅台成功转型</p> \\n <p> 　　白酒行业自2013年深度调整以来，以茅台、五粮液等为代表的名优白酒销量持续增长，价格回升趋势明显。据有关机构统计，自2011年至2015年，居民可支配收入增长79.5%，存款增加量增长101.7%，但茅台终端价格下降约50%。在“少喝酒、喝好酒、喝健康的酒”的消费理念带动下，大众消费的热情被点燃，客户覆盖更为广泛，研究机构数据显示目前公务消费已不足1%。茅台在1000元左右的终端零售价格，对于走亲访友、宴请宾客、结婚生子等场合，的确是更好的选择。与往年相较，茅台2016年整体呈现“淡季不淡、旺季更火”的特点。</p> \\n <p>　　预收账款创新高，渠道商信心大增</p> \\n <p> 　　伴随茅台酒价格回升和产销两旺的势头，截止三季度末，贵州茅台预收账款达174亿元，同比增长210.4%，创上市以来的历史新高，说明渠道经销商库存不足以应对即将到来的消费旺季，并普遍看好年底的茅台销售，积极踊跃打款，这是2013年以来未曾出现过的情况。</p> \\n <p> 　　经销商的积极性既来自于对后期市场的看好，也来自于自身盈利状况的大幅改善。贵州茅台在关注消费者利益的同时，也很关注经销商盈利状况。从去年底开始，茅台进一步加大品牌宣传力度，对经销商增加各种支持，引领大众消费向茅台倾斜，在终端取得良好效果。今年以来，茅台经销商的盈利状况改善，经销商普遍反应，“茅台经销商的好日子又要来了”，直爽淳朴的言语表达出对茅台未来发展的信心。</p> \\n <p>　　系列酒表现抢眼，渐成新增长极</p> \\n <p> 　　茅台系列酒由来已久，从最早的茅台王子酒、茅台迎宾酒，到“一曲三茅四酱”，产品体系不断丰富，但销售规模始终起色不大。2016年茅台在系列酒方面将原来的“一曲三茅四酱”品牌实施战略调整为全面践行“133”品牌战略中的“33”战略，即把“茅台王子酒、茅台迎宾酒、赖茅酒”打造成全国市场知名品牌，把“汉酱酒、仁酒、贵州大曲”打造成区域市场重点品牌；将王茅、华茅两个品牌作为战略储备。今年以来，茅台加强队伍建设，调整市场策略，狠抓市场营销工作，对系列酒销售体系给予更大的主动权，实现系列酒快速发展，前三季度茅台系列酒实现销售收入14.6亿元，同比增长67%。</p> \\n <p> 　　行业研究机构普遍认为，白酒行业目前在总量上已经趋于饱和，但品牌集中度仍然偏低，在消费升级和品牌消费趋势下，消费者会向优质、健康、品牌化的产品集中。这是茅台发展系列酒的有利背景，也是培养新增长极的重要机遇。今年以来，茅台实施的茅台酒与系列酒“两轮驱动”战略成效得以显现，未来发展空间被进一步打开。</p> \\n <p>　　看多茅台，机构持续加仓</p> \\n <p> 　　基金保险等投资机构的嗅觉最为灵敏，早在2015年二季度，全国社保基金等国内顶尖机构便进入茅台前十大股东名单，海外投资者关注时间更早，自2014年底沪港通开通以来，海外投资者持续买入，目前已经位列茅台第二大股东，新加坡政府投资公司（GIC PRIVATE LIMITED）也名列前十大机构，从最新的季报看，国内外投资机构依然对贵州茅台信心十足，青睐有加。</p> \\n <p> 　　证券研究机构也写了较多研究报告，仅今年8月以来就有近30篇研究报告分析贵州茅台的投资价值，力荐机构继续买入。其中，招商证券在8月份最新研报《预收首破百亿，确定性买入》中提到，“名酒继续复苏，优质资产重估，茅台值得给予高估值…年内目标价350元…确定性买入”，方正证券的报告《贵州茅台：白酒行业的定海神针》中提到，“需求的强劲支撑茅台未来很长一段时间保持两位数的强劲增长，供需紧张的局面会持续出现”。</p> \\n <p> 　　近期召开的秋季糖酒会上，众多业内人士普遍认为，白酒行业仍然处于弱复苏的周期中，经济形势低迷和消费需求疲软给行业复苏带来更多不确定性，但茅台强化品牌宣传，定位大众消费，成功实现了名酒到民酒的定位转换，呈现出企业、经销商、消费者和股东多方共赢的“茅台现象”，也为行业和资本市场所瞩目。年底茅台是否会交出更加靓丽的答卷，市场拭目以待。（郭奋）</p> \\n <!--/enpcontent--> \\n <!--/enpcontent--> \\n</div>\",\"author\":\"责任编辑：胡丽涓\",\"title\":\"茅台三季报：持续两位数增长茅台现象倍受关注\",\"publishTime\":\"发布时间：2016-10-31 09:28:27\",\"sourceName\":\"来源：贵州都市报\",\"tag\":{\"column\":\"贵阳网-本地经济\"}}";
+        String pasedData = "{\"content\":\"<div class=\\\"content\\\"> \\n <p style=\\\"TEXT-ALIGN: center\\\" align=\\\"center\\\"><img id=\\\"{81F6298B-D244-47D0-9A9A-D9F31CDE9C7F}\\\" title=\\\"\\\" style=\\\"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px\\\" border=\\\"0\\\" hspace=\\\"0\\\" align=\\\"center\\\" src=\\\"1119997701_14802144208251n.JPG\\\" sourcename=\\\"\\\" sourcedescription=\\\"\\\"></p> \\n <p style=\\\"TEXT-ALIGN: center\\\" align=\\\"center\\\"><font color=\\\"navy\\\" face=\\\"楷体\\\">“山地公园省·生态徒步季”西秀站活动现场。新华网 周远钢 摄</font></p> \\n <p style=\\\"TEXT-ALIGN: center\\\" align=\\\"center\\\"><font color=\\\"#000080\\\" face=\\\"楷体\\\"><img id=\\\"{286D7DC8-0402-4D98-B540-E48436673B08}\\\" title=\\\"\\\" style=\\\"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px\\\" border=\\\"0\\\" hspace=\\\"0\\\" align=\\\"center\\\" src=\\\"1119997701_14802144271151n.JPG\\\" sourcename=\\\"\\\" sourcedescription=\\\"\\\"></font></p> \\n <p style=\\\"FONT-FAMILY: 楷体; COLOR: navy; TEXT-ALIGN: center\\\" align=\\\"center\\\"><font color=\\\"navy\\\" face=\\\"楷体\\\">“山地公园省·生态徒步季”西秀站活动现场的吉祥物。新华网 周远钢 摄</font></p> \\n <p>&nbsp;&nbsp;&nbsp;&nbsp;新华网贵阳11月27日电（周远钢）“山地公园省·生态徒步季”走进西秀区活动11月26日在安顺市西秀区鸣枪，2万余名徒步健身爱好者在西秀区驼宝山广场开走，尽享全民健身乐趣。</p> \\n <p>&nbsp;&nbsp;&nbsp;&nbsp;据了解，本次“山地公园省·生态徒步季”走进西秀区活动由贵州省旅游发展委员会、贵州省体育局指导，由贵州日报报业集团、西秀区委、西秀区人民政府主办。本次“山地公园省·生态徒步季”走进西秀区活动徒步总程约11千米，徒步爱好者按预设线路，在关门时间内到达终点即完成徒步活动，可获得完赛徒步护照。同时，组委会为参加徒步活动的爱好者准备了彩电、冰箱、锅具、保温杯等800个奖品，徒步爱好者在徒步结束后可以参加现场的抽奖活动。</p> \\n <p>&nbsp;&nbsp;&nbsp;&nbsp;西秀区副区长杨荔在启动仪式上表示，随着人民生活水平的不断提高，人们的健康养生意识越来越强，各种体育健身活动多姿多彩。开展徒步活动，“自然温和、老少皆宜、低碳环保”，既能亲近大自然，又能强身健体，是广大市民朋友们喜爱和推崇一种活动。</p> \\n <p>&nbsp;&nbsp;&nbsp;&nbsp;杨荔表示，近年来西秀区不断加大体育基础设施投入，同时开展形式多样的体育活动和赛事，除每年在全区范围组织开展的象棋、围棋、乒乓球、篮球、足球、羽毛球、田径等竞技类项目比赛活动以外，还组织开展了广播体操、广场舞、拔河、放风筝、钓鱼、布依赛马等具有民族文化特色的活动，使广大人民群众积极参与到全民健身运动当中，不断提升人民群众健康水平。</p> \\n <p>&nbsp;&nbsp;&nbsp;&nbsp;据了解，“山地公园省·生态徒步季”活动拟于每年夏秋两季的周末和节假日，在贵州全省各地县城所在地或周边特定区域连续举办群众性大型城市徒步活动，力争用三年的时间走遍全省。</p> \\n <div width=\\\"100%\\\"> \\n  <p> </p> \\n  <center> \\n   <div id=\\\"div_page_roll1\\\" style=\\\"display:none\\\">\\n     &nbsp;&nbsp; \\n    <span>1</span> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/27/c_1119997701_2.htm\\\">2</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/27/c_1119997701_2.htm\\\">下一页</a>&nbsp;&nbsp; \\n   </div> \\n   <div id=\\\"div_currpage\\\">\\n     &nbsp;&nbsp; \\n    <span>1</span> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/27/c_1119997701_2.htm\\\">2</a> \\n    <a href=\\\"http://www.gz.xinhuanet.com/2016-11/27/c_1119997701_2.htm\\\">下一页</a>&nbsp;&nbsp; \\n   </div> \\n  </center> \\n  <p></p> \\n </div> \\n <script language=\\\"javascript\\\">function turnpage(page){  document.all(\\\"div_currpage\\\").innerHTML = document.all(\\\"div_page_roll\\\"+page).innerHTML;}</script> \\n <font style=\\\"color:#FF0000\\\"></font> \\n</div>\",\"author\":\"[责任编辑: 刘昌馀] \",\"title\":\" “山地公园省·生态徒步季”走进西秀 2万人畅享徒步乐趣\",\"sourceName\":\" 新华网\",\"tag\":{\"column\":\"新华网贵州频道- 本网专稿\"}}";
+        JSONObject jsonObject = JSONObject.parseObject(pasedData);
+        String taskId = "019c531802d4200e52586dc01677cd64";
+        FieldCroperEntity croper = fieldCroperEntityDao.findById(taskId);
+        System.out.println(JSON.toJSONString(croper));
+        System.out.println("author:" +crawlerDataEntityService.getCropFieldValue("author", croper, jsonObject));
     }
 }

@@ -1,15 +1,16 @@
 package cn.com.cloudpioneer.util;
 
-import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
+import cn.com.cloudpioneer.ApplicationNewsExport;
+import cn.com.cloudpioneer.push.NewsPusher;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
-import cn.com.cloudpioneer.service.NewsPusher;
 import com.alibaba.fastjson.JSONObject;
-import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
-import sun.misc.BASE64Encoder;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
-import java.security.MessageDigest;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,12 +21,17 @@ import java.util.Map;
  * @Author： Huanghai
  * @Version: 2016-09-21
  **/
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = ApplicationNewsExport.class)
+@WebAppConfiguration
 public class PostTest {
     /**
      * 多彩贵州北方网系统推送接口
      * @throws Exception
      */
     String taskId="acbrocdldrtfkauj9ertt29d67";
+    @Autowired
+    private CrawlerDataEntityService service;
 
     @Test
     public void pushNews()  throws Exception{
@@ -133,14 +139,13 @@ public class PostTest {
 
     @Test
     public void teste() throws Exception {
-        NewsPusher pusher=new NewsPusher();
+        cn.com.cloudpioneer.service.NewsPusher pusher=new cn.com.cloudpioneer.service.NewsPusher();
         pusher.pushNews();
     }
     @Test
     public void testNewsExport() throws Exception {
-        CrawlerDataEntityService service = new CrawlerDataEntityService();
-        List<String> xmls = service.crawlerDataEntityXml(100,"2ebb2984228fd024bfac23dbcb375a9e");
-        cn.com.cloudpioneer.push.NewsPusher pusher = new cn.com.cloudpioneer.push.NewsPusher();
+        List<String> xmls = service.crawlerDataEntityXml(250,"019c531802d4200e52586dc01677cd64");
+        NewsPusher pusher = new NewsPusher();
 
         //登陆获得返回数据
         String param = pusher.loginDuocai();

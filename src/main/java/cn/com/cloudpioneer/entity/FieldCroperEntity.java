@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FieldCroperEntity {
     String tid;
-    String cropRule;    //提取规则，使用json存储{"type":"sourceName","rules":{"preffix":"来源","suffix":"xx"}}
+    String cropRule;    //提取规则，使用json存储{"soureName":{"preffix":"来源：|新闻来源：|来自：","suffix":"xx"}}
 
     public String getTid() {
         return tid;

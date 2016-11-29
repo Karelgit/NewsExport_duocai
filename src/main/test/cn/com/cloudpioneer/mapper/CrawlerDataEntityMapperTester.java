@@ -40,7 +40,7 @@ public class CrawlerDataEntityMapperTester
     @Test
     public void testFindByPage()    {
         CrawlerDataEntityDao dao=new CrawlerDataEntityDao();
-        List<CrawlerDataEntity> list= dao.findByPage(1,101,"2ebb2984228fd024bfac23dbcb375a9e");
+        List<CrawlerDataEntity> list= dao.findByPage(0,100,"019c531802d4200e52586dc01677cd64");
         /*for (CrawlerDataEntity crawlerDataEntity : list) {
             System.out.println(JSONUtil.object2JacksonString(crawlerDataEntity));
         }*/
