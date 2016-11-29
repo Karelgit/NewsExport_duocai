@@ -9,14 +9,23 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url"
+<<<<<<< HEAD
+                          value="jdbc:mysql://118.118.118.201:3306/crawlerdata?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+=======
                           value="jdbc:mysql://108.108.108.8:3306/crawlerdata?useUnicode=true&amp;characterEncoding=UTF-8"/>
                 <property name="username" value="builder"/>
                 <property name="password" value="builder"/>
+>>>>>>> 365eb2b701a7b3d54d32b43fe3742098e2e61bb4
             </dataSource>
         </environment>
     </environments>
     <mappers>
         <mapper class="cn.com.cloudpioneer.mapper.CrawlerDataEntityMapper"/>
+<<<<<<< HEAD
+=======
         <mapper class="cn.com.cloudpioneer.mapper.FieldCroperEntityMapper"></mapper>
+>>>>>>> 365eb2b701a7b3d54d32b43fe3742098e2e61bb4
     </mappers>
 </configuration>

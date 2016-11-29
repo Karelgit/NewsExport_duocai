@@ -1,16 +1,15 @@
 package cn.com.cloudpioneer.util;
 
-import cn.com.cloudpioneer.ApplicationNewsExport;
-import cn.com.cloudpioneer.push.NewsPusher;
+import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
+import cn.com.cloudpioneer.service.NewsPusher;
 import com.alibaba.fastjson.JSONObject;
+import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import sun.misc.BASE64Encoder;
 
+import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
