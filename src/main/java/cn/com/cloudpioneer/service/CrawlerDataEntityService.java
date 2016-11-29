@@ -80,7 +80,7 @@ public class CrawlerDataEntityService {
 
                     String sourceName = getCropFieldValue("sourceName", croper, map);
                     if(sourceName !=null)   {
-                        entity.setSourceName(map.getString("sourceName"));
+                        entity.setSourceName(sourceName);
                     }else {
                         entity.setSourceName(map.getString("sourceName"));
                     }

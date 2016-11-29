@@ -1,15 +1,16 @@
 package cn.com.cloudpioneer.util;
 
-import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
+import cn.com.cloudpioneer.ApplicationNewsExport;
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
 import cn.com.cloudpioneer.service.NewsPusher;
 import com.alibaba.fastjson.JSONObject;
-import org.jdom2.output.support.SAXOutputProcessor;
 import org.junit.Test;
-import sun.misc.BASE64Encoder;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
-import java.security.MessageDigest;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -144,7 +145,7 @@ public class PostTest {
     @Test
     public void testNewsExport() throws Exception {
         List<String> xmls = service.crawlerDataEntityXml(250,"019c531802d4200e52586dc01677cd64");
-        NewsPusher pusher = new NewsPusher();
+        cn.com.cloudpioneer.push.NewsPusher pusher = new cn.com.cloudpioneer.push.NewsPusher();
 
         //登陆获得返回数据
         String param = pusher.loginDuocai();

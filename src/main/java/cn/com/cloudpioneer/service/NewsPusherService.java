@@ -23,7 +23,7 @@ public class NewsPusherService {
         return response;
     }
 
-    public void postNews(String postUrl,String newsXML,String loginResponse ) throws Exception {
+    public String postNews(String postUrl,String newsXML,String loginResponse ) throws Exception {
 
         Map<String,String> params = new HashMap<>();
 
@@ -36,12 +36,12 @@ public class NewsPusherService {
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
         String respones = NewsPushUtil.excutePost(postUrl,params);
-        System.out.println(respones);
+        return respones;
     }
-    public void exportNewsToDuocai(String xml,String param) throws Exception {
+    public String exportNewsToDuocai(String xml,String param) throws Exception {
         Properties duocai = NewsPushUtil.readResourceAsProperties("/duocai.properties");
         String postUrl = duocai.getProperty("newsExportUrl");
-        this.postNews(postUrl,xml,param);
+        return this.postNews(postUrl,xml,param);
     }
 
     public String loginDuocai(){

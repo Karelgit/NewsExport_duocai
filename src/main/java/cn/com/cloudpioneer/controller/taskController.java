@@ -29,7 +29,7 @@ public class taskController {
     private NewsPusherService newsPusherService;
 
     @RequestMapping(value = "/newsExport/{tid}")
-    public void newsExport(@PathVariable String tid)  {
+    public String newsExport(@PathVariable String tid)  {
         List<String> xmls = null;
         try {
             xmls = service.crawlerDataEntityXml(50,tid);
@@ -40,15 +40,17 @@ public class taskController {
 
         //登陆获得返回数据
         String param = newsPusherService.loginDuocai();
+        String result = null;
         for (String xml:xmls){
             //String xml = NewsPushUtil.readResourceAsXml("/newsTest.xml");
             //推送文章
             try {
-                newsPusherService.exportNewsToDuocai(xml,param);
+                result = newsPusherService.exportNewsToDuocai(xml,param);
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("推送到北方网错误！");
             }
         }
+        return result;
     }
 }
