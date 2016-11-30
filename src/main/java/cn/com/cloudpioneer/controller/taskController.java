@@ -53,4 +53,19 @@ public class taskController {
         }
         return result;
     }
+
+    @RequestMapping(value = "/testFinishedXml/{tid}")
+    public String testFinishedXml(@PathVariable String tid) {
+        StringBuffer sb = new StringBuffer();
+        try {
+            List<String> list = service.crawlerDataEntityXml(10,tid);
+            sb = new StringBuffer();
+            for (String s : list) {
+                sb.append(s);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "注意：测试完之后记住把数据库表pos_duocai_export记录的位置回到测试之前的数值"+ '\n' + sb.toString();
+    }
 }
