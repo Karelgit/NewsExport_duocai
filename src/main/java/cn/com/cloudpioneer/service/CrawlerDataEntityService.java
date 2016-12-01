@@ -140,6 +140,7 @@ public class CrawlerDataEntityService {
                 for (int i=0; i< parsedDataFieldValue.length; i++) {
                     //去前缀
                     for (String fieldPre : fieldPres) {
+                        fieldPre = fieldPre.trim();
                         if (parsedDataFieldValue[i].contains(fieldPre)) {
                             //前缀为空
                             if(fieldPre.equals("")) {
@@ -151,6 +152,7 @@ public class CrawlerDataEntityService {
                                 }else if(parsedDataFieldValue[i].replace(fieldPre,"").equals(""))  {
                                     //fieldString为数据库中提取字段的全部前缀
                                     for (String fieldValue : fieldString) {
+                                        fieldValue=fieldValue.trim();
                                         if(! fieldValue.equals(fieldPre))    {
                                             if(parsedDataFieldValue[i+1].contains(fieldValue))    {
                                                 //判断字段是空格，并且后面的字符包含特征值，如"发布时间",表明当前字段为空
@@ -160,7 +162,7 @@ public class CrawlerDataEntityService {
 
                                         }
                                     }
-                                    //循环比较结束
+                                    //循环比较结束,发现分割值的下一个值不是特征值
                                     if(nullField==false)    {
                                         cropFieldValue = parsedDataFieldValue[i+1];
                                     }
@@ -239,10 +241,10 @@ public class CrawlerDataEntityService {
         for (String s : parsedDataFieldValue) {
 
         }*/
-       /* String [] arr = " ".split("\\|");
+        String [] arr = " aa               bbb     cc".split("\\s+");
         for (String s : arr) {
-            
-        }*/
+            System.out.println(s);
+        }
 
         System.out.println(! (5==5));
     }

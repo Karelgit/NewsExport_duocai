@@ -46,12 +46,13 @@ public class taskController {
             //推送文章
             try {
                 result = newsPusherService.exportNewsToDuocai(xml,param);
+                System.out.println(result);
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("推送到北方网错误！");
             }
         }
-        return result;
+        return "done!";
     }
 
     @RequestMapping(value = "/testFinishedXml/{tid}")
