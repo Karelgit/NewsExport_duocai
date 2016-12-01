@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -92,7 +93,7 @@ public class CrawlerDataEntityServiceTest {
      */
     @Test
     public void testCrawlerDataEntityXml()  {
-        String tid = "21236056e8a995b6f95c675a7d7aa44f";
+        String tid = "2ebb2984228fd024bfac23dbcb375a9e";
         try {
             List<String> list = crawlerDataEntityService.crawlerDataEntityXml(50,tid);
             for (String s : list) {
@@ -112,6 +113,7 @@ public class CrawlerDataEntityServiceTest {
         String taskId = "21236056e8a995b6f95c675a7d7aa44f";
         FieldCroperEntity croper = fieldCroperEntityDao.findById(taskId);
         System.out.println(JSON.toJSONString(croper));
-        System.out.println("sourceName:" +crawlerDataEntityService.getCropFieldValue("sourceName", croper, jsonObject));
+        List<String> list = new ArrayList<>();
+        System.out.println("sourceName:" +crawlerDataEntityService.getCropFieldValue("sourceName", croper, jsonObject, list));
     }
 }
