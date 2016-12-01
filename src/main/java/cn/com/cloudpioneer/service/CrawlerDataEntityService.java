@@ -176,7 +176,7 @@ public class CrawlerDataEntityService {
                                 if(fieldSuf.equals("")) {
                                     break;
                                 }else {
-                                    cropFieldValue = cropFieldValue.substring(0,cropFieldValue.length()-cropFieldValue.indexOf(fieldSuf)+1);
+                                    cropFieldValue = cropFieldValue.replace(fieldSuf,"");
                                     break;
                                 }
                             }
