@@ -150,17 +150,22 @@ public class CrawlerDataEntityService {
                                     //前缀后面无空格
                                     cropFieldValue = parsedDataFieldValue[i].replace(fieldPre,"");
                                 }else if(parsedDataFieldValue[i].replace(fieldPre,"").equals(""))  {
-                                    //fieldString为数据库中提取字段的全部前缀
-                                    for (String fieldValue : fieldString) {
-                                        fieldValue=fieldValue.trim();
-                                        if(! fieldValue.equals(fieldPre))    {
-                                            if(parsedDataFieldValue[i+1].contains(fieldValue))    {
-                                                //判断字段是空格，并且后面的字符包含特征值，如"发布时间",表明当前字段为空
-                                                nullField = true;
-                                                break;
-                                            }
+                                    //如果类似情况如：作者：之后就没有任务内容，那么就要有一个i+1< parsedDataFieldValue.length的判断
+                                    if(i+1<parsedDataFieldValue.length) {
+                                        //fieldString为数据库中提取字段的全部前缀
+                                        for (String fieldValue : fieldString) {
+                                            fieldValue=fieldValue.trim();
+                                            if(! fieldValue.equals(fieldPre))    {
+                                                if(parsedDataFieldValue[i+1].contains(fieldValue))    {
+                                                    //判断字段是空格，并且后面的字符包含特征值，如"发布时间",表明当前字段为空
+                                                    nullField = true;
+                                                    break;
+                                                }
 
+                                            }
                                         }
+                                    }else  {
+                                        nullField = true;
                                     }
                                     //循环比较结束,发现分割值的下一个值不是特征值
                                     if(nullField==false)    {
