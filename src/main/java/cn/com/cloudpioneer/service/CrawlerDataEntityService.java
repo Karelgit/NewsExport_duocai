@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Tijun on 2016/9/21.
@@ -49,6 +51,7 @@ public class CrawlerDataEntityService {
 
     public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
     {
+        Pattern pattern = Pattern.compile("<!--.*?-->");
         TaskPositionEntity taskPositionEntity =crawlerDataEntityDao.findTaskEntity(taskId);
         int startPostion= taskPositionEntity.getPosition();
         List<CrawlerDataEntity> crawlerDataEntities= crawlerDataEntityDao.findByPage(startPostion, size,taskId);
@@ -98,7 +101,12 @@ public class CrawlerDataEntityService {
                 }
             }
 
-            if(entity.getText() != null)    {
+            if(entity.getText() != null&&entity.getTitle()!=null)    {
+               String content =  entity.getText();
+
+                Matcher matcher = pattern.matcher(content);
+                content = matcher.replaceAll("");
+                entity.setText(content);
                 datas.add(this.entityToXml(entity, xml));
             }
         }
@@ -150,17 +158,21 @@ public class CrawlerDataEntityService {
                                     //前缀后面无空格
                                     cropFieldValue = parsedDataFieldValue[i].replace(fieldPre,"");
                                 }else if(parsedDataFieldValue[i].replace(fieldPre,"").equals(""))  {
-                                    //fieldString为数据库中提取字段的全部前缀
-                                    for (String fieldValue : fieldString) {
-                                        fieldValue=fieldValue.trim();
-                                        if(! fieldValue.equals(fieldPre))    {
-                                            if(parsedDataFieldValue[i+1].contains(fieldValue))    {
-                                                //判断字段是空格，并且后面的字符包含特征值，如"发布时间",表明当前字段为空
-                                                nullField = true;
-                                                break;
-                                            }
+                                    if(i+1<parsedDataFieldValue.length) {
+                                        //fieldString为数据库中提取字段的全部前缀
+                                        for (String fieldValue : fieldString) {
+                                            fieldValue=fieldValue.trim();
+                                            if(! fieldValue.equals(fieldPre))    {
+                                                if(parsedDataFieldValue[i+1].contains(fieldValue))    {
+                                                    //判断字段是空格，并且后面的字符包含特征值，如"发布时间",表明当前字段为空
+                                                    nullField = true;
+                                                    break;
+                                                }
 
+                                            }
                                         }
+                                    }else   {
+                                        nullField = true;
                                     }
                                     //循环比较结束,发现分割值的下一个值不是特征值
                                     if(nullField==false)    {

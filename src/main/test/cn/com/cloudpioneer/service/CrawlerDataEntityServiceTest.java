@@ -93,9 +93,9 @@ public class CrawlerDataEntityServiceTest {
      */
     @Test
     public void testCrawlerDataEntityXml()  {
-        String tid = "2ebb2984228fd024bfac23dbcb375a9e";
+        String tid = "0dd8ed34025af01999f135e919b67855";
         try {
-            List<String> list = crawlerDataEntityService.crawlerDataEntityXml(50,tid);
+            List<String> list = crawlerDataEntityService.crawlerDataEntityXml(10,tid);
             for (String s : list) {
                 System.out.println(s);
             }
