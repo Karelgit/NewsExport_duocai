@@ -16,8 +16,6 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Tijun on 2016/9/21.
@@ -51,7 +49,6 @@ public class CrawlerDataEntityService {
 
     public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException
     {
-        Pattern pattern = Pattern.compile("<!--.*?-->");
         TaskPositionEntity taskPositionEntity =crawlerDataEntityDao.findTaskEntity(taskId);
         int startPostion= taskPositionEntity.getPosition();
         List<CrawlerDataEntity> crawlerDataEntities= crawlerDataEntityDao.findByPage(startPostion, size,taskId);
@@ -101,12 +98,7 @@ public class CrawlerDataEntityService {
                 }
             }
 
-            if(entity.getText() != null&&entity.getTitle()!=null)    {
-               String content =  entity.getText();
-
-                Matcher matcher = pattern.matcher(content);
-                content = matcher.replaceAll("");
-                entity.setText(content);
+            if(entity.getText() != null)    {
                 datas.add(this.entityToXml(entity, xml));
             }
         }
