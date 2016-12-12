@@ -134,9 +134,11 @@ public class CrawlerDataEntityService {
 
             // parsedDataJSON.getString(fieldName)用于保证就算此字段不能精确提取，但也要不为空才进行字符裁剪
             String waittingParseString = parsedDataJSON.getString(field_name);
+            //预处理,如果":",冒号之前有空格，去掉空格
+            waittingParseString = waittingParseString.replaceAll("\\s+：","：");
+            //开始匹配
             if (waittingParseString !=null && ! waittingParseString.equals("")) {
-
-                String[] parsedDataFieldValue = waittingParseString.trim().split("\\s+");
+                String[] parsedDataFieldValue = waittingParseString.trim().split("(\\s+|\\u00A0)");
                 for (int i=0; i< parsedDataFieldValue.length; i++) {
                     //去前缀
                     for (String fieldPre : fieldPres) {
@@ -150,7 +152,6 @@ public class CrawlerDataEntityService {
                                     //前缀后面无空格
                                     cropFieldValue = parsedDataFieldValue[i].replace(fieldPre,"");
                                 }else if(parsedDataFieldValue[i].replace(fieldPre,"").equals(""))  {
-                                    //如果类似情况如：作者：之后就没有任务内容，那么就要有一个i+1< parsedDataFieldValue.length的判断
                                     if(i+1<parsedDataFieldValue.length) {
                                         //fieldString为数据库中提取字段的全部前缀
                                         for (String fieldValue : fieldString) {
@@ -164,7 +165,7 @@ public class CrawlerDataEntityService {
 
                                             }
                                         }
-                                    }else  {
+                                    }else   {
                                         nullField = true;
                                     }
                                     //循环比较结束,发现分割值的下一个值不是特征值
@@ -175,6 +176,8 @@ public class CrawlerDataEntityService {
                             }
                         }
                         //去后缀
+
+
                         for (String fieldSuf : fieldSufs) {
                             if(cropFieldValue.endsWith(fieldSuf))   {
                                 //后缀为空
@@ -246,12 +249,16 @@ public class CrawlerDataEntityService {
         for (String s : parsedDataFieldValue) {
 
         }*/
-        String [] arr = " aa               bbb     cc".split("\\s+");
+        /*String [] arr = " aa               bbb     cc".split("\\s+");
         for (String s : arr) {
             System.out.println(s);
         }
 
-        System.out.println(! (5==5));
+        System.out.println(! (5==5));*/
+//        String str = "来源  :东方网 发布时间：2016-01-01";
+        String str =" 发布时间： 2016-12-05   作者： 欧阳小珍   来源 ：黔东南新闻网 编辑：廖俊超  ";
+        str = str.replaceAll("\\s+：","：");
+        System.out.println(str);
     }
 
 

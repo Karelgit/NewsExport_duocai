@@ -1,14 +1,11 @@
 package cn.com.cloudpioneer.controller;
 
 import cn.com.cloudpioneer.service.CrawlerDataEntityService;
-import cn.com.cloudpioneer.service.NewsPusher;
 import cn.com.cloudpioneer.service.NewsPusherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
