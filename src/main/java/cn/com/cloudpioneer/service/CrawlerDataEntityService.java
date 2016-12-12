@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
 
 /**
  * Created by Tijun on 2016/9/21.
@@ -27,9 +29,13 @@ public class CrawlerDataEntityService {
     @Autowired
     private  CrawlerDataEntityDao crawlerDataEntityDao;
 
+    ResourceBundle bundle = PropertyResourceBundle.getBundle("duocai");
+
     private String entityToXml(CrawlerDataEntity entity,String xml){
         xml=xml.replace("$content",entity.getText());
         xml=xml.replace("$title",entity.getTitle());
+        xml = xml.replace("$initEditor",bundle.getString("initEditor"));
+        xml = xml.replace("$channelId",bundle.getString("channelId"));
 
         if (entity.getAuthor()!=null){
             xml=xml.replace("$keywords4",entity.getAuthor());
