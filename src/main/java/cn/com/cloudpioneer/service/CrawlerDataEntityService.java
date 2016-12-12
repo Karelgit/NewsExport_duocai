@@ -135,7 +135,7 @@ public class CrawlerDataEntityService {
             // parsedDataJSON.getString(fieldName)用于保证就算此字段不能精确提取，但也要不为空才进行字符裁剪
             String waittingParseString = parsedDataJSON.getString(field_name);
             //预处理,如果":",冒号之前有空格，去掉空格
-            waittingParseString = waittingParseString.replaceAll("\\s+：","：");
+            waittingParseString = waittingParseString.replaceAll("\\s*(：)\\s*","：");
             //开始匹配
             if (waittingParseString !=null && ! waittingParseString.equals("")) {
                 String[] parsedDataFieldValue = waittingParseString.trim().split("(\\s+|\\u00A0)");
@@ -256,8 +256,8 @@ public class CrawlerDataEntityService {
 
         System.out.println(! (5==5));*/
 //        String str = "来源  :东方网 发布时间：2016-01-01";
-        String str =" 发布时间： 2016-12-05   作者： 欧阳小珍   来源 ：黔东南新闻网 编辑：廖俊超  ";
-        str = str.replaceAll("\\s+：","：");
+        String str =" 发布时间： 2016-12-05   作者： 欧阳小珍   来源 ：  黔东南新闻网 编辑：廖俊超  ";
+        str = str.replaceAll("\\s*(：)\\s*","：");
         System.out.println(str);
     }
 
