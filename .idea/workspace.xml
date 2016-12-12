@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="931b40ea-0b20-4377-9300-146dd2282be1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/pusher/NewsPusher.class" afterPath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/pusher/NewsPusher.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/service/CrawlerDataEntityService.class" afterPath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/service/CrawlerDataEntityService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/service/NewsPusher.class" afterPath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/service/NewsPusher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/util/HandleXml.class" afterPath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/util/HandleXml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/util/NewsPushUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/util/NewsPushUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/util/XmlFormatter.class" afterPath="$PROJECT_DIR$/target/classes/cn/com/cloudpioneer/util/XmlFormatter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/com/cloudpioneer/util/PostTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/com/cloudpioneer/util/PostTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/com/cloudpioneer/service/CrawlerDataEntityService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/com/cloudpioneer/service/CrawlerDataEntityService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.java" afterPath="$PROJECT_DIR$/src/main/test/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/duocai.properties" afterPath="$PROJECT_DIR$/target/classes/duocai.properties" />
     </list>
     <ignored path="NewsExport_duocai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +30,8 @@
       <file leaf-file-name="CrawlerDataEntityService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/cloudpioneer/service/CrawlerDataEntityService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="143" column="71" selection-start-line="143" selection-start-column="71" selection-end-line="143" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -57,8 +50,8 @@
       <file leaf-file-name="CrawlerDataEntityServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/test/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="111" column="57" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="57" />
+            <state relative-caret-position="65">
+              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -136,10 +129,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
-    <option name="y" value="5" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
     <option name="width" value="1874" />
-    <option name="height" value="1084" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -385,6 +378,119 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/cn/com/cloudpioneer/service/CrawlerDataEntityService.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/duocai.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/news.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/news.xml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="JUnit.CrawlerDataEntityServiceTest.testGetCropFieldValue">
     <configuration default="false" name="CrawlerDataEntityServiceTest.testGetCropFieldValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -876,14 +982,19 @@
       <updated>1481177776331</updated>
       <workItem from="1481177779032" duration="2050000" />
       <workItem from="1481523154084" duration="5309000" />
-      <workItem from="1481530298232" duration="3112000" />
+      <workItem from="1481530298232" duration="3669000" />
     </task>
+    <task id="LOCAL-00001" summary="fix 如“来源： 人民日报”之间的空格bug_2016-12-12 17:25:28">
+      <created>1481534735912</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481534735912</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CrawlerDataEntityServiceTest_testGetCropFieldValue - 2016.12.12 at 16h 58m 13s.xml">
-      <configuration name="CrawlerDataEntityServiceTest.testGetCropFieldValue" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CrawlerDataEntityServiceTest_testGetCropFieldValue - 2016.12.12 at 16h 59m 05s.xml">
       <configuration name="CrawlerDataEntityServiceTest.testGetCropFieldValue" configurationId="JUnit" />
     </history-entry>
@@ -911,12 +1022,15 @@
     <history-entry file="CrawlerDataEntityServiceTest_testGetCropFieldValue - 2016.12.12 at 17h 23m 46s.xml">
       <configuration name="CrawlerDataEntityServiceTest.testGetCropFieldValue" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CrawlerDataEntityServiceTest_testGetCropFieldValue - 2016.12.12 at 17h 33m 25s.xml">
+      <configuration name="CrawlerDataEntityServiceTest.testGetCropFieldValue" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10471000" />
+    <option name="totallyTimeSpent" value="11028000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="5" width="1874" height="1084" extended-state="0" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -928,10 +1042,10 @@
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20646584" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40584415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4154013" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40064102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41452992" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19264069" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1923077" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2370452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -962,16 +1076,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix 如“来源： 人民日报”之间的空格bug_2016-12-12 17:25:28" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 如“来源： 人民日报”之间的空格bug_2016-12-12 17:25:28" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.java</url>
-          <line>132</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
@@ -1079,16 +1189,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/cloudpioneer/service/CrawlerDataEntityService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="143" column="71" selection-start-line="143" selection-start-column="71" selection-end-line="143" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/cn/com/cloudpioneer/service/CrawlerDataEntityServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="111" column="57" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="57" />
+        <state relative-caret-position="65">
+          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
           <folding />
         </state>
       </provider>

@@ -141,7 +141,7 @@ public class CrawlerDataEntityService {
             // parsedDataJSON.getString(fieldName)用于保证就算此字段不能精确提取，但也要不为空才进行字符裁剪
             String waittingParseString = parsedDataJSON.getString(field_name);
             //预处理,如果":",冒号之前有空格，去掉空格
-            waittingParseString = waittingParseString.replaceAll("\\s*(：)\\s*","：");
+            waittingParseString = waittingParseString.replaceAll("\\s*：","：");
             //开始匹配
             if (waittingParseString !=null && ! waittingParseString.equals("")) {
                 String[] parsedDataFieldValue = waittingParseString.trim().split("(\\s+|\\u00A0)");
@@ -182,8 +182,6 @@ public class CrawlerDataEntityService {
                             }
                         }
                         //去后缀
-
-
                         for (String fieldSuf : fieldSufs) {
                             if(cropFieldValue.endsWith(fieldSuf))   {
                                 //后缀为空
