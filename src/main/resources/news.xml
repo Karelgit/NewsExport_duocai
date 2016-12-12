@@ -4,9 +4,9 @@
         <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
             <title class="java.lang.String"><![CDATA[$title]]></title>
             <sourceName class="java.lang.String"><![CDATA[$sourceName]]></sourceName>
-            <channelId class="java.lang.Long">28000000000000000</channelId>
+            <channelId class="java.lang.Long">$channelId</channelId>
             <keywords4 class="java.lang.String"><![CDATA[$keywords4]]></keywords4>
-            <initEditor class="java.lang.Integer">100000122</initEditor>
+            <initEditor class="java.lang.Integer">$initEditor</initEditor>
             <templateId class="java.lang.Integer">100000330</templateId>
         </tnNewsVo>
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
