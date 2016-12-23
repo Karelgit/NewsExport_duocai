@@ -2,15 +2,14 @@ package cn.com.cloudpioneer.service;
 
 import cn.com.cloudpioneer.dao.CrawlerDataEntityDao;
 import cn.com.cloudpioneer.dao.FieldCroperEntityDao;
-import cn.com.cloudpioneer.entity.CrawlerDataEntity;
-import cn.com.cloudpioneer.entity.FieldCroperEntity;
-import cn.com.cloudpioneer.entity.TaskPositionEntity;
+import cn.com.cloudpioneer.entity.*;
 import cn.com.cloudpioneer.util.HandleXml;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 
 import java.io.*;
@@ -51,6 +50,8 @@ public class CrawlerDataEntityService {
 
         return xml;
     }
+
+
 
 
     public List<String> crawlerDataEntityXml(int size,String taskId) throws IOException

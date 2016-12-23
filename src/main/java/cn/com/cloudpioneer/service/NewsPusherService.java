@@ -1,8 +1,12 @@
 package cn.com.cloudpioneer.service;
 
+import cn.com.cloudpioneer.entity.Article;
+import cn.com.cloudpioneer.entity.DuocaiInfo;
+import cn.com.cloudpioneer.util.HandleXml;
 import cn.com.cloudpioneer.util.NewsPushUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,6 +54,32 @@ public class NewsPusherService {
         String userName = duocai.getProperty("userName");
         String password = duocai.getProperty("password");
        return this.login(loginUrl,userName,password);
+    }
+    public String getXmlTemplate(DuocaiInfo duocaiInfo){
+        String xml= new HandleXml().readXml("/news.xml");
+        xml.replace("$initEditor",duocaiInfo.getInitEditor());
+        xml.replace("$templateId",duocaiInfo.getTemplateId());
+        xml.replace("$channelId",duocaiInfo.getChannelId());
+        return xml;
+    }
+
+    /**
+     * 将article中的属性填入标准的xml模板中
+     * @param article
+     * @param xml
+     * @return
+     */
+    public String articleToXml(Article article, String xml){
+        Assert.notNull(xml,"xml can't be null");
+        Assert.notNull(article,"article cannot be null");
+        if (article.getTitle()==null||article.getContent()==null||article.getTitle().equals("")||article.getContent().equals("")){
+            throw new IllegalArgumentException("title and content can not be null or empty");
+        }
+        xml=xml.replace("$content",article.getContent());
+        xml=xml.replace("$title",article.getTitle());
+        xml = xml.replace("$keywords4",article.getAuthor());
+        xml = xml.replace("$sourceName",article.getSourceName());
+        return xml;
     }
 
 }
