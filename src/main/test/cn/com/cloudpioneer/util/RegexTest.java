@@ -1,5 +1,7 @@
 package cn.com.cloudpioneer.util;
 
+import cn.com.cloudpioneer.entity.DuocaiInfo;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,7 +20,8 @@ public class RegexTest {
         if(m.find())    {
             System.out.println(m.group(0));
         }*/
-
+        DuocaiInfo duocaiInfo = new DuocaiInfo();
+        duocaiInfo.setUserName("ttt");
       Pattern  pattern = Pattern.compile("<!--.*?-->");
       Matcher  matcher = pattern.matcher("<!--dfdsfd--> <!--dfdd--><sdsdsdsd>");
         String str = matcher.replaceAll("");

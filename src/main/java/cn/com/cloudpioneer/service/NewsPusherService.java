@@ -58,8 +58,7 @@ public class NewsPusherService {
     public String getXmlTemplate(DuocaiInfo duocaiInfo){
         String xml = new HandleXml().readXml("/news.xml");
         xml = xml.replace("$initEditor",duocaiInfo.getInitEditor());
-        xml = xml.replace("$templateId",duocaiInfo.getTemplateId());
-        xml = xml.replace("$channelId",duocaiInfo.getChannelId());
+
         return xml;
     }
 
@@ -79,6 +78,8 @@ public class NewsPusherService {
         xml=xml.replace("$title",article.getTitle() == null ? "" : article.getTitle());
         xml = xml.replace("$keywords4",article.getAuthor() == null ? "" : article.getAuthor());
         xml = xml.replace("$sourceName",article.getSourceName()== null ? "" : article.getSourceName());
+        xml = xml.replace("$templateId",article.getTemplateId());
+        xml = xml.replace("$channelId",article.getChannelId());
         return xml;
     }
 

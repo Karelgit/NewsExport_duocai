@@ -7,7 +7,7 @@
             <channelId class="java.lang.Long">$channelId</channelId>
             <keywords4 class="java.lang.String"><![CDATA[$keywords4]]></keywords4>
             <initEditor class="java.lang.Integer">$initEditor</initEditor>
-            <templateId class="java.lang.Integer">100000330</templateId>
+            <templateId class="java.lang.Integer">$templateId</templateId>
         </tnNewsVo>
         <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
             <item>

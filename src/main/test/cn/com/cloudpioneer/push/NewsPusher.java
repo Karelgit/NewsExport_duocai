@@ -16,7 +16,7 @@ import java.util.Properties;
  */
 public class NewsPusher {
 
-    public String  login(String loginUrl,String userName,String password)  {
+    public String  login(String loginUrl,String userName,String password) throws Exception {
         Map<String,String> loginParams = new HashMap<>();
         loginParams.put("userName",userName);
         loginParams.put("password",password);
@@ -45,7 +45,7 @@ public class NewsPusher {
         this.postNews(postUrl,xml,param);
     }
 
-    public String loginDuocai(){
+    public String loginDuocai() throws Exception {
         Properties duocai = NewsPushUtil.readResourceAsProperties("/duocai.properties");
         String loginUrl = duocai.getProperty("loginUrl");
         String userName = duocai.getProperty("userName");

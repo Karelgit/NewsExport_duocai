@@ -7,8 +7,7 @@ public class DuocaiInfo {
     private String userName;
     private String password;
     private String initEditor;
-    private String channelId;
-    private String templateId;
+
 
     public String getUserName() {
         return userName;
@@ -34,19 +33,4 @@ public class DuocaiInfo {
         this.initEditor = initEditor;
     }
 
-    public String getChannelId() {
-        return channelId;
-    }
-
-    public void setChannelId(String channelId) {
-        this.channelId = channelId;
-    }
-
-    public String getTemplateId() {
-        return templateId;
-    }
-
-    public void setTemplateId(String templateId) {
-        this.templateId = templateId;
-    }
 }

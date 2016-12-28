@@ -8,6 +8,24 @@ public class Article {
     private String content;
     private String sourceName;
     private String author;
+    private String channelId;
+    private String templateId;
+
+    public String getChannelId() {
+        return channelId;
+    }
+
+    public void setChannelId(String channelId) {
+        this.channelId = channelId;
+    }
+
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
 
     public String getTitle() {
         return title;
