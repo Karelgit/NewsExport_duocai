@@ -51,7 +51,7 @@ public class NewsPushUtil {
 
 
 
-    public static String excutePost(String url, Map<String, String> params) {
+    public static String excutePost(String url, Map<String, String> params) throws Exception {
 
         HttpClient httpClient = new HttpClient();
 
@@ -71,7 +71,7 @@ public class NewsPushUtil {
             int status = httpClient.executeMethod(postMethod);
             response = postMethod.getResponseBodyAsString();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new Exception(e);
         } finally {
             if (postMethod != null)
                 postMethod.releaseConnection();

@@ -26,7 +26,7 @@ public class taskController {
     private NewsPusherService newsPusherService;
 
     @RequestMapping(value = "/newsExport/{tid}")
-    public String newsExport(@PathVariable String tid)  {
+    public String newsExport(@PathVariable String tid) throws Exception {
         List<String> xmls = null;
         try {
             xmls = service.crawlerDataEntityXml(50,tid);

@@ -19,7 +19,7 @@ import java.util.Properties;
 @Service
 public class NewsPusherService {
 
-    public String  login(String loginUrl,String userName,String password)  {
+    public String  login(String loginUrl,String userName,String password) throws Exception {
         Map<String,String> loginParams = new HashMap<>();
         loginParams.put("userName",userName);
         loginParams.put("password",password);
@@ -48,7 +48,7 @@ public class NewsPusherService {
         return this.postNews(postUrl,xml,param);
     }
 
-    public String loginDuocai(){
+    public String loginDuocai() throws Exception {
         Properties duocai = NewsPushUtil.readResourceAsProperties("/duocai.properties");
         String loginUrl = duocai.getProperty("loginUrl");
         String userName = duocai.getProperty("userName");
@@ -56,10 +56,10 @@ public class NewsPusherService {
        return this.login(loginUrl,userName,password);
     }
     public String getXmlTemplate(DuocaiInfo duocaiInfo){
-        String xml= new HandleXml().readXml("/news.xml");
-        xml.replace("$initEditor",duocaiInfo.getInitEditor());
-        xml.replace("$templateId",duocaiInfo.getTemplateId());
-        xml.replace("$channelId",duocaiInfo.getChannelId());
+        String xml = new HandleXml().readXml("/news.xml");
+        xml = xml.replace("$initEditor",duocaiInfo.getInitEditor());
+        xml = xml.replace("$templateId",duocaiInfo.getTemplateId());
+        xml = xml.replace("$channelId",duocaiInfo.getChannelId());
         return xml;
     }
 
@@ -75,10 +75,10 @@ public class NewsPusherService {
         if (article.getTitle()==null||article.getContent()==null||article.getTitle().equals("")||article.getContent().equals("")){
             throw new IllegalArgumentException("title and content can not be null or empty");
         }
-        xml=xml.replace("$content",article.getContent());
-        xml=xml.replace("$title",article.getTitle());
-        xml = xml.replace("$keywords4",article.getAuthor());
-        xml = xml.replace("$sourceName",article.getSourceName());
+        xml=xml.replace("$content",article.getContent() == null ? "" : article.getContent()  );
+        xml=xml.replace("$title",article.getTitle() == null ? "" : article.getTitle());
+        xml = xml.replace("$keywords4",article.getAuthor() == null ? "" : article.getAuthor());
+        xml = xml.replace("$sourceName",article.getSourceName()== null ? "" : article.getSourceName());
         return xml;
     }
 
