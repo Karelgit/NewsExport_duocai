@@ -35,6 +35,7 @@ public class ExportDuocaiController {
             "content": "多彩贵州网讯(本网记者 杨昌鼎)12月22日，贵州省农业委员会与中合三农集团有限公司签订框架协议，将在贵州省建设1—3个大型肉牛养殖、深加工综合产业园区，300个肉牛养殖单元(合作社)，共同携手推动贵州畜牧产业发展。",
             "sourceName": "多彩贵州网",
             "title": "贵州将打造肉牛养殖深加工综合产业园 3年引进10万头青年母牛"
+
         },
         {
             "author": "杨昌",
@@ -47,16 +48,20 @@ public class ExportDuocaiController {
      * @return
      */
     @PostMapping("/export/articles")
-    public Object exportArticles(String articles,HttpSession session){
+    public Object exportArticles(String articles,String duocaiInfo){
         JSONArray array = JSON.parseArray(articles);
         Map<String,Object> map = new HashMap<>();
-        String xml = (String) session.getAttribute("xml");
-        String token = (String) session.getAttribute("token");
-        if (xml==null||token==null){
-            map.put("code",600);
-            map.put("info","推送文章登陆过期");
-            return map;
+        DuocaiInfo duocai = JSON.parseObject(duocaiInfo,DuocaiInfo.class);
+        String xml = null;
+        String token = null;
+        try {
+            token = this.getToken(duocai);
+            xml = this.getXml(duocai);
+        } catch (Exception e) {
+            map.put("code",500);
+            map.put("info",e.getMessage());
         }
+
         for (int i=0;i<array.size();i++){
             Article article = JSON.parseObject(array.getString(i),Article.class);
             xml = newsPusherService.articleToXml(article,xml);
@@ -80,10 +85,20 @@ public class ExportDuocaiController {
      * @return
      */
     @PostMapping("/export/article")
-    public Object exportNewSingle(String article,HttpSession session){
-        String xml = (String) session.getAttribute("xml");
-        String token = (String) session.getAttribute("token");
+    public Object exportNewSingle(String article,String duocaiInfo){
         Map<String,Object> map = new HashMap<>();
+        DuocaiInfo duocai = JSON.parseObject(duocaiInfo,DuocaiInfo.class);
+        String xml = null;
+        String token = null;
+        try {
+            token = this.getToken(duocai);
+            xml = this.getXml(duocai);
+        } catch (Exception e) {
+            map.put("code",500);
+            map.put("info",e.getMessage());
+        }
+
+
         if (xml==null||token==null){
             map.put("code",600);
             map.put("info","duocai的用户登陆过期");
@@ -98,6 +113,7 @@ public class ExportDuocaiController {
             return map;
         }
         return map;
+
     }
 
 
@@ -144,6 +160,12 @@ public class ExportDuocaiController {
     }
 
 
+    private String getToken(DuocaiInfo duocai) throws Exception {
 
+        return newsPusherService.login(loginUrl,duocai.getUserName(),duocai.getPassword());
+    }
+    private String getXml(DuocaiInfo duocai ){
+        return  newsPusherService.getXmlTemplate(duocai);
+    }
 
 }
