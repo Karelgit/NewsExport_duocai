@@ -1,11 +1,14 @@
 package cn.com.cloudpioneer;
 
+import cn.com.cloudpioneer.service.Client;
 import cn.com.cloudpioneer.timer.NewsTimer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
 
+import java.io.IOException;
 import java.text.ParseException;
+import java.util.ResourceBundle;
 
 /**
  * <ApplicationNewsExport,启动Springboot提供新闻推送服务>
@@ -17,5 +20,18 @@ import java.text.ParseException;
 public class ApplicationNewsExport {
     public static void main(String[] args) {
         SpringApplication.run(ApplicationNewsExport.class);
+
+        //新闻推送socket客户端逻辑
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("conf");
+        String serverIp = resourceBundle.getString("SERVER_IP");
+        int port = Integer.parseInt(resourceBundle.getString("SERVER_PORT"));
+        Client client = new Client(serverIp,port);
+        client.addActionMap(Object.class,new Client.HandShakerObjectAction());
+        try {
+            client.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
