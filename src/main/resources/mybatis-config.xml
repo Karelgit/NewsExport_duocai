@@ -16,7 +16,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="cn.com.cloudpioneer.mapper.CrawlerDataEntityMapper"/>
-        <mapper class="cn.com.cloudpioneer.mapper.FieldCroperEntityMapper"></mapper>
+        <mapper class="NewsPusherModule.mapper.CrawlerDataEntityMapper"/>
+        <mapper class="NewsPusherModule.mapper.FieldCroperEntityMapper"></mapper>
     </mappers>
 </configuration>
