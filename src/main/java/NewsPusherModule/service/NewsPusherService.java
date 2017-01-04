@@ -24,6 +24,7 @@ public class NewsPusherService {
         loginParams.put("userName",userName);
         loginParams.put("password",password);
         String response = NewsPushUtil.excutePost(loginUrl,loginParams);
+        System.out.println("response:"+response);
         return response;
     }
 

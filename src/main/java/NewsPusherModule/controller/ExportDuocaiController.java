@@ -9,6 +9,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
@@ -19,11 +20,11 @@ import java.util.*;
  */
 @RestController
 @RequestMapping("duocai")
+@Scope("prototype")
 public class ExportDuocaiController {
     private Logger logger = LoggerFactory.getLogger(ExportDuocaiController.class);
-  private String loginUrl = PropertyResourceBundle.getBundle("duocai").getString("loginUrl");
-    @Autowired
-    private NewsPusherService newsPusherService;
+    private String loginUrl = PropertyResourceBundle.getBundle("duocai").getString("loginUrl");
+    private NewsPusherService newsPusherService =new NewsPusherService();
     /**
      * @apiParam {String} content
      *
@@ -65,7 +66,8 @@ public class ExportDuocaiController {
             Article article = JSON.parseObject(array.getString(i),Article.class);
             xml = newsPusherService.articleToXml(article,xml);
             try {
-                newsPusherService.exportNewsToDuocai(xml,token);
+                String result = newsPusherService.exportNewsToDuocai(xml,token);
+                System.out.println("推送结果：" + result);
             } catch (Exception e) {
                 map.put("code",500);
                 map.put("info",e.getMessage());

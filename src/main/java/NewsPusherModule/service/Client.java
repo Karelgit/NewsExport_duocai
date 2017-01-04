@@ -1,9 +1,13 @@
 package NewsPusherModule.service;
 
+import NewsPusherModule.controller.ExportDuocaiController;
 import NewsPusherModule.entity.HandShaker;
 import NewsPusherModule.entity.KeepAlive;
 import NewsPusherModule.entity.PushInfo;
+import NewsPusherModule.util.FileWriterUtil;
 import com.alibaba.fastjson.JSON;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,13 +33,19 @@ public class Client {
     /**
      * 处理服务端发回的对象，可实现该接口。
      */
+    private static final Logger LOG= LoggerFactory.getLogger(Client.class);
     public static interface ObjectAction {
         void doAction(Object obj, Client client);
     }
 
     public static final class DefaultObjectAction implements ObjectAction {
         public void doAction(Object obj, Client client) {
-            System.out.println("处理：\t" + obj.toString());
+            try {
+                FileWriterUtil.writeLog("处理：\t" + obj.toString()+"\n");
+                LOG.info("处理：\t" + obj.toString()+"\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
     }
@@ -71,8 +81,22 @@ public class Client {
 
     public void start() throws UnknownHostException, IOException {
         if (running) return;
-        socket = new Socket(serverIp, port);
-        System.out.println("本地端口：" + socket.getLocalPort());
+        while (socket == null)  {
+            try {
+                socket = new Socket(serverIp, port);
+            } catch (IOException e) {
+                try {
+                    Thread.sleep(1000*10);
+                    LOG.info("客户端初始连接失败，每隔10秒钟再次连接！");
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+
+                e.printStackTrace();
+            }
+        }
+
+        LOG.info("本地端口：" + socket.getLocalPort());
         lastSendTime = System.currentTimeMillis();
         running = true;
 
@@ -108,19 +132,19 @@ public class Client {
             HandShaker handShaker = new HandShaker();
             handShaker.setUsername(username);
             handShaker.setPassword(password);
-            System.out.println("客户端发送handShaker信息是：\t" + JSON.toJSONString(handShaker));
+            LOG.info("客户端发送handShaker信息是：\t" + JSON.toJSONString(handShaker));
             try {
                 sendObject(handShaker);
             } catch (IOException e) {
-                System.out.println("客户端发送handShaker信息时发生错误！");
+                LOG.info("客户端发送handShaker信息时发生错误！");
                 e.printStackTrace();
             }
         }
     }
 
     class KeepAliveWatchDog implements Runnable {
-        long checkDelay = 10;
-        long keepAliveDelay = 2000;
+        long checkDelay = 1000;
+        long keepAliveDelay = 1000*15;
 
         public void run() {
             while (running) {
@@ -155,14 +179,18 @@ public class Client {
                     if (in.available() > 0) {
                         ObjectInputStream ois = new ObjectInputStream(in);
                         Object obj = ois.readObject();
-                        System.out.println("接收：\t" + obj);
+                        FileWriterUtil.writeLog("接收：\t" + obj);
+                        LOG.info("接收：\t" + obj);
+//                        System.out.println("接收：\t" + obj);
                         ObjectAction oa = actionMapping.get(obj.getClass());
                         if (obj instanceof PushInfo) {
-                            //加入推送逻辑
                             Long timeBefore = System.currentTimeMillis();
-                            System.out.println("收到的推送新闻的信息：" + JSON.toJSONString(obj));
+                            LOG.info("收到的推送新闻的信息：" + JSON.toJSONString(obj)+"\n");
+                            //推送到多彩贵州
+                            Object resultObj =new ExportDuocaiController().exportArticles(((PushInfo) obj).getArticlesJSON(),((PushInfo) obj).getCustomerInfoJSON());
+                            LOG.info("推送结果："+JSON.toJSONString(resultObj));
                             Long timeAfter = System.currentTimeMillis();
-                            System.out.println("此次推送耗时(time elapsed): " + (timeAfter - timeBefore) / 1000 + "seconds");
+                            LOG.info("此次推送耗时(time elapsed): " + (timeAfter - timeBefore) / 1000 + "seconds");
 
                         }
                         oa = oa == null ? new DefaultObjectAction() : oa;

@@ -110,4 +110,5 @@ public class NewsPusher {
         return null;
     }
 
+    String str = "[ {     \"author\": \"杨昌鼎\",     \"content\": \"多彩贵州网讯(本网记者 杨昌鼎)12月22\",     \"sourceName\": \"多彩贵州网\",     \"title\": \"贵州将打造肉牛养殖深加工综合产业园 3年引进\",     \"templateId\":\"100000330\", \"channelId\": \"3000000000000000\" } ]";
 }
