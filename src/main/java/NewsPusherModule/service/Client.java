@@ -29,6 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 1.0
  */
 public class Client {
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("conf");
 
     /**
      * 处理服务端发回的对象，可实现该接口。
@@ -128,10 +129,10 @@ public class Client {
 
     class SendHandShaker implements Runnable {
         public void run() {
+            String companyId = resourceBundle.getString("companyId");
             //客户端发送HanndShaker信息，包括用户名，密码
             HandShaker handShaker = new HandShaker();
-            handShaker.setUsername(username);
-            handShaker.setPassword(password);
+            handShaker.setCompanyId(companyId);
             LOG.info("客户端发送handShaker信息是：\t" + JSON.toJSONString(handShaker));
             try {
                 sendObject(handShaker);
@@ -208,7 +209,6 @@ public class Client {
 
     class ReconnectSocket implements Runnable {
         public void run() {
-            ResourceBundle resourceBundle = ResourceBundle.getBundle("conf");
             String serverIp = resourceBundle.getString("SERVER_IP");
             int port = Integer.parseInt(resourceBundle.getString("SERVER_PORT"));
             Client client = new Client(serverIp, port, username, password);

@@ -3690,3 +3690,599 @@ Identify and stop the process that's listening on port 10088 or configure this a
 2017-01-04 18:50:07.734  INFO 24500 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-04 18:50:07	维持连接心跳包
 2017-01-04 18:50:07.746  INFO 24500 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-04 18:50:07	维持连接心跳包
 
+2017-01-05 09:03:19.617  INFO 11248 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 11248 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-05 09:03:19.626  INFO 11248 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-05 09:03:19.815  INFO 11248 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ae0f136: startup date [Thu Jan 05 09:03:19 CST 2017]; root of context hierarchy
+2017-01-05 09:03:22.007  INFO 11248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10088 (http)
+2017-01-05 09:03:22.017  INFO 11248 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-05 09:03:22.018  INFO 11248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-05 09:03:22.158  INFO 11248 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-05 09:03:22.159  INFO 11248 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2349 ms
+2017-01-05 09:03:22.421  INFO 11248 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-05 09:03:22.428  INFO 11248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-05 09:03:22.429  INFO 11248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-05 09:03:22.429  INFO 11248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-05 09:03:22.429  INFO 11248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-05 09:03:23.072  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ae0f136: startup date [Thu Jan 05 09:03:19 CST 2017]; root of context hierarchy
+2017-01-05 09:03:23.151  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-05 09:03:23.152  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-05 09:03:23.152  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-05 09:03:23.153  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-05 09:03:23.154  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-05 09:03:23.183  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-05 09:03:23.183  INFO 11248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-05 09:03:23.297  INFO 11248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-05 09:03:23.298  INFO 11248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-05 09:03:23.397  INFO 11248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-05 09:03:23.839  INFO 11248 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-05 09:03:24.007  INFO 11248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10088 (http)
+2017-01-05 09:03:24.016  INFO 11248 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 5.559 seconds (JVM running for 6.574)
+2017-01-05 09:03:24.028  INFO 11248 --- [main] NewsPusherModule.service.Client          : 本地端口：56165
+2017-01-05 09:03:24.243  INFO 11248 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"password":"1234567;","username":"libei001"}
+2017-01-05 09:03:38.696  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@616ff0c3
+2017-01-05 09:03:38.703  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"\",\"channelId\":\"3000000000000000\",\"content\":\" <p style=\\\"TEXT-ALIGN: center\\\" align=\\\"center\\\"><img style=\\\"BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px\\\" id=\\\"{6256B5B2-B999-4E4C-AB87-27674E78CCB2}\\\" title=\\\"\\\" border=\\\"0\\\" hspace=\\\"0\\\" align=\\\"center\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/019c531802d4200e52586dc01677cd64/668c8b8abb00cea6dbc7689987809572.jpg\\\" sourcedescription=\\\"\\\" sourcename=\\\"\\\"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;1月2日，广州恒大队球员在点球大战获胜后庆祝。新华社记者刘续摄</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;当日，在2017都匀国际足球小镇“黔南跨年杯”中超俱乐部邀请赛决赛中，广州恒大队依靠点球大战以4比3战胜辽宁宏运队，夺得冠军。</p>  <p> </p> <center>  &nbsp;&nbsp; <span>1</span> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_2.htm\\\">2</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_3.htm\\\">3</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_4.htm\\\">4</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_5.htm\\\">5</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_6.htm\\\">6</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_2.htm\\\">下一页</a>&nbsp;&nbsp;   &nbsp;&nbsp; <span>1</span> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_2.htm\\\">2</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_3.htm\\\">3</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_4.htm\\\">4</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_5.htm\\\">5</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_6.htm\\\">6</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/03/c_1120233432_2.htm\\\">下一页</a>&nbsp;&nbsp;  </center> <p></p>    \",\"sourceName\":\" 新华社\",\"templateId\":\"100000330\",\"title\":\" 足球——“黔南跨年杯”中超俱乐部邀请赛：广州恒大夺冠\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-05 09:03:39.181  WARN 11248 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-05 09:03:39.713  WARN 11248 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-05 09:03:39.713  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-05 09:03:39.714  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 1seconds
+2017-01-05 09:03:39.718  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@616ff0c3
+
+2017-01-05 09:03:39.724  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:03:39	维持连接心跳包
+2017-01-05 09:03:39.731  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:03:39	维持连接心跳包
+
+2017-01-05 09:03:54.162  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:03:54	维持连接心跳包
+2017-01-05 09:03:54.168  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:03:54	维持连接心跳包
+
+2017-01-05 09:03:55.504  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@2188c665
+2017-01-05 09:03:55.505  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"\",\"channelId\":\"3000000000000000\",\"content\":\" <p> 新华社贵阳１月３日电<font color=\\\"navy\\\"><strong> 题：贵州万山：“凤凰”进山 “土货”出山</strong></font></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;新华社记者向定杰</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;湘黔交界、武陵山脉深处，坐落着昔日的“汞都”万山。如今，万山区推进转型，枯竭的资源地重新焕发生机。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;“打算继续卖这个笋子，如果价钱好，一年可收入一万多元！”家住贵州铜仁市万山区鱼塘乡云山村的贫困户丁喜福，最近把家里晒干的竹笋拿到村合作社卖，前前后后共卖了２００多斤。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;云山村有野生竹林１０００余亩，过去农户采摘的竹笋大多自己吃，只有少量拿到集市卖。２０１６年，村支两委成立了专业合作社，收购农户采摘的竹笋，在网上销售。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;“村里与华众电商达成了销售合作协议。如果可以，将再扩大规模，来增加老百姓的收入。”村党支部书记舒情勇说。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;“正对这款野生山竹笋进行包装设计，还有产品的注册。”华众电商公司销售经理杨秀志说。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;华众电商入驻万山区电商生态城，园区管委会主任陆晓文说：“从去年５月开始运营，目前入驻率已达９０％以上。”</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;陆晓文的身份有些“特殊”。万山区委组织部常务副部长刘桂春说，他是万山专门聘请的县域电商“运营官”，当地政府出资２００万元用于其组建管委会运营团队。在工作业绩考核上，重点考核企业入驻率、孵化成功率等市场指标。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;陆晓文此前已有多年从业经历。２００９年至２０１１年间，他带领团队，利用麦包包官网平台，实现箱包年销售额十亿元的业绩。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;对于为何从浙江来到万山，陆晓文说，他认为万山潜力大、前景好，当地的全力扶持让他深受触动。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;如今，集项目模式咨询、运营指导、产品资源对接及网店咨询服务、人才培育等为一体的电商生态城已引进企业２０余家。目前，当地的蜜枣、糯米酒、兴隆粮油、跑山牛等１０多个农产品实现网销。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;“就好像先放水入鱼池，之后鱼才能茁壮成长。电商生态城的事业就是注入电商产业发展的‘活水’，以期让电商企业如鱼得水，快速成长。”陆晓文说。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;万山区电商局局长杨杰说，全区拟定了３４条电商发展扶持政策，每年安排不少于１０００万元的专项资金，加大人才引进培育力度。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;下一步，全区将整合农特产品系列，逐步做到有产量、有认证、有规模，带动更多贫困农户增收致富。</p> <font style=\\\"color:#FF0000\\\"></font> \",\"sourceName\":\" 新华社\",\"templateId\":\"100000330\",\"title\":\" 贵州万山：“凤凰”进山“ 土货”出山\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-05 09:03:55.854  WARN 11248 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-05 09:03:56.259  WARN 11248 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-05 09:03:56.262  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-05 09:03:56.263  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-05 09:03:56.270  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@2188c665
+
+2017-01-05 09:04:09.175  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:04:09	维持连接心跳包
+2017-01-05 09:04:09.191  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:04:09	维持连接心跳包
+
+2017-01-05 09:04:24.181  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:04:24	维持连接心跳包
+2017-01-05 09:04:24.188  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:04:24	维持连接心跳包
+
+2017-01-05 09:04:39.198  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:04:39	维持连接心跳包
+2017-01-05 09:04:39.219  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:04:39	维持连接心跳包
+
+2017-01-05 09:04:54.192  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:04:54	维持连接心跳包
+2017-01-05 09:04:54.203  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:04:54	维持连接心跳包
+
+2017-01-05 09:04:55.907  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@39df12c5
+2017-01-05 09:04:55.908  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"\",\"channelId\":\"3000000000000000\",\"content\":\" <p style=\\\"TEXT-ALIGN: center\\\" align=\\\"center\\\">&nbsp;<img id=\\\"{F17D0D7C-F681-49E9-B832-A023A4B358B0}\\\" title=\\\"\\\" style=\\\"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px\\\" border=\\\"0\\\" hspace=\\\"0\\\" align=\\\"center\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/019c531802d4200e52586dc01677cd64/89e08f7f829f427bcfc44b3dee290c54.jpg\\\" sourcedescription=\\\"\\\" sourcename=\\\"\\\"></p> <p> 2016年12月31日，一名小朋友在妈妈的怀抱里观看小企鹅游泳。新华社记者黄勇摄</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;当日是元旦假期第一天，很多游客来到贵阳市的多彩贵州城极地海洋世界，与海洋动物近距离接触。</p>  <p> </p> <center>  &nbsp;&nbsp; <span>1</span> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_2.htm\\\">2</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_3.htm\\\">3</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_4.htm\\\">4</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_5.htm\\\">5</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_2.htm\\\">下一页</a>&nbsp;&nbsp;   &nbsp;&nbsp; <span>1</span> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_2.htm\\\">2</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_3.htm\\\">3</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_4.htm\\\">4</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_5.htm\\\">5</a> <a href=\\\"http://www.gz.xinhuanet.com/2017-01/01/c_1120228404_2.htm\\\">下一页</a>&nbsp;&nbsp;  </center> <p></p>    \",\"sourceName\":\" 新华社\",\"templateId\":\"100000330\",\"title\":\" 贵阳：海洋世界里过假期\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-05 09:04:56.255  WARN 11248 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-05 09:04:57.444  WARN 11248 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-05 09:04:57.532  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-05 09:04:57.532  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 1seconds
+2017-01-05 09:04:57.537  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@39df12c5
+
+2017-01-05 09:05:09.221  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:05:09	维持连接心跳包
+2017-01-05 09:05:09.235  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:05:09	维持连接心跳包
+
+2017-01-05 09:05:24.222  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:05:24	维持连接心跳包
+2017-01-05 09:05:24.235  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:05:24	维持连接心跳包
+
+2017-01-05 09:05:39.230  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:05:39	维持连接心跳包
+2017-01-05 09:05:39.250  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:05:39	维持连接心跳包
+
+2017-01-05 09:05:54.234  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:05:54	维持连接心跳包
+2017-01-05 09:05:54.242  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:05:54	维持连接心跳包
+
+2017-01-05 09:06:09.246  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:06:09	维持连接心跳包
+2017-01-05 09:06:09.256  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:06:09	维持连接心跳包
+
+2017-01-05 09:06:24.251  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:06:24	维持连接心跳包
+2017-01-05 09:06:24.263  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:06:24	维持连接心跳包
+
+2017-01-05 09:06:39.265  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:06:39	维持连接心跳包
+2017-01-05 09:06:39.279  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:06:39	维持连接心跳包
+
+2017-01-05 09:06:54.272  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:06:54	维持连接心跳包
+2017-01-05 09:06:54.285  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:06:54	维持连接心跳包
+
+2017-01-05 09:07:09.280  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:07:09	维持连接心跳包
+2017-01-05 09:07:09.292  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:07:09	维持连接心跳包
+
+2017-01-05 09:07:24.286  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:07:24	维持连接心跳包
+2017-01-05 09:07:24.301  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:07:24	维持连接心跳包
+
+2017-01-05 09:07:39.305  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:07:39	维持连接心跳包
+2017-01-05 09:07:39.320  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:07:39	维持连接心跳包
+
+2017-01-05 09:07:54.302  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:07:54	维持连接心跳包
+2017-01-05 09:07:54.316  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:07:54	维持连接心跳包
+
+2017-01-05 09:08:09.314  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:08:09	维持连接心跳包
+2017-01-05 09:08:09.329  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:08:09	维持连接心跳包
+
+2017-01-05 09:08:24.316  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:08:24	维持连接心跳包
+2017-01-05 09:08:24.330  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:08:24	维持连接心跳包
+
+2017-01-05 09:08:39.438  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:08:39	维持连接心跳包
+2017-01-05 09:08:39.443  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:08:39	维持连接心跳包
+
+2017-01-05 09:08:54.445  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:08:54	维持连接心跳包
+2017-01-05 09:08:54.451  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:08:54	维持连接心跳包
+
+2017-01-05 09:09:09.469  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:09:09	维持连接心跳包
+2017-01-05 09:09:09.480  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:09:09	维持连接心跳包
+
+2017-01-05 09:09:24.464  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:09:24	维持连接心跳包
+2017-01-05 09:09:24.470  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:09:24	维持连接心跳包
+
+2017-01-05 09:09:39.474  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:09:39	维持连接心跳包
+2017-01-05 09:09:39.481  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:09:39	维持连接心跳包
+
+2017-01-05 09:09:54.495  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:09:54	维持连接心跳包
+2017-01-05 09:09:54.503  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:09:54	维持连接心跳包
+
+2017-01-05 09:10:09.503  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:10:09	维持连接心跳包
+2017-01-05 09:10:09.518  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:10:09	维持连接心跳包
+
+2017-01-05 09:10:24.514  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:10:24	维持连接心跳包
+2017-01-05 09:10:24.521  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:10:24	维持连接心跳包
+
+2017-01-05 09:10:39.515  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:10:39	维持连接心跳包
+2017-01-05 09:10:39.522  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:10:39	维持连接心跳包
+
+2017-01-05 09:10:54.528  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:10:54	维持连接心跳包
+2017-01-05 09:10:54.532  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:10:54	维持连接心跳包
+
+2017-01-05 09:11:09.534  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:11:09	维持连接心跳包
+2017-01-05 09:11:09.541  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:11:09	维持连接心跳包
+
+2017-01-05 09:11:24.547  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:11:24	维持连接心跳包
+2017-01-05 09:11:24.557  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:11:24	维持连接心跳包
+
+2017-01-05 09:11:39.546  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:11:39	维持连接心跳包
+2017-01-05 09:11:39.551  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:11:39	维持连接心跳包
+
+2017-01-05 09:11:54.563  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:11:54	维持连接心跳包
+2017-01-05 09:11:54.573  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:11:54	维持连接心跳包
+
+2017-01-05 09:12:09.562  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:12:09	维持连接心跳包
+2017-01-05 09:12:09.569  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:12:09	维持连接心跳包
+
+2017-01-05 09:12:24.597  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:12:24	维持连接心跳包
+2017-01-05 09:12:24.613  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:12:24	维持连接心跳包
+
+2017-01-05 09:12:39.597  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:12:39	维持连接心跳包
+2017-01-05 09:12:39.615  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:12:39	维持连接心跳包
+
+2017-01-05 09:12:54.603  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:12:54	维持连接心跳包
+2017-01-05 09:12:54.611  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:12:54	维持连接心跳包
+
+2017-01-05 09:13:09.619  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:13:09	维持连接心跳包
+2017-01-05 09:13:09.627  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:13:09	维持连接心跳包
+
+2017-01-05 09:13:24.619  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:13:24	维持连接心跳包
+2017-01-05 09:13:24.625  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:13:24	维持连接心跳包
+
+2017-01-05 09:13:39.630  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:13:39	维持连接心跳包
+2017-01-05 09:13:39.641  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:13:39	维持连接心跳包
+
+2017-01-05 09:13:54.638  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:13:54	维持连接心跳包
+2017-01-05 09:13:54.652  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:13:54	维持连接心跳包
+
+2017-01-05 09:14:09.675  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:14:09	维持连接心跳包
+2017-01-05 09:14:09.680  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:14:09	维持连接心跳包
+
+2017-01-05 09:14:24.710  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:14:24	维持连接心跳包
+2017-01-05 09:14:24.716  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:14:24	维持连接心跳包
+
+2017-01-05 09:14:39.746  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:14:39	维持连接心跳包
+2017-01-05 09:14:39.750  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:14:39	维持连接心跳包
+
+2017-01-05 09:14:54.757  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:14:54	维持连接心跳包
+2017-01-05 09:14:54.768  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:14:54	维持连接心跳包
+
+2017-01-05 09:15:09.760  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:15:09	维持连接心跳包
+2017-01-05 09:15:09.766  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:15:09	维持连接心跳包
+
+2017-01-05 09:15:24.767  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:15:24	维持连接心跳包
+2017-01-05 09:15:24.773  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:15:24	维持连接心跳包
+
+2017-01-05 09:15:39.773  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:15:39	维持连接心跳包
+2017-01-05 09:15:39.778  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:15:39	维持连接心跳包
+
+2017-01-05 09:15:54.787  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:15:54	维持连接心跳包
+2017-01-05 09:15:54.800  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:15:54	维持连接心跳包
+
+2017-01-05 09:16:09.784  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:16:09	维持连接心跳包
+2017-01-05 09:16:09.794  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:16:09	维持连接心跳包
+
+2017-01-05 09:16:24.807  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:16:24	维持连接心跳包
+2017-01-05 09:16:24.820  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:16:24	维持连接心跳包
+
+2017-01-05 09:16:39.801  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:16:39	维持连接心跳包
+2017-01-05 09:16:39.810  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:16:39	维持连接心跳包
+
+2017-01-05 09:16:54.819  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:16:54	维持连接心跳包
+2017-01-05 09:16:54.830  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:16:54	维持连接心跳包
+
+2017-01-05 09:17:09.818  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:17:09	维持连接心跳包
+2017-01-05 09:17:09.824  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:17:09	维持连接心跳包
+
+2017-01-05 09:17:24.838  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:17:24	维持连接心跳包
+2017-01-05 09:17:24.848  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:17:24	维持连接心跳包
+
+2017-01-05 09:17:39.845  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:17:39	维持连接心跳包
+2017-01-05 09:17:39.863  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:17:39	维持连接心跳包
+
+2017-01-05 09:17:54.892  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:17:54	维持连接心跳包
+2017-01-05 09:17:54.900  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:17:54	维持连接心跳包
+
+2017-01-05 09:18:10.048  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:18:10	维持连接心跳包
+2017-01-05 09:18:10.058  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:18:10	维持连接心跳包
+
+2017-01-05 09:18:25.080  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:18:25	维持连接心跳包
+2017-01-05 09:18:25.107  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:18:25	维持连接心跳包
+
+2017-01-05 09:18:40.100  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:18:40	维持连接心跳包
+2017-01-05 09:18:40.130  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:18:40	维持连接心跳包
+
+2017-01-05 09:18:55.086  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:18:55	维持连接心跳包
+2017-01-05 09:18:55.094  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:18:55	维持连接心跳包
+
+2017-01-05 09:19:10.124  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:19:10	维持连接心跳包
+2017-01-05 09:19:10.129  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:19:10	维持连接心跳包
+
+2017-01-05 09:19:25.245  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:19:25	维持连接心跳包
+2017-01-05 09:19:25.254  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:19:25	维持连接心跳包
+
+2017-01-05 09:19:40.253  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:19:40	维持连接心跳包
+2017-01-05 09:19:40.263  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:19:40	维持连接心跳包
+
+2017-01-05 09:19:55.265  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:19:55	维持连接心跳包
+2017-01-05 09:19:55.270  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:19:55	维持连接心跳包
+
+2017-01-05 09:20:10.341  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:20:10	维持连接心跳包
+2017-01-05 09:20:10.346  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:20:10	维持连接心跳包
+
+2017-01-05 09:20:25.378  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:20:25	维持连接心跳包
+2017-01-05 09:20:25.384  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:20:25	维持连接心跳包
+
+2017-01-05 09:20:40.630  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:20:40	维持连接心跳包
+2017-01-05 09:20:40.701  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:20:40	维持连接心跳包
+
+2017-01-05 09:20:55.603  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:20:55	维持连接心跳包
+2017-01-05 09:20:55.610  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:20:55	维持连接心跳包
+
+2017-01-05 09:21:10.609  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:21:10	维持连接心跳包
+2017-01-05 09:21:10.613  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:21:10	维持连接心跳包
+
+2017-01-05 09:21:25.628  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:21:25	维持连接心跳包
+2017-01-05 09:21:25.638  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:21:25	维持连接心跳包
+
+2017-01-05 09:21:40.635  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:21:40	维持连接心跳包
+2017-01-05 09:21:40.641  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:21:40	维持连接心跳包
+
+2017-01-05 09:21:55.645  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:21:55	维持连接心跳包
+2017-01-05 09:21:55.658  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:21:55	维持连接心跳包
+
+2017-01-05 09:22:10.649  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:22:10	维持连接心跳包
+2017-01-05 09:22:10.660  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:22:10	维持连接心跳包
+
+2017-01-05 09:22:25.658  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:22:25	维持连接心跳包
+2017-01-05 09:22:25.665  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:22:25	维持连接心跳包
+
+2017-01-05 09:22:40.662  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:22:40	维持连接心跳包
+2017-01-05 09:22:40.673  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:22:40	维持连接心跳包
+
+2017-01-05 09:22:55.672  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:22:55	维持连接心跳包
+2017-01-05 09:22:55.685  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:22:55	维持连接心跳包
+
+2017-01-05 09:23:10.681  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:23:10	维持连接心跳包
+2017-01-05 09:23:10.690  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:23:10	维持连接心跳包
+
+2017-01-05 09:23:25.686  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:23:25	维持连接心跳包
+2017-01-05 09:23:25.696  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:23:25	维持连接心跳包
+
+2017-01-05 09:23:40.704  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:23:40	维持连接心跳包
+2017-01-05 09:23:40.713  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:23:40	维持连接心跳包
+
+2017-01-05 09:23:55.708  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:23:55	维持连接心跳包
+2017-01-05 09:23:55.720  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:23:55	维持连接心跳包
+
+2017-01-05 09:24:10.711  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:24:10	维持连接心跳包
+2017-01-05 09:24:10.719  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:24:10	维持连接心跳包
+
+2017-01-05 09:24:25.717  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:24:25	维持连接心跳包
+2017-01-05 09:24:25.722  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:24:25	维持连接心跳包
+
+2017-01-05 09:24:40.735  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:24:40	维持连接心跳包
+2017-01-05 09:24:40.751  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:24:40	维持连接心跳包
+
+2017-01-05 09:24:55.735  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:24:55	维持连接心跳包
+2017-01-05 09:24:55.744  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:24:55	维持连接心跳包
+
+2017-01-05 09:25:10.747  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:25:10	维持连接心跳包
+2017-01-05 09:25:10.757  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:25:10	维持连接心跳包
+
+2017-01-05 09:25:25.756  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:25:25	维持连接心跳包
+2017-01-05 09:25:25.764  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:25:25	维持连接心跳包
+
+2017-01-05 09:25:40.771  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:25:40	维持连接心跳包
+2017-01-05 09:25:40.781  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:25:40	维持连接心跳包
+
+2017-01-05 09:25:55.769  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:25:55	维持连接心跳包
+2017-01-05 09:25:55.782  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:25:55	维持连接心跳包
+
+2017-01-05 09:26:10.777  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:26:10	维持连接心跳包
+2017-01-05 09:26:10.782  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:26:10	维持连接心跳包
+
+2017-01-05 09:26:25.784  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:26:25	维持连接心跳包
+2017-01-05 09:26:25.789  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:26:25	维持连接心跳包
+
+2017-01-05 09:26:40.793  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:26:40	维持连接心跳包
+2017-01-05 09:26:40.799  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:26:40	维持连接心跳包
+
+2017-01-05 09:26:55.801  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:26:55	维持连接心跳包
+2017-01-05 09:26:55.813  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:26:55	维持连接心跳包
+
+2017-01-05 09:27:10.825  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:27:10	维持连接心跳包
+2017-01-05 09:27:10.836  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:27:10	维持连接心跳包
+
+2017-01-05 09:27:25.817  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:27:25	维持连接心跳包
+2017-01-05 09:27:25.825  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:27:25	维持连接心跳包
+
+2017-01-05 09:27:40.829  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:27:40	维持连接心跳包
+2017-01-05 09:27:40.836  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:27:40	维持连接心跳包
+
+2017-01-05 09:27:55.838  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:27:55	维持连接心跳包
+2017-01-05 09:27:55.849  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:27:55	维持连接心跳包
+
+2017-01-05 09:28:10.845  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:28:10	维持连接心跳包
+2017-01-05 09:28:10.863  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:28:10	维持连接心跳包
+
+2017-01-05 09:28:25.853  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:28:25	维持连接心跳包
+2017-01-05 09:28:25.861  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:28:25	维持连接心跳包
+
+2017-01-05 09:28:40.870  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:28:40	维持连接心跳包
+2017-01-05 09:28:40.880  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:28:40	维持连接心跳包
+
+2017-01-05 09:28:55.873  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:28:55	维持连接心跳包
+2017-01-05 09:28:55.880  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:28:55	维持连接心跳包
+
+2017-01-05 09:29:10.954  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:29:10	维持连接心跳包
+2017-01-05 09:29:10.967  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:29:10	维持连接心跳包
+
+2017-01-05 09:29:25.884  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:29:25	维持连接心跳包
+2017-01-05 09:29:25.890  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:29:25	维持连接心跳包
+
+2017-01-05 09:29:40.894  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:29:40	维持连接心跳包
+2017-01-05 09:29:40.900  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:29:40	维持连接心跳包
+
+2017-01-05 09:29:55.908  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:29:55	维持连接心跳包
+2017-01-05 09:29:55.925  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:29:55	维持连接心跳包
+
+2017-01-05 09:30:10.935  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-05 09:30:10	维持连接心跳包
+2017-01-05 09:30:10.943  INFO 11248 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-05 09:30:10	维持连接心跳包
+
+2017-01-06 16:42:46.591  INFO 2360 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 2360 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-06 16:42:46.620  INFO 2360 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-06 16:42:46.731  INFO 2360 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a072412: startup date [Fri Jan 06 16:42:46 CST 2017]; root of context hierarchy
+2017-01-06 16:42:49.749  INFO 2360 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10088 (http)
+2017-01-06 16:42:49.762  INFO 2360 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-06 16:42:49.763  INFO 2360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-06 16:42:50.004  INFO 2360 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-06 16:42:50.004  INFO 2360 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3276 ms
+2017-01-06 16:42:50.233  INFO 2360 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-06 16:42:50.241  INFO 2360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-06 16:42:50.241  INFO 2360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-06 16:42:50.242  INFO 2360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-06 16:42:50.242  INFO 2360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-06 16:42:51.531  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a072412: startup date [Fri Jan 06 16:42:46 CST 2017]; root of context hierarchy
+2017-01-06 16:42:51.619  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-06 16:42:51.621  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-06 16:42:51.621  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-06 16:42:51.622  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-06 16:42:51.623  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-06 16:42:51.627  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-06 16:42:51.629  INFO 2360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-06 16:42:51.731  INFO 2360 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:42:51.731  INFO 2360 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:42:51.895  INFO 2360 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:42:52.271  INFO 2360 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-06 16:42:52.349  INFO 2360 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10088 (http)
+2017-01-06 16:42:52.358  INFO 2360 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 6.739 seconds (JVM running for 9.001)
+2017-01-06 16:42:52.368  INFO 2360 --- [main] NewsPusherModule.service.Client          : 本地端口：54139
+2017-01-06 16:42:52.800  INFO 2360 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-06 16:43:07.554  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:43:07	维持连接心跳包
+2017-01-06 16:43:07.559  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:43:07	维持连接心跳包
+
+2017-01-06 16:43:22.531  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:43:22	维持连接心跳包
+2017-01-06 16:43:22.539  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:43:22	维持连接心跳包
+
+2017-01-06 16:43:37.515  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:43:37	维持连接心跳包
+2017-01-06 16:43:37.526  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:43:37	维持连接心跳包
+
+2017-01-06 16:43:52.570  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:43:52	维持连接心跳包
+2017-01-06 16:43:52.582  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:43:52	维持连接心跳包
+
+2017-01-06 16:44:07.528  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:44:07	维持连接心跳包
+2017-01-06 16:44:07.534  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:44:07	维持连接心跳包
+
+2017-01-06 16:44:22.568  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:44:22	维持连接心跳包
+2017-01-06 16:44:22.572  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:44:22	维持连接心跳包
+
+2017-01-06 16:44:37.579  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:44:37	维持连接心跳包
+2017-01-06 16:44:37.583  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:44:37	维持连接心跳包
+
+2017-01-06 16:44:52.586  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:44:52	维持连接心跳包
+2017-01-06 16:44:52.593  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:44:52	维持连接心跳包
+
+2017-01-06 16:45:07.597  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:45:07	维持连接心跳包
+2017-01-06 16:45:07.601  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:45:07	维持连接心跳包
+
+2017-01-06 16:45:22.606  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:45:22	维持连接心跳包
+2017-01-06 16:45:22.615  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:45:22	维持连接心跳包
+
+2017-01-06 16:45:37.625  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:45:37	维持连接心跳包
+2017-01-06 16:45:37.630  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:45:37	维持连接心跳包
+
+2017-01-06 16:45:52.634  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:45:52	维持连接心跳包
+2017-01-06 16:45:52.639  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:45:52	维持连接心跳包
+
+2017-01-06 16:46:07.637  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:46:07	维持连接心跳包
+2017-01-06 16:46:07.642  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:46:07	维持连接心跳包
+
+2017-01-06 16:46:22.650  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:46:22	维持连接心跳包
+2017-01-06 16:46:22.657  INFO 2360 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:46:22	维持连接心跳包
+
+2017-01-06 16:50:03.857  INFO 12112 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 12112 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-06 16:50:03.882  INFO 12112 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-06 16:50:03.999  INFO 12112 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7dc3d69c: startup date [Fri Jan 06 16:50:03 CST 2017]; root of context hierarchy
+2017-01-06 16:50:06.798  INFO 12112 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10088 (http)
+2017-01-06 16:50:06.811  INFO 12112 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-06 16:50:06.812  INFO 12112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-06 16:50:06.969  INFO 12112 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-06 16:50:06.970  INFO 12112 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2974 ms
+2017-01-06 16:50:07.270  INFO 12112 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-06 16:50:07.278  INFO 12112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-06 16:50:07.278  INFO 12112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-06 16:50:07.278  INFO 12112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-06 16:50:07.279  INFO 12112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-06 16:50:07.963  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7dc3d69c: startup date [Fri Jan 06 16:50:03 CST 2017]; root of context hierarchy
+2017-01-06 16:50:08.051  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-06 16:50:08.052  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-06 16:50:08.053  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-06 16:50:08.054  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-06 16:50:08.054  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-06 16:50:08.058  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-06 16:50:08.059  INFO 12112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-06 16:50:08.137  INFO 12112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:50:08.138  INFO 12112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:50:08.230  INFO 12112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:50:08.654  INFO 12112 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-06 16:50:08.783  INFO 12112 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10088 (http)
+2017-01-06 16:50:08.793  INFO 12112 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 6.077 seconds (JVM running for 6.858)
+2017-01-06 16:50:08.811  INFO 12112 --- [main] NewsPusherModule.service.Client          : 本地端口：62031
+2017-01-06 16:50:09.046  INFO 12112 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-06 16:50:23.907  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:50:23	维持连接心跳包
+2017-01-06 16:50:23.915  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:50:23	维持连接心跳包
+
+2017-01-06 16:50:38.938  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:50:38	维持连接心跳包
+2017-01-06 16:50:38.947  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:50:38	维持连接心跳包
+
+2017-01-06 16:50:53.956  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:50:53	维持连接心跳包
+2017-01-06 16:50:53.967  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:50:53	维持连接心跳包
+
+2017-01-06 16:51:08.956  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:51:08	维持连接心跳包
+2017-01-06 16:51:08.962  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:51:08	维持连接心跳包
+
+2017-01-06 16:51:23.966  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:51:23	维持连接心跳包
+2017-01-06 16:51:23.970  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:51:23	维持连接心跳包
+
+2017-01-06 16:51:38.974  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:51:38	维持连接心跳包
+2017-01-06 16:51:38.978  INFO 12112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:51:38	维持连接心跳包
+
+2017-01-06 16:55:47.579  INFO 9356 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 9356 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-06 16:55:47.593  INFO 9356 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-06 16:55:47.789  INFO 9356 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@190bf402: startup date [Fri Jan 06 16:55:47 CST 2017]; root of context hierarchy
+2017-01-06 16:55:50.917  INFO 9356 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10088 (http)
+2017-01-06 16:55:50.932  INFO 9356 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-06 16:55:50.933  INFO 9356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-06 16:55:51.060  INFO 9356 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-06 16:55:51.060  INFO 9356 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3275 ms
+2017-01-06 16:55:51.322  INFO 9356 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-06 16:55:51.328  INFO 9356 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-06 16:55:51.329  INFO 9356 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-06 16:55:51.329  INFO 9356 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-06 16:55:51.330  INFO 9356 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-06 16:55:51.953  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@190bf402: startup date [Fri Jan 06 16:55:47 CST 2017]; root of context hierarchy
+2017-01-06 16:55:52.023  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-06 16:55:52.025  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-06 16:55:52.025  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-06 16:55:52.026  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-06 16:55:52.027  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-06 16:55:52.030  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-06 16:55:52.033  INFO 9356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-06 16:55:52.095  INFO 9356 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:55:52.095  INFO 9356 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:55:52.157  INFO 9356 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-06 16:55:52.688  INFO 9356 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-06 16:55:52.835  INFO 9356 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10088 (http)
+2017-01-06 16:55:52.844  INFO 9356 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 6.25 seconds (JVM running for 6.818)
+2017-01-06 16:55:52.859  INFO 9356 --- [main] NewsPusherModule.service.Client          : 本地端口：62180
+2017-01-06 16:55:53.198  INFO 9356 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-06 16:56:07.949  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:56:07	维持连接心跳包
+2017-01-06 16:56:07.954  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:56:07	维持连接心跳包
+
+2017-01-06 16:56:22.989  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:56:22	维持连接心跳包
+2017-01-06 16:56:22.995  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:56:22	维持连接心跳包
+
+2017-01-06 16:56:37.997  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:56:37	维持连接心跳包
+2017-01-06 16:56:38.002  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:56:38	维持连接心跳包
+
+2017-01-06 16:56:53.011  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:56:53	维持连接心跳包
+2017-01-06 16:56:53.017  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:56:53	维持连接心跳包
+
+2017-01-06 16:57:08.015  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:57:08	维持连接心跳包
+2017-01-06 16:57:08.020  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:57:08	维持连接心跳包
+
+2017-01-06 16:57:23.026  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:57:23	维持连接心跳包
+2017-01-06 16:57:23.057  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:57:23	维持连接心跳包
+
+2017-01-06 16:57:24.986  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@3885c37f
+2017-01-06 16:57:24.995  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p align=\\\"center\\\"><img id=\\\"6103309\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/361d3ee3bd4b3c97a50bf685823219e0.jpg\\\"></p> <p class=\\\"pictext\\\" align=\\\"center\\\"> 贵阳市委常委、组织部部长 王华平:</p> <p> 秉持初心前行,砥砺奋进创新,积极传播党的好声音。</p> <p> 遵义市委常委、组织部部长、统战部部长 吴刚平:</p> <p> 贵州日报《党建视野》是学习园地、宣传阵地、思想高地,是基层党建工作的好教材、指南针、导航器,相信改版后会更上一层楼,传递更多的党的建设和组织工作好声音。</p> <p> 六盘水市委常委、组织部部长 侯美传:</p> <p> 强化党建引领,补足精神之钙,锤炼执政骨干,筑牢战斗堡垒,聚焦人才强省,发扬务实作风,服务人民群众,整合党建资源,交流先进经验,展现党员形象,为党的建设鼓与呼。</p> <p> 安顺市委常委、组织部部长 高青:</p> <p> 祝贺《贵州日报》党建视野创刊,希望及时传达、精准解读中央、省委党建工作方针政策,紧密联系地方基层实践,增强工作的指导性和内容的可读性,办出特色。</p> <p> 毕节市委常委、组织部部长、统战部部长 张欣:</p> <p> 《党建视野》是《贵州日报》宣传全省党建工作的一个平台,希望这个平台成为外界了解贵州的“窗口”。</p> <p> 铜仁市委常委、组织部部长 陈代军:</p> <p> 《党建视野》的创办是顺应新形势、贯彻新要求、契合新常态的重要举措,是全省党建宣传的主平台和主阵地,期待成为党员干部群众最受欢迎的靓丽名片。</p> <p> 黔东南州委常委、组织部部长 马磊:</p> <p> 祝《贵州日报》党建视野越办越好,办出特色,办成精品。</p> <p> 黔南州委常委、组织部部长 胡志峰:</p> <p> 讲述身边党员故事,推介他山经典之石,激发干事创业激情,共谱贵州多彩新篇。</p> <p> 黔西南州委常委、组织部部长 顾先林:</p> <p> 愿《党建视野》成为全省党建工作新鲜经验的宣传阵地、党员干部工作生活的交流平台、党建工作者能力提升的学习园地,为全省党建工作不断取得新突破开创新局面。</p> <p align=\\\"center\\\"><img id=\\\"6103310\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/0f59472c806551f86e19940008719aa4.jpg\\\"></p> <p class=\\\"pictext\\\"> 全面从严治党,各市州组织部长都说了啥?欢迎扫二维码进行延伸阅读。</p> <p style=\\\"TEXT-INDENT: 30px; MARGIN: 0px 3px 15px\\\">党员有党员的样儿,干部有干部的范儿,他们亮出了鲜红的底色</p> <p style=\\\"TEXT-INDENT: 30px; MARGIN: 0px 3px 15px\\\"> <strong>— 2016“两学一做”在基层</strong></p> <p align=\\\"center\\\"><img id=\\\"6103311\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/0e81f0f35bf62255685e340c1207b1b0.jpg\\\"></p> <p class=\\\"pictext\\\"> 望谟供电局党员干部带头全力抗洪抢险。</p> <p align=\\\"center\\\"><img id=\\\"6103312\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/264a04afaaa6b2a6ef07b7fddeab4146.jpg\\\"></p> <p class=\\\"pictext\\\"> 南明区设立“党员集结站”让农民工党员有活动场所。</p> <p align=\\\"center\\\"><img id=\\\"6103313\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/4a9791ce65649d7dcd4836105d37fab7.jpg\\\"></p> <p class=\\\"pictext\\\"> 剑河县委宣传部党员杨家孟在上班之前佩戴党徽。 杨文斌 摄(贵景网 发)</p> <p> 本报记者 邹晨莹</p> <p> 2016年,是“十三五”的开局之年,后发赶超、同步小康的发展目标能否落到实处、取得实效,关键要看党员干部如何作为。</p> <p> 本报记者选取基层党员和基层党组织学做结合、知行合一的精彩片段,讲述“‘两学一做’在基层”的生动场景,反映全面从严治党从“关键少数”向广大党员拓展,从集中性教育向经常性教育延伸,我省广大党员干部在“学”中深化认知、提升自觉,在“做”中磨砺担当、建功立业,凝聚起贵州守底线走新路奔小康的正能量。</p> <p style=\\\"TEXT-INDENT: 30px; MARGIN: 0px 3px 15px\\\"><strong>耄耋党员李光忠141本党员成长日记讲述 — “把对党的信仰,从心里长出来”</strong></p> 李光忠背后是齐人高的书橱,里面整整齐齐码着140本笔记本,每本都标明顺序和日期。 <p> 这一摞泛黄的日记本,足以照见一个共产党员的成长心路。</p> <p> 党的十八大报告主要内容、社会主义核心价值观、中央八项规定、五大发展新理念等内容,他都“如数家珍”。朴实无华的字里行间,他将国家历史节点、家庭小事等人生经历娓娓道来。</p> <p> 说起“两学一做”学习教育,老人亦目光坚定:“如果不学习党章、遵循党章,就不是一名合格的共产党员,还怎么谈得上为人民服务。”</p> <p> 说话间,老人目光所向的,是一份4月21日的《人民日报》。这些天,他用有些颤抖的右手,一笔一画地摘抄9版中《习近平总书记系列重要讲话读本(2016版)》的内容:“江河万里总有源,树高千尺也有根。”抄录完这段论述之后,他写道,群众的事情多问路,就不会走错路；工作的事情多请示党组织,就不会犯错误。</p> <p> 理化乡党委书记李庆华带着乡党政干部、村“两委”成员、驻村干部和农民党员一行人来到了老人家的院坝。</p> <p> “我带着乡里的干部们来跟您学学,您给我们上上课吧。”李庆华告诉记者,由于李光忠对政策、法规熟知,知识和见识丰富,在当地群众中有很高威望,不管大事小情,都主动向他请教参谋,寻找问题的解决办法,解除心中的疑难困惑。</p> <p> “对于党员干部来说,信仰是思想‘庄稼地’,马克思主义不播种,非马克思主义、反马克思主义杂草就会蔓延。”</p> <p> “党章很短,却又很长；党章很薄,却又很厚。比如,党的十八大修订的党章,开篇是一个总纲,另有11章53条,1个小时就可以通读一遍。入党誓词连标点只有92个字,背下来不为难事。”</p> <p> 不翻书、不打结,一堂党课讲得在座党员打心底佩服。</p> <p> 然而,有一件事仍在李光忠心里惦记着。当初他带头修建的那条近5公里的通乡毛石路,如今已不适应发展需要,“我觉得这件事情做得不够好,愧对于群众。”</p> <p> 李庆华立刻承诺:“我们去跟有关部门联系协调,今年就把这件事情办了。”</p> <p> 当天晚上,李光忠在日记里写道:“退休后未给党和人民做更多有益的工作,我很惭愧,我决定,我活着一天,就要坚持为党和人民做一天事情,不论大小。”</p> <p> <strong>2017年回访</strong></p> <p> 1月1日,李光忠开始写第141本日记。</p> <p> “当年我所处的农村没有公路,距县城只有几公里是一条一尺宽的小泥路,400多户1500余人,每年种出粮物与群众生产生活物资等进出都靠人背肩挑,吃尽了苦头。现在5公里的大路建成,人民的衣食住行,都有国家的各种政策照顾,真是幸福生活甜上甜。”</p> <p> 日记封面,标注主题为《不忘初心,继续前进》。</p> <p> <strong>背景链接</strong></p> <p> “肌体细胞”释放活力。我省党员干部对党章、党规和习近平总书记系列重要讲话精神的学习领会更加深刻,政治意识、大局意识、核心意识、看齐意识明显增强,按照“四讲四有”合格党员标准自觉规范言行,党员意识、组织观念得到强化。</p> <p> 场景:2016年4月29日9时,大方县理化乡大塘村大水井村民组,从医院输完液的李光忠回到家中,和往常一样,写下自己学习党章的心得:“任何时候,任何境遇,都相信党、相信组织,笃行宗旨。‘两学一做’,就是要把对党的信仰,从心里长出来。”</p> <p style=\\\"TEXT-INDENT: 30px; MARGIN: 0px 3px 15px\\\"><strong>全国先进基层党组织长滩村党支部把党课搬到一线 — 党员带头学 相互帮 创新发展奔小康</strong></p> <strong><img id=\\\"6103314\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/e0b4cc50ba85fad724b64d55cdb91027.jpg\\\"></strong> <p> 没有讲台、没有横幅,56名党员挤在一个会议室,党支部书记、支委成员领学总书记讲话精神,主题锁定“五大新发展理念”。</p> <p> “什么是发展,大家都清楚,但什么是新发展理念,大家可能有点摸不清,今天就从我们身边事讲讲……”在村党支部书记李平洲看来,注入更多鲜活的素材,是保持吸引力的关键。</p> <p> 前两年,织了几十年苗家包头帕的姜仲英有了放弃这门手艺的念头。“本来可以卖到150元一条,可是大家为了抢客,硬是压成100元一条。”李平洲说,无序竞争让邻里关系紧张,也让大家织布的积极性大打折扣。</p> <p> 李平洲随后道出了发生变化的关键词——十户一体。</p> <p> 长滩村30多名织娘组建了3个产业联建主体,根据技艺高低将包头帕划分档次,统一定价、统一销售,产品在周边县十分畅销。按每月平均织25张包头帕来算,一个月收入超过3000元。“看看现在,姜仲英哪天不是笑得合不拢嘴。”</p> <p> “十户一体就是长滩的创新。”李平洲接着解释,创新摆在五大新发展理念的最前面,就是说,大到国家,小到村子,创新都是很重要的,“要敢想,不要瞎想,弄清楚情况、弄清楚问题,多琢磨多商量,好主意、新点子总会有。”</p> <p> 村主任石俊用一口地道的土话接过话茬,指着现场的党员龙来发说:“他在村里面养鱼是出名的。在被推选为户长后,跟大家一起,选准了网箱养鱼。以前,村里给他们安排什么项目,他们就接什么。现在种啥、养啥,十个人讨论好,协调好,拧成一股绳,聚起一股劲,这样来的项目更符合大家自己的想法和特长。”</p> <p> 长滩村的主体产业联建、公益事业共建、计生诚信联责、社会治安联保……“十户一体”创建活动渗透到村民们生产生活的方方面面。石俊的一番话,让在场的党员们恍然大悟,原来“协调”就在身边。</p> <p> “石主任讲了邻里之间,那我讲讲我们自己。如果别人家的院子建得很漂亮,你自家的还是乱糟糟,那苍蝇就会来你家做客了!”你方唱罢我登场,主讲者换成了副支书刘跃明,角度变成“绿色”。</p> <p> 三个人依次表达完自己的观点后,李平洲复述了课前给党员们出的两道“必答题”,“现在就不是上课了,大家交流一下想法和体会。”</p> <p> “电商发展起来,在网上就可以把我们的产品卖到外面去,外面的信息让大家知道的东西更多,看得更远,说句时髦话,这就是开放哩。”“现在身子有点不舒服不用非得赶到县里去了,村里就能看好,去外地看病也能刷医保卡,这算不算是共享嘛”……答案各不相同,党员们逐一回答各自学习“开放”和“共享”的体会。</p> <p> 2小时的党课,掌声不断,气氛热烈,看不到一个玩手机开小差的人。“过去党课内容太高深、很难懂,很多党员反映听不懂、悟不透。但是这几次集中学习后,我们支委都讲得很实在,连我这个没念过几年书的人都听得明明白白。”长滩村党员龙光寿说。</p> <p> “我们用半个多月的时间专门学习五大新发展理念,将其中与农村有关的内容逐条勾出,支部事先明确班子成员分别领学哪些内容、怎么备课、怎么讲解。</p> <p> 每周一下午,开完村“两委”例会之后,接着开村支委会,带头学、相互帮,还专门征求村里有威望老党员的意见建议。”李平洲说,要把党课上好,需下番苦功,最重要的是将自己的备课内容,更多地与长滩的经济社会发展实践“串”起来。</p> <p> 明显的变化是,党支部的凝聚力号召力比过去明显增强。“过去村里开党员大会,三番五次叫不来人。现在通知开会,喇叭一喊,党员们不仅来得整齐,而且主动发言。”李平洲说。</p> <p> “作为一名农村党员,你该为村庄发展做些什么?”集中学习结束前,李平洲给支部党员留下了“作业”。李平洲说,下次党课,每个人多要说上几句,回答这个问题,说得好不好,大家自然会评判。</p> <p> <strong> 2017年回访</strong></p> <p> 离开台江县城,车子一头钻进了连绵大山,一小时左右到达长滩村。</p> <p> 机械“嗒嗒嗒”的声音响起,挖掘机轰鸣作响,运输车往来穿梭,又一座旧房被拆除。短短10多天里,长滩村拆除了数栋旧房,为村子发展旅游打下基础。</p> <p> 推倒的旧房只剩下残垣断壁,正在清理中。可对于村党支部书记李平洲来说,破败的景象却孕育着重生的力量。</p> <p> “村民们都很配合,因为党员在关键时刻发挥了关键作用!”李平洲说,党员率先站出来,带头拆除自家房子支持美丽乡村建设,村支委成员带领党员上门解释、宣传政策,效果显著。</p> <p> “现在支部经常把学习的课堂搬到一线,搬到产业,让我们边学习、边反思,找差距、明方向。”党员熊光德说,这让他们对学做结合也有了新的认识。</p> <p> <strong> 背景链接</strong></p> <p> “神经末梢”焕发生机。我省基层党组织中,“三会一课”等党的组织生活制度有效激活,党支部主体作用得到发挥,对党员的联系、教育、管理真正紧密和严格起来。</p> <p> 场景:2016年国庆长假期间,台江县老屯乡长滩村党支部趁着外出务工党员回乡的时机,召集全村全体党员上了“两学一做”学习教育开展以来的第7次党课。</p> <p align=\\\"center\\\"><img id=\\\"6103315\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/8a1eadda84c60cf4d01804833c29f34b.jpg\\\"></p> <p> 伴随着全新改版,以突出“党建因子、时代元素、人文底蕴”的“党建视野”版今天也与读者朋友们见面了。在这里,让我们彼此祝福,愿你我新的一年都拥有更美好的生活,都离我们的梦想更近一步。</p> <p> 我们深知,不管传媒形式如何变迁,辛勤耕耘在贵州大地上的基层党员干部仍是我们这张报纸最忠实的读者,所以我们将过去的“党建”版面全新升级为现在的“党建视野”,旨在通过加强专题策划,打造品牌专栏,突出典型宣传,以兼具思想性和厚重性、专业性和可读性的报道,更加准确、生动地解读党建和组织工作的政策要求；及时反映基层鲜活经验和党员风采,不断培育内涵品位、扩大宣传影响,使“党建视野”成为传播我省党建和组织工作好声音的重要平台。同时也试图通过这个平台发现更多的优秀,评选值得借鉴的典型案例,让这里成为你工作中解惑释疑的助手。</p> <p> 亲爱的读者朋友们,在这个平台里,我们和您一样,律动着贵州后发赶超的强劲脉搏,努力地充实自己完善自己,默念着曾经在党旗前的誓言:做一名合格党员!不断为脱贫攻坚、公共服务水平、创新能力、生态文明建设、产业链条短板、基础设施建设等各个关键方面注入自己的一份动力。</p> <p> 改革越到深水区越艰难,它需要我们每一个人的锲而不舍。贵州日报的全新改版也需要读者朋友和我们一起探索传统媒体的融合创新,为了新年的新面貌,很多同事数月前就进入了“战备”状态,有的深入工厂农村、有的等候在高铁高速的必经之路上,用相机捕捉新年的第一缕晨曦……我们用笔和镜头来迎接全新的2017,用不断前行来继续着这张报纸的光荣与梦想。新的一年,你依然能从这张报纸的字里行间发现我们的心跳、热泪和汗水。</p> <p> 欢迎赐稿</p> <p> 邮箱:<a class=\\\"__cf_email__\\\" href=\\\"http://www.gywb.cn/cdn-cgi/l/email-protection\\\" data-cfemail=\\\"ec9f888b969e8eac9f85828dc28f8381\\\">[email&nbsp;protected]</a></p> <p align=\\\"center\\\"><img id=\\\"6103316\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/e6270d147f08702a08ff3f920b77cbb1.jpg\\\"></p> <p><a class=\\\"__cf_email__\\\" href=\\\"http://www.gywb.cn/cdn-cgi/l/email-protection\\\" data-cfemail=\\\"1bf89b9bf89b9bf2a08ff3bea4fe95a4f3abacf29c97f28e9cfe9e81febc8ffe92b4ffa2bdf3b5abf89b9af28e9cf28ea4fca68cfe96b0fe87b3fe9d87fd93acfd8d\\\">[email&nbsp;protected]</a>�<a class=\\\"__cf_email__\\\" href=\\\"http://www.gywb.cn/cdn-cgi/l/email-protection\\\" data-cfemail=\\\"3fdb8091d8a5bbd9b780da92afdab6b2db8785dab9a3d9b788d7bb8ed78b94d7b88bda90b3dab885d8bd86da92afdcbfbed78fb4d78890da92afdcbfbddcbfbfdcbf\\\">[email&nbsp;protected]</a>� 谢盼 摄</p>   \",\"sourceName\":\"贵州日报\",\"templateId\":\"100000330\",\"title\":\"各市州组织部长寄语\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-06 16:57:25.338  WARN 9356 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-06 16:57:26.528  WARN 9356 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-06 16:57:26.532  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-06 16:57:26.532  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 1seconds
+2017-01-06 16:57:26.536  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@3885c37f
+
+2017-01-06 16:57:38.085  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:57:38	维持连接心跳包
+2017-01-06 16:57:38.125  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:57:38	维持连接心跳包
+
+2017-01-06 16:57:53.061  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:57:53	维持连接心跳包
+2017-01-06 16:57:53.073  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:57:53	维持连接心跳包
+
+2017-01-06 16:58:08.067  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:58:08	维持连接心跳包
+2017-01-06 16:58:08.077  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:58:08	维持连接心跳包
+
+2017-01-06 16:58:23.103  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:58:23	维持连接心跳包
+2017-01-06 16:58:23.108  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:58:23	维持连接心跳包
+
+2017-01-06 16:58:38.097  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:58:38	维持连接心跳包
+2017-01-06 16:58:38.102  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:58:38	维持连接心跳包
+
+2017-01-06 16:58:53.129  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:58:53	维持连接心跳包
+2017-01-06 16:58:53.135  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:58:53	维持连接心跳包
+
+2017-01-06 16:59:08.121  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:59:08	维持连接心跳包
+2017-01-06 16:59:08.133  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:59:08	维持连接心跳包
+
+2017-01-06 16:59:23.321  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:59:23	维持连接心跳包
+2017-01-06 16:59:23.326  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:59:23	维持连接心跳包
+
+2017-01-06 16:59:38.193  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:59:38	维持连接心跳包
+2017-01-06 16:59:38.203  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:59:38	维持连接心跳包
+
+2017-01-06 16:59:53.191  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 16:59:53	维持连接心跳包
+2017-01-06 16:59:53.200  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 16:59:53	维持连接心跳包
+
+2017-01-06 17:00:08.160  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 17:00:08	维持连接心跳包
+2017-01-06 17:00:08.171  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 17:00:08	维持连接心跳包
+
+2017-01-06 17:00:23.174  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 17:00:23	维持连接心跳包
+2017-01-06 17:00:23.184  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 17:00:23	维持连接心跳包
+
+2017-01-06 17:00:38.176  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 17:00:38	维持连接心跳包
+2017-01-06 17:00:38.183  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 17:00:38	维持连接心跳包
+
+2017-01-06 17:00:53.698  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 17:00:53	维持连接心跳包
+2017-01-06 17:00:53.885  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 17:00:53	维持连接心跳包
+
+2017-01-06 17:01:08.565  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-06 17:01:08	维持连接心跳包
+2017-01-06 17:01:08.574  INFO 9356 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-06 17:01:08	维持连接心跳包
+

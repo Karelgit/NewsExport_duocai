@@ -10,24 +10,15 @@ import java.net.Socket;
  * @Version: 2016-12-28
  **/
 public class HandShaker implements Serializable{
-    private String username;
-    private String password;
+    private String companyId;
     private Socket clientSocket;
 
-    public String getUsername() {
-        return username;
+    public String getCompanyId() {
+        return companyId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
     }
 
     public Socket getClientSocket() {
