@@ -70,6 +70,7 @@ public class NewsPusherService {
      * @return
      */
     public String articleToXml(Article article, String xml){
+        xml = new String(xml);
         Assert.notNull(xml,"xml can't be null");
         Assert.notNull(article,"article cannot be null");
         if (article.getTitle()==null||article.getContent()==null||article.getTitle().equals("")||article.getContent().equals("")){

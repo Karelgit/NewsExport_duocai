@@ -70,14 +70,10 @@ public class Client {
     private boolean running = false;
     private long lastSendTime;
     private ConcurrentHashMap<Class, ObjectAction> actionMapping = new ConcurrentHashMap<Class, ObjectAction>();
-    private String username;
-    private String password;
 
-    public Client(String serverIp, int port, String username, String password) {
+    public Client(String serverIp, int port) {
         this.serverIp = serverIp;
         this.port = port;
-        this.username = username;
-        this.password = password;
     }
 
     public void start() throws UnknownHostException, IOException {
@@ -211,7 +207,7 @@ public class Client {
         public void run() {
             String serverIp = resourceBundle.getString("SERVER_IP");
             int port = Integer.parseInt(resourceBundle.getString("SERVER_PORT"));
-            Client client = new Client(serverIp, port, username, password);
+            Client client = new Client(serverIp, port);
             client.addActionMap(Object.class, new HandShakerObjectAction());
             try {
                 client.start();

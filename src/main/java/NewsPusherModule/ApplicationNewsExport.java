@@ -23,7 +23,7 @@ public class ApplicationNewsExport {
         ResourceBundle resourceBundle = ResourceBundle.getBundle("conf");
         String serverIp = resourceBundle.getString("SERVER_IP");
         int port = Integer.parseInt(resourceBundle.getString("SERVER_PORT"));
-        Client client = new Client(serverIp,port,args[0],args[1]);
+        Client client = new Client(serverIp,port);
         client.addActionMap(Object.class,new Client.HandShakerObjectAction());
         try {
             client.start();

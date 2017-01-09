@@ -61,10 +61,10 @@ public class ExportDuocaiController {
             map.put("code",500);
             map.put("info",e.getMessage());
         }
-
+        final String xmlTemplate = xml;
         for (int i=0;i<array.size();i++){
             Article article = JSON.parseObject(array.getString(i),Article.class);
-            xml = newsPusherService.articleToXml(article,xml);
+            xml = newsPusherService.articleToXml(article,xmlTemplate);
             try {
                 String result = newsPusherService.exportNewsToDuocai(xml,token);
                 System.out.println("推送结果：" + result);
