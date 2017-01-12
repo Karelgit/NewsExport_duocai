@@ -57,7 +57,9 @@ public class ExportDuocaiController {
         try {
             token = this.getToken(duocai);
             xml = this.getXml(duocai);
+            System.out.println("duocai的信息："+duocai);
         } catch (Exception e) {
+            System.out.println("异常"+e);
             map.put("code",500);
             map.put("info",e.getMessage());
         }

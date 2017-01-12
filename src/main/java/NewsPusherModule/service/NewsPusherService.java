@@ -57,7 +57,9 @@ public class NewsPusherService {
        return this.login(loginUrl,userName,password);
     }
     public String getXmlTemplate(DuocaiInfo duocaiInfo){
+
         String xml = new HandleXml().readXml("/news.xml");
+        System.out.println("xml值："+xml);
         xml = xml.replace("$initEditor",duocaiInfo.getInitEditor());
 
         return xml;

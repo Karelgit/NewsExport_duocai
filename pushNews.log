@@ -5689,3 +5689,449 @@ Identify and stop the process that's listening on port 10088 or configure this a
 2017-01-09 17:06:46.348  INFO 5640 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-09 17:06:46	维持连接心跳包
 2017-01-09 17:06:46.353  INFO 5640 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-09 17:06:46	维持连接心跳包
 
+2017-01-10 11:39:16.441  INFO 291200 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 291200 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-10 11:39:16.467  INFO 291200 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-10 11:39:16.651  INFO 291200 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2cf63e26: startup date [Tue Jan 10 11:39:16 CST 2017]; root of context hierarchy
+2017-01-10 11:39:21.097  INFO 291200 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-10 11:39:21.129  INFO 291200 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-10 11:39:21.131  INFO 291200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-10 11:39:21.477  INFO 291200 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-10 11:39:21.478  INFO 291200 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4831 ms
+2017-01-10 11:39:22.345  INFO 291200 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-10 11:39:22.401  INFO 291200 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-10 11:39:22.402  INFO 291200 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-10 11:39:22.402  INFO 291200 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-10 11:39:22.402  INFO 291200 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-10 11:39:23.934  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2cf63e26: startup date [Tue Jan 10 11:39:16 CST 2017]; root of context hierarchy
+2017-01-10 11:39:24.092  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-10 11:39:24.094  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-10 11:39:24.095  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-10 11:39:24.100  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-10 11:39:24.101  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-10 11:39:24.106  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-10 11:39:24.106  INFO 291200 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-10 11:39:24.211  INFO 291200 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-10 11:39:24.211  INFO 291200 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-10 11:39:24.442  INFO 291200 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-10 11:39:25.363  INFO 291200 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-10 11:39:25.502  INFO 291200 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-10 11:39:25.524  INFO 291200 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 10.751 seconds (JVM running for 12.218)
+2017-01-10 11:39:25.554  INFO 291200 --- [main] NewsPusherModule.service.Client          : 本地端口：59787
+2017-01-10 11:39:25.751  INFO 291200 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-10 11:39:40.741  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:39:40	维持连接心跳包
+2017-01-10 11:39:40.747  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:39:40	维持连接心跳包
+
+2017-01-10 11:39:55.723  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:39:55	维持连接心跳包
+2017-01-10 11:39:55.729  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:39:55	维持连接心跳包
+
+2017-01-10 11:40:10.744  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:40:10	维持连接心跳包
+2017-01-10 11:40:10.751  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:40:10	维持连接心跳包
+
+2017-01-10 11:40:25.747  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:40:25	维持连接心跳包
+2017-01-10 11:40:25.753  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:40:25	维持连接心跳包
+
+2017-01-10 11:40:40.759  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:40:40	维持连接心跳包
+2017-01-10 11:40:40.766  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:40:40	维持连接心跳包
+
+2017-01-10 11:40:55.976  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:40:55	维持连接心跳包
+2017-01-10 11:40:55.984  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:40:55	维持连接心跳包
+
+2017-01-10 11:41:10.918  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:41:10	维持连接心跳包
+2017-01-10 11:41:10.930  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:41:10	维持连接心跳包
+
+2017-01-10 11:41:26.001  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:41:26	维持连接心跳包
+2017-01-10 11:41:26.006  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:41:26	维持连接心跳包
+
+2017-01-10 11:41:41.062  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:41:41	维持连接心跳包
+2017-01-10 11:41:41.069  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:41:41	维持连接心跳包
+
+2017-01-10 11:41:56.147  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:41:56	维持连接心跳包
+2017-01-10 11:41:56.156  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:41:56	维持连接心跳包
+
+2017-01-10 11:42:11.173  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:42:11	维持连接心跳包
+2017-01-10 11:42:11.181  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:42:11	维持连接心跳包
+
+2017-01-10 11:42:26.217  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:42:26	维持连接心跳包
+2017-01-10 11:42:26.222  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:42:26	维持连接心跳包
+
+2017-01-10 11:42:41.222  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:42:41	维持连接心跳包
+2017-01-10 11:42:41.227  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:42:41	维持连接心跳包
+
+2017-01-10 11:42:56.240  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:42:56	维持连接心跳包
+2017-01-10 11:42:56.245  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:42:56	维持连接心跳包
+
+2017-01-10 11:43:11.246  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:43:11	维持连接心跳包
+2017-01-10 11:43:11.254  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:43:11	维持连接心跳包
+
+2017-01-10 11:43:26.265  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:43:26	维持连接心跳包
+2017-01-10 11:43:26.272  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:43:26	维持连接心跳包
+
+2017-01-10 11:43:41.282  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:43:41	维持连接心跳包
+2017-01-10 11:43:41.298  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:43:41	维持连接心跳包
+
+2017-01-10 11:43:56.330  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:43:56	维持连接心跳包
+2017-01-10 11:43:56.335  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:43:56	维持连接心跳包
+
+2017-01-10 11:44:11.336  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:44:11	维持连接心跳包
+2017-01-10 11:44:11.341  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:44:11	维持连接心跳包
+
+2017-01-10 11:44:26.343  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:44:26	维持连接心跳包
+2017-01-10 11:44:26.350  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:44:26	维持连接心跳包
+
+2017-01-10 11:44:41.363  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-10 11:44:41	维持连接心跳包
+2017-01-10 11:44:41.368  INFO 291200 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-10 11:44:41	维持连接心跳包
+
+2017-01-12 09:51:36.875  INFO 488552 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 488552 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-12 09:51:36.912  INFO 488552 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-12 09:51:37.304  INFO 488552 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38b229f7: startup date [Thu Jan 12 09:51:37 CST 2017]; root of context hierarchy
+2017-01-12 09:51:42.162  INFO 488552 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-12 09:51:42.214  INFO 488552 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-12 09:51:42.217  INFO 488552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-12 09:51:43.279  INFO 488552 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-12 09:51:43.279  INFO 488552 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5993 ms
+2017-01-12 09:51:43.664  INFO 488552 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-12 09:51:43.673  INFO 488552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-12 09:51:43.674  INFO 488552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-12 09:51:43.674  INFO 488552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-12 09:51:43.675  INFO 488552 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-12 09:51:45.404  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38b229f7: startup date [Thu Jan 12 09:51:37 CST 2017]; root of context hierarchy
+2017-01-12 09:51:45.556  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-12 09:51:45.558  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-12 09:51:45.558  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-12 09:51:45.562  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-12 09:51:45.562  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-12 09:51:45.566  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-12 09:51:45.567  INFO 488552 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-12 09:51:45.808  INFO 488552 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 09:51:45.808  INFO 488552 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 09:51:45.946  INFO 488552 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 09:51:46.804  INFO 488552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-12 09:51:47.023  INFO 488552 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-12 09:51:47.045  INFO 488552 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 12.131 seconds (JVM running for 17.865)
+2017-01-12 09:51:47.064  INFO 488552 --- [main] NewsPusherModule.service.Client          : 本地端口：58282
+2017-01-12 09:51:47.648  INFO 488552 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-12 09:52:02.447  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 09:52:02	维持连接心跳包
+2017-01-12 09:52:02.456  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 09:52:02	维持连接心跳包
+
+2017-01-12 09:52:03.775  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@53514e2
+2017-01-12 09:52:03.791  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"记者\",\"channelId\":\"92000000000000000\",\"content\":\"<p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><strong><span style=\\\"font-size:12pt;\\\"><span style=\\\"font-family:宋体;\\\"><span style=\\\"font-family:宋体;\\\">（记者</span>&nbsp;朱俊洁&nbsp;报道）</span></span></strong><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">1月10日下午，八镇代表团就县人大常委会、法院、检察院三个工作报告进行讨论。各会场代表直奔主题，谈感受、提建议，发言积极踊跃。</span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">“作为一名人大代表，我们要首当其冲，在行事作风上当好表率，充分体现代表职能职责，当好群众的代言人。我建议，县级人大要加强重视基层组织工作，着重对镇村人大代表进行职业化培训，进一步提高基层代表的职业素养；要探索创新视察工作方式方法，分门别类进行专项专题督查视察，确保视察工作出实效。”黎鏊开说。</span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\"><span style=\\\"font-family:宋体;\\\">代表陆天童认为，近年来，人大工作视察走村进镇，听民意、集民愿，人大代表的作用得到进一步发挥，代表建议数量逐年增多。同时，相关部门通过认真办理代表建议，可以集思广益，群策群力，也可以了解社情民意，找出工作中存在的问题。建议县级人大完善代表建议办理机制，建立绿色通道，提供优质高效的建议办理服务，提高满意率和落实率。</span></span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\"><span style=\\\"font-family:宋体;\\\">检察院工作报告中，一系列深化检察体制改革的新举措纷纷亮相,吸引诸多代表关注，预防职务犯罪、司法公正、党风廉政等成为讨论的热点词汇。</span></span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">“</span></span><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">县</span></span><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">检察院</span></span><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">要</span></span><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\"><span style=\\\"font-family:宋体;\\\">从以往案件中汲取经验，继续加强职务犯罪预防检查力度，采取更有力的制度措施，突破职务犯罪中存在的隐蔽性强、初查方式和侦查谋略陈旧等问题，实现标本兼治；要加大对执法干部的培训，创新侦查工作的方式方法，提高工作效率。”韦相祥建议。</span></span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">代表何士华说，检察工作的开展要自觉接受社会各界监督，敢于亮短现丑,不搞花架子，做到公平、公正、公开；要加强与相关部门的沟通协作，组织代表、干部、群众参与到工作视察、专项检查、案件听证、公诉庭审等工作中，提高检察院公信力。</span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">“今天认真研读了检察院工作报告，我认为党风廉政也是老百姓重点关注的问题之一，建议检察机关要多开展专项案件案例等主题宣传活动，不仅把检察工作普及到干部当中，更要让老百姓正确了解检察院职能职责，做到公正透明，进一步提升检察系统形象。”代表熊图飞说。</span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">三个工作报告中，各团代表对法院工作也尤为关注。一致认为，法院工作与群众满意度息息相关，希望法院重视基层法院建设，对民生领域社会矛盾、纠纷等做到及时调解，耐心化解，提升群众满意度。</span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\"><span style=\\\"font-family:宋体;\\\">代表何可建说：“当今，不法分子钻法律空子的现象仍然存在，希望法院加大执行力度，坚决从严执法，保障司法公平公正，定期不定期开展普法培训；要加大拐卖人口和食品安全等案件的审判力度，对肆意妄为之徒采取特殊方法特殊对待，严厉惩治。</span></span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\"><span style=\\\"font-size:12.0000pt;\\\"><span style=\\\"font-family:宋体;\\\">“希望县级法院多下基层开展培训，多用以案说法方式进行直面的宣传警示教育，提高农村群众法律意识；要自觉接受全民监督，对案件进行统一受理、考核和监督,特别要对每个案件的执法环节实行实时监督、全程控制,将公平正义体现在每一个司法个案中。”代表何昌义说。</span></span></p><p style=\\\"margin-right:0pt;margin-bottom:12pt;margin-left:0pt;text-indent:24pt;line-height:200%;\\\">&nbsp;</p><p style=\\\"margin-right: 0pt; margin-bottom: 12pt; margin-left: 0pt; text-indent: 24pt; line-height: 200%; text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/d6adcb60fd452084ae504a6f79047fbb.JPG\\\"></p><p style=\\\"text-align: center;\\\">代表黎鳌开发言</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/2b34487954e61fd4f0b6e4e0a1cf48ee.JPG\\\"></p><p style=\\\"text-align: center;\\\">代表何士华发言</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/cb4d2d92e4897d022bcd8b9f27f1ed15.JPG\\\"></p><p style=\\\"text-align: center;\\\">代表何可建发言</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/0e2f393a40dfc5a2c099da82f8be4748.JPG\\\"></p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/0db468aac0a9f1e1e2ca505b3c29fd1a.JPG\\\"></p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/e11a6a468828b178889ae002f42d897e.JPG\\\"></p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\">&nbsp;</p><p style=\\\"text-align: center;\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/68efcdcf409e17ad1ad6c81852cb56d0/d63fcdd73a29ee64d73ec89abc04eb2c.JPG\\\"></p>\",\"sourceName\":\"独山传媒\",\"templateId\":\"100000330\",\"title\":\"【“两会”讨论】代表为县人大、法院、检察院工作建言\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-12 09:52:04.252  WARN 488552 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 09:52:05.209  WARN 488552 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 09:52:05.212  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-12 09:52:05.212  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 1seconds
+2017-01-12 09:52:05.223  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@53514e2
+
+2017-01-12 09:52:17.388  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 09:52:17	维持连接心跳包
+2017-01-12 09:52:17.396  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 09:52:17	维持连接心跳包
+
+2017-01-12 09:52:32.395  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 09:52:32	维持连接心跳包
+2017-01-12 09:52:32.404  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 09:52:32	维持连接心跳包
+
+2017-01-12 09:52:47.488  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 09:52:47	维持连接心跳包
+2017-01-12 09:52:47.498  INFO 488552 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 09:52:47	维持连接心跳包
+
+2017-01-12 10:00:06.949  INFO 525280 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 525280 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-12 10:00:06.955  INFO 525280 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-12 10:00:07.174  INFO 525280 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6836f324: startup date [Thu Jan 12 10:00:07 CST 2017]; root of context hierarchy
+2017-01-12 10:00:11.115  INFO 525280 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-12 10:00:11.135  INFO 525280 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-12 10:00:11.138  INFO 525280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-12 10:00:11.380  INFO 525280 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-12 10:00:11.381  INFO 525280 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4213 ms
+2017-01-12 10:00:11.809  INFO 525280 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-12 10:00:11.826  INFO 525280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-12 10:00:11.827  INFO 525280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-12 10:00:11.828  INFO 525280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-12 10:00:11.828  INFO 525280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-12 10:00:12.928  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6836f324: startup date [Thu Jan 12 10:00:07 CST 2017]; root of context hierarchy
+2017-01-12 10:00:13.044  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-12 10:00:13.046  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-12 10:00:13.047  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-12 10:00:13.050  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-12 10:00:13.050  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-12 10:00:13.055  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-12 10:00:13.056  INFO 525280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-12 10:00:13.163  INFO 525280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:00:13.163  INFO 525280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:00:13.342  INFO 525280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:00:14.348  INFO 525280 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-12 10:00:14.685  INFO 525280 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-12 10:00:14.691  INFO 525280 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 8.972 seconds (JVM running for 10.011)
+2017-01-12 10:00:14.701  INFO 525280 --- [main] NewsPusherModule.service.Client          : 本地端口：58481
+2017-01-12 10:00:14.952  INFO 525280 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-12 10:00:29.841  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:00:29	维持连接心跳包
+2017-01-12 10:00:29.862  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:00:29	维持连接心跳包
+
+2017-01-12 10:00:44.907  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:00:44	维持连接心跳包
+2017-01-12 10:00:44.914  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:00:44	维持连接心跳包
+
+2017-01-12 10:00:51.290  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@72f99d1b
+2017-01-12 10:00:51.307  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 1月10日，网络媒体编辑记者新年第一“走”，清晨赶赴福建福州，2017年网络媒体“走转改”暨“温暖中国”新春走基层主题采访活动将在这座有“福“之地火热开展。</p> <p> 2017年网络媒体“走转改”暨“温暖中国”新春走基层活动由中央网信办网络新闻信息传播局主办、福建省网信办承办。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/70b8f3e8dc4f0f635adf336a81bed8ef.jpg\\\" id=\\\"6108343\\\"> </p> <p> 来自全国50余家中央新闻网站、地方新闻网站、商业网站和新媒体的60多名记者编辑参加了出发仪式。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/7ed318e6cabda2226f25966d0af7625e.jpg\\\" id=\\\"6108344\\\"> </p> <p> 出发仪式上，<strong>中央网信办网络新闻信息传播局副局长刘冲向参加本次活动的各位记者编辑提出三点希望：</strong></p> <p> <strong>一是坚持正确导向</strong> ，把学习贯彻全国宣传部长会议、全国网信办主任会议精神落到实处。</p> <p> <strong>二是脚踏实地</strong> ，切实得到锻炼。“一头汗、两腿泥”才能写出好新闻。</p> <p> <strong>三是创新传播</strong> ，务求实效。</p> <p> 参加本次采访活动的记者编辑将在福州、宁德两市基层、田间地头、工厂车间进行为期一周的深入采访。反映普通人身上温暖人心的真情故事，展现平凡人践行社会主义核心价值观的光辉形象。用手中的笔写出有温度、有深度的文章。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/607afbddeb7bf1abccb32db0ccb3cf90.jpg\\\" id=\\\"6108345\\\"> </p> <p align=\\\"center\\\" class=\\\"pictext\\\">采访团第一站，到达福州火车站“王威服务台”。</p> <p> 王威是南昌铁路局福州南站党总支书记，从事铁路一线客运工作28年来，以服务为宗旨、待旅客如亲人，以他名字命名的“海峡情 王威服务台”成为一张亮丽的名片。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/28090aff26f00182b420a4e2d8c18fc5.jpg\\\" id=\\\"6108346\\\"> </p> <p align=\\\"center\\\" class=\\\"pictext\\\">采访团采访南昌铁路局福州车站福州南站党总支书记王威。</p> <p> 据悉，此次新春走基层主题采访活动还在新浪微博开设了#温暖中国#和#中国温度#两个微话题，截至目前，两个话题阅读量已超过3.4亿次，讨论数超过3亿次。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/89068581c41509a7013199ad1fffb46f.jpg\\\" id=\\\"6108347\\\"> </p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/42722936b26f1840e55c07617097e1d8.jpg\\\" id=\\\"6108348\\\"> </p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/45290dcf3d4902e516a3ec1d98a083c3.jpg\\\" id=\\\"6108349\\\"> </p>   \",\"sourceName\":\"央广网\",\"templateId\":\"100000330\",\"title\":\"一头汗、两腿泥，网络媒体新年撸起袖子这样干\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-12 10:00:51.608  WARN 525280 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:00:53.364  WARN 525280 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:00:53.367  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-12 10:00:53.367  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 2seconds
+2017-01-12 10:00:53.379  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@72f99d1b
+
+2017-01-12 10:00:59.955  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:00:59	维持连接心跳包
+2017-01-12 10:00:59.962  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:00:59	维持连接心跳包
+
+2017-01-12 10:01:15.006  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:01:15	维持连接心跳包
+2017-01-12 10:01:15.011  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:01:15	维持连接心跳包
+
+2017-01-12 10:01:30.020  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:01:30	维持连接心跳包
+2017-01-12 10:01:30.032  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:01:30	维持连接心跳包
+
+2017-01-12 10:01:45.038  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:01:45	维持连接心跳包
+2017-01-12 10:01:45.046  INFO 525280 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:01:45	维持连接心跳包
+
+2017-01-12 10:06:29.662  INFO 543624 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 543624 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-12 10:06:29.668  INFO 543624 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-12 10:06:29.895  INFO 543624 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@528ca407: startup date [Thu Jan 12 10:06:29 CST 2017]; root of context hierarchy
+2017-01-12 10:06:34.144  INFO 543624 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-12 10:06:34.172  INFO 543624 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-12 10:06:34.174  INFO 543624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-12 10:06:34.492  INFO 543624 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-12 10:06:34.492  INFO 543624 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4601 ms
+2017-01-12 10:06:34.934  INFO 543624 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-12 10:06:34.940  INFO 543624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-12 10:06:34.941  INFO 543624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-12 10:06:34.941  INFO 543624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-12 10:06:34.942  INFO 543624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-12 10:06:36.026  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@528ca407: startup date [Thu Jan 12 10:06:29 CST 2017]; root of context hierarchy
+2017-01-12 10:06:36.145  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-12 10:06:36.146  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-12 10:06:36.146  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-12 10:06:36.147  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-12 10:06:36.148  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-12 10:06:36.152  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-12 10:06:36.154  INFO 543624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-12 10:06:36.283  INFO 543624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:06:36.284  INFO 543624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:06:36.436  INFO 543624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:06:37.544  INFO 543624 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-12 10:06:37.682  INFO 543624 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-12 10:06:37.691  INFO 543624 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 10.071 seconds (JVM running for 10.972)
+2017-01-12 10:06:37.701  INFO 543624 --- [main] NewsPusherModule.service.Client          : 本地端口：58606
+2017-01-12 10:06:37.883  INFO 543624 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-12 10:06:52.791  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:06:52	维持连接心跳包
+2017-01-12 10:06:52.799  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:06:52	维持连接心跳包
+
+2017-01-12 10:07:01.336  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@28a57b48
+2017-01-12 10:07:01.350  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 1月10日，网络媒体编辑记者新年第一“走”，清晨赶赴福建福州，2017年网络媒体“走转改”暨“温暖中国”新春走基层主题采访活动将在这座有“福“之地火热开展。</p> <p> 2017年网络媒体“走转改”暨“温暖中国”新春走基层活动由中央网信办网络新闻信息传播局主办、福建省网信办承办。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/70b8f3e8dc4f0f635adf336a81bed8ef.jpg\\\" id=\\\"6108343\\\"> </p> <p> 来自全国50余家中央新闻网站、地方新闻网站、商业网站和新媒体的60多名记者编辑参加了出发仪式。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/7ed318e6cabda2226f25966d0af7625e.jpg\\\" id=\\\"6108344\\\"> </p> <p> 出发仪式上，<strong>中央网信办网络新闻信息传播局副局长刘冲向参加本次活动的各位记者编辑提出三点希望：</strong></p> <p> <strong>一是坚持正确导向</strong> ，把学习贯彻全国宣传部长会议、全国网信办主任会议精神落到实处。</p> <p> <strong>二是脚踏实地</strong> ，切实得到锻炼。“一头汗、两腿泥”才能写出好新闻。</p> <p> <strong>三是创新传播</strong> ，务求实效。</p> <p> 参加本次采访活动的记者编辑将在福州、宁德两市基层、田间地头、工厂车间进行为期一周的深入采访。反映普通人身上温暖人心的真情故事，展现平凡人践行社会主义核心价值观的光辉形象。用手中的笔写出有温度、有深度的文章。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/607afbddeb7bf1abccb32db0ccb3cf90.jpg\\\" id=\\\"6108345\\\"> </p> <p align=\\\"center\\\" class=\\\"pictext\\\">采访团第一站，到达福州火车站“王威服务台”。</p> <p> 王威是南昌铁路局福州南站党总支书记，从事铁路一线客运工作28年来，以服务为宗旨、待旅客如亲人，以他名字命名的“海峡情 王威服务台”成为一张亮丽的名片。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/28090aff26f00182b420a4e2d8c18fc5.jpg\\\" id=\\\"6108346\\\"> </p> <p align=\\\"center\\\" class=\\\"pictext\\\">采访团采访南昌铁路局福州车站福州南站党总支书记王威。</p> <p> 据悉，此次新春走基层主题采访活动还在新浪微博开设了#温暖中国#和#中国温度#两个微话题，截至目前，两个话题阅读量已超过3.4亿次，讨论数超过3亿次。</p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/89068581c41509a7013199ad1fffb46f.jpg\\\" id=\\\"6108347\\\"> </p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/42722936b26f1840e55c07617097e1d8.jpg\\\" id=\\\"6108348\\\"> </p> <p align=\\\"center\\\"><img src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/45290dcf3d4902e516a3ec1d98a083c3.jpg\\\" id=\\\"6108349\\\"> </p>   \",\"sourceName\":\"央广网\",\"templateId\":\"100000330\",\"title\":\"一头汗、两腿泥，网络媒体新年撸起袖子这样干\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-12 10:07:01.648  WARN 543624 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:07:02.594  WARN 543624 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:07:02.598  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-12 10:07:02.599  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 1seconds
+2017-01-12 10:07:02.604  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@28a57b48
+
+2017-01-12 10:07:07.868  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:07:07	维持连接心跳包
+2017-01-12 10:07:07.877  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:07:07	维持连接心跳包
+
+2017-01-12 10:07:23.034  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:07:23	维持连接心跳包
+2017-01-12 10:07:23.040  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:07:23	维持连接心跳包
+
+2017-01-12 10:07:38.048  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:07:38	维持连接心跳包
+2017-01-12 10:07:38.056  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:07:38	维持连接心跳包
+
+2017-01-12 10:07:53.069  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:07:53	维持连接心跳包
+2017-01-12 10:07:53.075  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:07:53	维持连接心跳包
+
+2017-01-12 10:08:08.087  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:08:08	维持连接心跳包
+2017-01-12 10:08:08.095  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:08:08	维持连接心跳包
+
+2017-01-12 10:08:23.129  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:08:23	维持连接心跳包
+2017-01-12 10:08:23.133  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:08:23	维持连接心跳包
+
+2017-01-12 10:08:38.163  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:08:38	维持连接心跳包
+2017-01-12 10:08:38.173  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:08:38	维持连接心跳包
+
+2017-01-12 10:08:53.218  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:08:53	维持连接心跳包
+2017-01-12 10:08:53.226  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:08:53	维持连接心跳包
+
+2017-01-12 10:09:08.243  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:09:08	维持连接心跳包
+2017-01-12 10:09:08.251  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:09:08	维持连接心跳包
+
+2017-01-12 10:09:23.258  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:09:23	维持连接心跳包
+2017-01-12 10:09:23.265  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:09:23	维持连接心跳包
+
+2017-01-12 10:09:38.274  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:09:38	维持连接心跳包
+2017-01-12 10:09:38.279  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:09:38	维持连接心跳包
+
+2017-01-12 10:09:53.296  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:09:53	维持连接心跳包
+2017-01-12 10:09:53.303  INFO 543624 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:09:53	维持连接心跳包
+
+2017-01-12 10:41:37.841  INFO 538296 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 538296 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-12 10:41:37.884  INFO 538296 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-12 10:41:38.231  INFO 538296 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e00ab61: startup date [Thu Jan 12 10:41:38 CST 2017]; root of context hierarchy
+2017-01-12 10:41:44.372  INFO 538296 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-12 10:41:44.397  INFO 538296 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-12 10:41:44.399  INFO 538296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-12 10:41:45.505  INFO 538296 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-12 10:41:45.505  INFO 538296 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7338 ms
+2017-01-12 10:41:46.048  INFO 538296 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-12 10:41:46.072  INFO 538296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-12 10:41:46.073  INFO 538296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-12 10:41:46.073  INFO 538296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-12 10:41:46.073  INFO 538296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-12 10:41:47.624  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e00ab61: startup date [Thu Jan 12 10:41:38 CST 2017]; root of context hierarchy
+2017-01-12 10:41:47.766  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-12 10:41:47.769  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-12 10:41:47.770  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-12 10:41:47.773  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-12 10:41:47.773  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-12 10:41:47.779  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-12 10:41:47.779  INFO 538296 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-12 10:41:47.933  INFO 538296 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:41:47.933  INFO 538296 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:41:48.176  INFO 538296 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:41:49.208  INFO 538296 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-12 10:41:49.444  INFO 538296 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-12 10:41:49.455  INFO 538296 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 13.248 seconds (JVM running for 18.165)
+2017-01-12 10:41:49.479  INFO 538296 --- [main] NewsPusherModule.service.Client          : 本地端口：59417
+2017-01-12 10:41:49.702  INFO 538296 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-12 10:42:04.723  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:42:04	维持连接心跳包
+2017-01-12 10:42:04.730  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:42:04	维持连接心跳包
+
+2017-01-12 10:42:19.814  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:42:19	维持连接心跳包
+2017-01-12 10:42:19.820  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:42:19	维持连接心跳包
+
+2017-01-12 10:42:34.750  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:42:34	维持连接心跳包
+2017-01-12 10:42:34.758  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:42:34	维持连接心跳包
+
+2017-01-12 10:42:36.202  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@73fc62f
+2017-01-12 10:42:36.211  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 本报讯（贵州日报记者 王恬）1月11日，全省宣传部长会议在贵阳召开。会议深入学习贯彻习近平总书记系列重要讲话精神，全面贯彻全国宣传部长会议精神和省委书记陈敏尔在省委常委会研究宣传思想文化工作时的讲话精神，总结工作、分析形势，部署2017年工作。省委副书记、省政法委书记谌贻琴出席会议并讲话，省人大常委会副主任周忠良、副省长何力、省政协副主席左定超出席会议。</p> <p> 谌贻琴在讲话中充分肯定了2016年全省宣传思想文化工作取得的成绩。她指出，面对新形势新任务，全省宣传思想文化战线要始终坚持同以习近平同志为核心的党中央保持高度一致，坚决贯彻落实中央和省委的各项决策部署，牢固树立政治意识、大局意识、核心意识、看齐意识，深刻认识和把握工作规律，深刻认识和坚定文化自信，坚持正确政治方向、舆论导向、价值取向，紧扣坚持和发展中国特色社会主义、实现中华民族伟大复兴中国梦这个主题，贯穿迎接宣传贯彻党的十九大和省第十二次党代会这条主线，把握稳中求进工作总基调，大力弘扬和践行“天人合一、知行合一”的贵州人文精神，大力构筑贵州“精神高地”，讲好多彩贵州精彩故事、传播开放贵州响亮声音，为全省守底线走新路奔小康提供有力思想保证和良好精神文化条件。</p> <p> 谌贻琴强调，要高扬党的理论旗帜，把学习研究宣传习近平总书记系列重要讲话精神和治国理政新理念、新思想、新战略持续引向深入，更好地用以武装头脑、指导实践、推动工作。要唱响贵州时代强音，围绕决战脱贫攻坚、决胜全面小康的主旋律，进一步营造团结奋进的主流舆论强势。要厚植贵州文明沃土，持续用力推进社会主义核心价值观建设，大力开展“文明在行动·满意在贵州”活动。要增强贵州文化自信，强实力、抓特色、补短板，加快建设多彩贵州民族特色文化强省。要坚守政治安全底线，切实提高工作能力水平，牢牢掌握意识形态工作主导权。要严格落实领导责任，切实加强宣传思想文化战线党的建设和队伍建设，不断开创宣传思想文化工作新局面，以优异成绩迎接党的十九大和省第十二次党代会胜利召开。</p>   \",\"sourceName\":\"贵州都市报\",\"templateId\":\"100000330\",\"title\":\"构筑“精神高地”　讲好“贵州故事”\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-12 10:42:52.305  WARN 538296 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:51:09.112  INFO 538296 --- [Thread-6] NewsPusherModule.service.Client          : 本地端口：59591
+2017-01-12 10:51:09.163  INFO 538296 --- [Thread-9] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-12 10:51:09.170  WARN 538296 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:51:09.171  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-12 10:51:09.171  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 512seconds
+2017-01-12 10:51:09.184  INFO 538296 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@73fc62f
+
+2017-01-12 10:55:04.612  INFO 435144 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 435144 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-12 10:55:04.617  INFO 435144 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-12 10:55:04.789  INFO 435144 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c213c27: startup date [Thu Jan 12 10:55:04 CST 2017]; root of context hierarchy
+2017-01-12 10:55:08.371  INFO 435144 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-12 10:55:08.392  INFO 435144 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-12 10:55:08.393  INFO 435144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-12 10:55:08.588  INFO 435144 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-12 10:55:08.588  INFO 435144 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3802 ms
+2017-01-12 10:55:08.993  INFO 435144 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-12 10:55:09.003  INFO 435144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-12 10:55:09.003  INFO 435144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-12 10:55:09.003  INFO 435144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-12 10:55:09.003  INFO 435144 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-12 10:55:09.943  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c213c27: startup date [Thu Jan 12 10:55:04 CST 2017]; root of context hierarchy
+2017-01-12 10:55:10.044  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-12 10:55:10.045  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-12 10:55:10.046  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-12 10:55:10.049  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-12 10:55:10.049  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-12 10:55:10.053  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-12 10:55:10.053  INFO 435144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-12 10:55:10.167  INFO 435144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:55:10.167  INFO 435144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:55:10.291  INFO 435144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-12 10:55:10.793  INFO 435144 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-12 10:55:11.016  INFO 435144 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-12 10:55:11.022  INFO 435144 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 8.013 seconds (JVM running for 8.904)
+2017-01-12 10:55:11.038  INFO 435144 --- [main] NewsPusherModule.service.Client          : 本地端口：59649
+2017-01-12 10:55:11.642  INFO 435144 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-12 10:55:26.245  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:55:26	维持连接心跳包
+2017-01-12 10:55:26.253  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:55:26	维持连接心跳包
+
+2017-01-12 10:55:41.273  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:55:41	维持连接心跳包
+2017-01-12 10:55:41.282  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:55:41	维持连接心跳包
+
+2017-01-12 10:55:56.283  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:55:56	维持连接心跳包
+2017-01-12 10:55:56.288  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:55:56	维持连接心跳包
+
+2017-01-12 10:56:10.665  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@4d3f3b78
+2017-01-12 10:56:10.680  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 本报讯（贵州日报记者 王恬）1月11日，全省宣传部长会议在贵阳召开。会议深入学习贯彻习近平总书记系列重要讲话精神，全面贯彻全国宣传部长会议精神和省委书记陈敏尔在省委常委会研究宣传思想文化工作时的讲话精神，总结工作、分析形势，部署2017年工作。省委副书记、省政法委书记谌贻琴出席会议并讲话，省人大常委会副主任周忠良、副省长何力、省政协副主席左定超出席会议。</p> <p> 谌贻琴在讲话中充分肯定了2016年全省宣传思想文化工作取得的成绩。她指出，面对新形势新任务，全省宣传思想文化战线要始终坚持同以习近平同志为核心的党中央保持高度一致，坚决贯彻落实中央和省委的各项决策部署，牢固树立政治意识、大局意识、核心意识、看齐意识，深刻认识和把握工作规律，深刻认识和坚定文化自信，坚持正确政治方向、舆论导向、价值取向，紧扣坚持和发展中国特色社会主义、实现中华民族伟大复兴中国梦这个主题，贯穿迎接宣传贯彻党的十九大和省第十二次党代会这条主线，把握稳中求进工作总基调，大力弘扬和践行“天人合一、知行合一”的贵州人文精神，大力构筑贵州“精神高地”，讲好多彩贵州精彩故事、传播开放贵州响亮声音，为全省守底线走新路奔小康提供有力思想保证和良好精神文化条件。</p> <p> 谌贻琴强调，要高扬党的理论旗帜，把学习研究宣传习近平总书记系列重要讲话精神和治国理政新理念、新思想、新战略持续引向深入，更好地用以武装头脑、指导实践、推动工作。要唱响贵州时代强音，围绕决战脱贫攻坚、决胜全面小康的主旋律，进一步营造团结奋进的主流舆论强势。要厚植贵州文明沃土，持续用力推进社会主义核心价值观建设，大力开展“文明在行动·满意在贵州”活动。要增强贵州文化自信，强实力、抓特色、补短板，加快建设多彩贵州民族特色文化强省。要坚守政治安全底线，切实提高工作能力水平，牢牢掌握意识形态工作主导权。要严格落实领导责任，切实加强宣传思想文化战线党的建设和队伍建设，不断开创宣传思想文化工作新局面，以优异成绩迎接党的十九大和省第十二次党代会胜利召开。</p>   \",\"sourceName\":\"贵州都市报\",\"templateId\":\"100000330\",\"title\":\"构筑“精神高地”　讲好“贵州故事”\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-12 10:56:10.977  WARN 435144 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:56:11.082  WARN 435144 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:56:11.083  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-12 10:56:11.083  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-12 10:56:11.099  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@4d3f3b78
+
+2017-01-12 10:56:11.386  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:56:11	维持连接心跳包
+2017-01-12 10:56:11.394  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:56:11	维持连接心跳包
+
+2017-01-12 10:56:26.421  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:56:26	维持连接心跳包
+2017-01-12 10:56:26.426  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:56:26	维持连接心跳包
+
+2017-01-12 10:56:41.412  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:56:41	维持连接心跳包
+2017-01-12 10:56:41.419  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:56:41	维持连接心跳包
+
+2017-01-12 10:56:56.448  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:56:56	维持连接心跳包
+2017-01-12 10:56:56.456  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:56:56	维持连接心跳包
+
+2017-01-12 10:57:11.433  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:57:11	维持连接心跳包
+2017-01-12 10:57:11.442  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:57:11	维持连接心跳包
+
+2017-01-12 10:57:16.364  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@1b268984
+2017-01-12 10:57:16.365  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"杨\",\"channelId\":\"3000000000000000\",\"content\":\"<p> 笔者近日从剑河县教科局获悉，该县青少年活动中心在贵州省第九届“贵青杯”青少年教育系列活动中被评为优秀组织奖。</p><p> 据悉，此次该县共推荐舞蹈、绘画、书法、征文、歌咏7类作品共45件。其中，县城关一小《芦笙娃娃》获舞蹈类一等奖，县城关二小欧楠作品获毛笔类一等奖，县职中吴菊获硬笔类一等奖，周文星获二等奖;县城关三小张玉杏、职中杨海琴的作品均获国画三等奖，县民中邰星获征文类一等奖;革东中学的《映山红》《苗家幸福来》、二高的《老师我想你》《三个腊汉吹笛在坡颠》均获歌咏类二等奖、县城关一小《让我们荡起双浆》《山童》获三等奖。县城关一小都晓华、张安琴、县城关四小欧运科、县职中欧运明、县民中吴国鑫均获优秀指导老师。</p><p><br></p>\",\"sourceName\":\"贵州民族报\",\"templateId\":\"100000330\",\"title\":\"剑河县在省“贵青杯” 活动中成绩突出\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-12 10:57:16.633  WARN 435144 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:57:17.360  WARN 435144 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-12 10:57:17.362  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-12 10:57:17.363  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-12 10:57:17.370  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@1b268984
+
+2017-01-12 10:57:26.478  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:57:26	维持连接心跳包
+2017-01-12 10:57:26.485  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:57:26	维持连接心跳包
+
+2017-01-12 10:57:41.497  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:57:41	维持连接心跳包
+2017-01-12 10:57:41.504  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:57:41	维持连接心跳包
+
+2017-01-12 10:57:56.867  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:57:56	维持连接心跳包
+2017-01-12 10:57:56.879  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:57:56	维持连接心跳包
+
+2017-01-12 10:58:11.553  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:58:11	维持连接心跳包
+2017-01-12 10:58:11.564  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:58:11	维持连接心跳包
+
+2017-01-12 10:58:26.773  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:58:26	维持连接心跳包
+2017-01-12 10:58:26.782  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:58:26	维持连接心跳包
+
+2017-01-12 10:58:41.728  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:58:41	维持连接心跳包
+2017-01-12 10:58:41.738  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:58:41	维持连接心跳包
+
+2017-01-12 10:58:56.740  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:58:56	维持连接心跳包
+2017-01-12 10:58:56.746  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:58:56	维持连接心跳包
+
+2017-01-12 10:59:11.766  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:59:11	维持连接心跳包
+2017-01-12 10:59:11.775  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:59:11	维持连接心跳包
+
+2017-01-12 10:59:27.104  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:59:27	维持连接心跳包
+2017-01-12 10:59:27.114  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:59:27	维持连接心跳包
+
+2017-01-12 10:59:41.856  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:59:41	维持连接心跳包
+2017-01-12 10:59:41.865  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:59:41	维持连接心跳包
+
+2017-01-12 10:59:57.167  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 10:59:57	维持连接心跳包
+2017-01-12 10:59:57.175  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 10:59:57	维持连接心跳包
+
+2017-01-12 11:00:12.601  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:00:12	维持连接心跳包
+2017-01-12 11:00:12.609  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:00:12	维持连接心跳包
+
+2017-01-12 11:00:27.611  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:00:27	维持连接心跳包
+2017-01-12 11:00:27.619  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:00:27	维持连接心跳包
+
+2017-01-12 11:00:42.717  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:00:42	维持连接心跳包
+2017-01-12 11:00:42.726  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:00:42	维持连接心跳包
+
+2017-01-12 11:00:57.864  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:00:57	维持连接心跳包
+2017-01-12 11:00:57.872  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:00:57	维持连接心跳包
+
+2017-01-12 11:01:12.941  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:01:12	维持连接心跳包
+2017-01-12 11:01:12.954  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:01:12	维持连接心跳包
+
+2017-01-12 11:01:28.070  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:01:28	维持连接心跳包
+2017-01-12 11:01:28.079  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:01:28	维持连接心跳包
+
