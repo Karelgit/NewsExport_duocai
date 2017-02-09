@@ -149,11 +149,11 @@ public class PostTest {
 
         //登陆获得返回数据
         String param = pusher.loginDuocai();
-        for (String xml:xmls){
-            //String xml = NewsPushUtil.readResourceAsXml("/newsTest.xml");
+//        for (String xml:xmls){
+            String xml = NewsPushUtil.readResourceAsXml("/newsTest.xml");
            //推送文章
             pusher.exportNewsToDuocai(xml,param);
-        }
+//        }
 
     }
 

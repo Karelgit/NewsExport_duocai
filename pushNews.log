@@ -6135,3 +6135,1224 @@ Identify and stop the process that's listening on port 10088 or configure this a
 2017-01-12 11:01:28.070  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-12 11:01:28	维持连接心跳包
 2017-01-12 11:01:28.079  INFO 435144 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-12 11:01:28	维持连接心跳包
 
+2017-01-24 11:52:11.227  INFO 4048 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 4048 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-24 11:52:11.249  INFO 4048 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-24 11:52:11.587  INFO 4048 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40f5c621: startup date [Tue Jan 24 11:52:11 CST 2017]; root of context hierarchy
+2017-01-24 11:52:17.377  INFO 4048 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-24 11:52:17.405  INFO 4048 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-24 11:52:17.406  INFO 4048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-24 11:52:17.747  INFO 4048 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-24 11:52:17.747  INFO 4048 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6176 ms
+2017-01-24 11:52:18.075  INFO 4048 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-24 11:52:18.083  INFO 4048 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-24 11:52:18.084  INFO 4048 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-24 11:52:18.084  INFO 4048 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-24 11:52:18.084  INFO 4048 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-24 11:52:19.535  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40f5c621: startup date [Tue Jan 24 11:52:11 CST 2017]; root of context hierarchy
+2017-01-24 11:52:19.645  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-24 11:52:19.646  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-24 11:52:19.647  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-24 11:52:19.648  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-24 11:52:19.649  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-24 11:52:19.654  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-24 11:52:19.654  INFO 4048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-24 11:52:19.755  INFO 4048 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 11:52:19.755  INFO 4048 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 11:52:19.955  INFO 4048 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 11:52:20.748  INFO 4048 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-24 11:52:20.849  INFO 4048 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-24 11:52:20.874  INFO 4048 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 11.917 seconds (JVM running for 14.747)
+2017-01-24 11:52:20.911  INFO 4048 --- [main] NewsPusherModule.service.Client          : 本地端口：57345
+2017-01-24 11:52:21.208  INFO 4048 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-24 11:52:36.147  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:52:36	维持连接心跳包
+2017-01-24 11:52:36.148  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:52:36	维持连接心跳包
+
+2017-01-24 11:52:51.184  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:52:51	维持连接心跳包
+2017-01-24 11:52:51.186  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:52:51	维持连接心跳包
+
+2017-01-24 11:53:06.245  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:53:06	维持连接心跳包
+2017-01-24 11:53:06.247  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:53:06	维持连接心跳包
+
+2017-01-24 11:53:21.266  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:53:21	维持连接心跳包
+2017-01-24 11:53:21.266  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:53:21	维持连接心跳包
+
+2017-01-24 11:53:21.899  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@71a658b9
+2017-01-24 11:53:21.905  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 全省教育工作会昨日召开，公布了我省2016年教育脱贫工作精准实施情况。</p> <p> 据悉，去年我省在全国率先制定贵州省教育精准脱贫规划方案（2016-2020 年），切实保障学生不因贫困而失学，不因上学而贫困。全年共资助各级各类学生 365.7 万人次，资助资金73.3 亿元。</p>   \",\"sourceName\":\"贵阳网-贵阳晚报\",\"templateId\":\"0001\",\"title\":\"贵州省公布2016年教育脱贫工作精准实施情况\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 11:53:22.221  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:53:22.353  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:53:22.355  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 11:53:22.356  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 11:53:22.360  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@71a658b9
+
+2017-01-24 11:53:36.282  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:53:36	维持连接心跳包
+2017-01-24 11:53:36.283  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:53:36	维持连接心跳包
+
+2017-01-24 11:53:51.387  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:53:51	维持连接心跳包
+2017-01-24 11:53:51.389  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:53:51	维持连接心跳包
+
+2017-01-24 11:54:06.445  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:54:06	维持连接心跳包
+2017-01-24 11:54:06.446  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:54:06	维持连接心跳包
+
+2017-01-24 11:54:21.461  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:54:21	维持连接心跳包
+2017-01-24 11:54:21.462  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:54:21	维持连接心跳包
+
+2017-01-24 11:54:36.541  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:54:36	维持连接心跳包
+2017-01-24 11:54:36.542  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:54:36	维持连接心跳包
+
+2017-01-24 11:54:51.578  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:54:51	维持连接心跳包
+2017-01-24 11:54:51.579  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:54:51	维持连接心跳包
+
+2017-01-24 11:55:06.610  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:55:06	维持连接心跳包
+2017-01-24 11:55:06.611  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:55:06	维持连接心跳包
+
+2017-01-24 11:55:21.686  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:55:21	维持连接心跳包
+2017-01-24 11:55:21.686  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:55:21	维持连接心跳包
+
+2017-01-24 11:55:31.352  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@5cbb9c8
+2017-01-24 11:55:31.354  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 市民朋友们：</p> <p> 春节是中华民族最隆重的传统节日。辞旧迎新、燃放烟花爆竹是欢度春节的一种习惯，但大量燃放烟花爆竹会严重影响空气环境质量，产生雾霾天气，造成噪音污染，容易酿成火灾事故和财产损失。为此，我们倡议：春节期间告别烟花爆竹，不放或少放烟花爆竹，过一个低碳、祥和、文明、健康的春节。</p> <p> 过一个低碳环保年。广大市民要自觉树立环保意识，不购买、不燃放烟花爆竹。倡导采用电子爆竹、喜庆音乐、鲜花等安全、环保、低碳的方式欢度佳节，努力营造环境优美、空气清新、文明和谐的节日氛围，用实际行动守护贵阳的碧水蓝天，共建生态文明示范城市。</p> <p> 过一个安全祥和年。不在规定的禁止燃放时间和区域内随意燃放烟花爆竹。广大市民要发挥主人翁的责任感和使命感，积极劝阻和抵制周边人员随意燃放烟花爆竹的不文明行为，彻底消除安全隐患，让广大市民能够过一个安全、祥和、喜庆的春节。</p> <p> 过一个文明健康年。广大市民可以利用微信、微博、手机短信、QQ等新兴传播方式作为平台，传递新年祝福，向亲朋好友宣传不燃放烟花爆竹的好处，努力把不燃放烟花爆竹变成广大市民的自觉行为，凝聚起保护环境的强大正能量。</p> <p> 过一个平安祈福年。提倡文明祭祀，不燃放烟花爆竹，不焚烧纸钱，倡导用鲜花祭奠、网上祭奠、家庭追思等文明祭扫活动。不携带火源上山，不在山地、林区烧纸焚香、燃放烟花爆竹，最大限度地减少环境污染和火险隐患。</p> <p> 为了让贵阳的天更蓝、水更清、空气更清新，我们真诚希望广大市民朋友告别烟花爆竹，从身边做起，从点滴做起，爱护环境，文明过节，以实际行动践行社会主义核心价值观，用一言一行为全国文明城市增光添彩，为贵阳打造创新型中心城市作出自己应有的贡献。恭祝全市人民新春快乐!阖家幸福!鸡年吉祥!</p> <p> 贵阳市文明办</p> <p> 2017年1月24日</p>   \",\"sourceName\":\"贵阳网-贵阳晚报\",\"templateId\":\"0001\",\"title\":\"贵阳市文明办：守护贵阳蓝天 文明低碳过节\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 11:55:31.471  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:55:31.614  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:55:31.617  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 11:55:31.618  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 11:55:31.622  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@5cbb9c8
+
+2017-01-24 11:55:36.648  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:55:36	维持连接心跳包
+2017-01-24 11:55:36.649  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:55:36	维持连接心跳包
+
+2017-01-24 11:55:51.685  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:55:51	维持连接心跳包
+2017-01-24 11:55:51.686  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:55:51	维持连接心跳包
+
+2017-01-24 11:55:54.398  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@78353b10
+2017-01-24 11:55:54.398  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 作为推动\\\"互联网 \\\"发展的重要力量，电子商务已成为城市新经济的重要组成部分。而作为全国电子商务示范城市之一，近年来在一系列扶持电商发展的优惠政策激励下，贵阳市电子商务产业呈现出蓬勃发展态势。2016年贵阳市电子商务交易额预计突破700亿元，同比增长30%以上，排名位居全省第一。</p> <p> 为进一步推动贵阳市电子商务发展，培育和鼓励一批市场竞争力强、商业模式新、社会知名度高的电子商务示范企业，贵阳市商务局于近日组织评选出了15家\\\"2016贵阳市电子商务示范企业（园区、示范村）\\\"，这些电商企业将通过他们自身的创新活力和示范带动性，为贵阳市经济发展注入新的加速度。</p> <p> 一、2016年贵阳市电子商务示范园区</p> <p> ●南明大数据电商产业聚集区</p> <p> 南明大数据电商产业聚集区是以\\\"政府主导 企业运营\\\"模式运行的大数据电商及相关产业创业创新基地，通过\\\"人才培养 产业孵化 运营帮扶\\\"构建起小微企业创业发展的全生态产业链。聚集区成立以来，已有137家小微创业创新单位入驻运营，签署入驻协议企业277家，相继组织了人才培训、融资担保、法律服务、主题活动等服务100余批次。</p> <p> ●观山湖电商发展中心</p> <p> 观山湖电商发展中心是由观山湖区人民政府携手北京厚木集团共同打造的电子商务产业集聚示范地。中心采取\\\"政府主导，企业运作，合作共赢\\\"的市场化运作模式，目前入驻电商企业达到49家，涵盖了服务型电商、应用技术型电商、平台型电商、孵化器企业等。成立以来，中心相继通过金融支持、电商培训、新媒体技术等手段服务于电商企业，并荣膺\\\"省级电子商务示范地培养点\\\"，2016预估交易额22.48亿元。</p> <p> ●贵州（乌当）农村电商产业园</p> <p> 贵州（乌当）农村电商产业园是2015年组建的电商服务运营机构，是乌当区电子商务发展过程中政企对接、产业联合协作的公共服务平台，目前已入驻47家经营主体，重点打造农村电子商务产业集群，大力推进传统产业转型升级。该园区打造的\\\"午当锄禾\\\"淘宝店，有效拓展区域农产品销售渠道，实现了特色品牌知名度的提升。</p> <p> 2016年贵阳市电子商务示范企业</p> <p> ●贵州电子商务云运营有限责任公司</p> <p> 贵州电子商务云是贵州省大数据产业\\\"云上贵州\\\"7 N朵云工程之一。作为全国首家区域性电商平台、贵州省电商综合服务平台，贵州电子商务云涵盖了在线交易平台B2C商城--那家网(www.gogbuy.com)、农村电商、电商综合服务平台(fw.gogbuy.com)、政府监管与服务平台、大数据挖掘及分析平台。平台旨在解决贵州企业在发展电子商务过程中存在的政策、技术、资金、服务、人才等问题，打造贵州省电子商务生态圈，促进全省经济转型、产业升级。目前已有2040家企业入驻贵州电子商务云，上线单品达到21000个，截止至2016年底平台交易额突破1.7亿元。</p> <p> ●贵阳贵电商电子商务有限公司</p> <p> 贵阳贵电商电子商务有限公司是以贵阳市供销集团为主体，整合资源成立的市级电子商务平台企业。公司作为全市农村电子商务工作的实施主体，通过在市、县、乡、村建设\\\"四级\\\"电商服务网络，打造\\\"贵电商\\\"城乡一体化电子商务平台，实现区域内农产品与城市社区、超市、学校等的直接对接，并整合冷链物流、线上交易平台、农村金融、保险服务、旅游服务等资源，形成具有区域特色的电商品牌。2016年，贵电商完成全市农村电商便民服务店建设365个，基本实现乡（镇）覆盖。</p> <p> ●贵州茅台集团电子商务股份有限公司</p> <p> 茅台电商是茅台集团官方唯一的线上渠道建设、运营、监管一级子公司，目前公司业务涉及自营商城、专享产品、茅台云商三大板块。自营商城以茅台商城、天猫旗舰店为主营，结合银行平台、京东等18家电商平台合力上阵；专享产品利用茅台已有优质经销商，结合互联网运作，快速提升品牌美誉度；茅台云商利用全国2000多家经销商专卖店，实现线上线下销售联动。</p> <p> ●贵州贵农网络科技有限公司</p> <p> 贵农网是贵州省供销社重点打造的农村电子商务综合服务平台，通过融合全省供销系统网络体系资源，以线上服务平台为支撑，连接遍布城乡的线下服务网点，构建多位一体的农村电子商务生态体系。2016年，贵农网通过县级运营中心电商孵化，帮助农民专业合作社开网店、树品牌、做包装，让修文猕猴桃、威宁洋芋、荔波蜜柚、罗甸火龙果等众多贵州特色农产品源源不断走出\\\"大山\\\"，走向全国。</p> <p> ●世纪恒通科技股份有限公司</p> <p> 世纪恒通是专门从事移动互联网信息服务及手机信息服务的高科技企业，长期专注于为各企业和终端用户提供优质的信息服务，主要从事计算机硬件开发、电信增值业务系统运用、电子商务平台建设、呼叫中心及服务外包等业务。公司主要产品包括O2O类业务电子优惠券、车友助理、手机报等。2014年，公司完成全国布局，2016年6月正式向证监会递交IPO申报材料并获受理，拟将在创业板上市。</p> <p> ●贵州晟邦科技发展有限责任公司</p> <p> 成立于2002年的晟邦科技是贵阳最早一批电子商务企业，长期致力于信息化技术、互联网 模式应用等。目前公司主营业务为服务外包和网络运营，是贵州移动支付、移动12580、移动电商业务的运营支撑方。公司现有注册品牌\\\"黔城无线\\\"，定位为乐活主义精品生活网站，通过\\\"定时送\\\"、\\\"包月服务\\\"、\\\"个性礼包\\\"、\\\"福利组装\\\"等订制化服务受到消费者青睐，荣获全省首批电子商务示范企业。</p> <p> ●贵州恒盛科技发展有限公司</p> <p> 贵州恒盛科技发展有限公司是一家从事行业应用软件开发、服务，为行业及企事业单位提供信息化咨询及方案设计服务的高新技术企业。近年来，公司致力于电子商务和互联网业务运营，为全球知名手机和配件提供销售及售后服务，并自主研发了手机行业综合服务平台--贵州手机联盟和\\\"爱生活\\\"手机电子商务平台，在全省发展了300余家电子商务标准化加盟店，销售年产值突破5000万元。</p> <p> ●贵州威门堂医药连锁有限责任公司</p> <p> 贵州威门堂医药连锁有限责任公司是贵州威门药业股份有限公司的全资子公司，目前在贵阳已拥有10家连锁分店，结合具备\\\"互联网 大健康\\\"特色的威门大健康商城，打造线上、线下立体销售，为消费者提供诊疗、购物、健康咨询等一站式养生健康服务。目前企业正着力打造符合新诊疗方式及生活方式的中医药养生保健服务垂直细分电商平台。</p> <p> ●贵州黔茶商城电子商务有限公司</p> <p> 成立于2014年的黔茶商城围绕做强产业链，提升产业竞争力，在推动\\\"黔茶出山\\\"的过程中，探索出了一条符合贵州茶产业发展的电商之路。黔茶商城积极参与茶业生产，以市场需求合理引导生产企业，并通过举办茶文化节，挖掘贵州各地茶文化内涵。同时，企业还参与到贵州省农委的生态茶业标准制定当中，助力首个省级地理标志--贵州绿茶申报成功。目前黔茶商城每年服务全国近5万消费者，帮扶省内600多户茶农，全面带动了全省茶叶电商的快速发展。</p> <p> ●贵州黔贵尚品文化开发有限责任公司</p> <p> 成立于2011年的黔贵尚品广泛整合省内优质产品，通过淘宝、天猫、京东、亚马逊等平台进行推广和销售，并为企业提供电商运营方面的专业输出，形成了较强的行业影响力。近年来，公司在各大景点开设特产体验店，实现了线上与线下实体销售体验模式的创新互动，并积极投入到银器、蜡染、茶叶等地方特色产品的创新研发中，致力打造专业化、深度化、多品牌的电商企业。</p> <p> ●贵阳市南明区永乐田园生态农民专业合作社</p> <p> 由贵阳市南明区永乐田园生态农民专业合作社运营打造的\\\"农集\\\"平台，是互联网 时代涉农林产品的首家移动端服务平台，旨在运用互联网 的模式减少中间环节，实现农林产品与消费者间的有效对接。自2015年6月上线至今，\\\"农集\\\"已带动南明区永乐乡7个村551户农民、全省3000余户农民投身到各类专业生产经营活动中，有效带动了全省特色农林产品的生产销售。</p> <p> 2016年贵阳市电子商务示范村</p> <p> ●南明区永乐乡永乐村</p> <p> 2015年以来，永乐村打造\\\"村淘创富示范村\\\"，投入资金60万元，在永乐村果蔬批发市场建立\\\"永乐农村电商服务中心\\\"，为村民提供网上代销、包装、物流、农残检测、产品展示、电商培训、创业指导、电商金融等服务。该村还通过开设永乐电商微商平台、淘宝店铺，实现精品水果、特色蔬菜、蛋禽食品、桃木工艺品等的在线销售，并与旅游公司合作，开发永乐生态采摘一日游，推动地方经济全面发展。</p>   \",\"sourceName\":\"贵阳网-贵阳晚报\",\"templateId\":\"0001\",\"title\":\"2016年贵州省贵阳市电子商务示范企业展示\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 11:55:54.506  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:55:54.679  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:55:54.681  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 11:55:54.683  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 11:55:54.684  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@78353b10
+
+2017-01-24 11:56:06.713  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:56:06	维持连接心跳包
+2017-01-24 11:56:06.714  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:56:06	维持连接心跳包
+
+2017-01-24 11:56:21.406  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@a46c7f
+2017-01-24 11:56:21.406  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 1月24日至2月1日，贵州铁路再增6趟普铁列车。 这6趟次具体为：</p> <p> 1、1月24日，成都至麻尾加开K9403/2次，成都20:01开车，第二日22:17到达麻尾，运行26小时16分。</p> <p> 2、1月26日，麻尾至成都加开K9401/4次，麻尾0:40开车，第二日4:15到达成都，运行27小时35分。</p> <p> 3、1月30日至2月1日，贵阳—昭通加开K9487/90次（全列硬座），贵阳8:05开车，当日15:22抵达昭通，运行7小时17分。</p> <p> 4、1月30日至2月1日，昭通至贵阳加开K9489/8次，昭通16:40开车，第二日0:59到达贵阳。</p> <p> 5、1月25、26、30日，贵阳至重庆加开K9520次，贵阳15:30开车，第二日3:47抵达重庆，运行12小时17分。</p> <p> 6、1月26、31日，重庆—贵阳加开K9521次，重庆10:06开车，22:33到达贵阳，运行12小时27分。</p>   \",\"sourceName\":\"贵阳网-贵阳晚报\",\"templateId\":\"0001\",\"title\":\"1月24日至2月1日期间 春运铁路将再增6趟普列\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 11:56:21.489  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:56:21.599  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:56:21.601  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 11:56:21.601  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 11:56:21.603  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@a46c7f
+
+2017-01-24 11:56:21.735  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:56:21	维持连接心跳包
+2017-01-24 11:56:21.736  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:56:21	维持连接心跳包
+
+2017-01-24 11:56:36.857  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:56:36	维持连接心跳包
+2017-01-24 11:56:36.858  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:56:36	维持连接心跳包
+
+2017-01-24 11:56:51.868  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:56:51	维持连接心跳包
+2017-01-24 11:56:51.869  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:56:51	维持连接心跳包
+
+2017-01-24 11:56:52.709  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@1f06785
+2017-01-24 11:56:52.710  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"\",\"channelId\":\"3000000000000000\",\"content\":\" <p>&nbsp;&nbsp;&nbsp;&nbsp;新华社贵阳１月２２日电（记者肖艳）记者近日从贵州省遵义市中级人民法院获悉，遵义市绥阳县和赤水市两地法院分别执行了一起用住房公积金偿还债务的案件，破解了执行难。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;据介绍，绥阳县居民徐某欠游某债务，长时间追债无果，游某于２００８年将徐某告上法庭，经绥阳法院判决，徐某需偿还游某借款及利息１４．４万元。判决生效后，徐某偿还了５．７５万元，余下８．６５万元一拖数年未履行。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;２０１６年年底，执行法官在执行过程中了解到徐某住房公积金账户资金共有５.5万元尚未提取。法院与当地住房公积金管理中心联系后，将徐某住房公积金账户内的钱扣划至法院，偿还了游某债务。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;今年年初，赤水市一公司亦通过法院执行债务人的住房公积金而成功讨债。２０１６年下半年，该公司向赤水市法院申请执行与被执行人宋某、王某等借款合同纠纷一案。宋、王等人共欠下该公司１２万余元。接到申请后，执行法官在查明宋某、王某等人没有任何可供执行的财产的情况下，转而在遵义市住房公积金管理中心查到宋某、王某名下有可供执行的住房公积金，遂通过努力，顺利将两人的公积金共计１２万余元扣划至法院，目前，该公司已经领到了执行款。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;据介绍，根据国家《住房公积金管理条例》，住房公积金属于个人所有，且不属于法律规定的在民事执行中免予查封、扣押、冻结的财产，住房公积金制度的根本目的是保障职工的最低居住条件。因此，在司法实践中，在保障被执行人基本生活及居住条件的前提下，法院可以强制执行被执行人的住房公积金。</p>  \",\"sourceName\":\" 新华社\",\"templateId\":\"0001\",\"title\":\" 拖欠债务不还 法院划走公积金还款\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 11:56:52.800  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:56:52.914  WARN 4048 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 11:56:52.915  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 11:56:52.915  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 11:56:52.916  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@1f06785
+
+2017-01-24 11:57:06.885  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:57:06	维持连接心跳包
+2017-01-24 11:57:06.886  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:57:06	维持连接心跳包
+
+2017-01-24 11:57:21.927  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:57:21	维持连接心跳包
+2017-01-24 11:57:21.927  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:57:21	维持连接心跳包
+
+2017-01-24 11:57:36.933  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:57:36	维持连接心跳包
+2017-01-24 11:57:36.934  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:57:36	维持连接心跳包
+
+2017-01-24 11:57:51.969  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:57:51	维持连接心跳包
+2017-01-24 11:57:51.969  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:57:51	维持连接心跳包
+
+2017-01-24 11:58:06.990  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:58:06	维持连接心跳包
+2017-01-24 11:58:06.990  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:58:06	维持连接心跳包
+
+2017-01-24 11:58:22.058  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:58:22	维持连接心跳包
+2017-01-24 11:58:22.060  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:58:22	维持连接心跳包
+
+2017-01-24 11:58:37.073  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:58:37	维持连接心跳包
+2017-01-24 11:58:37.075  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:58:37	维持连接心跳包
+
+2017-01-24 11:58:52.098  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:58:52	维持连接心跳包
+2017-01-24 11:58:52.099  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:58:52	维持连接心跳包
+
+2017-01-24 11:59:07.106  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:59:07	维持连接心跳包
+2017-01-24 11:59:07.107  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:59:07	维持连接心跳包
+
+2017-01-24 11:59:22.134  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:59:22	维持连接心跳包
+2017-01-24 11:59:22.135  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:59:22	维持连接心跳包
+
+2017-01-24 11:59:37.144  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:59:37	维持连接心跳包
+2017-01-24 11:59:37.145  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:59:37	维持连接心跳包
+
+2017-01-24 11:59:52.159  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 11:59:52	维持连接心跳包
+2017-01-24 11:59:52.163  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 11:59:52	维持连接心跳包
+
+2017-01-24 12:00:07.172  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:00:07	维持连接心跳包
+2017-01-24 12:00:07.173  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:00:07	维持连接心跳包
+
+2017-01-24 12:00:22.186  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:00:22	维持连接心跳包
+2017-01-24 12:00:22.187  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:00:22	维持连接心跳包
+
+2017-01-24 12:00:37.197  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:00:37	维持连接心跳包
+2017-01-24 12:00:37.198  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:00:37	维持连接心跳包
+
+2017-01-24 12:00:52.230  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:00:52	维持连接心跳包
+2017-01-24 12:00:52.231  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:00:52	维持连接心跳包
+
+2017-01-24 12:01:07.281  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:01:07	维持连接心跳包
+2017-01-24 12:01:07.282  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:01:07	维持连接心跳包
+
+2017-01-24 12:01:22.289  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:01:22	维持连接心跳包
+2017-01-24 12:01:22.290  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:01:22	维持连接心跳包
+
+2017-01-24 12:01:37.328  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:01:37	维持连接心跳包
+2017-01-24 12:01:37.330  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:01:37	维持连接心跳包
+
+2017-01-24 12:01:52.357  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:01:52	维持连接心跳包
+2017-01-24 12:01:52.358  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:01:52	维持连接心跳包
+
+2017-01-24 12:02:07.463  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:02:07	维持连接心跳包
+2017-01-24 12:02:07.463  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:02:07	维持连接心跳包
+
+2017-01-24 12:02:22.456  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:02:22	维持连接心跳包
+2017-01-24 12:02:22.456  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:02:22	维持连接心跳包
+
+2017-01-24 12:02:37.467  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:02:37	维持连接心跳包
+2017-01-24 12:02:37.469  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:02:37	维持连接心跳包
+
+2017-01-24 12:02:52.490  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:02:52	维持连接心跳包
+2017-01-24 12:02:52.491  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:02:52	维持连接心跳包
+
+2017-01-24 12:03:07.504  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:03:07	维持连接心跳包
+2017-01-24 12:03:07.506  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:03:07	维持连接心跳包
+
+2017-01-24 12:03:22.526  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:03:22	维持连接心跳包
+2017-01-24 12:03:22.527  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:03:22	维持连接心跳包
+
+2017-01-24 12:03:37.536  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:03:37	维持连接心跳包
+2017-01-24 12:03:37.537  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:03:37	维持连接心跳包
+
+2017-01-24 12:03:52.547  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:03:52	维持连接心跳包
+2017-01-24 12:03:52.548  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:03:52	维持连接心跳包
+
+2017-01-24 12:04:07.566  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:04:07	维持连接心跳包
+2017-01-24 12:04:07.567  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:04:07	维持连接心跳包
+
+2017-01-24 12:04:22.575  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:04:22	维持连接心跳包
+2017-01-24 12:04:22.577  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:04:22	维持连接心跳包
+
+2017-01-24 12:04:37.647  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:04:37	维持连接心跳包
+2017-01-24 12:04:37.648  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:04:37	维持连接心跳包
+
+2017-01-24 12:04:52.717  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:04:52	维持连接心跳包
+2017-01-24 12:04:52.718  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:04:52	维持连接心跳包
+
+2017-01-24 12:05:07.836  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:05:07	维持连接心跳包
+2017-01-24 12:05:07.838  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:05:07	维持连接心跳包
+
+2017-01-24 12:05:22.939  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:05:22	维持连接心跳包
+2017-01-24 12:05:22.940  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:05:22	维持连接心跳包
+
+2017-01-24 12:05:37.952  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:05:37	维持连接心跳包
+2017-01-24 12:05:37.954  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:05:37	维持连接心跳包
+
+2017-01-24 12:05:53.057  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:05:53	维持连接心跳包
+2017-01-24 12:05:53.059  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:05:53	维持连接心跳包
+
+2017-01-24 12:06:08.074  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:06:08	维持连接心跳包
+2017-01-24 12:06:08.075  INFO 4048 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:06:08	维持连接心跳包
+
+2017-01-24 12:06:24.709  INFO 15692 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 15692 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-24 12:06:24.723  INFO 15692 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-24 12:06:24.897  INFO 15692 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2e331e19: startup date [Tue Jan 24 12:06:24 CST 2017]; root of context hierarchy
+2017-01-24 12:06:28.031  INFO 15692 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-24 12:06:28.045  INFO 15692 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-24 12:06:28.046  INFO 15692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-24 12:06:28.205  INFO 15692 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-24 12:06:28.206  INFO 15692 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3312 ms
+2017-01-24 12:06:28.601  INFO 15692 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-24 12:06:28.619  INFO 15692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-24 12:06:28.619  INFO 15692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-24 12:06:28.620  INFO 15692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-24 12:06:28.620  INFO 15692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-24 12:06:29.477  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2e331e19: startup date [Tue Jan 24 12:06:24 CST 2017]; root of context hierarchy
+2017-01-24 12:06:29.595  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-24 12:06:29.596  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-24 12:06:29.597  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-24 12:06:29.598  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-24 12:06:29.599  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-24 12:06:29.602  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-24 12:06:29.602  INFO 15692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-24 12:06:29.680  INFO 15692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:06:29.680  INFO 15692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:06:29.931  INFO 15692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:06:30.660  INFO 15692 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-24 12:06:30.790  INFO 15692 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-24 12:06:30.800  INFO 15692 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 7.649 seconds (JVM running for 8.499)
+2017-01-24 12:06:30.814  INFO 15692 --- [main] NewsPusherModule.service.Client          : 本地端口：57612
+2017-01-24 12:06:31.083  INFO 15692 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-24 12:06:45.936  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:06:45	维持连接心跳包
+2017-01-24 12:06:45.939  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:06:45	维持连接心跳包
+
+2017-01-24 12:07:00.986  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:07:00	维持连接心跳包
+2017-01-24 12:07:00.987  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:07:00	维持连接心跳包
+
+2017-01-24 12:07:12.040  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@1d662c73
+2017-01-24 12:07:12.047  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 中共中央政治局召开会议</p> <p> 决定设立中央军民融合发展委员会</p> <p> 审议《中央政治局常委会听取和研究全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组工作汇报和中央书记处工作报告的综合情况报告》</p> <p> 中共中央总书记习近平主持会议</p> <p> 新华社北京1月22日电 中共中央政治局1月22日召开会议，决定设立中央军民融合发展委员会；审议《中央政治局常委会听取和研究全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组工作汇报和中央书记处工作报告的综合情况报告》。中共中央总书记习近平主持会议。</p> <p> 会议决定，设立中央军民融合发展委员会，由习近平任主任。中央军民融合发展委员会是中央层面军民融合发展重大问题的决策和议事协调机构，统一领导军民融合深度发展，向中央政治局、中央政治局常务委员会负责。</p> <p> 会议对全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组和中央书记处2016年的工作给予充分肯定，同意其对2017年的工作安排。会议强调，要深入学习贯彻党的十八届六中全会精神，严格执行《关于新形势下党内政治生活的若干准则》、《中国共产党党内监督条例》，深刻理解和牢固树立政治意识、大局意识、核心意识、看齐意识，坚决维护以习近平同志为核心的党中央权威，始终在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，坚决维护党中央集中统一领导，不折不扣贯彻执行党中央决策部署。</p> <p> 会议强调，今年我们将召开党的十九大，也是实施“十三五”规划的重要一年、推进供给侧结构性改革的深化之年。要坚持稳中求进工作总基调，统筹推进“五位一体”总体布局和协调推进“四个全面”战略布局，紧紧围绕大局履职尽责，交上让党和人民满意的答卷。全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组要自觉坚持党中央集中统一领导，贯彻落实新发展理念，落实全面从严治党责任，扎实做好党中央部署的各项工作，着力防范和化解各种风险，促进经济平稳健康发展和社会和谐稳定。中央书记处要服务大局出谋划策，突出重点抓好落实，深入开展调查研究，健全完善工作机制，提高解决实际问题能力，完成好党中央交办的各项任务。</p> <p> 会议还研究了其他事项。</p>   \",\"sourceName\":\"新华社\",\"templateId\":\"0001\",\"title\":\"中共中央政治局召开会议\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:07:12.456  WARN 15692 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:07:12.457  INFO 15692 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：
+{"code":1,"result":{"seed":"2bde9b9932a885aae99612c2407ead2e","token":"000001000001250000014852307876295fbd2a948241c96d17219b441258cd0c"}}
+2017-01-24 12:07:12.473  INFO 15692 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:
+<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[中共中央政治局召开会议]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新华社]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[胡丽涓]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">0001</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 中共中央政治局召开会议</p> <p> 决定设立中央军民融合发展委员会</p> <p> 审议《中央政治局常委会听取和研究全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组工作汇报和中央书记处工作报告的综合情况报告》</p> <p> 中共中央总书记习近平主持会议</p> <p> 新华社北京1月22日电 中共中央政治局1月22日召开会议，决定设立中央军民融合发展委员会；审议《中央政治局常委会听取和研究全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组工作汇报和中央书记处工作报告的综合情况报告》。中共中央总书记习近平主持会议。</p> <p> 会议决定，设立中央军民融合发展委员会，由习近平任主任。中央军民融合发展委员会是中央层面军民融合发展重大问题的决策和议事协调机构，统一领导军民融合深度发展，向中央政治局、中央政治局常务委员会负责。</p> <p> 会议对全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组和中央书记处2016年的工作给予充分肯定，同意其对2017年的工作安排。会议强调，要深入学习贯彻党的十八届六中全会精神，严格执行《关于新形势下党内政治生活的若干准则》、《中国共产党党内监督条例》，深刻理解和牢固树立政治意识、大局意识、核心意识、看齐意识，坚决维护以习近平同志为核心的党中央权威，始终在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，坚决维护党中央集中统一领导，不折不扣贯彻执行党中央决策部署。</p> <p> 会议强调，今年我们将召开党的十九大，也是实施“十三五”规划的重要一年、推进供给侧结构性改革的深化之年。要坚持稳中求进工作总基调，统筹推进“五位一体”总体布局和协调推进“四个全面”战略布局，紧紧围绕大局履职尽责，交上让党和人民满意的答卷。全国人大常委会、国务院、全国政协、最高人民法院、最高人民检察院党组要自觉坚持党中央集中统一领导，贯彻落实新发展理念，落实全面从严治党责任，扎实做好党中央部署的各项工作，着力防范和化解各种风险，促进经济平稳健康发展和社会和谐稳定。中央书记处要服务大局出谋划策，突出重点抓好落实，深入开展调查研究，健全完善工作机制，提高解决实际问题能力，完成好党中央交办的各项任务。</p> <p> 会议还研究了其他事项。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:07:12.574  WARN 15692 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:07:12.575  INFO 15692 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：
+{"code":-1000,"result":"最近修改过的1条与本新闻重复的新闻是：\n015371857(中共中央政治局召开会议)"}
+2017-01-24 12:07:12.575  INFO 15692 --- [Thread-4] N.controller.ExportDuocaiController      : 推送结果：{"code":-1000,"result":"最近修改过的1条与本新闻重复的新闻是：\n015371857(中共中央政治局召开会议)"}
+2017-01-24 12:07:12.575  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:07:12.576  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:07:12.576  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@1d662c73
+
+2017-01-24 12:07:16.013  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:07:16	维持连接心跳包
+2017-01-24 12:07:16.015  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:07:16	维持连接心跳包
+
+2017-01-24 12:07:31.024  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:07:31	维持连接心跳包
+2017-01-24 12:07:31.024  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:07:31	维持连接心跳包
+
+2017-01-24 12:07:46.069  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:07:46	维持连接心跳包
+2017-01-24 12:07:46.069  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:07:46	维持连接心跳包
+
+2017-01-24 12:07:54.817  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@83cce82
+2017-01-24 12:07:54.818  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p>&nbsp;&nbsp;&nbsp; 近日，省教育厅公布了2017年全省校园足球教学竞赛相关规定，将采取一系列举措全面推进足球教学改革，推进校园足球发展。</p> <p> 据悉，2017年全省校园足球竞赛由四级联赛和选拔性竞赛组成，四级联赛分为校内竞赛和校际竞赛两个层次，包括小学联赛、初中联赛、高中联赛、高校联赛四个部分。选拔性竞赛主要为小学、初中训练营活动。</p> <p> 校内竞赛各级各类学校要组织开展以班级、年级或院（系）为参赛单位的校内竞赛活动。其中，小学一、二年级要开展以兴趣培养为主、丰富多彩的足球活动和足球技能竞赛，三年级以上建立班级足球代表队，初中、高中（含中等职业学校）要建立班级、年级、学校足球代表队，高校要建立年级、院（系）和学校足球代表队。校际竞赛由各地校足办负责组织实施与管理，参赛规模可根据辖区内学校实际情况决定，校园足球特色学校、省级示范性普通高中、高等学校必须参赛，试点县（区）小学组、初中组的参赛队数应不少于当地小学或初中总数的60%，高中学校必须参赛。</p> <p> 此外，为畅通优秀足球苗子的成长通道，2017年省校足办将组织开展全省校园足球四级联赛高校男子足球超级联赛、甲级联赛和女子联赛分区赛、总决赛，全省校园足球四级联赛初、高中总决赛，省属中等职业学校足球比赛。同时还将组织开展小学和初中两个阶段，共9个组别的全省校园足球训练营活动，选拔出各组别最强阵容参加全国校园足球夏令营第六营区活动。</p> <p> （记者 罗海兰）</p>   \",\"sourceName\":\"贵阳日报\",\"templateId\":\"0001\",\"title\":\"贵州省学校要开展校内课余训练和竞赛活动\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:07:54.904  WARN 15692 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:07:54.906  INFO 15692 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：
+{"code":1,"result":{"seed":"132e56128bf89c8a7aa66cdbbebe9ae4","token":"000001000001250000014852308300840edcf278d9a628eed10d86ad01bc3912"}}
+2017-01-24 12:07:54.907  INFO 15692 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:
+<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[贵州省学校要开展校内课余训练和竞赛活动]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵阳日报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[徐倩]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">0001</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p>&nbsp;&nbsp;&nbsp; 近日，省教育厅公布了2017年全省校园足球教学竞赛相关规定，将采取一系列举措全面推进足球教学改革，推进校园足球发展。</p> <p> 据悉，2017年全省校园足球竞赛由四级联赛和选拔性竞赛组成，四级联赛分为校内竞赛和校际竞赛两个层次，包括小学联赛、初中联赛、高中联赛、高校联赛四个部分。选拔性竞赛主要为小学、初中训练营活动。</p> <p> 校内竞赛各级各类学校要组织开展以班级、年级或院（系）为参赛单位的校内竞赛活动。其中，小学一、二年级要开展以兴趣培养为主、丰富多彩的足球活动和足球技能竞赛，三年级以上建立班级足球代表队，初中、高中（含中等职业学校）要建立班级、年级、学校足球代表队，高校要建立年级、院（系）和学校足球代表队。校际竞赛由各地校足办负责组织实施与管理，参赛规模可根据辖区内学校实际情况决定，校园足球特色学校、省级示范性普通高中、高等学校必须参赛，试点县（区）小学组、初中组的参赛队数应不少于当地小学或初中总数的60%，高中学校必须参赛。</p> <p> 此外，为畅通优秀足球苗子的成长通道，2017年省校足办将组织开展全省校园足球四级联赛高校男子足球超级联赛、甲级联赛和女子联赛分区赛、总决赛，全省校园足球四级联赛初、高中总决赛，省属中等职业学校足球比赛。同时还将组织开展小学和初中两个阶段，共9个组别的全省校园足球训练营活动，选拔出各组别最强阵容参加全国校园足球夏令营第六营区活动。</p> <p> （记者 罗海兰）</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:07:55.019  WARN 15692 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:07:55.020  INFO 15692 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：
+{"code":-1000,"result":"ORA-02291: 违反完整约束条件 (PUB6.FK_NEWS_REF_TEMPL_FILE) - 未找到父项关键字\n"}
+2017-01-24 12:07:55.020  INFO 15692 --- [Thread-4] N.controller.ExportDuocaiController      : 推送结果：{"code":-1000,"result":"ORA-02291: 违反完整约束条件 (PUB6.FK_NEWS_REF_TEMPL_FILE) - 未找到父项关键字\n"}
+2017-01-24 12:07:55.020  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:07:55.020  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:07:55.021  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@83cce82
+
+2017-01-24 12:08:01.082  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:08:01	维持连接心跳包
+2017-01-24 12:08:01.083  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:08:01	维持连接心跳包
+
+2017-01-24 12:08:16.091  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:08:16	维持连接心跳包
+2017-01-24 12:08:16.092  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:08:16	维持连接心跳包
+
+2017-01-24 12:08:31.145  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:08:31	维持连接心跳包
+2017-01-24 12:08:31.146  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:08:31	维持连接心跳包
+
+2017-01-24 12:08:46.134  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:08:46	维持连接心跳包
+2017-01-24 12:08:46.136  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:08:46	维持连接心跳包
+
+2017-01-24 12:09:01.145  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:09:01	维持连接心跳包
+2017-01-24 12:09:01.147  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:09:01	维持连接心跳包
+
+2017-01-24 12:09:16.164  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:09:16	维持连接心跳包
+2017-01-24 12:09:16.165  INFO 15692 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:09:16	维持连接心跳包
+
+2017-01-24 12:09:30.114  INFO 17112 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 17112 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-24 12:09:30.119  INFO 17112 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-24 12:09:30.393  INFO 17112 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b7a6216: startup date [Tue Jan 24 12:09:30 CST 2017]; root of context hierarchy
+2017-01-24 12:09:34.800  INFO 17112 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-24 12:09:34.815  INFO 17112 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-24 12:09:34.816  INFO 17112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-24 12:09:35.069  INFO 17112 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-24 12:09:35.070  INFO 17112 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4685 ms
+2017-01-24 12:09:35.431  INFO 17112 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-24 12:09:35.441  INFO 17112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-24 12:09:35.442  INFO 17112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-24 12:09:35.442  INFO 17112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-24 12:09:35.443  INFO 17112 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-24 12:09:36.493  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b7a6216: startup date [Tue Jan 24 12:09:30 CST 2017]; root of context hierarchy
+2017-01-24 12:09:36.613  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-24 12:09:36.614  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-24 12:09:36.615  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-24 12:09:36.616  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-24 12:09:36.616  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-24 12:09:36.618  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-24 12:09:36.619  INFO 17112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-24 12:09:36.732  INFO 17112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:09:36.733  INFO 17112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:09:36.915  INFO 17112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:09:37.733  INFO 17112 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-24 12:09:37.946  INFO 17112 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-24 12:09:37.970  INFO 17112 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 10.569 seconds (JVM running for 11.779)
+2017-01-24 12:09:37.987  INFO 17112 --- [main] NewsPusherModule.service.Client          : 本地端口：57667
+2017-01-24 12:09:38.187  INFO 17112 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-24 12:09:53.089  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:09:53	维持连接心跳包
+2017-01-24 12:09:53.091  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:09:53	维持连接心跳包
+
+2017-01-24 12:10:08.152  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:10:08	维持连接心跳包
+2017-01-24 12:10:08.155  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:10:08	维持连接心跳包
+
+2017-01-24 12:10:23.178  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:10:23	维持连接心跳包
+2017-01-24 12:10:23.179  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:10:23	维持连接心跳包
+
+2017-01-24 12:10:38.370  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:10:38	维持连接心跳包
+2017-01-24 12:10:38.371  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:10:38	维持连接心跳包
+
+2017-01-24 12:10:53.568  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:10:53	维持连接心跳包
+2017-01-24 12:10:53.569  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:10:53	维持连接心跳包
+
+2017-01-24 12:11:08.603  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:11:08	维持连接心跳包
+2017-01-24 12:11:08.603  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:11:08	维持连接心跳包
+
+2017-01-24 12:11:23.623  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:11:23	维持连接心跳包
+2017-01-24 12:11:23.624  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:11:23	维持连接心跳包
+
+2017-01-24 12:11:38.651  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:11:38	维持连接心跳包
+2017-01-24 12:11:38.652  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:11:38	维持连接心跳包
+
+2017-01-24 12:11:53.647  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:11:53	维持连接心跳包
+2017-01-24 12:11:53.648  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:11:53	维持连接心跳包
+
+2017-01-24 12:12:08.061  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@33b44e09
+2017-01-24 12:12:08.070  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"吴志维\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 新华网北京11月30日电（记者 娄奕娟）11月30日，质检总局召开例行新闻发布会，公布今年1-10日我国缺陷产品召回情况。截至2016年10月31日，2016年我国共有68家汽车生产企业开展了152次召回活动，涉及车辆1043.35万辆。</p> <p> 据质检总局新闻发言人李静介绍，今年前10月，涉及召回的1043万余辆汽车中，生产企业受质检总局缺陷调查影响实施召回45次，涉及车辆822.17万辆，占汽车召回总数量的78.8%。</p> <p> 截至10月底，质检总局共发布78次进口缺陷汽车产品召回信息，涉及112万辆进口缺陷汽车，涉及品牌包括大众、现代、宝马、保时捷、本田、丰田、法拉利、阿斯顿马丁、福特、奔驰、克莱斯勒、铃木、马自达、玛莎拉蒂、起亚、日产、三菱、神龙、斯巴鲁、通用、沃尔沃等。其中包括5家平行进口车进口商，共发布7次召回信息，涉及4366辆进口缺陷汽车，主要是保时捷改装车和宝马改装车。</p> <p> 10月份，质检总局新发布召回信息5次，涉及45287辆进口缺陷汽车，涉及品牌包括保时捷、玛莎拉蒂、马自达、沃尔沃、福特。</p> <p> 同时公布的1-10月缺陷产品召回情况统计显示，截至10月31日，2016年我国共实施消费品召回215次，涉及数量591.93万件。</p> <p> 具体来看，消费品召回包括实施儿童玩具及用品召回147次，涉及儿童玩具及用品28.65万件；实施电子电器产品召回41次，涉及电子电器产品285.56万件；其他消费品召回27次，涉及数量277.72万件。这其中包括36次进口消费品召回信息，共涉及玩具、仿真饰品、家用电器、食品接触产品、家具等7类产品，共计召回114.33万件缺陷产品。</p> <p> 新闻发布会当日，质检总局连续发布4个汽车召回信息，涉及玛莎拉蒂、斯巴鲁、沃尔沃、上汽等车企。其中，玛莎拉蒂将自11月30日起，召回进口QUATTROPORTE（总裁）和GHIBLI（吉博力）汽车，中国大陆地区共涉及263辆；斯巴鲁将自2017年1月5日起，召回2008—2011年款部分进口力狮、森林人、翼豹系列汽车，中国大陆地区共涉及46804辆。</p>   \",\"sourceName\":\"新华汽车\",\"templateId\":\"0001\",\"title\":\"质检总局：今年前10月68家车企召回汽车超千万辆\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:12:08.747  WARN 17112 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:12:08.748  INFO 17112 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：{"code":1,"result":{"seed":"60c5ef7b0f9ac051a785ac3a8cf1b0e2","token":"00000100000125000001485231083910908fb2cb74bad9354045ee1b2734490e"}}
+2017-01-24 12:12:08.757  INFO 17112 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[质检总局：今年前10月68家车企召回汽车超千万辆]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新华汽车]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[吴志维]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">0001</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 新华网北京11月30日电（记者 娄奕娟）11月30日，质检总局召开例行新闻发布会，公布今年1-10日我国缺陷产品召回情况。截至2016年10月31日，2016年我国共有68家汽车生产企业开展了152次召回活动，涉及车辆1043.35万辆。</p> <p> 据质检总局新闻发言人李静介绍，今年前10月，涉及召回的1043万余辆汽车中，生产企业受质检总局缺陷调查影响实施召回45次，涉及车辆822.17万辆，占汽车召回总数量的78.8%。</p> <p> 截至10月底，质检总局共发布78次进口缺陷汽车产品召回信息，涉及112万辆进口缺陷汽车，涉及品牌包括大众、现代、宝马、保时捷、本田、丰田、法拉利、阿斯顿马丁、福特、奔驰、克莱斯勒、铃木、马自达、玛莎拉蒂、起亚、日产、三菱、神龙、斯巴鲁、通用、沃尔沃等。其中包括5家平行进口车进口商，共发布7次召回信息，涉及4366辆进口缺陷汽车，主要是保时捷改装车和宝马改装车。</p> <p> 10月份，质检总局新发布召回信息5次，涉及45287辆进口缺陷汽车，涉及品牌包括保时捷、玛莎拉蒂、马自达、沃尔沃、福特。</p> <p> 同时公布的1-10月缺陷产品召回情况统计显示，截至10月31日，2016年我国共实施消费品召回215次，涉及数量591.93万件。</p> <p> 具体来看，消费品召回包括实施儿童玩具及用品召回147次，涉及儿童玩具及用品28.65万件；实施电子电器产品召回41次，涉及电子电器产品285.56万件；其他消费品召回27次，涉及数量277.72万件。这其中包括36次进口消费品召回信息，共涉及玩具、仿真饰品、家用电器、食品接触产品、家具等7类产品，共计召回114.33万件缺陷产品。</p> <p> 新闻发布会当日，质检总局连续发布4个汽车召回信息，涉及玛莎拉蒂、斯巴鲁、沃尔沃、上汽等车企。其中，玛莎拉蒂将自11月30日起，召回进口QUATTROPORTE（总裁）和GHIBLI（吉博力）汽车，中国大陆地区共涉及263辆；斯巴鲁将自2017年1月5日起，召回2008—2011年款部分进口力狮、森林人、翼豹系列汽车，中国大陆地区共涉及46804辆。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:12:08.979  WARN 17112 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:12:08.980  INFO 17112 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":-1000,"result":"ORA-02291: 违反完整约束条件 (PUB6.FK_NEWS_REF_TEMPL_FILE) - 未找到父项关键字\n"}
+2017-01-24 12:12:08.980  INFO 17112 --- [Thread-4] N.controller.ExportDuocaiController      : 推送结果：{"code":-1000,"result":"ORA-02291: 违反完整约束条件 (PUB6.FK_NEWS_REF_TEMPL_FILE) - 未找到父项关键字\n"}
+2017-01-24 12:12:08.981  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:12:08.981  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:12:08.982  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@33b44e09
+
+2017-01-24 12:12:08.984  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:12:08	维持连接心跳包
+2017-01-24 12:12:08.985  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:12:08	维持连接心跳包
+
+2017-01-24 12:12:23.692  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:12:23	维持连接心跳包
+2017-01-24 12:12:23.693  INFO 17112 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:12:23	维持连接心跳包
+
+2017-01-24 12:12:45.535  INFO 12104 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 12104 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-24 12:12:45.546  INFO 12104 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-24 12:12:45.689  INFO 12104 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51527a1e: startup date [Tue Jan 24 12:12:45 CST 2017]; root of context hierarchy
+2017-01-24 12:12:51.146  INFO 12104 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-24 12:12:51.175  INFO 12104 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-24 12:12:51.177  INFO 12104 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-24 12:12:51.538  INFO 12104 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-24 12:12:51.538  INFO 12104 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5853 ms
+2017-01-24 12:12:52.068  INFO 12104 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-24 12:12:52.079  INFO 12104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-24 12:12:52.080  INFO 12104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-24 12:12:52.081  INFO 12104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-24 12:12:52.081  INFO 12104 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-24 12:12:53.066  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51527a1e: startup date [Tue Jan 24 12:12:45 CST 2017]; root of context hierarchy
+2017-01-24 12:12:53.156  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-24 12:12:53.157  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-24 12:12:53.158  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-24 12:12:53.159  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-24 12:12:53.159  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-24 12:12:53.173  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-24 12:12:53.174  INFO 12104 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-24 12:12:53.252  INFO 12104 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:12:53.252  INFO 12104 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:12:53.383  INFO 12104 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:12:54.195  INFO 12104 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-24 12:12:54.384  INFO 12104 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-24 12:12:54.395  INFO 12104 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 10.42 seconds (JVM running for 11.218)
+2017-01-24 12:12:54.488  INFO 12104 --- [main] NewsPusherModule.service.Client          : 本地端口：57869
+2017-01-24 12:12:54.682  INFO 12104 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-24 12:13:09.571  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:13:09	维持连接心跳包
+2017-01-24 12:13:09.573  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:13:09	维持连接心跳包
+
+2017-01-24 12:13:24.591  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:13:24	维持连接心跳包
+2017-01-24 12:13:24.592  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:13:24	维持连接心跳包
+
+2017-01-24 12:13:39.599  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:13:39	维持连接心跳包
+2017-01-24 12:13:39.600  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:13:39	维持连接心跳包
+
+2017-01-24 12:13:54.603  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:13:54	维持连接心跳包
+2017-01-24 12:13:54.604  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:13:54	维持连接心跳包
+
+2017-01-24 12:14:09.610  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:14:09	维持连接心跳包
+2017-01-24 12:14:09.611  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:14:09	维持连接心跳包
+
+2017-01-24 12:14:22.375  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@5ba19eab
+2017-01-24 12:14:22.381  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"胡丽涓\",\"channelId\":\"3000000000000000\",\"content\":\"    <p align=\\\"center\\\"><img id=\\\"6100252\\\" alt=\\\"（体育）汽车——首届中国汽车100小时耐力赛新闻发布会在京举行\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/VXSRoTQLC71EgAGiuDwP4obLgXfXJv38/fb67c8e1a474ef9cfe8925d1a7eaf058.jpg\\\"></p> <p> 12月29日，与会嘉宾在启动仪式上。当日，首届中国汽车100小时耐力赛新闻发布会及启动仪式在北京举行。据介绍，首届中国汽车100小时耐力赛将于明年4月在广东国际赛车场举办。新华社发（张燕辉摄）</p>   \",\"sourceName\":\"新华社\",\"templateId\":\"0001\",\"title\":\"首届中国汽车100小时耐力赛新闻发布会在京举行\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:14:22.822  WARN 12104 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:14:22.824  INFO 12104 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：{"code":1,"result":{"seed":"823cb1d6eb28b96a09b54ecc95183263","token":"000001000001250000014852312179771230124c4b8dce299b9c091372704832"}}
+2017-01-24 12:14:22.836  INFO 12104 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[首届中国汽车100小时耐力赛新闻发布会在京举行]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新华社]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[胡丽涓]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">0001</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p align="center"><img id="6100252" alt="（体育）汽车——首届中国汽车100小时耐力赛新闻发布会在京举行" src="http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/VXSRoTQLC71EgAGiuDwP4obLgXfXJv38/fb67c8e1a474ef9cfe8925d1a7eaf058.jpg"></p> <p> 12月29日，与会嘉宾在启动仪式上。当日，首届中国汽车100小时耐力赛新闻发布会及启动仪式在北京举行。据介绍，首届中国汽车100小时耐力赛将于明年4月在广东国际赛车场举办。新华社发（张燕辉摄）</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:14:22.926  WARN 12104 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:14:22.927  INFO 12104 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":-1000,"result":"ORA-02291: 违反完整约束条件 (PUB6.FK_NEWS_REF_TEMPL_FILE) - 未找到父项关键字\n"}
+2017-01-24 12:14:22.928  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:14:22.929  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:14:22.930  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@5ba19eab
+
+2017-01-24 12:14:24.651  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:14:24	维持连接心跳包
+2017-01-24 12:14:24.652  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:14:24	维持连接心跳包
+
+2017-01-24 12:14:39.647  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:14:39	维持连接心跳包
+2017-01-24 12:14:39.648  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:14:39	维持连接心跳包
+
+2017-01-24 12:14:54.658  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:14:54	维持连接心跳包
+2017-01-24 12:14:54.659  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:14:54	维持连接心跳包
+
+2017-01-24 12:15:09.668  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:15:09	维持连接心跳包
+2017-01-24 12:15:09.669  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:15:09	维持连接心跳包
+
+2017-01-24 12:15:24.678  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:15:24	维持连接心跳包
+2017-01-24 12:15:24.679  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:15:24	维持连接心跳包
+
+2017-01-24 12:15:39.689  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:15:39	维持连接心跳包
+2017-01-24 12:15:39.690  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:15:39	维持连接心跳包
+
+2017-01-24 12:15:54.702  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:15:54	维持连接心跳包
+2017-01-24 12:15:54.703  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:15:54	维持连接心跳包
+
+2017-01-24 12:16:09.716  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:16:09	维持连接心跳包
+2017-01-24 12:16:09.717  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:16:09	维持连接心跳包
+
+2017-01-24 12:16:24.728  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:16:24	维持连接心跳包
+2017-01-24 12:16:24.729  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:16:24	维持连接心跳包
+
+2017-01-24 12:16:39.735  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:16:39	维持连接心跳包
+2017-01-24 12:16:39.736  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:16:39	维持连接心跳包
+
+2017-01-24 12:16:54.749  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:16:54	维持连接心跳包
+2017-01-24 12:16:54.750  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:16:54	维持连接心跳包
+
+2017-01-24 12:17:09.761  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:17:09	维持连接心跳包
+2017-01-24 12:17:09.761  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:17:09	维持连接心跳包
+
+2017-01-24 12:17:24.771  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:17:24	维持连接心跳包
+2017-01-24 12:17:24.772  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:17:24	维持连接心跳包
+
+2017-01-24 12:17:39.781  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:17:39	维持连接心跳包
+2017-01-24 12:17:39.782  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:17:39	维持连接心跳包
+
+2017-01-24 12:17:54.792  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:17:54	维持连接心跳包
+2017-01-24 12:17:54.793  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:17:54	维持连接心跳包
+
+2017-01-24 12:18:09.802  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:18:09	维持连接心跳包
+2017-01-24 12:18:09.803  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:18:09	维持连接心跳包
+
+2017-01-24 12:18:24.814  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:18:24	维持连接心跳包
+2017-01-24 12:18:24.815  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:18:24	维持连接心跳包
+
+2017-01-24 12:18:39.823  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:18:39	维持连接心跳包
+2017-01-24 12:18:39.824  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:18:39	维持连接心跳包
+
+2017-01-24 12:18:54.836  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:18:54	维持连接心跳包
+2017-01-24 12:18:54.836  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:18:54	维持连接心跳包
+
+2017-01-24 12:19:09.849  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:19:09	维持连接心跳包
+2017-01-24 12:19:09.850  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:19:09	维持连接心跳包
+
+2017-01-24 12:19:24.858  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:19:24	维持连接心跳包
+2017-01-24 12:19:24.859  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:19:24	维持连接心跳包
+
+2017-01-24 12:19:39.872  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:19:39	维持连接心跳包
+2017-01-24 12:19:39.873  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:19:39	维持连接心跳包
+
+2017-01-24 12:19:54.888  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:19:54	维持连接心跳包
+2017-01-24 12:19:54.890  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:19:54	维持连接心跳包
+
+2017-01-24 12:20:09.902  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:20:09	维持连接心跳包
+2017-01-24 12:20:09.903  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:20:09	维持连接心跳包
+
+2017-01-24 12:20:24.915  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:20:24	维持连接心跳包
+2017-01-24 12:20:24.916  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:20:24	维持连接心跳包
+
+2017-01-24 12:20:39.926  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:20:39	维持连接心跳包
+2017-01-24 12:20:39.927  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:20:39	维持连接心跳包
+
+2017-01-24 12:20:54.937  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:20:54	维持连接心跳包
+2017-01-24 12:20:54.939  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:20:54	维持连接心跳包
+
+2017-01-24 12:21:09.954  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:21:09	维持连接心跳包
+2017-01-24 12:21:09.955  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:21:09	维持连接心跳包
+
+2017-01-24 12:21:24.966  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:21:24	维持连接心跳包
+2017-01-24 12:21:24.967  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:21:24	维持连接心跳包
+
+2017-01-24 12:21:39.976  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:21:39	维持连接心跳包
+2017-01-24 12:21:39.978  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:21:39	维持连接心跳包
+
+2017-01-24 12:21:54.987  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:21:54	维持连接心跳包
+2017-01-24 12:21:54.988  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:21:54	维持连接心跳包
+
+2017-01-24 12:22:10.011  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:22:10	维持连接心跳包
+2017-01-24 12:22:10.012  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:22:10	维持连接心跳包
+
+2017-01-24 12:22:25.013  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:22:25	维持连接心跳包
+2017-01-24 12:22:25.014  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:22:25	维持连接心跳包
+
+2017-01-24 12:22:40.020  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:22:40	维持连接心跳包
+2017-01-24 12:22:40.022  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:22:40	维持连接心跳包
+
+2017-01-24 12:22:55.053  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:22:55	维持连接心跳包
+2017-01-24 12:22:55.054  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:22:55	维持连接心跳包
+
+2017-01-24 12:23:10.049  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:23:10	维持连接心跳包
+2017-01-24 12:23:10.050  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:23:10	维持连接心跳包
+
+2017-01-24 12:23:25.062  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:23:25	维持连接心跳包
+2017-01-24 12:23:25.063  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:23:25	维持连接心跳包
+
+2017-01-24 12:23:40.112  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:23:40	维持连接心跳包
+2017-01-24 12:23:40.114  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:23:40	维持连接心跳包
+
+2017-01-24 12:23:55.084  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:23:55	维持连接心跳包
+2017-01-24 12:23:55.084  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:23:55	维持连接心跳包
+
+2017-01-24 12:24:10.095  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:24:10	维持连接心跳包
+2017-01-24 12:24:10.096  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:24:10	维持连接心跳包
+
+2017-01-24 12:24:25.137  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:24:25	维持连接心跳包
+2017-01-24 12:24:25.139  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:24:25	维持连接心跳包
+
+2017-01-24 12:24:40.122  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:24:40	维持连接心跳包
+2017-01-24 12:24:40.123  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:24:40	维持连接心跳包
+
+2017-01-24 12:24:55.133  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:24:55	维持连接心跳包
+2017-01-24 12:24:55.134  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:24:55	维持连接心跳包
+
+2017-01-24 12:25:10.175  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:25:10	维持连接心跳包
+2017-01-24 12:25:10.176  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:25:10	维持连接心跳包
+
+2017-01-24 12:25:25.169  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:25:25	维持连接心跳包
+2017-01-24 12:25:25.170  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:25:25	维持连接心跳包
+
+2017-01-24 12:25:40.170  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:25:40	维持连接心跳包
+2017-01-24 12:25:40.172  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:25:40	维持连接心跳包
+
+2017-01-24 12:25:55.176  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:25:55	维持连接心跳包
+2017-01-24 12:25:55.177  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:25:55	维持连接心跳包
+
+2017-01-24 12:26:10.190  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:26:10	维持连接心跳包
+2017-01-24 12:26:10.191  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:26:10	维持连接心跳包
+
+2017-01-24 12:26:25.197  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:26:25	维持连接心跳包
+2017-01-24 12:26:25.198  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:26:25	维持连接心跳包
+
+2017-01-24 12:26:40.207  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:26:40	维持连接心跳包
+2017-01-24 12:26:40.208  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:26:40	维持连接心跳包
+
+2017-01-24 12:26:55.220  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:26:55	维持连接心跳包
+2017-01-24 12:26:55.221  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:26:55	维持连接心跳包
+
+2017-01-24 12:27:10.230  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:27:10	维持连接心跳包
+2017-01-24 12:27:10.231  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:27:10	维持连接心跳包
+
+2017-01-24 12:27:25.241  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:27:25	维持连接心跳包
+2017-01-24 12:27:25.242  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:27:25	维持连接心跳包
+
+2017-01-24 12:27:40.251  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:27:40	维持连接心跳包
+2017-01-24 12:27:40.252  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:27:40	维持连接心跳包
+
+2017-01-24 12:27:55.263  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:27:55	维持连接心跳包
+2017-01-24 12:27:55.264  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:27:55	维持连接心跳包
+
+2017-01-24 12:28:10.272  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:28:10	维持连接心跳包
+2017-01-24 12:28:10.273  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:28:10	维持连接心跳包
+
+2017-01-24 12:28:25.283  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:28:25	维持连接心跳包
+2017-01-24 12:28:25.284  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:28:25	维持连接心跳包
+
+2017-01-24 12:28:40.297  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:28:40	维持连接心跳包
+2017-01-24 12:28:40.299  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:28:40	维持连接心跳包
+
+2017-01-24 12:28:55.306  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:28:55	维持连接心跳包
+2017-01-24 12:28:55.307  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:28:55	维持连接心跳包
+
+2017-01-24 12:29:10.316  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:29:10	维持连接心跳包
+2017-01-24 12:29:10.317  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:29:10	维持连接心跳包
+
+2017-01-24 12:29:25.325  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:29:25	维持连接心跳包
+2017-01-24 12:29:25.326  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:29:25	维持连接心跳包
+
+2017-01-24 12:29:40.340  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:29:40	维持连接心跳包
+2017-01-24 12:29:40.342  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:29:40	维持连接心跳包
+
+2017-01-24 12:29:55.356  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:29:55	维持连接心跳包
+2017-01-24 12:29:55.357  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:29:55	维持连接心跳包
+
+2017-01-24 12:30:10.367  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:30:10	维持连接心跳包
+2017-01-24 12:30:10.368  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:30:10	维持连接心跳包
+
+2017-01-24 12:30:25.382  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:30:25	维持连接心跳包
+2017-01-24 12:30:25.384  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:30:25	维持连接心跳包
+
+2017-01-24 12:30:40.391  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:30:40	维持连接心跳包
+2017-01-24 12:30:40.392  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:30:40	维持连接心跳包
+
+2017-01-24 12:30:55.414  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:30:55	维持连接心跳包
+2017-01-24 12:30:55.414  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:30:55	维持连接心跳包
+
+2017-01-24 12:31:10.415  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:31:10	维持连接心跳包
+2017-01-24 12:31:10.416  INFO 12104 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:31:10	维持连接心跳包
+
+2017-01-24 12:31:29.939  INFO 13728 --- [main] NewsPusherModule.ApplicationNewsExport   : Starting ApplicationNewsExport on DESKTOP-I5VPLTQ with PID 13728 (D:\IdeaProjects\NewsExport_duocai\target\classes started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-24 12:31:29.943  INFO 13728 --- [main] NewsPusherModule.ApplicationNewsExport   : No active profile set, falling back to default profiles: default
+2017-01-24 12:31:30.084  INFO 13728 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@16ed889d: startup date [Tue Jan 24 12:31:30 CST 2017]; root of context hierarchy
+2017-01-24 12:31:32.819  INFO 13728 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 10091 (http)
+2017-01-24 12:31:32.833  INFO 13728 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-01-24 12:31:32.834  INFO 13728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2017-01-24 12:31:33.014  INFO 13728 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-01-24 12:31:33.015  INFO 13728 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2934 ms
+2017-01-24 12:31:33.373  INFO 13728 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-01-24 12:31:33.379  INFO 13728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-01-24 12:31:33.380  INFO 13728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-01-24 12:31:33.380  INFO 13728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-01-24 12:31:33.380  INFO 13728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-01-24 12:31:34.133  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@16ed889d: startup date [Tue Jan 24 12:31:30 CST 2017]; root of context hierarchy
+2017-01-24 12:31:34.225  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-24 12:31:34.226  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-24 12:31:34.226  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-24 12:31:34.227  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-24 12:31:34.227  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-24 12:31:34.234  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-24 12:31:34.234  INFO 13728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-24 12:31:34.300  INFO 13728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:31:34.300  INFO 13728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:31:34.446  INFO 13728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:31:35.048  INFO 13728 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-01-24 12:31:35.201  INFO 13728 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 10091 (http)
+2017-01-24 12:31:35.213  INFO 13728 --- [main] NewsPusherModule.ApplicationNewsExport   : Started ApplicationNewsExport in 6.62 seconds (JVM running for 7.404)
+2017-01-24 12:31:35.227  INFO 13728 --- [main] NewsPusherModule.service.Client          : 本地端口：58036
+2017-01-24 12:31:35.518  INFO 13728 --- [Thread-5] NewsPusherModule.service.Client          : 客户端发送handShaker信息是：	{"companyId":"001"}
+2017-01-24 12:31:50.322  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:31:50	维持连接心跳包
+2017-01-24 12:31:50.324  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:31:50	维持连接心跳包
+
+2017-01-24 12:32:01.425  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@23d63abc
+2017-01-24 12:32:01.437  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 市民朋友们：</p> <p> 春节是中华民族最隆重的传统节日。辞旧迎新、燃放烟花爆竹是欢度春节的一种习惯，但大量燃放烟花爆竹会严重影响空气环境质量，产生雾霾天气，造成噪音污染，容易酿成火灾事故和财产损失。为此，我们倡议：春节期间告别烟花爆竹，不放或少放烟花爆竹，过一个低碳、祥和、文明、健康的春节。</p> <p> 过一个低碳环保年。广大市民要自觉树立环保意识，不购买、不燃放烟花爆竹。倡导采用电子爆竹、喜庆音乐、鲜花等安全、环保、低碳的方式欢度佳节，努力营造环境优美、空气清新、文明和谐的节日氛围，用实际行动守护贵阳的碧水蓝天，共建生态文明示范城市。</p> <p> 过一个安全祥和年。不在规定的禁止燃放时间和区域内随意燃放烟花爆竹。广大市民要发挥主人翁的责任感和使命感，积极劝阻和抵制周边人员随意燃放烟花爆竹的不文明行为，彻底消除安全隐患，让广大市民能够过一个安全、祥和、喜庆的春节。</p> <p> 过一个文明健康年。广大市民可以利用微信、微博、手机短信、QQ等新兴传播方式作为平台，传递新年祝福，向亲朋好友宣传不燃放烟花爆竹的好处，努力把不燃放烟花爆竹变成广大市民的自觉行为，凝聚起保护环境的强大正能量。</p> <p> 过一个平安祈福年。提倡文明祭祀，不燃放烟花爆竹，不焚烧纸钱，倡导用鲜花祭奠、网上祭奠、家庭追思等文明祭扫活动。不携带火源上山，不在山地、林区烧纸焚香、燃放烟花爆竹，最大限度地减少环境污染和火险隐患。</p> <p> 为了让贵阳的天更蓝、水更清、空气更清新，我们真诚希望广大市民朋友告别烟花爆竹，从身边做起，从点滴做起，爱护环境，文明过节，以实际行动践行社会主义核心价值观，用一言一行为全国文明城市增光添彩，为贵阳打造创新型中心城市作出自己应有的贡献。恭祝全市人民新春快乐!阖家幸福!鸡年吉祥!</p> <p> 贵阳市文明办</p> <p> 2017年1月24日</p>   \",\"sourceName\":\"贵阳网-贵阳晚报\",\"templateId\":\"0001\",\"title\":\"贵阳市文明办：守护贵阳蓝天 文明低碳过节\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:32:01.691  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:32:01.692  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：{"code":1,"result":{"seed":"1bf91cfa225d6fcf6f3c9162594886cb","token":"0000010000012500000148523227679260363942c31e5caf2ec7978d749bcc04"}}
+2017-01-24 12:32:01.706  INFO 13728 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[贵阳市文明办：守护贵阳蓝天 文明低碳过节]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵阳网-贵阳晚报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[徐倩]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">0001</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 市民朋友们：</p> <p> 春节是中华民族最隆重的传统节日。辞旧迎新、燃放烟花爆竹是欢度春节的一种习惯，但大量燃放烟花爆竹会严重影响空气环境质量，产生雾霾天气，造成噪音污染，容易酿成火灾事故和财产损失。为此，我们倡议：春节期间告别烟花爆竹，不放或少放烟花爆竹，过一个低碳、祥和、文明、健康的春节。</p> <p> 过一个低碳环保年。广大市民要自觉树立环保意识，不购买、不燃放烟花爆竹。倡导采用电子爆竹、喜庆音乐、鲜花等安全、环保、低碳的方式欢度佳节，努力营造环境优美、空气清新、文明和谐的节日氛围，用实际行动守护贵阳的碧水蓝天，共建生态文明示范城市。</p> <p> 过一个安全祥和年。不在规定的禁止燃放时间和区域内随意燃放烟花爆竹。广大市民要发挥主人翁的责任感和使命感，积极劝阻和抵制周边人员随意燃放烟花爆竹的不文明行为，彻底消除安全隐患，让广大市民能够过一个安全、祥和、喜庆的春节。</p> <p> 过一个文明健康年。广大市民可以利用微信、微博、手机短信、QQ等新兴传播方式作为平台，传递新年祝福，向亲朋好友宣传不燃放烟花爆竹的好处，努力把不燃放烟花爆竹变成广大市民的自觉行为，凝聚起保护环境的强大正能量。</p> <p> 过一个平安祈福年。提倡文明祭祀，不燃放烟花爆竹，不焚烧纸钱，倡导用鲜花祭奠、网上祭奠、家庭追思等文明祭扫活动。不携带火源上山，不在山地、林区烧纸焚香、燃放烟花爆竹，最大限度地减少环境污染和火险隐患。</p> <p> 为了让贵阳的天更蓝、水更清、空气更清新，我们真诚希望广大市民朋友告别烟花爆竹，从身边做起，从点滴做起，爱护环境，文明过节，以实际行动践行社会主义核心价值观，用一言一行为全国文明城市增光添彩，为贵阳打造创新型中心城市作出自己应有的贡献。恭祝全市人民新春快乐!阖家幸福!鸡年吉祥!</p> <p> 贵阳市文明办</p> <p> 2017年1月24日</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:32:01.800  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:32:01.802  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":-1000,"result":"最近修改过的1条与本新闻重复的新闻是：\n015376388(致贵阳全体市民春节期间减少燃放烟花爆竹倡议书)"}
+2017-01-24 12:32:01.803  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:32:01.803  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:32:01.804  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@23d63abc
+
+2017-01-24 12:32:05.369  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:32:05	维持连接心跳包
+2017-01-24 12:32:05.371  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:32:05	维持连接心跳包
+
+2017-01-24 12:32:20.399  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:32:20	维持连接心跳包
+2017-01-24 12:32:20.400  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:32:20	维持连接心跳包
+
+2017-01-24 12:32:35.432  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:32:35	维持连接心跳包
+2017-01-24 12:32:35.433  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:32:35	维持连接心跳包
+
+2017-01-24 12:32:50.431  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:32:50	维持连接心跳包
+2017-01-24 12:32:50.432  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:32:50	维持连接心跳包
+
+2017-01-24 12:33:05.444  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:33:05	维持连接心跳包
+2017-01-24 12:33:05.445  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:33:05	维持连接心跳包
+
+2017-01-24 12:33:09.855  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@42e64242
+2017-01-24 12:33:09.857  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"徐倩\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 1月23日，十届市纪委二次全会闭幕。大会的召开在我市广大党员干部中引起强烈反响，大家纷纷表示，要进一步把党风廉政建设和反腐败斗争引向深入，巩固好反腐败斗争压倒性态势。</p> <p> 云岩区委书记王建忠说，大会体现了我市抓好党风廉政建设和反腐败斗争的坚定决心。我们将深入学习、深化认识，把全面从严治党转化为实际行动，结合实际情况，精准发力，推动党纪党规全面落实。</p> <p> 市委组织部副部长、市纪委委员杨俊基说，这次大会向全市发出了推动全面从严治党向纵深发展的动员令。全面从严治党必须抓住严肃党内政治生活这个根本，要坚持正确选人用人导向，为严肃党内政治生活提供组织保证。把纪律和规矩挺在前面，落实到干部选拔任用中，精准科学选人用人，把从严管理监督干部与加强正向激励结合起来，推动形成风清气正的政治生态。</p> <p> 开阳县委常委、县纪委书记金灿认为，民心是最大的政治，我们党最大的政治优势是密切联系群众，民心始终是我们党最深厚的执政之基。要着力开展民生监督工作，让老百姓在从严治党中提高获得感。</p> <p> 市第七纪检监察组组长高广元说，我市全面推动派驻机构全覆盖，派驻机构的独立性和权威性得到充分发挥，办案的质量和数量都大大提高。</p> <p> 市纪委监察局特邀监督员黄成德表示，作为基层监督员，他明显感到近年来党风更正了，党风正、民风也更正，希望不断巩固反腐败斗争压倒性态势。</p> <p> 记者 钱丽</p>   \",\"sourceName\":\"贵阳网-贵阳日报\",\"templateId\":\"0001\",\"title\":\"贵阳市广大党员干部热议十届市纪委二次全会\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:33:09.950  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:33:09.953  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：{"code":1,"result":{"seed":"63aab418a0c97df7fc495918b25a8d73","token":"00000100000125000001485232345054ce652bc5ea93052072d9679c9f66ed43"}}
+2017-01-24 12:33:09.957  INFO 13728 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[贵阳市广大党员干部热议十届市纪委二次全会]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵阳网-贵阳日报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[徐倩]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">0001</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 1月23日，十届市纪委二次全会闭幕。大会的召开在我市广大党员干部中引起强烈反响，大家纷纷表示，要进一步把党风廉政建设和反腐败斗争引向深入，巩固好反腐败斗争压倒性态势。</p> <p> 云岩区委书记王建忠说，大会体现了我市抓好党风廉政建设和反腐败斗争的坚定决心。我们将深入学习、深化认识，把全面从严治党转化为实际行动，结合实际情况，精准发力，推动党纪党规全面落实。</p> <p> 市委组织部副部长、市纪委委员杨俊基说，这次大会向全市发出了推动全面从严治党向纵深发展的动员令。全面从严治党必须抓住严肃党内政治生活这个根本，要坚持正确选人用人导向，为严肃党内政治生活提供组织保证。把纪律和规矩挺在前面，落实到干部选拔任用中，精准科学选人用人，把从严管理监督干部与加强正向激励结合起来，推动形成风清气正的政治生态。</p> <p> 开阳县委常委、县纪委书记金灿认为，民心是最大的政治，我们党最大的政治优势是密切联系群众，民心始终是我们党最深厚的执政之基。要着力开展民生监督工作，让老百姓在从严治党中提高获得感。</p> <p> 市第七纪检监察组组长高广元说，我市全面推动派驻机构全覆盖，派驻机构的独立性和权威性得到充分发挥，办案的质量和数量都大大提高。</p> <p> 市纪委监察局特邀监督员黄成德表示，作为基层监督员，他明显感到近年来党风更正了，党风正、民风也更正，希望不断巩固反腐败斗争压倒性态势。</p> <p> 记者 钱丽</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:33:10.075  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:33:10.075  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":-1000,"result":"ORA-02291: 违反完整约束条件 (PUB6.FK_NEWS_REF_TEMPL_FILE) - 未找到父项关键字\n"}
+2017-01-24 12:33:10.075  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:33:10.076  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:33:10.077  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@42e64242
+
+2017-01-24 12:33:20.462  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:33:20	维持连接心跳包
+2017-01-24 12:33:20.463  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:33:20	维持连接心跳包
+
+2017-01-24 12:33:35.482  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:33:35	维持连接心跳包
+2017-01-24 12:33:35.483  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:33:35	维持连接心跳包
+
+2017-01-24 12:33:50.489  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:33:50	维持连接心跳包
+2017-01-24 12:33:50.489  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:33:50	维持连接心跳包
+
+2017-01-24 12:34:05.497  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:34:05	维持连接心跳包
+2017-01-24 12:34:05.498  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:34:05	维持连接心跳包
+
+2017-01-24 12:34:20.508  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:34:20	维持连接心跳包
+2017-01-24 12:34:20.509  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:34:20	维持连接心跳包
+
+2017-01-24 12:34:35.530  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:34:35	维持连接心跳包
+2017-01-24 12:34:35.531  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:34:35	维持连接心跳包
+
+2017-01-24 12:34:50.531  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:34:50	维持连接心跳包
+2017-01-24 12:34:50.533  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:34:50	维持连接心跳包
+
+2017-01-24 12:35:05.540  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:35:05	维持连接心跳包
+2017-01-24 12:35:05.541  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:35:05	维持连接心跳包
+
+2017-01-24 12:35:20.552  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:35:20	维持连接心跳包
+2017-01-24 12:35:20.553  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:35:20	维持连接心跳包
+
+2017-01-24 12:35:35.564  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:35:35	维持连接心跳包
+2017-01-24 12:35:35.565  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:35:35	维持连接心跳包
+
+2017-01-24 12:35:50.602  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:35:50	维持连接心跳包
+2017-01-24 12:35:50.603  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:35:50	维持连接心跳包
+
+2017-01-24 12:36:05.607  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:36:05	维持连接心跳包
+2017-01-24 12:36:05.608  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:36:05	维持连接心跳包
+
+2017-01-24 12:36:20.805  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:36:20	维持连接心跳包
+2017-01-24 12:36:20.805  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:36:20	维持连接心跳包
+
+2017-01-24 12:36:35.888  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:36:35	维持连接心跳包
+2017-01-24 12:36:35.891  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:36:35	维持连接心跳包
+
+2017-01-24 12:36:50.896  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:36:50	维持连接心跳包
+2017-01-24 12:36:50.897  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:36:50	维持连接心跳包
+
+2017-01-24 12:37:05.906  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:37:05	维持连接心跳包
+2017-01-24 12:37:05.906  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:37:05	维持连接心跳包
+
+2017-01-24 12:37:20.920  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:37:20	维持连接心跳包
+2017-01-24 12:37:20.921  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:37:20	维持连接心跳包
+
+2017-01-24 12:37:36.169  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:37:36	维持连接心跳包
+2017-01-24 12:37:36.170  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:37:36	维持连接心跳包
+
+2017-01-24 12:37:46.805  INFO 16144 --- [main] NewsPusherModule.util.PostTest           : Starting PostTest on DESKTOP-I5VPLTQ with PID 16144 (started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-01-24 12:37:46.806  INFO 16144 --- [main] NewsPusherModule.util.PostTest           : No active profile set, falling back to default profiles: default
+2017-01-24 12:37:47.050  INFO 16144 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@25eef81: startup date [Tue Jan 24 12:37:47 CST 2017]; root of context hierarchy
+2017-01-24 12:37:50.827  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@25eef81: startup date [Tue Jan 24 12:37:47 CST 2017]; root of context hierarchy
+2017-01-24 12:37:50.946  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-01-24 12:37:50.947  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-01-24 12:37:50.948  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-01-24 12:37:50.950  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-01-24 12:37:50.951  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-01-24 12:37:50.953  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-01-24 12:37:50.954  INFO 16144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-01-24 12:37:51.037  INFO 16144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:37:51.037  INFO 16144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:37:51.168  INFO 16144 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-01-24 12:37:51.245  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:37:51	维持连接心跳包
+2017-01-24 12:37:51.246  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:37:51	维持连接心跳包
+
+2017-01-24 12:37:51.801  INFO 16144 --- [main] NewsPusherModule.util.PostTest           : Started PostTest in 6.138 seconds (JVM running for 7.699)
+2017-01-24 12:38:06.256  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:38:06	维持连接心跳包
+2017-01-24 12:38:06.257  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:38:06	维持连接心跳包
+
+2017-01-24 12:38:13.677  WARN 16144 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:38:14.508  WARN 16144 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:38:14.552  INFO 16144 --- [Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@25eef81: startup date [Tue Jan 24 12:37:47 CST 2017]; root of context hierarchy
+2017-01-24 12:38:21.296  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:38:21	维持连接心跳包
+2017-01-24 12:38:21.297  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:38:21	维持连接心跳包
+
+2017-01-24 12:38:36.289  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:38:36	维持连接心跳包
+2017-01-24 12:38:36.289  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:38:36	维持连接心跳包
+
+2017-01-24 12:38:51.362  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:38:51	维持连接心跳包
+2017-01-24 12:38:51.363  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:38:51	维持连接心跳包
+
+2017-01-24 12:39:06.387  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:39:06	维持连接心跳包
+2017-01-24 12:39:06.389  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:39:06	维持连接心跳包
+
+2017-01-24 12:39:21.467  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:39:21	维持连接心跳包
+2017-01-24 12:39:21.469  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:39:21	维持连接心跳包
+
+2017-01-24 12:39:36.466  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:39:36	维持连接心跳包
+2017-01-24 12:39:36.467  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:39:36	维持连接心跳包
+
+2017-01-24 12:39:51.480  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:39:51	维持连接心跳包
+2017-01-24 12:39:51.481  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:39:51	维持连接心跳包
+
+2017-01-24 12:40:06.509  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:40:06	维持连接心跳包
+2017-01-24 12:40:06.510  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:40:06	维持连接心跳包
+
+2017-01-24 12:40:21.510  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:40:21	维持连接心跳包
+2017-01-24 12:40:21.511  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:40:21	维持连接心跳包
+
+2017-01-24 12:40:36.522  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:40:36	维持连接心跳包
+2017-01-24 12:40:36.523  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:40:36	维持连接心跳包
+
+2017-01-24 12:40:51.549  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:40:51	维持连接心跳包
+2017-01-24 12:40:51.550  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:40:51	维持连接心跳包
+
+2017-01-24 12:41:06.575  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:41:06	维持连接心跳包
+2017-01-24 12:41:06.576  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:41:06	维持连接心跳包
+
+2017-01-24 12:41:21.594  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:41:21	维持连接心跳包
+2017-01-24 12:41:21.595  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:41:21	维持连接心跳包
+
+2017-01-24 12:41:36.588  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:41:36	维持连接心跳包
+2017-01-24 12:41:36.590  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:41:36	维持连接心跳包
+
+2017-01-24 12:41:51.572  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:41:51	维持连接心跳包
+2017-01-24 12:41:51.573  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:41:51	维持连接心跳包
+
+2017-01-24 12:42:06.584  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:42:06	维持连接心跳包
+2017-01-24 12:42:06.585  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:42:06	维持连接心跳包
+
+2017-01-24 12:42:21.595  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:42:21	维持连接心跳包
+2017-01-24 12:42:21.596  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:42:21	维持连接心跳包
+
+2017-01-24 12:42:36.615  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:42:36	维持连接心跳包
+2017-01-24 12:42:36.616  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:42:36	维持连接心跳包
+
+2017-01-24 12:42:51.639  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:42:51	维持连接心跳包
+2017-01-24 12:42:51.640  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:42:51	维持连接心跳包
+
+2017-01-24 12:43:06.653  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:43:06	维持连接心跳包
+2017-01-24 12:43:06.654  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:43:06	维持连接心跳包
+
+2017-01-24 12:43:21.672  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:43:21	维持连接心跳包
+2017-01-24 12:43:21.672  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:43:21	维持连接心跳包
+
+2017-01-24 12:43:36.682  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:43:36	维持连接心跳包
+2017-01-24 12:43:36.683  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:43:36	维持连接心跳包
+
+2017-01-24 12:43:51.716  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:43:51	维持连接心跳包
+2017-01-24 12:43:51.717  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:43:51	维持连接心跳包
+
+2017-01-24 12:44:06.724  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:44:06	维持连接心跳包
+2017-01-24 12:44:06.724  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:44:06	维持连接心跳包
+
+2017-01-24 12:44:21.756  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:44:21	维持连接心跳包
+2017-01-24 12:44:21.757  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:44:21	维持连接心跳包
+
+2017-01-24 12:44:36.729  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:44:36	维持连接心跳包
+2017-01-24 12:44:36.730  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:44:36	维持连接心跳包
+
+2017-01-24 12:44:51.807  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:44:51	维持连接心跳包
+2017-01-24 12:44:51.813  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:44:51	维持连接心跳包
+
+2017-01-24 12:45:04.496  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@7d221499
+2017-01-24 12:45:04.499  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"何莹莹\",\"channelId\":\"3000000000000000\",\"content\":\"    <p> 新华社北京1月23日电（记者齐中熙、赵文君）１月23日，全国春运迎来节前客流最高峰。交通运输部预测，23日预计日发送旅客将突破8300万人次，26个重点客运枢纽客流量比春运首日（1月13日）增长约32%。</p> <p> 据初步统计，春运前11天（1月13日－23日），全国铁路、道路、水路、民航共发送旅客约8.4亿人次，同比增长2.9%。其中，铁路约9800万人次，增长18.3%；公路约7.16亿人次，增长0.73%；水路990余万人次，增长7.3%；民航约1600万人次，增长16.4%。</p> <p> 23日，全国铁路预计发送旅客920万人次。为应对客流高峰，铁路部门继续加大运力投放，增开旅客列车，最大限度满足旅客出行需求。全国铁路预计增开旅客列车756列。</p> <p> 春运期间，各地铁路部门推出多项便民利民措施。沈阳铁路局在各大车站设立医疗服务点，安排专业医护人员常驻候车室；呼和浩特铁路局“蒙京快线”微信公众号在部分列车推出就医旅客预约服务；济南铁路局在青岛北站增设“爱心妈妈”小屋，为孕妇和儿童旅客提供一条龙温馨服务；南昌铁路局在车站增设站内便捷换乘通道，为重点旅客提供“绿色通道”快捷引导服务。</p> <p> 从北京、广州、阜阳等12个交通运输部重点联络城市监测情况看，1月23日，北京六里桥客运站、阜阳市汽车东站客流量比春运首日增长近1.2倍，成都机场客运站、重庆机场换乘中心增长50%以上，郑州汽车中心站、北京八王坟客运站增长40%以上。</p> <p> 携程、百度等互联网平台大数据分析结果显示，北京、上海、广州、深圳、郑州、杭州、苏州、东莞等城市排在旅客出发城市前列；济南、阜阳、赣州、周口、合肥、昆明、南宁、上饶等城市排在客流迁入城市前列。</p>   \",\"sourceName\":\"新华网\",\"templateId\":\"100000330\",\"title\":\"全国春运迎来“巅峰时刻”日发送旅客突破8300万人次\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:45:04.587  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:45:04.590  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：{"code":1,"result":{"seed":"057d38ff730ae0f06b01688b4bcc0610","token":"00000100000125000001485233059659b36df5b7957c8fad93ac75027950a45f"}}
+2017-01-24 12:45:04.596  INFO 13728 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[全国春运迎来“巅峰时刻”日发送旅客突破8300万人次]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新华网]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[何莹莹]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 新华社北京1月23日电（记者齐中熙、赵文君）１月23日，全国春运迎来节前客流最高峰。交通运输部预测，23日预计日发送旅客将突破8300万人次，26个重点客运枢纽客流量比春运首日（1月13日）增长约32%。</p> <p> 据初步统计，春运前11天（1月13日－23日），全国铁路、道路、水路、民航共发送旅客约8.4亿人次，同比增长2.9%。其中，铁路约9800万人次，增长18.3%；公路约7.16亿人次，增长0.73%；水路990余万人次，增长7.3%；民航约1600万人次，增长16.4%。</p> <p> 23日，全国铁路预计发送旅客920万人次。为应对客流高峰，铁路部门继续加大运力投放，增开旅客列车，最大限度满足旅客出行需求。全国铁路预计增开旅客列车756列。</p> <p> 春运期间，各地铁路部门推出多项便民利民措施。沈阳铁路局在各大车站设立医疗服务点，安排专业医护人员常驻候车室；呼和浩特铁路局“蒙京快线”微信公众号在部分列车推出就医旅客预约服务；济南铁路局在青岛北站增设“爱心妈妈”小屋，为孕妇和儿童旅客提供一条龙温馨服务；南昌铁路局在车站增设站内便捷换乘通道，为重点旅客提供“绿色通道”快捷引导服务。</p> <p> 从北京、广州、阜阳等12个交通运输部重点联络城市监测情况看，1月23日，北京六里桥客运站、阜阳市汽车东站客流量比春运首日增长近1.2倍，成都机场客运站、重庆机场换乘中心增长50%以上，郑州汽车中心站、北京八王坟客运站增长40%以上。</p> <p> 携程、百度等互联网平台大数据分析结果显示，北京、上海、广州、深圳、郑州、杭州、苏州、东莞等城市排在旅客出发城市前列；济南、阜阳、赣州、周口、合肥、昆明、南宁、上饶等城市排在客流迁入城市前列。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:45:04.711  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:45:04.713  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":-1000,"result":"最近修改过的2条与本新闻重复的新闻是：\n015375013(全国春运迎来“巅峰时刻”日发送旅客突破8300万人次),\n015375977(全国春运迎来“巅峰时刻”日发送旅客突破8300万人次)"}
+2017-01-24 12:45:04.715  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:45:04.716  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:45:04.717  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@7d221499
+
+2017-01-24 12:45:06.902  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:45:06	维持连接心跳包
+2017-01-24 12:45:06.903  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:45:06	维持连接心跳包
+
+2017-01-24 12:45:21.988  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:45:21	维持连接心跳包
+2017-01-24 12:45:21.989  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:45:21	维持连接心跳包
+
+2017-01-24 12:45:22.263  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	NewsPusherModule.entity.PushInfo@49ef1dc9
+2017-01-24 12:45:22.266  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 收到的推送新闻的信息：{"articlesJSON":"[{\"author\":\"何莹莹\",\"channelId\":\"3000000000000000\",\"content\":\"    <p align=\\\"center\\\"><img id=\\\"6118705\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/VXSRoTQLC71EgAGiuDwP4obLgXfXJv38/79494e1c04bf5b9fb34878a321ecf769.jpg\\\"></p> <p align=\\\"center\\\"> 马学款接受记者采访。刘佳 摄影</p> <p align=\\\"center\\\"><img id=\\\"6118706\\\" alt=\\\"\\\" src=\\\"http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/VXSRoTQLC71EgAGiuDwP4obLgXfXJv38/0b6a9a35d8017fa85c4cc05c30a7902c.gif\\\"></p> <p align=\\\"center\\\"> 全国降水量预报图。</p> <p> 记者：春节长假期间的总体天气趋势如何？天气会有转折性变化吗？将影响哪些地区？</p> <p> 马学款：春节长假期间，将有较强冷空气影响我国，气温起伏较大，相比节前，降水也明显增多，雨雪分界线将明显南移，南方地区气温逐步走低。</p> <p> 降温方面，1月28至30日，受冷空气影响，中东部大部地区气温下降4至8℃，东北、华北北部局地降温幅度可达10℃以上，气温起伏较大。</p> <p> 伴随冷空气来袭，29日和31日前后我国中东部地区还将迎来两次降水过程，随着气温的下降，31日的雨雪分界线将明显南移至沿淮甚至更偏南的地方。其中28日夜间至29日，降水范围逐渐从西北地区东部向东扩展，西北地区东部、内蒙古东部、东北、华北中南部和黄淮北部等地将会出现小到中雪或雨夹雪；1月30日夜间-2月1日，西南地区东部、西北地区东南部、黄淮、江汉、江淮及江南北部等地有小到中雨（雪）或雨夹雪。</p> <p> 记者：针对春节期间的天气影响，您对大家有哪些建议？</p> <p> 马学款：目前来看，从现在到春节假期期间，对出行不利的天气主要有冷空气、雨雪、雾等低能见度天气。公众回乡探亲无论自驾还是乘坐公共交通工具，天气对行程的影响无处不在，建议提前查询天气信息，做好出行计划。</p> <p> 节前回乡高峰期天气状况虽然总体向好，但由于冷空气活动频繁，气温起伏较大，公众需备足衣物，做好防寒保暖工作。春节长假期间，随着雨雪天气影响范围不断扩大，道路湿滑，出行需关注交通安全，雨雪天自驾出行要保持平稳驾驶，降低车速。遇有雾等低能见度天气，出行需及时打开防雾灯和近光灯，转弯时仔细观察周围情况，适时注意道路交通状况。</p>   \",\"sourceName\":\"新华网\",\"templateId\":\"100000330\",\"title\":\"中央气象台专家解析春节期间天气趋势及影响\"}]","customerInfoJSON":"{\"userName\":\"libei001\",\"companyId\":\"001\",\"password\":\"1234567;\",\"initEditor\":\"100000125\"}","initEditor":"100000125","password":"1234567;","userName":"libei001"}
+
+2017-01-24 12:45:22.355  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:45:22.367  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用登录多彩接口 response：{"code":1,"result":{"seed":"dff663004c9d4c758042ba905c686ebb","token":"00000100000125000001485233077424f00c7d8cb4d1d47358df7680c8294f9c"}}
+2017-01-24 12:45:22.371  INFO 13728 --- [Thread-4] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[中央气象台专家解析春节期间天气趋势及影响]]></title>
+            <sourceName class="java.lang.String"><![CDATA[新华网]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[何莹莹]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p align="center"><img id="6118705" alt="" src="http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/VXSRoTQLC71EgAGiuDwP4obLgXfXJv38/79494e1c04bf5b9fb34878a321ecf769.jpg"></p> <p align="center"> 马学款接受记者采访。刘佳 摄影</p> <p align="center"><img id="6118706" alt="" src="http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/VXSRoTQLC71EgAGiuDwP4obLgXfXJv38/0b6a9a35d8017fa85c4cc05c30a7902c.gif"></p> <p align="center"> 全国降水量预报图。</p> <p> 记者：春节长假期间的总体天气趋势如何？天气会有转折性变化吗？将影响哪些地区？</p> <p> 马学款：春节长假期间，将有较强冷空气影响我国，气温起伏较大，相比节前，降水也明显增多，雨雪分界线将明显南移，南方地区气温逐步走低。</p> <p> 降温方面，1月28至30日，受冷空气影响，中东部大部地区气温下降4至8℃，东北、华北北部局地降温幅度可达10℃以上，气温起伏较大。</p> <p> 伴随冷空气来袭，29日和31日前后我国中东部地区还将迎来两次降水过程，随着气温的下降，31日的雨雪分界线将明显南移至沿淮甚至更偏南的地方。其中28日夜间至29日，降水范围逐渐从西北地区东部向东扩展，西北地区东部、内蒙古东部、东北、华北中南部和黄淮北部等地将会出现小到中雪或雨夹雪；1月30日夜间-2月1日，西南地区东部、西北地区东南部、黄淮、江汉、江淮及江南北部等地有小到中雨（雪）或雨夹雪。</p> <p> 记者：针对春节期间的天气影响，您对大家有哪些建议？</p> <p> 马学款：目前来看，从现在到春节假期期间，对出行不利的天气主要有冷空气、雨雪、雾等低能见度天气。公众回乡探亲无论自驾还是乘坐公共交通工具，天气对行程的影响无处不在，建议提前查询天气信息，做好出行计划。</p> <p> 节前回乡高峰期天气状况虽然总体向好，但由于冷空气活动频繁，气温起伏较大，公众需备足衣物，做好防寒保暖工作。春节长假期间，随着雨雪天气影响范围不断扩大，道路湿滑，出行需关注交通安全，雨雪天自驾出行要保持平稳驾驶，降低车速。遇有雾等低能见度天气，出行需及时打开防雾灯和近光灯，转弯时仔细观察周围情况，适时注意道路交通状况。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-01-24 12:45:23.162  WARN 13728 --- [Thread-4] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-01-24 12:45:23.169  INFO 13728 --- [Thread-4] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":1,"result":{"newsId":"015377237","title":"中央气象台专家解析春节期间天气趋势及影响","state":0,"url":"http://news.gog.cn/system/2017/01/24/015377237.shtml"}}
+2017-01-24 12:45:23.169  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 推送结果：{"code":200}
+2017-01-24 12:45:23.169  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 此次推送耗时(time elapsed): 0seconds
+2017-01-24 12:45:23.170  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	NewsPusherModule.entity.PushInfo@49ef1dc9
+
+2017-01-24 12:45:37.043  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 接收：	2017-01-24 12:45:37	维持连接心跳包
+2017-01-24 12:45:37.044  INFO 13728 --- [Thread-4] NewsPusherModule.service.Client          : 处理：	2017-01-24 12:45:37	维持连接心跳包
+
+2017-02-07 17:44:00.641  INFO 6908 --- [main] NewsPusherModule.util.PostTest           : Starting PostTest on DESKTOP-I5VPLTQ with PID 6908 (started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-02-07 17:44:00.657  INFO 6908 --- [main] NewsPusherModule.util.PostTest           : No active profile set, falling back to default profiles: default
+2017-02-07 17:44:00.872  INFO 6908 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@266f2c06: startup date [Tue Feb 07 17:44:00 CST 2017]; root of context hierarchy
+2017-02-07 17:44:03.748  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@266f2c06: startup date [Tue Feb 07 17:44:00 CST 2017]; root of context hierarchy
+2017-02-07 17:44:03.826  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-02-07 17:44:03.827  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-02-07 17:44:03.827  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-02-07 17:44:03.828  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-02-07 17:44:03.828  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-02-07 17:44:03.830  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-07 17:44:03.831  INFO 6908 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-07 17:44:03.881  INFO 6908 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 17:44:03.881  INFO 6908 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 17:44:03.930  INFO 6908 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 17:44:04.380  INFO 6908 --- [main] NewsPusherModule.util.PostTest           : Started PostTest in 4.393 seconds (JVM running for 6.335)
+2017-02-07 17:44:13.267  WARN 6908 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-02-07 17:44:13.335  WARN 6908 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-02-07 17:44:13.384  INFO 6908 --- [Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@266f2c06: startup date [Tue Feb 07 17:44:00 CST 2017]; root of context hierarchy
+2017-02-09 09:31:17.663  INFO 19400 --- [main] N.service.CrawlerDataEntityServiceTest   : Starting CrawlerDataEntityServiceTest on DESKTOP-I5VPLTQ with PID 19400 (started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-02-09 09:31:17.665  INFO 19400 --- [main] N.service.CrawlerDataEntityServiceTest   : No active profile set, falling back to default profiles: default
+2017-02-09 09:31:17.918  INFO 19400 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@447a195c: startup date [Thu Feb 09 09:31:17 CST 2017]; root of context hierarchy
+2017-02-09 09:31:21.463  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@447a195c: startup date [Thu Feb 09 09:31:17 CST 2017]; root of context hierarchy
+2017-02-09 09:31:21.575  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-02-09 09:31:21.576  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-02-09 09:31:21.577  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-02-09 09:31:21.577  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-02-09 09:31:21.578  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-02-09 09:31:21.580  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-09 09:31:21.581  INFO 19400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-09 09:31:21.644  INFO 19400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-09 09:31:21.644  INFO 19400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-09 09:31:21.741  INFO 19400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-09 09:31:22.207  INFO 19400 --- [main] N.service.CrawlerDataEntityServiceTest   : Started CrawlerDataEntityServiceTest in 5.37 seconds (JVM running for 7.617)
+2017-02-09 09:31:27.711  INFO 19400 --- [main] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[贵州今年将实施2万个以上产业扶贫项目]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵州都市报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[胡丽涓]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 据新华社电 2017年贵州将重点强化产业精准扶贫，新增10个省级扶贫产业园，实施2万个以上的产业扶贫项目，力争带动60万贫困群众脱贫。</p> <p> 记者8日从贵州省委农村工作会议暨全省扶贫开发工作会议上了解到，为确保2017年贵州产业扶贫取得重大突破，贵州将召开全省产业扶贫招商引资会议，分层次、分批次外出招商；并通过大力发展“一村一品”产业与乡村旅游、强化配套服务、支持农业龙头企业发展、实施政策性农业保险贫困县全覆盖等，多措并举提升产业扶贫的质量与效益。</p> <p> 据了解，2017年，贵州将通过产业扶贫、生态脱贫、易地扶贫搬迁等措施，减贫100万人以上，实现20个贫困县脱贫摘帽，对40万农村青壮年劳动力开展技能培训；向对口帮扶城市有组织输出1万名劳务人员。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-02-09 09:31:44.212  WARN 19400 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-02-09 09:31:51.031  INFO 19400 --- [main] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":1,"result":{"newsId":"015403406","title":"贵州今年将实施2万个以上产业扶贫项目","state":0,"url":"http://news.gog.cn/system/2017/02/09/015403406.shtml"}}
+2017-02-09 09:32:28.022  INFO 19400 --- [main] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[环卫工倒垃圾手指被“咬”碎]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵州都市报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[胡丽涓]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p align="center"><img id="6104383" src="http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/99fe4c6d9824e38a207810ba9ed2c3af.jpg"> </p> <p class="pictext" align="center"> 雷天福躺在床上。<br></p> <p> 本报讯（记者 杜高富摄影报道）“我父亲在贵医附院家属区运输垃圾，将垃圾倒进转运站的压缩垃圾车过程中，司机启动机器，‘咬’碎了他的右手中指。”昨日，雷先生拨打贵州都市报新闻热线96811反映。</p> <p> <strong>倒垃圾手指被“咬”碎</strong></p> <p> 当天中午2点，记者来到贵阳建筑医院见到了雷先生的父亲雷天福，他躺在病床上打着吊针，右手包裹着纱布，雷天福的老婆付成秀守在病床旁边一脸焦虑。</p> <p> 雷天福告诉记者，1月1日上午10点半左右，他在贵医附院家属区清扫垃圾，用手推式垃圾车将垃圾运输到宅吉垃圾转运站。平时，垃圾转运站是用机器将手推式垃圾车内的垃圾倒进压缩式垃圾车箱内。</p> <p> 由于吊垃圾车的机器坏了，于是，就得采用人工将垃圾倒进压缩式垃圾车箱内，这样就容易倒泼出很多垃圾到地上。于是司机便走过来对雷天福和付成秀说，“我们一起用力，把垃圾倒进转运车内。”于是，司机与付成秀负责手推式垃圾车的一边手把，雷天福一人负责另一边手把，三人用力，一下就将该垃圾车连车倒进了转运垃圾车箱内。</p> <p> 此时，司机进入驾驶室，雷天福看到他的垃圾车手把也在转运车内，立即走过去欲把此车拉下来，“唉哟，我的手遭了……”雷天福正在拉手把时，谁知司机此时启动了机器，压缩机运转时把他的右手中指压碎了。</p> <p> 事故发生后，司机和付成秀迅速将雷天福送到贵医附院救治。经医生检查后，建议转到贵阳建筑医院治疗。于是当天就转到了贵阳建筑医院。</p> <p> <strong>医药费管理方与垃圾站方协调中</strong></p> <p> 雷天福说，转院后，环卫用人单位方及开垃圾车的京贵环卫站方都没有交钱，至今已花去了2万多元，还欠下医院9000多元没着落。“我在贵医附院家属区清扫转运垃圾已有18年，眼看今年5月份就退休了，没有想到就出事了。我在垃圾站倒垃圾受伤，肯定是工伤。可是，事情出了，医药费却没有着落，我想不通。”</p> <p> 建筑医院的医生告诉记者，雷天福的右手中指第一关节外被压碎，为尽可能保住手指，当天做断指再植术。养了三天多仍然摇摇欲坠，发现患者中指因碎了，血管不通，养不活。于是，院方将情况详情介绍，经患者方同意，将第一关节及第二关节约一半进行了截肢。</p> <p> 对此事，记者与雷天福的用工单位、贵医附院家属区负责该区环卫管理的刘近平书记联系，刘书记说，雷天福受伤一事，他们一直都管的。由于此事故的责任有一点分歧，患者方称是京贵垃圾站开压缩式垃圾车的司机喊他一起将倒垃圾倒垃圾箱内，而司机则称没有喊患者倒垃圾进转运车箱内，当时没有直接的第三方目击证人，双方因此责任划分暂时还不明确。</p> <p> 刘近平说，尽管如此，他们以人为本，当时他先掏了2000元垫付医药费先救人。就此事，他们一直在努力，1月6日，刘近平还陪同雷天福的儿子雷先生前往用人单位找了相关负责人。目前他们正在与京贵垃圾站方积极协调中。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-02-09 09:32:28.826  WARN 19400 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-02-09 09:32:28.828  INFO 19400 --- [main] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":1,"result":{"newsId":"015403421","title":"环卫工倒垃圾手指被“咬”碎","state":0,"url":"http://news.gog.cn/system/2017/02/09/015403421.shtml"}}
+2017-02-09 09:32:28.869  INFO 19400 --- [Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@447a195c: startup date [Thu Feb 09 09:31:17 CST 2017]; root of context hierarchy
+2017-02-09 09:40:33.472  INFO 7228 --- [main] N.service.CrawlerDataEntityServiceTest   : Starting CrawlerDataEntityServiceTest on DESKTOP-I5VPLTQ with PID 7228 (started by karel in D:\IdeaProjects\NewsExport_duocai)
+2017-02-09 09:40:33.473  INFO 7228 --- [main] N.service.CrawlerDataEntityServiceTest   : No active profile set, falling back to default profiles: default
+2017-02-09 09:40:33.633  INFO 7228 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@20fa6509: startup date [Thu Feb 09 09:40:33 CST 2017]; root of context hierarchy
+2017-02-09 09:40:36.442  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@20fa6509: startup date [Thu Feb 09 09:40:33 CST 2017]; root of context hierarchy
+2017-02-09 09:40:36.523  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/articles],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportArticles(java.lang.String,java.lang.String)
+2017-02-09 09:40:36.524  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/login],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.login(java.lang.String,javax.servlet.http.HttpSession)
+2017-02-09 09:40:36.524  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duocai/export/article],methods=[POST]}" onto public java.lang.Object NewsPusherModule.controller.ExportDuocaiController.exportNewSingle(java.lang.String,java.lang.String)
+2017-02-09 09:40:36.525  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/newsExport/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.newsExport(java.lang.String) throws java.lang.Exception
+2017-02-09 09:40:36.525  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testFinishedXml/{tid}]}" onto public java.lang.String NewsPusherModule.controller.taskController.testFinishedXml(java.lang.String)
+2017-02-09 09:40:36.527  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-09 09:40:36.527  INFO 7228 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-09 09:40:36.583  INFO 7228 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-09 09:40:36.583  INFO 7228 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-09 09:40:36.634  INFO 7228 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-09 09:40:37.143  INFO 7228 --- [main] N.service.CrawlerDataEntityServiceTest   : Started CrawlerDataEntityServiceTest in 4.435 seconds (JVM running for 6.313)
+2017-02-09 09:40:37.381  INFO 7228 --- [main] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[贵州今年将实施2万个以上产业扶贫项目]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵州都市报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[胡丽涓]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p> 据新华社电 2017年贵州将重点强化产业精准扶贫，新增10个省级扶贫产业园，实施2万个以上的产业扶贫项目，力争带动60万贫困群众脱贫。</p> <p> 记者8日从贵州省委农村工作会议暨全省扶贫开发工作会议上了解到，为确保2017年贵州产业扶贫取得重大突破，贵州将召开全省产业扶贫招商引资会议，分层次、分批次外出招商；并通过大力发展“一村一品”产业与乡村旅游、强化配套服务、支持农业龙头企业发展、实施政策性农业保险贫困县全覆盖等，多措并举提升产业扶贫的质量与效益。</p> <p> 据了解，2017年，贵州将通过产业扶贫、生态脱贫、易地扶贫搬迁等措施，减贫100万人以上，实现20个贫困县脱贫摘帽，对40万农村青壮年劳动力开展技能培训；向对口帮扶城市有组织输出1万名劳务人员。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-02-09 09:40:38.172  WARN 7228 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-02-09 09:40:38.173  INFO 7228 --- [main] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":1,"result":{"newsId":"015403557","title":"贵州今年将实施2万个以上产业扶贫项目","state":0,"url":"http://news.gog.cn/system/2017/02/09/015403557.shtml"}}
+2017-02-09 09:40:38.175  INFO 7228 --- [main] N.controller.ExportDuocaiController      : 待推送的xml:<?xml version="1.0" encoding="utf-8"?>
+<root defDateFormat="yyyy-MM-dd HH:mm:ss" driver="cn.com.enorth.utility.file.impl.xml_util.XmlDriver" version="1.0">
+    <root class="cn.com.enorth.cms.service.news.News">
+        <tnNewsVo class="cn.com.enorth.cms.vo.table.cms.TnNewsVo">
+            <title class="java.lang.String"><![CDATA[环卫工倒垃圾手指被“咬”碎]]></title>
+            <sourceName class="java.lang.String"><![CDATA[贵州都市报]]></sourceName>
+            <channelId class="java.lang.Long">3000000000000000</channelId>
+            <keywords4 class="java.lang.String"><![CDATA[胡丽涓]]></keywords4>
+            <initEditor class="java.lang.Integer">100000125</initEditor>
+            <templateId class="java.lang.Integer">100000330</templateId>
+        </tnNewsVo>
+        <clobs class="cn.com.enorth.cms.util.lang.util.CMSMap">
+            <item>
+                <key class="java.lang.String"><![CDATA[content]]></key>
+                <value class="java.lang.String"><![CDATA[    <p align="center"><img id="6104383" src="http://cloudpioneer-test.oss-cn-shanghai.aliyuncs.com/21236056e8a995b6f95c675a7d7aa44f/99fe4c6d9824e38a207810ba9ed2c3af.jpg"> </p> <p class="pictext" align="center"> 雷天福躺在床上。<br></p> <p> 本报讯（记者 杜高富摄影报道）“我父亲在贵医附院家属区运输垃圾，将垃圾倒进转运站的压缩垃圾车过程中，司机启动机器，‘咬’碎了他的右手中指。”昨日，雷先生拨打贵州都市报新闻热线96811反映。</p> <p> <strong>倒垃圾手指被“咬”碎</strong></p> <p> 当天中午2点，记者来到贵阳建筑医院见到了雷先生的父亲雷天福，他躺在病床上打着吊针，右手包裹着纱布，雷天福的老婆付成秀守在病床旁边一脸焦虑。</p> <p> 雷天福告诉记者，1月1日上午10点半左右，他在贵医附院家属区清扫垃圾，用手推式垃圾车将垃圾运输到宅吉垃圾转运站。平时，垃圾转运站是用机器将手推式垃圾车内的垃圾倒进压缩式垃圾车箱内。</p> <p> 由于吊垃圾车的机器坏了，于是，就得采用人工将垃圾倒进压缩式垃圾车箱内，这样就容易倒泼出很多垃圾到地上。于是司机便走过来对雷天福和付成秀说，“我们一起用力，把垃圾倒进转运车内。”于是，司机与付成秀负责手推式垃圾车的一边手把，雷天福一人负责另一边手把，三人用力，一下就将该垃圾车连车倒进了转运垃圾车箱内。</p> <p> 此时，司机进入驾驶室，雷天福看到他的垃圾车手把也在转运车内，立即走过去欲把此车拉下来，“唉哟，我的手遭了……”雷天福正在拉手把时，谁知司机此时启动了机器，压缩机运转时把他的右手中指压碎了。</p> <p> 事故发生后，司机和付成秀迅速将雷天福送到贵医附院救治。经医生检查后，建议转到贵阳建筑医院治疗。于是当天就转到了贵阳建筑医院。</p> <p> <strong>医药费管理方与垃圾站方协调中</strong></p> <p> 雷天福说，转院后，环卫用人单位方及开垃圾车的京贵环卫站方都没有交钱，至今已花去了2万多元，还欠下医院9000多元没着落。“我在贵医附院家属区清扫转运垃圾已有18年，眼看今年5月份就退休了，没有想到就出事了。我在垃圾站倒垃圾受伤，肯定是工伤。可是，事情出了，医药费却没有着落，我想不通。”</p> <p> 建筑医院的医生告诉记者，雷天福的右手中指第一关节外被压碎，为尽可能保住手指，当天做断指再植术。养了三天多仍然摇摇欲坠，发现患者中指因碎了，血管不通，养不活。于是，院方将情况详情介绍，经患者方同意，将第一关节及第二关节约一半进行了截肢。</p> <p> 对此事，记者与雷天福的用工单位、贵医附院家属区负责该区环卫管理的刘近平书记联系，刘书记说，雷天福受伤一事，他们一直都管的。由于此事故的责任有一点分歧，患者方称是京贵垃圾站开压缩式垃圾车的司机喊他一起将倒垃圾倒垃圾箱内，而司机则称没有喊患者倒垃圾进转运车箱内，当时没有直接的第三方目击证人，双方因此责任划分暂时还不明确。</p> <p> 刘近平说，尽管如此，他们以人为本，当时他先掏了2000元垫付医药费先救人。就此事，他们一直在努力，1月6日，刘近平还陪同雷天福的儿子雷先生前往用人单位找了相关负责人。目前他们正在与京贵垃圾站方积极协调中。</p>   ]]></value>
+            </item>
+        </clobs>
+    </root>
+</root>
+
+2017-02-09 09:40:39.062  WARN 7228 --- [main] o.a.commons.httpclient.HttpMethodBase    : Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2017-02-09 09:40:39.070  INFO 7228 --- [main] N.service.NewsPusherService              : 调用推送多彩接口 response：{"code":1,"result":{"newsId":"015403558","title":"环卫工倒垃圾手指被“咬”碎","state":0,"url":"http://news.gog.cn/system/2017/02/09/015403558.shtml"}}
+2017-02-09 09:40:39.080  INFO 7228 --- [Thread-1] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@20fa6509: startup date [Thu Feb 09 09:40:33 CST 2017]; root of context hierarchy
