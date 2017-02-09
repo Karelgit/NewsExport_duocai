@@ -7,7 +7,8 @@ public class DuocaiInfo {
     private String userName;
     private String password;
     private String initEditor;
-
+    private String api_token;
+    private String seed;
 
     public String getUserName() {
         return userName;
@@ -31,6 +32,22 @@ public class DuocaiInfo {
 
     public void setInitEditor(String initEditor) {
         this.initEditor = initEditor;
+    }
+
+    public String getApi_token() {
+        return api_token;
+    }
+
+    public void setApi_token(String api_token) {
+        this.api_token = api_token;
+    }
+
+    public String getSeed() {
+        return seed;
+    }
+
+    public void setSeed(String seed) {
+        this.seed = seed;
     }
 
 }

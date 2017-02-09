@@ -55,7 +55,7 @@ public class ExportDuocaiController {
         String xml = null;
         String token = null;
         try {
-            token = this.getToken(duocai);
+            //token = this.getToken(duocai);
             xml = this.getXml(duocai);
             System.out.println("duocai的信息："+duocai);
         } catch (Exception e) {
@@ -67,9 +67,9 @@ public class ExportDuocaiController {
         for (int i=0;i<array.size();i++){
             Article article = JSON.parseObject(array.getString(i),Article.class);
             xml = newsPusherService.articleToXml(article,xmlTemplate);
+            logger.info("待推送的xml:"+xml);
             try {
-                String result = newsPusherService.exportNewsToDuocai(xml,token);
-                System.out.println("推送结果：" + result);
+                String result = newsPusherService.exportNewsToDuocai(xml,duocai);
             } catch (Exception e) {
                 map.put("code",500);
                 map.put("info",e.getMessage());
@@ -92,9 +92,9 @@ public class ExportDuocaiController {
         Map<String,Object> map = new HashMap<>();
         DuocaiInfo duocai = JSON.parseObject(duocaiInfo,DuocaiInfo.class);
         String xml = null;
-        String token = null;
+//        String token = null;
         try {
-            token = this.getToken(duocai);
+//            token = this.getToken(duocai);
             xml = this.getXml(duocai);
         } catch (Exception e) {
             map.put("code",500);
@@ -102,14 +102,14 @@ public class ExportDuocaiController {
         }
 
 
-        if (xml==null||token==null){
-            map.put("code",600);
-            map.put("info","duocai的用户登陆过期");
-            return map;
-        }
+//        if (xml==null||token==null){
+//            map.put("code",600);
+//            map.put("info","duocai的用户登陆过期");
+//            return map;
+//        }
         xml = newsPusherService.articleToXml(JSON.parseObject(article,Article.class),xml);
         try {
-            newsPusherService.exportNewsToDuocai(xml,token);
+            newsPusherService.exportNewsToDuocai(xml,duocai);
         } catch (Exception e) {
            map.put("code",500);
             map.put("info",e.getCause().getMessage());

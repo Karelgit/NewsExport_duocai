@@ -42,7 +42,8 @@ public class taskController {
             //String xml = NewsPushUtil.readResourceAsXml("/newsTest.xml");
             //推送文章
             try {
-                result = newsPusherService.exportNewsToDuocai(xml,param);
+
+//                result = newsPusherService.exportNewsToDuocai(xml,param); deprecated method...
                 System.out.println(result);
             } catch (Exception e) {
                 e.printStackTrace();

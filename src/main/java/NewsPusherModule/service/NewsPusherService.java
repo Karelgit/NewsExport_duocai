@@ -5,6 +5,8 @@ import NewsPusherModule.entity.DuocaiInfo;
 import NewsPusherModule.util.HandleXml;
 import NewsPusherModule.util.NewsPushUtil;
 import com.alibaba.fastjson.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
@@ -18,35 +20,39 @@ import java.util.Properties;
  */
 @Service
 public class NewsPusherService {
-
+    private static final Logger LOG= LoggerFactory.getLogger(NewsPusherService.class);
     public String  login(String loginUrl,String userName,String password) throws Exception {
         Map<String,String> loginParams = new HashMap<>();
         loginParams.put("userName",userName);
         loginParams.put("password",password);
         String response = NewsPushUtil.excutePost(loginUrl,loginParams);
-        System.out.println("response:"+response);
+        LOG.info("调用登录多彩接口 response："+response);
         return response;
     }
 
-    public String postNews(String postUrl,String newsXML,String loginResponse ) throws Exception {
+    public String postNews(String postUrl,String newsXML,/*String loginResponse*/DuocaiInfo duocaiInfo ) throws Exception {
 
         Map<String,String> params = new HashMap<>();
 
-        JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
-        String api_token = (String) jsonObject.getJSONObject("result").get("token");
-        String seed = (String) jsonObject.getJSONObject("result").get("seed");
+//        JSONObject jsonObject = (JSONObject) JSONObject.parse(loginResponse);
+//        String api_token = (String) jsonObject.getJSONObject("result").get("token");
+//        String seed = (String) jsonObject.getJSONObject("result").get("seed");
+        String api_token =duocaiInfo.getApi_token();
+        String seed = duocaiInfo.getSeed();
         String check_sum = NewsPushUtil.generateMD5(newsXML+seed);
 
         params.put("news",newsXML);
         params.put("api_token",api_token);
         params.put("check_sum",check_sum);
-        String respones = NewsPushUtil.excutePost(postUrl,params);
-        return respones;
+        String response = NewsPushUtil.excutePost(postUrl,params);
+        LOG.info("调用推送多彩接口 response："+response);
+        return response;
     }
-    public String exportNewsToDuocai(String xml,String param) throws Exception {
+    public String exportNewsToDuocai(String xml,/*String param*/DuocaiInfo duocaiInfo) throws Exception {
         Properties duocai = NewsPushUtil.readResourceAsProperties("/duocai.properties");
         String postUrl = duocai.getProperty("newsExportUrl");
-        return this.postNews(postUrl,xml,param);
+
+        return this.postNews(postUrl,xml,duocaiInfo);
     }
 
     public String loginDuocai() throws Exception {
@@ -59,7 +65,6 @@ public class NewsPusherService {
     public String getXmlTemplate(DuocaiInfo duocaiInfo){
 
         String xml = new HandleXml().readXml("/news.xml");
-        System.out.println("xml值："+xml);
         xml = xml.replace("$initEditor",duocaiInfo.getInitEditor());
 
         return xml;
