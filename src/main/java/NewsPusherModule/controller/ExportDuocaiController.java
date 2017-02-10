@@ -70,6 +70,7 @@ public class ExportDuocaiController {
             logger.info("待推送的xml:"+xml);
             try {
                 String result = newsPusherService.exportNewsToDuocai(xml,duocai);
+                map.put("result",result);
             } catch (Exception e) {
                 map.put("code",500);
                 map.put("info",e.getMessage());

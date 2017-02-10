@@ -41,12 +41,7 @@ public class Client {
 
     public static final class DefaultObjectAction implements ObjectAction {
         public void doAction(Object obj, Client client) {
-            try {
-                FileWriterUtil.writeLog("处理：\t" + obj.toString()+"\n");
-                LOG.info("处理：\t" + obj.toString()+"\n");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            LOG.info("处理：\t" + obj.toString()+"\n");
         }
 
     }
@@ -176,7 +171,6 @@ public class Client {
                     if (in.available() > 0) {
                         ObjectInputStream ois = new ObjectInputStream(in);
                         Object obj = ois.readObject();
-                        FileWriterUtil.writeLog("接收：\t" + obj);
                         LOG.info("接收：\t" + obj);
 //                        System.out.println("接收：\t" + obj);
                         ObjectAction oa = actionMapping.get(obj.getClass());
@@ -185,6 +179,7 @@ public class Client {
                             LOG.info("收到的推送新闻的信息：" + JSON.toJSONString(obj)+"\n");
                             //推送到多彩贵州
                             Object resultObj =new ExportDuocaiController().exportArticles(((PushInfo) obj).getArticlesJSON(),((PushInfo) obj).getCustomerInfoJSON());
+                            FileWriterUtil.writeLog(JSON.toJSONString(resultObj));
                             LOG.info("推送结果："+JSON.toJSONString(resultObj));
                             Long timeAfter = System.currentTimeMillis();
                             LOG.info("此次推送耗时(time elapsed): " + (timeAfter - timeBefore) / 1000 + "seconds");
