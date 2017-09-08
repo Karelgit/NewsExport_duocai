@@ -81,7 +81,11 @@ public class NewsPusherService {
         Assert.notNull(xml,"xml can't be null");
         Assert.notNull(article,"article cannot be null");
         if (article.getTitle()==null||article.getContent()==null||article.getTitle().equals("")||article.getContent().equals("")){
-            throw new IllegalArgumentException("title and content can not be null or empty");
+            try {
+                throw new IllegalArgumentException("title and content can not be null or empty");
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
         }
         xml=xml.replace("$content",article.getContent() == null ? "" : article.getContent()  );
         xml=xml.replace("$title",article.getTitle() == null ? "" : article.getTitle());

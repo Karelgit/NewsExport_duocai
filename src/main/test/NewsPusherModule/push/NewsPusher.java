@@ -31,8 +31,8 @@ public class NewsPusher {
         String check_sum = NewsPushUtil.generateMD5(newsXML+seed);
 
         params.put("news",newsXML);
-//        params.put("api_token",api_token);
-//        params.put("check_sum",check_sum);
+        params.put("api_token",api_token);
+        params.put("check_sum",check_sum);
         String respones = NewsPushUtil.excutePost(postUrl,params);
         System.out.println(respones);
     }

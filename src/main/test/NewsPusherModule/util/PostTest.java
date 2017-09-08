@@ -144,7 +144,7 @@ public class PostTest {
     }
     @Test
     public void testNewsExport() throws Exception {
-        List<String> xmls = service.crawlerDataEntityXml(250,"019c531802d4200e52586dc01677cd64");
+//        List<String> xmls = service.crawlerDataEntityXml(250,"019c531802d4200e52586dc01677cd64");
         NewsPusherModule.push.NewsPusher pusher = new NewsPusherModule.push.NewsPusher();
 
         //登陆获得返回数据
